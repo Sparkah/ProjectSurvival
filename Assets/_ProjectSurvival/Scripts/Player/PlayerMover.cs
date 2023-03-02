@@ -11,8 +11,7 @@ namespace _ProjectSurvival.Scripts.Player
         //private NavMeshAgent _agent; // возможно придется вернуть навмеш
         private Rigidbody2D _agent;
         private Animator _animator;
-        private string _animatorMoveParam = "AnimationPar";
-        private const int _speedIncreaseConstant =10000;
+        private const int _speedIncreaseConstant = 10000;
 
         void Start()
         {
@@ -41,8 +40,7 @@ namespace _ProjectSurvival.Scripts.Player
         private void Move(Vector2 input)
         {
             var moveDirection = new Vector2(input.x, input.y);
-
-            Debug.Log(moveDirection);
+            
             MoveTowardTarget(moveDirection);
         }
 
