@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7e0270169691b438adcd0f1f8e70db, type: 3}
+  m_Name: HalfAngleWeapon
+  m_EditorClassIdentifier: 
+  _title: "\u041A\u043E\u043D\u0443\u0441 \u043F\u0435\u0440\u0435\u0434 \u0441\u043E\u0431\u043E\u0439"
+  _projectilePrefab: {fileID: 5693121489685280538, guid: 4ce3101adcf1e5f419a179d401fbe0e3, type: 3}
+  _weaponLevels:
+  - _appearFrequency: 2
+    _appearAmount: 4
+    _projectileSetting:
+      _damage: 3
+      _size: 1
+      _speed: 15
+      _durability: 1
+  - _appearFrequency: 1.5
+    _appearAmount: 6
+    _projectileSetting:
+      _damage: 7
+      _size: 1
+      _speed: 15
+      _durability: 1
+  - _appearFrequency: 1.25
+    _appearAmount: 8
+    _projectileSetting:
+      _damage: 9
+      _size: 1
+      _speed: 15
+      _durability: 1
+  - _appearFrequency: 1
+    _appearAmount: 10
+    _projectileSetting:
+      _damage: 10
+      _size: 1
+      _speed: 15
+      _durability: 1
