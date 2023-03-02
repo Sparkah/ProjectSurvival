@@ -8,7 +8,7 @@ public class DamageDealer : MonoBehaviour
     public event UnityAction<IDamagable> OnDamagableTouched;
     public event UnityAction OnNotDamagableTouched;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.attachedRigidbody)
             return;
