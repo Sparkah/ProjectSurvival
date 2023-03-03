@@ -50,12 +50,14 @@ MonoBehaviour:
   - TimerSecondsThisWave: 10
     Batches:
     - EnemiesToSpawnThisWave:
-      - {fileID: 1773543650070138907, guid: 62c3f645ff2bb437fab42b7fd131d230, type: 3}
+      - {fileID: 11400000, guid: 9440a4719e806a9489961a22dec718ef, type: 2}
       SpawnSpeedSecondsThisWave: 2
       SpawnAmountThisWave: 2
   - TimerSecondsThisWave: 10
     Batches:
     - EnemiesToSpawnThisWave:
-      - {fileID: 1773543650070138907, guid: 62c3f645ff2bb437fab42b7fd131d230, type: 3}
+      - {fileID: 11400000, guid: 9440a4719e806a9489961a22dec718ef, type: 2}
+      - {fileID: 11400000, guid: 945d9ea8239405747959433d9262acc1, type: 2}
       SpawnSpeedSecondsThisWave: 1
       SpawnAmountThisWave: 2
+  _enemyFactory: {fileID: 0}

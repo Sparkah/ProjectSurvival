@@ -1,11 +1,14 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 using Random = System.Random;
 
 namespace _ProjectSurvival.Scripts.Enemies.EnemySpawner
 {
     public class EnemySpawnSystem : MonoBehaviour
     {
+        [Inject] private EnemyFactory _enemyFactory;
         [Header("Drag player from scene to transform point to spawn enemies around him")]
         [SerializeField] private Transform _spawnPoint;
         [SerializeField] private float _spawnDistance = 20;
@@ -18,7 +21,7 @@ namespace _ProjectSurvival.Scripts.Enemies.EnemySpawner
 
         private void Start()
         {
-            _spawn = gameObject.transform;
+            _enemyFactory.PreparePools(_waves[_currentWave].GetWaveEnemies(), _spawnPoint);
             SpawnEnemiesManager();
         }
 
@@ -50,6 +53,7 @@ namespace _ProjectSurvival.Scripts.Enemies.EnemySpawner
         {
             _currentWave += 1;
             SpawnEnemiesManager();
+            _enemyFactory.PreparePools( _waves[_currentWave].GetWaveEnemies(), _spawnPoint);
         }
 
         private void SpawnEnemiesManager()
@@ -100,19 +104,18 @@ namespace _ProjectSurvival.Scripts.Enemies.EnemySpawner
         private void SpawnEnemies(int enemyBatch, int currentWave)
         {
             var random = new Vector2(Mathf.Sin(_rand.Next(0, 360)),  Mathf.Cos(_rand.Next(0, 360)));
-            var position =
+            var spawnPosition =
                 new Vector2(_spawnPoint.position.x, _spawnPoint.position.y);
             var dir = random.normalized;
-            _spawn.transform.position = position + (dir * _spawnDistance);
+            spawnPosition += (dir * _spawnDistance);
 
-            var enemy = Instantiate(
-                _waves[currentWave].Batches[enemyBatch].EnemiesToSpawnThisWave[
-                    _rand.Next(0, _waves[currentWave].Batches[enemyBatch].EnemiesToSpawnThisWave.Length)],
-                new Vector2(_spawn.transform.position.x,_spawn.transform.position.y), Quaternion.identity);
+            EnemyTypeSO selectedEnemy = _waves[currentWave].Batches[enemyBatch].EnemiesToSpawnThisWave[
+                    _rand.Next(0, _waves[currentWave].Batches[enemyBatch].EnemiesToSpawnThisWave.Length)];
+            _enemyFactory.SpawnEnemy(selectedEnemy, spawnPosition);
 
-            var enemyMover = enemy.GetComponent<EnemyMover>();
-            enemyMover.Construct(_spawnPoint);
-            if (enemy.GetComponent<EnemyMover>() == null) return;
+            //var enemyMover = enemy.GetComponent<EnemyMover>();
+            //enemyMover.Construct(_spawnPoint);
+            //if (enemy.GetComponent<EnemyMover>() == null) return;
             //var enemyToConstruct = enemy.GetComponentInChildren<Enemy>();
             //enemyToConstruct.ConstructDetectRadius(99999);
         }

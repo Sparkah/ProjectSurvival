@@ -17,8 +17,15 @@ public class DamageDealer : MonoBehaviour
         bool isTarget = _targetLayer.Contains(touchedObject.layer);
 
         if (isTarget && touchedObject.TryGetComponent(out IDamagable damagedObject))
-            OnDamagableTouched?.Invoke(damagedObject);
+        {
+            if (!damagedObject.IsDefeated && gameObject.activeInHierarchy)
+            {
+                OnDamagableTouched?.Invoke(damagedObject);
+            }
+        }
         else
+        {
             OnNotDamagableTouched?.Invoke();
+        }
     }
 }

@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42dcdd4ca0882d942af94df6c1ec9811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initHealth: 5
   _damagableObject: {fileID: 2003025251597223358}
+  _enemyMover: {fileID: 461090571523312540}
 --- !u!114 &2003025251597223358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb20598b1caa49cd9e0f3afd9782338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
 --- !u!1 &7606497836860024854
 GameObject:
   m_ObjectHideFlags: 0

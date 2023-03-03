@@ -1,23 +1,39 @@
 using UnityEngine;
+using UnityEngine.Pool;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IPoolableObject<Enemy>
 {
-    [SerializeField] private float _initHealth = 100; //Temp definition before SO
     [SerializeField] private DamagableObject _damagableObject;
+    [SerializeField] private EnemyMover _enemyMover;
+    private IObjectPool<Enemy> _pool;
 
-    private void Start() //Temp initialization before pool initing
+    public void Init(IObjectPool<Enemy> pool)
     {
-        _damagableObject.OnDefeat += Defeat;
-        _damagableObject.SetupHealth(_initHealth);
+        _pool = pool;
+        _damagableObject.OnDefeat += ReturnToPool;
     }
 
-    private void OnDestroy()
+    public void Destroy()
     {
-        _damagableObject.OnDefeat -= Defeat;
+        _damagableObject.OnDefeat -= ReturnToPool;
     }
 
-    private void Defeat()
+    public void ReturnToPool()
     {
-        Destroy(gameObject); //Temp code before pooling
+        Debug.Log(name + " defeated - return to pool");
+        _pool.Release(this);
+    }
+
+    public void DefineType(EnemyTypeSO enemyType)
+    {
+        _damagableObject.SetupHealth(enemyType.BaseHealth);
+        _enemyMover.SetupSpeed(enemyType.BaseSpeed);
+    }
+
+    public void Restore(Vector3 appearPoint, Transform target)
+    {
+        transform.position = appearPoint;
+        _damagableObject.RestoreDurability();
+        _enemyMover.Construct(target);
     }
 }

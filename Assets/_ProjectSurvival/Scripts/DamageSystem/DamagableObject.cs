@@ -5,9 +5,11 @@ public class DamagableObject : MonoBehaviour, IDamagable
 {
     private float _maxHealth;
     private float _health;
+    private bool _isDefeated;
 
     public float MaximumDurability => _maxHealth;
     public float CurrentDurability => _health;
+    public bool IsDefeated => _isDefeated;
 
     public event UnityAction OnDamaged;
     public event UnityAction OnRestored;
@@ -22,6 +24,7 @@ public class DamagableObject : MonoBehaviour, IDamagable
     public void RestoreDurability()
     {
         _health = _maxHealth;
+        _isDefeated = false;
         OnRestored?.Invoke();
     }
 
@@ -30,6 +33,9 @@ public class DamagableObject : MonoBehaviour, IDamagable
         _health -= damageAmount;
         OnDamaged?.Invoke();
         if (_health <= 0)
+        {
+            _isDefeated = true;
             OnDefeat?.Invoke();
+        }
     }
 }

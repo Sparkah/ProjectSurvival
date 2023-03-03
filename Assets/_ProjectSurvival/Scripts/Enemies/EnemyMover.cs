@@ -7,7 +7,7 @@ public class EnemyMover : MonoBehaviour
     private Transform _player;
     private Rigidbody2D _rigidbody;
 
-    [SerializeField] private float _speed;
+    private float _speed;
     
     public void Construct(Transform player)
     {
@@ -28,5 +28,10 @@ public class EnemyMover : MonoBehaviour
     private void FixedUpdate()
     {
         _rigidbody.AddForce(transform.forward*_speed);
+    }
+
+    public void SetupSpeed(float speed)
+    {
+        _speed = speed;
     }
 }

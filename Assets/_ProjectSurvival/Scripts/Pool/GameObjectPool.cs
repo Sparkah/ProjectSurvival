@@ -46,6 +46,7 @@ public class GameObjectPool<T> : MonoBehaviour where T : Component
     {
         T spawned = _diContainer.InstantiatePrefabForComponent<T>(_prefab, transform);
         ((IPoolableObject<T>)spawned).Init(Pool);
+        spawned.name += Random.Range(0, 1000);
         return spawned;
     }
 
