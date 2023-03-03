@@ -110,7 +110,9 @@ namespace _ProjectSurvival.Scripts.Enemies.EnemySpawner
                     _rand.Next(0, _waves[currentWave].Batches[enemyBatch].EnemiesToSpawnThisWave.Length)],
                 new Vector2(_spawn.transform.position.x,_spawn.transform.position.y), Quaternion.identity);
 
-            //if (enemy.GetComponentInChildren<Enemy>() == null) return;
+            var enemyMover = enemy.GetComponent<EnemyMover>();
+            enemyMover.Construct(_spawnPoint);
+            if (enemy.GetComponent<EnemyMover>() == null) return;
             //var enemyToConstruct = enemy.GetComponentInChildren<Enemy>();
             //enemyToConstruct.ConstructDetectRadius(99999);
         }
