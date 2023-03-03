@@ -7,7 +7,7 @@ public class ForwardProjectlie : WeaponProjectile
 
     private void FixedUpdate()
     {
-        transform.position += transform.up * _speed * Time.fixedDeltaTime;
+        transform.position += transform.forward * _speed * Time.fixedDeltaTime;
     }
 
     public override void PrepareForLaunch(ProjectileSettings projectileSettings)
@@ -26,7 +26,7 @@ public class ForwardProjectlie : WeaponProjectile
 
     protected virtual Quaternion CalculateRotation(Vector3 forwardDirection)
     {
-         return Quaternion.identity;
+         return Quaternion.LookRotation(forwardDirection);
     }
 
     protected override float CalculateDamage()

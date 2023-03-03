@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Player;
 using UnityEngine;
 using Zenject;
 
@@ -5,6 +6,7 @@ public class PlayerAttack : MonoBehaviour
 {
     [Inject] private ActiveWeapons _activeWeapons;
     [SerializeField] private Transform _firePoint;
+    [SerializeField] private PlayerMover _playerMover; //Bad dependency, find better solution
 
     public void StartFire()
     {
@@ -25,7 +27,7 @@ public class PlayerAttack : MonoBehaviour
         {
             attackProjectile = activeWeapon.GetProjectile();
             attackProjectile.PrepareForLaunch(activeWeapon.WeaponType.GetProjectileSettings(attackLevel));
-            attackProjectile.Launch(_firePoint.position, transform.up);
+            attackProjectile.Launch(_firePoint.position, _playerMover.MovementDirection);
         }
     }
 }

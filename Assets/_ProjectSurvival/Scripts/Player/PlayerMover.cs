@@ -12,6 +12,9 @@ namespace _ProjectSurvival.Scripts.Player
         private Rigidbody2D _agent;
         private Animator _animator;
         private const int _speedIncreaseConstant = 10000;
+        private Vector2 _movementDirection;
+
+        public Vector2 MovementDirection => _movementDirection;
 
         void Start()
         {
@@ -23,6 +26,8 @@ namespace _ProjectSurvival.Scripts.Player
             var input = GetInput();
             Move(input);
             Rotate(input);
+            if (input.magnitude != 0)
+                _movementDirection = input;
         }
     
         private Vector2 GetInput()
