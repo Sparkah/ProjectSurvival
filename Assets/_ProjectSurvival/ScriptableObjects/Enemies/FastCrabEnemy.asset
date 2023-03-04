@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FastCrabEnemy
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 8123472272529497478, guid: 62c3f645ff2bb437fab42b7fd131d230, type: 3}
+  _appearanceSprite: {fileID: 21300000, guid: 2270b0fcaec844a808eed5a1e39dc14d, type: 3}
   _baseHealth: 1
   _baseSpeed: 5
   _baseDamage: 0

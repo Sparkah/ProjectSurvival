@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour, IPoolableObject<Enemy>
 {
     [SerializeField] private DamagableObject _damagableObject;
     [SerializeField] private EnemyMover _enemyMover;
+    [SerializeField] private ObjectAppearance _enemyAppearance;
     private IObjectPool<Enemy> _pool;
 
     public void Init(IObjectPool<Enemy> pool)
@@ -28,6 +29,7 @@ public class Enemy : MonoBehaviour, IPoolableObject<Enemy>
     {
         _damagableObject.SetupHealth(enemyType.BaseHealth);
         _enemyMover.SetupSpeed(enemyType.BaseSpeed);
+        _enemyAppearance.SetupSprite(enemyType.AppearanceSprite);
     }
 
     public void Restore(Vector3 appearPoint, Transform target)

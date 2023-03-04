@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyTypeSO : ScriptableObject
 {
     [SerializeField] private Enemy _enemyPrefab;
+    [SerializeField] private Sprite _appearanceSprite;
     [SerializeField] private float _baseHealth;
     [SerializeField] private float _baseSpeed;
     [SerializeField] private float _baseDamage;
@@ -15,4 +16,5 @@ public class EnemyTypeSO : ScriptableObject
     public float BaseSpeed => _baseSpeed;
     public float BaseDamage => _baseDamage;
     public float BaseExperience => _baseExperience;
+    public Sprite AppearanceSprite => _appearanceSprite;
 }
