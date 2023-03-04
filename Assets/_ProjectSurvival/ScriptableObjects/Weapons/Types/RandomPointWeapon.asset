@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RandomPointWeapon
   m_EditorClassIdentifier: 
   _title: "\u042D\u0432\u0440\u0438\u0441\u0442\u0438\u043A\u0430"
-  _projectilePrefab: {fileID: 5693121489685280538, guid: f22e1abbf471fef41a873016e9cdd33c, type: 3}
+  _projectilePrefab: {fileID: 5878013301034431319, guid: f22e1abbf471fef41a873016e9cdd33c, type: 3}
   _weaponLevels:
   - _appearFrequency: 2
     _appearAmount: 1

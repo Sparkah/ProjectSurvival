@@ -5,10 +5,18 @@ public abstract class WeaponProjectile : MonoBehaviour, IPoolableObject<WeaponPr
 {
     [SerializeField] private DamagableObject _projectileDurability;
     [SerializeField] private DamageDealer _damageDealer;
+    [SerializeField] private ProjectileAngle _projectileAngle;
     private IObjectPool<WeaponProjectile> _pool;
+    private float _speed;
+    private float _baseDamage;
+    private float _size;
 
-    public abstract void PrepareForLaunch(ProjectileSettings projectileSettings);
-    public abstract void Launch(Vector3 launchPosition, Vector3 forwardDirection);
+    public float Speed => _speed;
+    public float Size => _size;
+    public float BaseDamage => _baseDamage;
+
+    public abstract void CustomPrepareForLaunch(ProjectileSettings projectileSettings);
+    public abstract void CustomLaunch(Vector3 launchPosition, Vector3 forwardDirection);
     protected abstract float CalculateDamage();
     protected abstract void PrepareForReturningToPool();
 
@@ -25,6 +33,22 @@ public abstract class WeaponProjectile : MonoBehaviour, IPoolableObject<WeaponPr
         PrepareForReturningToPool();
         _projectileDurability.RestoreDurability();
         _pool.Release(this);
+    }
+
+    public void PrepareForLaunch(ProjectileSettings projectileSettings)
+    {
+        _baseDamage = projectileSettings.Damage;
+        _speed = projectileSettings.Speed;
+        _size = projectileSettings.Size;
+        SetDurability(projectileSettings.Durability);
+        CustomPrepareForLaunch(projectileSettings);
+    }
+
+    public void Launch(Vector3 launchPosition, Vector3 forwardDirection)
+    {
+        transform.position = launchPosition;
+        transform.rotation = _projectileAngle.CalculateAngle(forwardDirection);
+        CustomLaunch(launchPosition, forwardDirection);
     }
 
     public void Destroy()

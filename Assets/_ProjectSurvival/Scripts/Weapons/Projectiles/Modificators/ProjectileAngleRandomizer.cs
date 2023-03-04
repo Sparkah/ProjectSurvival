@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class AngledProjectile : ForwardProjectlie
+public class ProjectileAngleRandomizer : ProjectileAngle
 {
     [SerializeField] private float _directionAngle;
 
-    protected override Quaternion CalculateRotation(Vector3 forwardDirection)
+    public override Quaternion CalculateAngle(Vector3 forwardDirection)
     {
         float customAngle = Random.Range(-_directionAngle, _directionAngle);
         Quaternion forwardRotation = Quaternion.LookRotation(forwardDirection);
