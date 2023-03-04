@@ -3,9 +3,16 @@ using UnityEngine;
 
 public class ZoneProjectile : WeaponProjectile
 {
+    [Tooltip("Uncheck if appear size should not be default prefab size (1,1,1)")]
+    [SerializeField] private bool _hasDefaultInitSize = true;
+    [Tooltip("Check if after scaling to custom size, projectile should scale back to appear size")]
+    [SerializeField] private bool _isScalingBack;
     private float _speed;
     private float _baseDamage;
     private float _size;
+
+    protected float Speed => _speed;
+    protected float Size => _size;
 
     private void OnDestroy()
     {
@@ -17,7 +24,7 @@ public class ZoneProjectile : WeaponProjectile
         _baseDamage = projectileSettings.Damage;
         _speed = projectileSettings.Speed;
         _size = projectileSettings.Size;
-        transform.localScale = Vector3.one;
+        transform.localScale = _hasDefaultInitSize ? Vector3.one : new Vector3(_size, _size, _size);
         SetDurability(projectileSettings.Durability);
     }
 
@@ -26,10 +33,10 @@ public class ZoneProjectile : WeaponProjectile
         transform.position = launchPosition;
         transform.rotation = Quaternion.LookRotation(forwardDirection);
 
-        transform.DOScale(_size, _speed)
-            .SetEase(Ease.InSine)
-            .SetLoops(2, LoopType.Yoyo)
-            .OnComplete(ReturnToPool);
+        var scalingTweening = transform.DOScale(_size, _speed).SetEase(Ease.InSine);
+        if (_isScalingBack)
+            scalingTweening.SetLoops(2, LoopType.Yoyo);
+        scalingTweening.OnComplete(ReturnToPool);
     }
 
     protected override float CalculateDamage()

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &119182560098008099
+--- !u!1001 &368167139882531995
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -57,52 +57,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5030530398003907315, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_Name
-      value: ZoneProjectile
+      value: FirewallProjectile
       objectReference: {fileID: 0}
     - target: {fileID: 5641912257251231343, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_Color.a
-      value: 0.4627451
+      value: 0.47058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641912257251231343, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641912257251231343, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2630502
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641912257251231343, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641912257251231343, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
---- !u!114 &79845571793857395 stripped
+--- !u!114 &407363456766995403 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 53129466766497616, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
-  m_PrefabInstance: {fileID: 119182560098008099}
+  m_PrefabInstance: {fileID: 368167139882531995}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4933521139214579408}
+  m_GameObject: {fileID: 4669096667402253928}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf7fc97200a4d5b40b54efde7409568e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &4933521139214579408 stripped
+--- !u!1 &4669096667402253928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5030530398003907315, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
-  m_PrefabInstance: {fileID: 119182560098008099}
+  m_PrefabInstance: {fileID: 368167139882531995}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5834513481960770431
+--- !u!114 &2262055468180564842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4933521139214579408}
+  m_GameObject: {fileID: 4669096667402253928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e320be5ab54164187660f5244e7772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3614126506049027145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4669096667402253928}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2419970d667271841ab82f825a0fc2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectileDurability: {fileID: 79845571793857395}
-  _damageDealer: {fileID: 6202776115635368700}
+  _projectileDurability: {fileID: 407363456766995403}
+  _damageDealer: {fileID: 5956052269194703428}
   _hasDefaultInitSize: 1
-  _isScalingBack: 1
---- !u!114 &6202776115635368700 stripped
+  _isScalingBack: 0
+--- !u!114 &5956052269194703428 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
-  m_PrefabInstance: {fileID: 119182560098008099}
+  m_PrefabInstance: {fileID: 368167139882531995}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4933521139214579408}
+  m_GameObject: {fileID: 4669096667402253928}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a59744fd84819944fb9061d5b716dd81, type: 3}
