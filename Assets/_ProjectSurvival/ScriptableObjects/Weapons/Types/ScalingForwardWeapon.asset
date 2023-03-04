@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a7e0270169691b438adcd0f1f8e70db, type: 3}
-  m_Name: ZoneWeapon
+  m_Name: ScalingForwardWeapon
   m_EditorClassIdentifier: 
-  _title: "\u0411\u0440\u043E\u0441\u0430\u043D\u0438\u0435 \u043E\u0431\u043B\u0430\u0441\u0442\u0438
-    \u043F\u043E\u0434 \u0441\u0435\u0431\u044F"
-  _projectilePrefab: {fileID: 5834513481960770431, guid: aeda9db5d84e73e4995f9e6d5621b395, type: 3}
+  _title: "\u041F\u0440\u043E\u0433\u043D\u043E\u0437"
+  _projectilePrefab: {fileID: 4126832796780620866, guid: b8a929d6dfba17b45a28d28ffcadbd47, type: 3}
   _weaponLevels:
   - _appearFrequency: 3
     _appearAmount: 1
@@ -22,25 +21,25 @@ MonoBehaviour:
       _damage: 3
       _size: 5
       _speed: 10
-      _durability: 999
+      _durability: 1
   - _appearFrequency: 2.5
     _appearAmount: 1
     _projectileSetting:
       _damage: 5
       _size: 7
-      _speed: 15
-      _durability: 999
+      _speed: 12
+      _durability: 2
   - _appearFrequency: 2.25
     _appearAmount: 1
     _projectileSetting:
       _damage: 7
       _size: 8
-      _speed: 20
-      _durability: 999
+      _speed: 13
+      _durability: 3
   - _appearFrequency: 2
     _appearAmount: 1
     _projectileSetting:
       _damage: 10
       _size: 10
-      _speed: 30
-      _durability: 999
+      _speed: 15
+      _durability: 4

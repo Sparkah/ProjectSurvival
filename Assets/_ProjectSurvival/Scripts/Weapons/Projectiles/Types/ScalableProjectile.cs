@@ -20,7 +20,7 @@ public class ScalableProjectile : WeaponProjectile
 
     public override void CustomLaunch(Vector3 launchPosition, Vector3 forwardDirection)
     {
-        var scalingTweening = transform.DOScale(Size, Speed).SetEase(Ease.InSine);
+        var scalingTweening = transform.DOScale(Size, Speed * 0.05f).SetEase(Ease.InSine);
         if (_isScalingBack)
             scalingTweening.SetLoops(2, LoopType.Yoyo);
         scalingTweening.OnComplete(ReturnToPool);

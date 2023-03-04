@@ -20,26 +20,26 @@ MonoBehaviour:
     _projectileSetting:
       _damage: 3
       _size: 10
-      _speed: 1
+      _speed: 20
       _durability: 999
   - _appearFrequency: 2.5
     _appearAmount: 1
     _projectileSetting:
       _damage: 5
       _size: 12
-      _speed: 1
+      _speed: 20
       _durability: 999
   - _appearFrequency: 2.25
     _appearAmount: 1
     _projectileSetting:
       _damage: 7
       _size: 15
-      _speed: 1
+      _speed: 20
       _durability: 999
   - _appearFrequency: 2
     _appearAmount: 1
     _projectileSetting:
       _damage: 10
       _size: 17
-      _speed: 1
+      _speed: 20
       _durability: 999
