@@ -9,8 +9,8 @@ namespace _ProjectSurvival.Scripts.Enemies.EnemySpawner
     public class EnemySpawnSystem : MonoBehaviour
     {
         [Inject] private EnemyFactory _enemyFactory;
-        [Header("Drag player from scene to transform point to spawn enemies around him")]
-        [SerializeField] private Transform _spawnPoint;
+        //[Header("Drag player from scene to transform point to spawn enemies around him")]
+        [Inject(Id = "Player")] private Transform _spawnPoint;
         [SerializeField] private float _spawnDistance = 20;
         [SerializeField] private Wave[] _waves;
 
