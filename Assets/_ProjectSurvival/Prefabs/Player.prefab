@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _firePoint: {fileID: 7617777528118974446}
+  _playerMover: {fileID: 1761106399}
 --- !u!114 &1291759303958039748
 MonoBehaviour:
   m_ObjectHideFlags: 0
