@@ -24,7 +24,7 @@ public class ZoneProjectile : WeaponProjectile
     public override void Launch(Vector3 launchPosition, Vector3 forwardDirection)
     {
         transform.position = launchPosition;
-        transform.rotation = Quaternion.identity;
+        transform.rotation = Quaternion.LookRotation(forwardDirection);
 
         transform.DOScale(_size, _speed)
             .SetEase(Ease.InSine)
