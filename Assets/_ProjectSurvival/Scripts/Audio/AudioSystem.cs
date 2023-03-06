@@ -11,11 +11,6 @@ namespace _ProjectSurvival.Scripts.Audio
         [SerializeField] private AudioClip _menuSceneMusic;
         [SerializeField] private AudioClip _levelSceneMusic;
 
-        [Header("Sounds")] 
-        [SerializeField] private AudioClip _levelUp;
-        [SerializeField] private AudioClip _chooseWeaponA;
-        [SerializeField] private AudioClip _chooseWeaponB;
-        
         private AudioSource _audioSource;
         private World _world;
 
@@ -30,8 +25,11 @@ namespace _ProjectSurvival.Scripts.Audio
             if (scene.name.Equals(SceneNames.MenuScene))
                 _audioSource.clip = _menuSceneMusic;
             else
+            {
+                Debug.Log(_levelSceneMusic.name);
                 _audioSource.clip = _levelSceneMusic;
-        
+            }
+
             _audioSource.Play();
         }
 

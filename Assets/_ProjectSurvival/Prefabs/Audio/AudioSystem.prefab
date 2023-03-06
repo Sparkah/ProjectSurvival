@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740599322759243325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.712847, y: 6.312519, z: 30.167418}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -145,10 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _menuSceneMusic: {fileID: 0}
-  _levelSceneMusic: {fileID: 8300000, guid: 59aaff049c38b4d96a0cd495ccaff5c8, type: 3}
-  _levelUp: {fileID: 0}
-  _chooseWeaponA: {fileID: 0}
-  _chooseWeaponB: {fileID: 0}
+  _levelSceneMusic: {fileID: 8300000, guid: ea476f17d052d3b4c908bcc40c273b0c, type: 3}
 --- !u!1 &2965714128023367925
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +320,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSourceMain: {fileID: 7698896602412660651}
   _audioSourceSecondary: {fileID: 6725695602026794179}
+  _levelUp: {fileID: 0}
+  _shootWeaponA: {fileID: 0}
+  _enemyDeath: {fileID: 0}
+  _bigDrops: {fileID: 0}
+  _enter: {fileID: 0}
+  _hit: {fileID: 0}
+  _hoover: {fileID: 0}
+  _low: {fileID: 0}
+  _round: {fileID: 0}
 --- !u!1 &5313252633059848830
 GameObject:
   m_ObjectHideFlags: 0
