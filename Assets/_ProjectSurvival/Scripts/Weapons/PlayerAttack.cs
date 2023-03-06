@@ -1,4 +1,5 @@
 using _ProjectSurvival.Scripts.Player;
+using _ProjectSurvival.Scripts.Weapons.ActiveWeapons;
 using UnityEngine;
 using Zenject;
 

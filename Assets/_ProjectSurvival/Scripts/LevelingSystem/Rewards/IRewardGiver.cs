@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
-using UnityEngine;
-
-public interface IRewardGiver 
+namespace _ProjectSurvival.Scripts.LevelingSystem.Rewards
 {
-    public void GiveReward(IReward reward);
+    public interface IRewardGiver 
+    {
+        public void GiveReward(IReward reward);
+    }
 }

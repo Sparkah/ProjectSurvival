@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
 using _ProjectSurvival.Scripts.LevelingSystem.UI;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class LevelUpRewardButton : MonoBehaviour
     [SerializeField] private Button _button;
     [SerializeField] private Text _attackLabel;
     private LevelUpWindow _levelUpWindow;
-    private IRewardGiver _rewardGiver;
+    private List <IRewardGiver> _rewardGiver = new List<IRewardGiver>();
     private IReward _reward;
     private RewardType _rewardType;
 
@@ -18,7 +19,7 @@ public class LevelUpRewardButton : MonoBehaviour
         _button.onClick.RemoveListener(OnCick);
     }
 
-    public void Init(LevelUpWindow levelUpWindow, IRewardGiver rewardGiver = null)
+    public void Init(LevelUpWindow levelUpWindow, List <IRewardGiver> rewardGiver = null)
     {
         _levelUpWindow = levelUpWindow;
         _rewardGiver = rewardGiver;
@@ -41,7 +42,11 @@ public class LevelUpRewardButton : MonoBehaviour
     private void OnCick()
     {
         if (_reward != null && _rewardGiver != null)
-            _rewardGiver.GiveReward(_reward);
+            foreach (var rewardGiver in _rewardGiver)
+            {
+                rewardGiver.GiveReward(_reward);
+            }
+           // _rewardGiver.GiveReward(_reward);
         _levelUpWindow.CloseLevelUpWindow();
     }
 }

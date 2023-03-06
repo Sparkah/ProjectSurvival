@@ -1,4 +1,7 @@
+using System.Collections.Generic;
+using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
 using _ProjectSurvival.Scripts.Stats;
+using _ProjectSurvival.Scripts.Weapons.ActiveWeapons;
 using UnityEngine;
 using Zenject;
 
@@ -9,6 +12,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
         [Inject] private WeaponTypeSelector _attackTypeSelector;
         [Inject] private ActiveWeapons _activeWeapons;
         [Inject] private StatsTypeSelector _statsTypeSelector;
+        [Inject] private ActiveStats _activeStats;
         [SerializeField] private Window _window;
         [SerializeField] private PauseControllerSO _pauseControllerSO;
         [Header("Upgrades window")]
@@ -26,9 +30,17 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
         private void Awake()
         {
             _levelable.OnLevelUp += ShowLevelUpWindow;
+            List<IRewardGiver> _rewards = new List<IRewardGiver>();
+            if (_includeStatsUpgrades)
+            {
+                _rewards.Add(_activeStats);
+            }
+
+            _rewards.Add(_activeWeapons);
+            
             for (int i = 0; i < _levelUpButtons.Length; i++)
             {
-                _levelUpButtons[i].Init(this, _activeWeapons);
+                _levelUpButtons[i].Init(this, _rewards);
             }
             _upgradedCloseButton.Init(this);
         }
@@ -55,11 +67,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
             if (_includeStatsUpgrades) 
             {
                 StatsTypeSO[] statsUpgrades = _statsTypeSelector.SelectStats(_levelUpButtons.Length);
-                foreach (var statsUpgrade in statsUpgrades)
-                {
-                    Debug.Log(statsUpgrade.Title);
-                }
-                
+
                 ShowAllUpgrades(selectedUpgrades, statsUpgrades);
                 _window.Open();
                 return;

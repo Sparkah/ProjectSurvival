@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _ProjectSurvival.Scripts.Weapons.ActiveWeapons;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "AvailableWeapons", menuName = "Survivors prototype/Available weapons", order = 1)]
