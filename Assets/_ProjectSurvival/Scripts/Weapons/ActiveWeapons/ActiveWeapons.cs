@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
 using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
@@ -22,7 +23,8 @@ public class ActiveWeapons : MonoBehaviour, IRewardGiver
 
     public void GiveReward(IReward reward)
     {
-        AddWeapon((WeaponTypeSO)reward);
+        if(reward.GetRewardType()==RewardType.Weapon)
+            AddWeapon((WeaponTypeSO)reward);
     }
 
     public void AddWeapon(WeaponTypeSO weaponType)

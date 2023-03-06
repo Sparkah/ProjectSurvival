@@ -5723,6 +5723,10 @@ PrefabInstance:
       propertyPath: _levelableObject
       value: 
       objectReference: {fileID: 1761106403}
+    - target: {fileID: 7747693291816837324, guid: 070bb5ce458724b88a430a8edb61a486, type: 3}
+      propertyPath: _includeStatsUpgrades
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8895057310037396811, guid: 070bb5ce458724b88a430a8edb61a486, type: 3}
       propertyPath: m_Enabled
       value: 1

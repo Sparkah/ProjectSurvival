@@ -1,8 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public interface IReward
+namespace _ProjectSurvival.Scripts.LevelingSystem.Rewards
 {
-    public string Title { get; }
+    public interface IReward
+    {
+        public string Title { get; }
+        public RewardType GetRewardType();
+    }
 }

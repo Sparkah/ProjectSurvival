@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New weapon type", menuName = "Survivors prototype/Weapon type", order = 1)]
@@ -8,6 +9,11 @@ public class WeaponTypeSO : ScriptableObject, IReward
     [SerializeField] private WeaponLevel[] _weaponLevels;
 
     public string Title => _title;
+    public RewardType GetRewardType()
+    {
+        return RewardType.Weapon;
+    }
+
     public WeaponProjectile ProjectilePrefab => _projectilePrefab;
     public int MaximumLevel => _weaponLevels.Length;
 

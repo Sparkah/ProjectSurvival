@@ -1,3 +1,5 @@
+using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
+using _ProjectSurvival.Scripts.LevelingSystem.UI;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -6,16 +8,17 @@ public class LevelUpRewardButton : MonoBehaviour
 {
     [SerializeField] private Button _button;
     [SerializeField] private Text _attackLabel;
-    private LevelUpWeaponsWindow _levelUpWindow;
+    private LevelUpWindow _levelUpWindow;
     private IRewardGiver _rewardGiver;
     private IReward _reward;
+    private RewardType _rewardType;
 
     private void OnDestroy()
     {
         _button.onClick.RemoveListener(OnCick);
     }
 
-    public void Init(LevelUpWeaponsWindow levelUpWindow, IRewardGiver rewardGiver = null)
+    public void Init(LevelUpWindow levelUpWindow, IRewardGiver rewardGiver = null)
     {
         _levelUpWindow = levelUpWindow;
         _rewardGiver = rewardGiver;
@@ -30,6 +33,7 @@ public class LevelUpRewardButton : MonoBehaviour
     public void ShowReward(IReward reward)
     {
         _reward = reward;
+        _rewardType = _reward.GetRewardType();
         _attackLabel.text = _reward.Title;
         gameObject.SetActive(true);
     }
