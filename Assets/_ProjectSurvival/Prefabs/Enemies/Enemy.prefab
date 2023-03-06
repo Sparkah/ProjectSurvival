@@ -53,6 +53,7 @@ MonoBehaviour:
   _damagableObject: {fileID: 2003025251597223358}
   _enemyMover: {fileID: 461090571523312540}
   _enemyAppearance: {fileID: 6661120161075554999}
+  _xpDropOnDeath: 10
 --- !u!114 &2003025251597223358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +154,7 @@ Transform:
   m_GameObject: {fileID: 7606497836860024854}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2154923407692376612}

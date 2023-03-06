@@ -35,7 +35,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         {
             _damagableObject.SetupHealth(enemyType.BaseHealth);
             _enemyMover.SetupSpeed(enemyType.BaseSpeed);
-            _enemyAppearance.SetupSprite(enemyType.AppearanceSprite);
+            _enemyAppearance.SetupSprite(enemyType.AppearanceSpriteFront);
         }
 
         public void Restore(Vector3 appearPoint, Transform target)
