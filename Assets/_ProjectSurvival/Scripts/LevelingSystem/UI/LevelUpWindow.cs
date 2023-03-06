@@ -26,6 +26,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
         [SerializeField] private bool _includeStatsUpgrades = false;
     
         private ILevelable _levelable => _levelableObject as ILevelable;
+        private bool _firstTimeLevelUp = true;
 
         private void Awake()
         {
@@ -64,7 +65,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
 
             WeaponTypeSO[] selectedUpgrades = _attackTypeSelector.SelectWeapons(_levelUpButtons.Length);
         
-            if (_includeStatsUpgrades) 
+            if (_includeStatsUpgrades && !_firstTimeLevelUp) 
             {
                 StatsTypeSO[] statsUpgrades = _statsTypeSelector.SelectStats(_levelUpButtons.Length);
 
@@ -78,6 +79,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
             else
                 ShowUpgradedMessage();
 
+            _firstTimeLevelUp = false;
             _window.Open();
         }
 
