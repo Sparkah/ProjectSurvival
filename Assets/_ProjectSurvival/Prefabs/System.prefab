@@ -249,6 +249,7 @@ MonoBehaviour:
   - {fileID: 9210531385874249977}
   - {fileID: 750848174}
   - {fileID: 2034113108}
+  - {fileID: 810115377}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -588,6 +589,42 @@ PrefabInstance:
       propertyPath: _enemyFactory
       value: 
       objectReference: {fileID: 5417133414054828787}
+    - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
+      propertyPath: _waves.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
+      propertyPath: _waves.Array.data[2].Batches.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
+      propertyPath: _waves.Array.data[2].TimerSecondsThisWave
+      value: 9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
+      propertyPath: _waves.Array.data[2].Batches.Array.data[0].SpawnAmountThisWave
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
+      propertyPath: _waves.Array.data[2].Batches.Array.data[0].SpawnSpeedSecondsThisWave
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
+      propertyPath: _waves.Array.data[2].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
+      propertyPath: _waves.Array.data[2].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9440a4719e806a9489961a22dec718ef, type: 2}
+    - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
+      propertyPath: _waves.Array.data[2].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 945d9ea8239405747959433d9262acc1, type: 2}
+    - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
+      propertyPath: _waves.Array.data[2].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 945d9ea8239405747959433d9262acc1, type: 2}
     - target: {fileID: 9159611575924156758, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: m_RootOrder
       value: 2
