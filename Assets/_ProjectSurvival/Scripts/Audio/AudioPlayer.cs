@@ -119,7 +119,7 @@ namespace _ProjectSurvival.Scripts.Audio
          AudioSounds.Hit => _hit,//попадаешь по мобу пулей
          AudioSounds.Hoover => _hoover,//наводишь мышку на лвл ап
          AudioSounds.Low => _low,//маленькие пульки
-         AudioSounds.Round => _round,
+         AudioSounds.Round => _round,//выстрел нескольких пуль по кругу
                 _ => null
             };
         }
