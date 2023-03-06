@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _ProjectSurvival.Scripts.Enemies;
 using UnityEngine;
 using Zenject;
 
