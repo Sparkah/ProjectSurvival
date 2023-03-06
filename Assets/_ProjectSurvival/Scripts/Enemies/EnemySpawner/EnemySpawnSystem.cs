@@ -112,6 +112,7 @@ namespace _ProjectSurvival.Scripts.Enemies.EnemySpawner
             EnemyTypeSO selectedEnemy = _waves[currentWave].Batches[enemyBatch].EnemiesToSpawnThisWave[
                     _rand.Next(0, _waves[currentWave].Batches[enemyBatch].EnemiesToSpawnThisWave.Length)];
             _enemyFactory.SpawnEnemy(selectedEnemy, spawnPosition);
+            
 
             //var enemyMover = enemy.GetComponent<EnemyMover>();
             //enemyMover.Construct(_spawnPoint);

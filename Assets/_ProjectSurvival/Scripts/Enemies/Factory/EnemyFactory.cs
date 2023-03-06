@@ -6,6 +6,7 @@ using Zenject;
 public class EnemyFactory : MonoBehaviour
 {
     [Inject] DiContainer _diContainer;
+    [Inject(Id = "Player")] private Transform _player;
     [SerializeField] private EnemiesPool _enemiesPoolPrefab;
     private Transform _chasingTarget;
     private Dictionary<EnemyTypeSO, EnemiesPool> _enemiesPools = new Dictionary<EnemyTypeSO, EnemiesPool>();
@@ -42,6 +43,7 @@ public class EnemyFactory : MonoBehaviour
             Enemy enemy = _enemiesPools[enemyType].Pool.Get();
             enemy.DefineType(enemyType);
             enemy.Restore(spawnPosition, _chasingTarget.transform);
+            enemy.SetPlayer(_player);
         }
     }
 

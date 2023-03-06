@@ -19,7 +19,6 @@ namespace _ProjectSurvival.Scripts.Stats
                 selectedstats[i] = availableWeapons[selectedIndexes[i]];
 
             return selectedstats;
-            return null;
         }
     }
 }
