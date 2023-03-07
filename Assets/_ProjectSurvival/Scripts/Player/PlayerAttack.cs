@@ -1,9 +1,11 @@
 using _ProjectSurvival.Scripts.Audio;
 using _ProjectSurvival.Scripts.Weapons.ActiveWeapons;
+using _ProjectSurvival.Scripts.Weapons.Projectiles;
 using UnityEngine;
 using Zenject;
 
-namespace _ProjectSurvival.Scripts.Player {
+namespace _ProjectSurvival.Scripts.Player
+{
 
     public class PlayerAttack : MonoBehaviour
     {

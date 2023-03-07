@@ -1,12 +1,15 @@
 using UnityEngine;
 using Zenject;
 
-public class PlayerFollower : MonoBehaviour
+namespace _ProjectSurvival.Scripts.Weapons.Projectiles
 {
-    [Inject(Id = "Player")] private Transform _playerTransform;
-
-    private void FixedUpdate()
+    public class PlayerFollower : MonoBehaviour
     {
-        transform.position = _playerTransform.position;
+        [Inject(Id = "Player")] private Transform _playerTransform;
+
+        private void FixedUpdate()
+        {
+            transform.position = _playerTransform.position;
+        }
     }
 }

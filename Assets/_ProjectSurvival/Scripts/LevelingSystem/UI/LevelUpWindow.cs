@@ -1,14 +1,14 @@
-using System.Collections.Generic;
-using _ProjectSurvival.Scripts.Audio;
 using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
 using _ProjectSurvival.Scripts.Stats;
 using _ProjectSurvival.Scripts.Weapons.ActiveWeapons;
+using _ProjectSurvival.Scripts.Weapons.WeaponTypes;
+using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
 namespace _ProjectSurvival.Scripts.LevelingSystem.UI
 {
-    public class LevelUpWindow : MonoBehaviour 
+    public class LevelUpWindow : MonoBehaviour
     {
         [Inject] private WeaponTypeSelector _attackTypeSelector;
         [Inject] private ActiveWeapons _activeWeapons;
@@ -25,7 +25,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
         [Header("Tracking object")]
         [SerializeField] private Behaviour _levelableObject;
         [SerializeField] private bool _includeStatsUpgrades = false;
-    
+
         private ILevelable _levelable => _levelableObject as ILevelable;
         private bool _firstTimeLevelUp = true;
 
@@ -39,7 +39,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
             }
 
             _rewards.Add(_activeWeapons);
-            
+
             for (int i = 0; i < _levelUpButtons.Length; i++)
             {
                 _levelUpButtons[i].Init(this, _rewards);
@@ -65,8 +65,8 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
             _fullyUpgradedPanel.SetActive(false);
 
             WeaponTypeSO[] selectedUpgrades = _attackTypeSelector.SelectWeapons(_levelUpButtons.Length);
-        
-            if (_includeStatsUpgrades && !_firstTimeLevelUp) 
+
+            if (_includeStatsUpgrades && !_firstTimeLevelUp)
             {
                 StatsTypeSO[] statsUpgrades = _statsTypeSelector.SelectStats(_levelUpButtons.Length);
 
@@ -74,7 +74,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
                 _window.Open();
                 return;
             }
-        
+
             if (selectedUpgrades.Length != 0)
                 ShowUpgrades(selectedUpgrades);
             else
