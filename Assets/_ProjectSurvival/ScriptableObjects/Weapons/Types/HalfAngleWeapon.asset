@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: HalfAngleWeapon
   m_EditorClassIdentifier: 
   _title: "\u041A\u043E\u043D\u0443\u0441 \u043F\u0435\u0440\u0435\u0434 \u0441\u043E\u0431\u043E\u0439"
+  _shootSound: 9
   _projectilePrefab: {fileID: 1604206291989398089, guid: 4ce3101adcf1e5f419a179d401fbe0e3, type: 3}
   _weaponLevels:
   - _appearFrequency: 2

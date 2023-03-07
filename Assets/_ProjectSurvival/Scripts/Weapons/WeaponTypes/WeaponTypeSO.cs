@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Audio;
 using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ using UnityEngine;
 public class WeaponTypeSO : ScriptableObject, IReward
 {
     [SerializeField] private string _title;
+    [SerializeField] private AudioSounds _shootSound;
     [SerializeField] private WeaponProjectile _projectilePrefab;
     [SerializeField] private WeaponLevel[] _weaponLevels;
 
@@ -16,6 +18,7 @@ public class WeaponTypeSO : ScriptableObject, IReward
 
     public WeaponProjectile ProjectilePrefab => _projectilePrefab;
     public int MaximumLevel => _weaponLevels.Length;
+    public AudioSounds ShootSound => _shootSound;
 
     public float GetAppearFrequency(int level)
     {
