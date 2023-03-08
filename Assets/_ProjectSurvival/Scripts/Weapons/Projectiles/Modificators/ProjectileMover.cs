@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class ProjectileMover : MonoBehaviour
+namespace _ProjectSurvival.Scripts.Weapons.Projectiles
 {
-    [SerializeField] private WeaponProjectile _weaponProjectile;
-
-    private void FixedUpdate()
+    public class ProjectileMover : MonoBehaviour
     {
-        transform.position += transform.forward * _weaponProjectile.Speed * Time.fixedDeltaTime;
+        [SerializeField] private WeaponProjectile _weaponProjectile;
+
+        private void FixedUpdate()
+        {
+            transform.position += transform.forward * _weaponProjectile.Speed * Time.fixedDeltaTime;
+        }
     }
 }

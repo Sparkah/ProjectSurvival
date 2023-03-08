@@ -10,7 +10,7 @@ public class DamageDealer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.attachedRigidbody)
+        if (!gameObject.activeInHierarchy || !other.attachedRigidbody)
             return;
 
         GameObject touchedObject = other.attachedRigidbody.gameObject;
@@ -18,7 +18,7 @@ public class DamageDealer : MonoBehaviour
 
         if (isTarget && touchedObject.TryGetComponent(out IDamagable damagedObject))
         {
-            if (!damagedObject.IsDefeated && gameObject.activeInHierarchy)
+            if (!damagedObject.IsDefeated)
             {
                 OnDamagableTouched?.Invoke(damagedObject);
             }

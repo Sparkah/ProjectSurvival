@@ -1,11 +1,14 @@
 using UnityEngine;
 using Zenject;
 
-public class WeaponTypeSelectorInstaller : MonoInstaller
+namespace _ProjectSurvival.Scripts.Weapons.WeaponTypes
 {
-    [SerializeField] private WeaponTypeSelector _weaponTypeSelector;
-    public override void InstallBindings()
+    public class WeaponTypeSelectorInstaller : MonoInstaller
     {
-        Container.Bind<WeaponTypeSelector>().FromInstance(_weaponTypeSelector).AsSingle();
+        [SerializeField] private WeaponTypeSelector _weaponTypeSelector;
+        public override void InstallBindings()
+        {
+            Container.Bind<WeaponTypeSelector>().FromInstance(_weaponTypeSelector).AsSingle();
+        }
     }
 }

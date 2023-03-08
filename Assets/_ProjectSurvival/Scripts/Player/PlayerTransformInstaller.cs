@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Player;
 using UnityEngine;
 using Zenject;
 

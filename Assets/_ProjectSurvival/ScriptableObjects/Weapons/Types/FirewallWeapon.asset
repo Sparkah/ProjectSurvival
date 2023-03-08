@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FirewallWeapon
   m_EditorClassIdentifier: 
   _title: "\u0411\u0440\u0430\u043D\u0434\u043C\u0430\u0443\u044D\u0440"
+  _shootSound: 4
   _projectilePrefab: {fileID: 3614126506049027145, guid: f7f0c999ed5bf7a41931b480dbd3c268, type: 3}
   _weaponLevels:
   - _appearFrequency: 3

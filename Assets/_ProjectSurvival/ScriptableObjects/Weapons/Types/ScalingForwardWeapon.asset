@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ScalingForwardWeapon
   m_EditorClassIdentifier: 
   _title: "\u041F\u0440\u043E\u0433\u043D\u043E\u0437"
+  _shootSound: 4
   _projectilePrefab: {fileID: 4126832796780620866, guid: b8a929d6dfba17b45a28d28ffcadbd47, type: 3}
   _weaponLevels:
   - _appearFrequency: 3

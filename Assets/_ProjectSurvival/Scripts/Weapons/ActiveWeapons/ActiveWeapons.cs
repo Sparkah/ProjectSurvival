@@ -1,5 +1,7 @@
-using System.Collections.Generic;
 using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
+using _ProjectSurvival.Scripts.Weapons.Projectiles;
+using _ProjectSurvival.Scripts.Weapons.WeaponTypes;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
@@ -25,7 +27,7 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
 
         public void GiveReward(IReward reward)
         {
-            if(reward.GetRewardType()==RewardType.Weapon)
+            if (reward.GetRewardType() == RewardType.Weapon)
                 AddWeapon((WeaponTypeSO)reward);
         }
 

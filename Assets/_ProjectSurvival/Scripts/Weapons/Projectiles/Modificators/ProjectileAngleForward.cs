@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class ProjectileAngleForward : ProjectileAngle
+namespace _ProjectSurvival.Scripts.Weapons.Projectiles
 {
-    public override Quaternion CalculateAngle(Vector3 forwardDirection)
+    public class ProjectileAngleForward : ProjectileAngle
     {
-        return Quaternion.LookRotation(forwardDirection);
+        public override Quaternion CalculateAngle(Vector3 forwardDirection)
+        {
+            return Quaternion.LookRotation(forwardDirection);
+        }
     }
 }

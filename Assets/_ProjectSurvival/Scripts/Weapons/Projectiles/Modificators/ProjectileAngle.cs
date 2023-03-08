@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public abstract class ProjectileAngle : MonoBehaviour
+namespace _ProjectSurvival.Scripts.Weapons.Projectiles
 {
-    public abstract Quaternion CalculateAngle(Vector3 forwardDirection);
+    public abstract class ProjectileAngle : MonoBehaviour
+    {
+        public abstract Quaternion CalculateAngle(Vector3 forwardDirection);
+    }
 }
