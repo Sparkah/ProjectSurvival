@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5030530398003907315, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_Name
-      value: HalfAngleProjectile 1
+      value: FullAngleProjectile
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
@@ -84,7 +84,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5030530398003907315, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
   m_PrefabInstance: {fileID: 4145853385052589863}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5693121489685280538
+--- !u!114 &608574056813921058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960209488015181268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c17f226a5bf70940a717c5a6bc7ca88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponProjectile: {fileID: 5878013301034431319}
+--- !u!114 &1748789249979164596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,6 +109,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a8c3a07a429394a97914602f310182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _minDirectionAngle: -180
+  _maxDirectionAngle: 180
+--- !u!114 &5878013301034431319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960209488015181268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb272dce9b1a1544a534762fed4359a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _projectileDurability: {fileID: 4122420145229404279}
   _damageDealer: {fileID: 7942903178322772472}
-  _directionAngle: 180
+  _projectileAngle: {fileID: 1748789249979164596}

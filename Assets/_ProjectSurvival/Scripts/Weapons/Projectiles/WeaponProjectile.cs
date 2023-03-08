@@ -1,47 +1,74 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-public abstract class WeaponProjectile : MonoBehaviour, IPoolableObject<WeaponProjectile>
+namespace _ProjectSurvival.Scripts.Weapons.Projectiles
 {
-    [SerializeField] private DamagableObject _projectileDurability;
-    [SerializeField] private DamageDealer _damageDealer;
-    private IObjectPool<WeaponProjectile> _pool;
-
-    public abstract void PrepareForLaunch(ProjectileSettings projectileSettings);
-    public abstract void Launch(Vector3 launchPosition, Vector3 forwardDirection);
-    protected abstract float CalculateDamage();
-    protected abstract void PrepareForReturningToPool();
-
-    public void Init(IObjectPool<WeaponProjectile> pool)
+    public abstract class WeaponProjectile : MonoBehaviour, IPoolableObject<WeaponProjectile>
     {
-        _damageDealer.OnDamagableTouched += DoDamage;
-        _damageDealer.OnNotDamagableTouched += ReturnToPool;
-        _projectileDurability.OnDefeat += ReturnToPool;
-        _pool = pool;
-    }
+        [SerializeField] private DamagableObject _projectileDurability;
+        [SerializeField] private DamageDealer _damageDealer;
+        [SerializeField] private ProjectileAngle _projectileAngle;
+        private IObjectPool<WeaponProjectile> _pool;
+        private float _speed;
+        private float _baseDamage;
+        private float _size;
 
-    public void ReturnToPool()
-    {
-        PrepareForReturningToPool();
-        _projectileDurability.RestoreDurability();
-        _pool.Release(this);
-    }
+        public float Speed => _speed;
+        public float Size => _size;
+        public float BaseDamage => _baseDamage;
 
-    public void Destroy()
-    {
-        _damageDealer.OnDamagableTouched -= DoDamage;
-        _damageDealer.OnNotDamagableTouched -= ReturnToPool;
-        _projectileDurability.OnDefeat -= ReturnToPool;
-    }
+        public abstract void CustomPrepareForLaunch(ProjectileSettings projectileSettings);
+        public abstract void CustomLaunch(Vector3 launchPosition, Vector3 forwardDirection);
+        protected abstract float CalculateDamage();
+        protected abstract void PrepareForReturningToPool();
 
-    protected void SetDurability(int durability)
-    {
-        _projectileDurability.SetupHealth(durability);
-    }
+        public void Init(IObjectPool<WeaponProjectile> pool)
+        {
+            _damageDealer.OnDamagableTouched += DoDamage;
+            _damageDealer.OnNotDamagableTouched += ReturnToPool;
+            _projectileDurability.OnDefeat += ReturnToPool;
+            _pool = pool;
+        }
 
-    private void DoDamage(IDamagable damagable)
-    {
-        damagable.TakeDamage(CalculateDamage());
-        _projectileDurability.TakeDamage(1); //How many enemies can projectile hit (pass through) before destroy
+        public void ReturnToPool()
+        {
+            PrepareForReturningToPool();
+            _projectileDurability.RestoreDurability();
+            _pool.Release(this);
+        }
+
+        public void PrepareForLaunch(ProjectileSettings projectileSettings)
+        {
+            _baseDamage = projectileSettings.Damage;
+            _speed = projectileSettings.Speed;
+            _size = projectileSettings.Size;
+            SetDurability(projectileSettings.Durability);
+            CustomPrepareForLaunch(projectileSettings);
+        }
+
+        public void Launch(Vector3 launchPosition, Vector3 forwardDirection)
+        {
+            transform.position = launchPosition;
+            transform.rotation = _projectileAngle.CalculateAngle(forwardDirection);
+            CustomLaunch(launchPosition, forwardDirection);
+        }
+
+        public void Destroy()
+        {
+            _damageDealer.OnDamagableTouched -= DoDamage;
+            _damageDealer.OnNotDamagableTouched -= ReturnToPool;
+            _projectileDurability.OnDefeat -= ReturnToPool;
+        }
+
+        protected void SetDurability(int durability)
+        {
+            _projectileDurability.SetupHealth(durability);
+        }
+
+        private void DoDamage(IDamagable damagable)
+        {
+            damagable.TakeDamage(CalculateDamage());
+            _projectileDurability.TakeDamage(1); //How many enemies can projectile hit (pass through) before destroy
+        }
     }
 }

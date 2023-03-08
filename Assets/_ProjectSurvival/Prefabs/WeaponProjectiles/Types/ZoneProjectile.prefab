@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 39993472202071981, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 695566582781420574, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -91,6 +95,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectileDurability: {fileID: 79845571793857395}
   _damageDealer: {fileID: 6202776115635368700}
+  _projectileAngle: {fileID: 7279522835285442372}
+  _hasDefaultInitSize: 1
+  _isScalingBack: 1
+--- !u!114 &7279522835285442372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4933521139214579408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32397a4a1c7a2a04e86f373ff02a5e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6202776115635368700 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}

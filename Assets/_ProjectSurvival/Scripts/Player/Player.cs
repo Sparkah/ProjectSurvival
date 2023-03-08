@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+namespace _ProjectSurvival.Scripts.Player
 {
-    [SerializeField] private PlayerAttack _playerAttack;
-    [SerializeField] private LevelableObject _levelableObject;
-
-    private void Start()
+    public class Player : MonoBehaviour
     {
-        _levelableObject.Init();
-        _playerAttack.StartFire();
+        [SerializeField] private PlayerAttack _playerAttack;
+        [SerializeField] private LevelableObject _levelableObject;
+
+        private void Start()
+        {
+            _levelableObject.Init();
+            _playerAttack.StartFire();
+        }
     }
 }

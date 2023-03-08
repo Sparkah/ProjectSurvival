@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class LevelingBarUI : MonoBehaviour
 {
-    [SerializeField] private Slider _experienceSlider;
+    [SerializeField] private Image _experienceSlider;
     [SerializeField] private Text _levelLabel;
     [SerializeField] private Behaviour _levelableObject;
     private ILevelable _levelable => _levelableObject as ILevelable;
@@ -24,12 +24,12 @@ public class LevelingBarUI : MonoBehaviour
 
     private void SetupUI()
     {
-        _experienceSlider.maxValue = _levelable.RequiredExperience;
-        _levelLabel.text = _levelable.Level.ToString();
+        //_experienceSlider.maxValue = _levelable.RequiredExperience;
+        //_levelLabel.text = _levelable.Level.ToString();
     }
 
     private void UpdateUI()
     {
-        _experienceSlider.value = _levelable.CurrentExperience;
+        _experienceSlider.fillAmount = _levelable.CurrentExperience/_levelable.RequiredExperience;
     }
 }

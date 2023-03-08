@@ -9,8 +9,8 @@ namespace _ProjectSurvival.Scripts.Enemies.EnemySpawner
     public class EnemySpawnSystem : MonoBehaviour
     {
         [Inject] private EnemyFactory _enemyFactory;
-        [Header("Drag player from scene to transform point to spawn enemies around him")]
-        [SerializeField] private Transform _spawnPoint;
+        //[Header("Drag player from scene to transform point to spawn enemies around him")]
+        [Inject(Id = "Player")] private Transform _spawnPoint;
         [SerializeField] private float _spawnDistance = 20;
         [SerializeField] private Wave[] _waves;
 
@@ -112,6 +112,7 @@ namespace _ProjectSurvival.Scripts.Enemies.EnemySpawner
             EnemyTypeSO selectedEnemy = _waves[currentWave].Batches[enemyBatch].EnemiesToSpawnThisWave[
                     _rand.Next(0, _waves[currentWave].Batches[enemyBatch].EnemiesToSpawnThisWave.Length)];
             _enemyFactory.SpawnEnemy(selectedEnemy, spawnPosition);
+            
 
             //var enemyMover = enemy.GetComponent<EnemyMover>();
             //enemyMover.Construct(_spawnPoint);

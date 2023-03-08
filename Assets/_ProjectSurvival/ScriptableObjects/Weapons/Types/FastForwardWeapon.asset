@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FastForwardWeapon
   m_EditorClassIdentifier: 
   _title: "\u0411\u044B\u0441\u0442\u0440\u044B\u0439 \u043E\u0433\u043E\u043D\u044C"
+  _shootSound: 8
   _projectilePrefab: {fileID: 5102044091516270430, guid: bdfc937c2b37cd54ca292e1493e81adc, type: 3}
   _weaponLevels:
   - _appearFrequency: 0.3

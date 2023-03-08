@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SuperForwardWeapon
   m_EditorClassIdentifier: 
   _title: "\u041F\u0440\u043E\u0431\u0438\u0432\u043D\u043E\u0439 \u0441\u043D\u0430\u0440\u044F\u0434"
+  _shootSound: 4
   _projectilePrefab: {fileID: 5102044091516270430, guid: bdfc937c2b37cd54ca292e1493e81adc, type: 3}
   _weaponLevels:
   - _appearFrequency: 3

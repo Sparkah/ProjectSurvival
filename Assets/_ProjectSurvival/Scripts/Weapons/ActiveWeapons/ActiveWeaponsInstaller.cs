@@ -1,11 +1,14 @@
 using UnityEngine;
 using Zenject;
 
-public class ActiveWeaponsInstaller : MonoInstaller
+namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
 {
-    [SerializeField] private ActiveWeapons _activeWeapons;
-    public override void InstallBindings()
+    public class ActiveWeaponsInstaller : MonoInstaller
     {
-        Container.Bind<ActiveWeapons>().FromInstance(_activeWeapons).AsSingle();
+        [SerializeField] private ActiveWeapons _activeWeapons;
+        public override void InstallBindings()
+        {
+            Container.Bind<ActiveWeapons>().FromInstance(_activeWeapons).AsSingle();
+        }
     }
 }

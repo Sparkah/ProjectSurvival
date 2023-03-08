@@ -84,6 +84,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5030530398003907315, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
   m_PrefabInstance: {fileID: 4280909781684578360}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3166456573968869785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9131277482335281867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c17f226a5bf70940a717c5a6bc7ca88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponProjectile: {fileID: 5102044091516270430}
 --- !u!114 &5102044091516270430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,3 +111,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectileDurability: {fileID: 4311097355277762408}
   _damageDealer: {fileID: 7843866649473378023}
+  _projectileAngle: {fileID: 2038309747956820201}
+--- !u!114 &2038309747956820201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9131277482335281867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32397a4a1c7a2a04e86f373ff02a5e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

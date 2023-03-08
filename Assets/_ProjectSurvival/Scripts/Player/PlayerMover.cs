@@ -5,6 +5,7 @@ namespace _ProjectSurvival.Scripts.Player
 {
     public class PlayerMover : MonoBehaviour
     {
+        [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private float _speed = 150f;
         [SerializeField] private float _rotationSpeed = 2f;
     
@@ -60,6 +61,8 @@ namespace _ProjectSurvival.Scripts.Player
             //Приделать сюда повороты
             //var targetVector = new Vector3(input.x, 0, input.z);
             //RotateTowardMovementVector(targetVector);
+            if (input.x != 0)
+                _spriteRenderer.flipX = input.x < 0;
         }
 
         private void RotateTowardMovementVector(Vector3 movementDirection)

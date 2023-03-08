@@ -1,62 +1,67 @@
+using _ProjectSurvival.Scripts.Weapons.Projectiles;
+using _ProjectSurvival.Scripts.Weapons.WeaponTypes;
 using Cysharp.Threading.Tasks;
 using System;
 using System.Threading;
 using UnityEngine.Events;
 
-public class ActiveWeapon
+namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
 {
-    private WeaponTypeSO _attackType;
-    private int _level;
-    private ProjectilesPool _pool;
-    private CancellationTokenSource _cancellationTokenSource;
-
-    public WeaponTypeSO WeaponType => _attackType;
-    public int Level => _level;
-
-    public event UnityAction<ActiveWeapon> OnFire;
-
-    public ActiveWeapon(WeaponTypeSO attackType, ProjectilesPool pool)
+    public class ActiveWeapon
     {
-        _pool = pool;
-        _attackType = attackType;
-        _level = 1;
-        _cancellationTokenSource = new CancellationTokenSource();
-    }
+        private WeaponTypeSO _attackType;
+        private int _level;
+        private ProjectilesPool _pool;
+        private CancellationTokenSource _cancellationTokenSource;
 
-    public void LevelUp()
-    {
-        _level++;
-    }
+        public WeaponTypeSO WeaponType => _attackType;
+        public int Level => _level;
 
-    public bool HasMaximumLevel()
-    {
-        return _level == _attackType.MaximumLevel;
-    }
+        public event UnityAction<ActiveWeapon> OnFire;
 
-    public WeaponProjectile GetProjectile()
-    {
-        return _pool.Pool.Get();
-    }
-
-    public void StartFiring()
-    {
-        Firing().Forget();
-    }
-
-    public void CancelFiring()
-    {
-        _cancellationTokenSource.Cancel();
-    }
-
-    private async UniTaskVoid Firing()
-    {
-        while (true)
+        public ActiveWeapon(WeaponTypeSO attackType, ProjectilesPool pool)
         {
-            OnFire?.Invoke(this);
-            await UniTask.Delay(
-                TimeSpan.FromSeconds(_attackType.GetAppearFrequency(_level)),
-                ignoreTimeScale: false,
-                cancellationToken: _cancellationTokenSource.Token);
+            _pool = pool;
+            _attackType = attackType;
+            _level = 1;
+            _cancellationTokenSource = new CancellationTokenSource();
+        }
+
+        public void LevelUp()
+        {
+            _level++;
+        }
+
+        public bool HasMaximumLevel()
+        {
+            return _level == _attackType.MaximumLevel;
+        }
+
+        public WeaponProjectile GetProjectile()
+        {
+            return _pool.Pool.Get();
+        }
+
+        public void StartFiring()
+        {
+            Firing().Forget();
+        }
+
+        public void CancelFiring()
+        {
+            _cancellationTokenSource.Cancel();
+        }
+
+        private async UniTaskVoid Firing()
+        {
+            while (true)
+            {
+                OnFire?.Invoke(this);
+                await UniTask.Delay(
+                    TimeSpan.FromSeconds(_attackType.GetAppearFrequency(_level)),
+                    ignoreTimeScale: false,
+                    cancellationToken: _cancellationTokenSource.Token);
+            }
         }
     }
 }

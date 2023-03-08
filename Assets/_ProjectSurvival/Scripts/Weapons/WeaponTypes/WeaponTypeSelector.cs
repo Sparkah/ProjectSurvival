@@ -1,23 +1,26 @@
 using UnityEngine;
 using Zenject;
 
-public class WeaponTypeSelector : MonoBehaviour
+namespace _ProjectSurvival.Scripts.Weapons.WeaponTypes
 {
-    [Inject] private ActiveWeapons _activeWeapons;
-    [SerializeField] private AvailableWeaponsSO _availableWeaponsSO;
-
-    public WeaponTypeSO[] SelectWeapons(int count)
+    public class WeaponTypeSelector : MonoBehaviour
     {
-        WeaponTypeSO[] availableWeapons = _availableWeaponsSO.SelectAvailableWeapons(_activeWeapons);
+        [Inject] private ActiveWeapons.ActiveWeapons _activeWeapons;
+        [SerializeField] private AvailableWeaponsSO _availableWeaponsSO;
 
-        RandomRangeSelector randomRangeSelector = new RandomRangeSelector();
-        int[] selectedIndexes = randomRangeSelector
-            .SelectRandomIndexes(count, availableWeapons.Length);
+        public WeaponTypeSO[] SelectWeapons(int count)
+        {
+            WeaponTypeSO[] availableWeapons = _availableWeaponsSO.SelectAvailableWeapons(_activeWeapons);
 
-        WeaponTypeSO[] selectedWeapons = new WeaponTypeSO[selectedIndexes.Length];
-        for (int i = 0; i < selectedIndexes.Length; i++)
-            selectedWeapons[i] = availableWeapons[selectedIndexes[i]];
+            RandomRangeSelector randomRangeSelector = new RandomRangeSelector();
+            int[] selectedIndexes = randomRangeSelector
+                .SelectRandomIndexes(count, availableWeapons.Length);
 
-        return selectedWeapons;
+            WeaponTypeSO[] selectedWeapons = new WeaponTypeSO[selectedIndexes.Length];
+            for (int i = 0; i < selectedIndexes.Length; i++)
+                selectedWeapons[i] = availableWeapons[selectedIndexes[i]];
+
+            return selectedWeapons;
+        }
     }
 }
