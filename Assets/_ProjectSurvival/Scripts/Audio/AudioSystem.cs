@@ -26,7 +26,6 @@ namespace _ProjectSurvival.Scripts.Audio
                 _audioSource.clip = _menuSceneMusic;
             else
             {
-                Debug.Log(_levelSceneMusic.name);
                 _audioSource.clip = _levelSceneMusic;
             }
 

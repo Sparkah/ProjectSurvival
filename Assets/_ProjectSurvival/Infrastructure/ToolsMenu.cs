@@ -3,6 +3,8 @@ using UnityEngine;
 
 namespace _ProjectSurvival.Infrastructure
 {
+#if UNITY_EDITOR
+    
     public class ToolsMenu : MonoBehaviour
     {
         [MenuItem("Survival Tools/Drop State")]
@@ -11,4 +13,5 @@ namespace _ProjectSurvival.Infrastructure
             GameProgressHandler.DeleteFile();
         }
     }
+#endif
 }
