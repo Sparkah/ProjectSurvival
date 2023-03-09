@@ -10,30 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a7e0270169691b438adcd0f1f8e70db, type: 3}
-  m_Name: FastForwardWeapon
+  m_Name: wp-03 (SuperForwardWeapon)
   m_EditorClassIdentifier: 
-  _title: "\u0411\u044B\u0441\u0442\u0440\u044B\u0439 \u043E\u0433\u043E\u043D\u044C"
-  _shootSound: 8
+  _title: "\u0412\u043E\u043F\u0440\u043E\u0441"
+  _shootSound: 4
   _projectilePrefab: {fileID: 5102044091516270430, guid: bdfc937c2b37cd54ca292e1493e81adc, type: 3}
   _weaponLevels:
-  - _appearFrequency: 0.3
+  - _appearFrequency: 3
     _appearAmount: 1
     _projectileSetting:
-      _damage: 2
-      _size: 0.3
-      _speed: 12
-      _durability: 1
-  - _appearFrequency: 0.3
+      _damage: 3
+      _size: 1
+      _speed: 10
+      _durability: 999
+  - _appearFrequency: 2.5
     _appearAmount: 1
     _projectileSetting:
-      _damage: 4
-      _size: 0.4
-      _speed: 13
-      _durability: 1
-  - _appearFrequency: 0.2
+      _damage: 5
+      _size: 1.5
+      _speed: 11
+      _durability: 999
+  - _appearFrequency: 2.25
     _appearAmount: 1
     _projectileSetting:
       _damage: 7
-      _size: 0.5
-      _speed: 14
-      _durability: 1
+      _size: 1.75
+      _speed: 12
+      _durability: 999
+  - _appearFrequency: 2
+    _appearAmount: 1
+    _projectileSetting:
+      _damage: 10
+      _size: 2
+      _speed: 13
+      _durability: 999
