@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5030530398003907315, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_Name
-      value: ForwardProjectile
+      value: WorldCenterProjectile
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
@@ -84,19 +84,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5030530398003907315, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
   m_PrefabInstance: {fileID: 4280909781684578360}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2038309747956820201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9131277482335281867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32397a4a1c7a2a04e86f373ff02a5e28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _direction: 0
 --- !u!114 &3166456573968869785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,4 +111,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectileDurability: {fileID: 4311097355277762408}
   _damageDealer: {fileID: 7843866649473378023}
-  _projectileAngle: {fileID: 2038309747956820201}
+  _projectileAngle: {fileID: 8470889219954679233}
+--- !u!114 &8470889219954679233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9131277482335281867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5763cca0d277b6847a2d4859729e6a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _worldPoint: {x: 0, y: 0, z: 0}

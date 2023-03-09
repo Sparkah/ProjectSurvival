@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5030530398003907315, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_Name
-      value: ForwardProjectile
+      value: BackwardProjectile
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32397a4a1c7a2a04e86f373ff02a5e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _direction: 0
+  _direction: 1
 --- !u!114 &3166456573968869785
 MonoBehaviour:
   m_ObjectHideFlags: 0
