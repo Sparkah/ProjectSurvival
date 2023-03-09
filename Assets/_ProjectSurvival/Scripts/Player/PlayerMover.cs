@@ -20,6 +20,10 @@ namespace _ProjectSurvival.Scripts.Player
         void Start()
         {
             _agent = gameObject.GetComponent<Rigidbody2D>();
+            //Чтобы задать навпрление стрельбы при старте игры
+            //Right - ибо тестовый персонаж при старте смотрит вправо
+            //Можно вынести в инспектор?
+            _movementDirection = transform.right;
         }
 
         void Update()
