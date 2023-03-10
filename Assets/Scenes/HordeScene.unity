@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 128305463}
   - component: {fileID: 128305464}
   - component: {fileID: 128305465}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: GameZoneBarrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -746,6 +746,30 @@ PrefabInstance:
     - target: {fileID: 5304235764312410987, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_Name
       value: Ultimate UI Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 384
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 384
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 348
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 307.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1920
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}

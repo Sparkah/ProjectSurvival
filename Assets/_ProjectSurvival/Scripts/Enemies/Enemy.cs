@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Experience;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -8,12 +9,10 @@ namespace _ProjectSurvival.Scripts.Enemies
         [SerializeField] private DamagableObject _damagableObject;
         [SerializeField] private EnemyMover _enemyMover;
         [SerializeField] private ObjectAppearance _enemyAppearance;
-        [SerializeField] private DamageDealer _damageDealer;
+        [SerializeField] private ExperienceHolder _experienceHolder;
         
-        private float _xpDropOnDeath;
         private float _damage;
         private IObjectPool<Enemy> _pool;
-        private LevelableObject _player;
 
         public void Init(IObjectPool<Enemy> pool)
         {
@@ -28,8 +27,8 @@ namespace _ProjectSurvival.Scripts.Enemies
 
         public void ReturnToPool()
         {
-            _player.AddExperience(_xpDropOnDeath); // тут дроп опыта вместо прямого добавления
             Debug.Log(name + " defeated - return to pool");
+            _experienceHolder.DropExperiencePoint();
             _pool.Release(this);
         }
 
@@ -39,7 +38,7 @@ namespace _ProjectSurvival.Scripts.Enemies
             _enemyMover.SetupSpeed(enemyType.BaseSpeed);
             _enemyAppearance.SetupSprite(enemyType.AppearanceSpriteFront);
             _damage = enemyType.BaseDamage;
-            _xpDropOnDeath = enemyType.BaseExperience;
+            _experienceHolder.SetupExperience(enemyType.BaseExperience);
         }
 
         public void Restore(Vector3 appearPoint, Transform target)
@@ -49,18 +48,13 @@ namespace _ProjectSurvival.Scripts.Enemies
             _enemyMover.Construct(target);
         }
 
-        public void SetPlayer(Transform player)
-        {
-            _player = player.GetComponent<LevelableObject>();
-        }
-
-        /*private void OnTriggerEnter2D(Collider2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.TryGetComponent(out DamagableObject damagableObject))
             {
                 damagableObject.TakeDamage(_damage);
                 ReturnToPool();
             }
-        }*/
+        }
     }
 }

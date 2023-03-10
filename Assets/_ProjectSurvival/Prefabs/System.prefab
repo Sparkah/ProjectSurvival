@@ -192,6 +192,98 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _statsTypeSelector: {fileID: 1986032641}
+--- !u!1 &3429831636525124439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 902956576184407987}
+  - component: {fileID: 3837511978222293379}
+  m_Layer: 0
+  m_Name: ExperiencePoolInstaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &902956576184407987
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3429831636525124439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9210531383878399382}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3837511978222293379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3429831636525124439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7b26431748e054795df9f8c257ac51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _experiencePool: {fileID: 3482890845598204804}
+--- !u!1 &6348431629882430161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3071749122018096211}
+  - component: {fileID: 3482890845598204804}
+  m_Layer: 0
+  m_Name: Experience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3071749122018096211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6348431629882430161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9210531385913296422}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3482890845598204804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6348431629882430161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58843fc9998a0214388e04e755449c7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 7147077363567685315, guid: 6137c8db5643c4749be16c0735943fc0, type: 3}
+  _collectionChecks: 1
+  _maxPoolSize: 10
 --- !u!1 &9210531383878399383
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +319,7 @@ Transform:
   - {fileID: 750848173}
   - {fileID: 2034113107}
   - {fileID: 810115376}
+  - {fileID: 902956576184407987}
   m_Father: {fileID: 9210531385913296422}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -250,6 +343,7 @@ MonoBehaviour:
   - {fileID: 750848174}
   - {fileID: 2034113108}
   - {fileID: 810115377}
+  - {fileID: 3837511978222293379}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -494,6 +588,7 @@ Transform:
   - {fileID: 58295334293904980}
   - {fileID: 891810602855669443}
   - {fileID: 1986032640}
+  - {fileID: 3071749122018096211}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -134,6 +134,9 @@ MonoBehaviour:
   _targetLayer:
     serializedVersion: 2
     m_Bits: 64
+  _destructionMask:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!114 &53129466766497616
 MonoBehaviour:
   m_ObjectHideFlags: 0

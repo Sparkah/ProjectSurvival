@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.LevelingSystem;
 using UnityEngine;
 
 namespace _ProjectSurvival.Scripts.Player
