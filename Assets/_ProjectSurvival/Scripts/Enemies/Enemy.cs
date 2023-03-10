@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Experience;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -8,10 +9,9 @@ namespace _ProjectSurvival.Scripts.Enemies
         [SerializeField] private DamagableObject _damagableObject;
         [SerializeField] private EnemyMover _enemyMover;
         [SerializeField] private ObjectAppearance _enemyAppearance;
-        [SerializeField] private float _xpDropOnDeath = 10; // переделать на so
+        [SerializeField] private ExperienceHolder _experienceHolder;
         
         private IObjectPool<Enemy> _pool;
-        private LevelableObject _player;
 
         public void Init(IObjectPool<Enemy> pool)
         {
@@ -27,7 +27,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         public void ReturnToPool()
         {
             Debug.Log(name + " defeated - return to pool");
-            _player.AddExperience(_xpDropOnDeath);
+            _experienceHolder.DropExperiencePoint();
             _pool.Release(this);
         }
 
@@ -36,6 +36,7 @@ namespace _ProjectSurvival.Scripts.Enemies
             _damagableObject.SetupHealth(enemyType.BaseHealth);
             _enemyMover.SetupSpeed(enemyType.BaseSpeed);
             _enemyAppearance.SetupSprite(enemyType.AppearanceSpriteFront);
+            _experienceHolder.SetupExperience(enemyType.BaseExperience);
         }
 
         public void Restore(Vector3 appearPoint, Transform target)
@@ -43,11 +44,6 @@ namespace _ProjectSurvival.Scripts.Enemies
             transform.position = appearPoint;
             _damagableObject.RestoreDurability();
             _enemyMover.Construct(target);
-        }
-
-        public void SetPlayer(Transform player)
-        {
-            _player = player.GetComponent<LevelableObject>();
         }
     }
 }

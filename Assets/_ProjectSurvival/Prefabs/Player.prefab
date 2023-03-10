@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 997466040119755983}
   - component: {fileID: 3951661139004924395}
   - component: {fileID: 1291759303958039748}
+  - component: {fileID: 66853999795886105}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -131,6 +132,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelingSchemeSO: {fileID: 11400000, guid: faeeb8455cbba1d40bb027dab2dc26c6, type: 2}
+--- !u!114 &66853999795886105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24100507808405507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ccdfbb6e44a1d4dbe0d54e89b88268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelableObject: {fileID: 1291759303958039748}
 --- !u!1 &2690305551358438880
 GameObject:
   m_ObjectHideFlags: 0

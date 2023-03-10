@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3495747090491520708}
   - component: {fileID: 461090571523312540}
   - component: {fileID: 6661120161075554999}
+  - component: {fileID: 4861972512225955783}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -53,7 +54,7 @@ MonoBehaviour:
   _damagableObject: {fileID: 2003025251597223358}
   _enemyMover: {fileID: 461090571523312540}
   _enemyAppearance: {fileID: 6661120161075554999}
-  _xpDropOnDeath: 10
+  _experienceHolder: {fileID: 4861972512225955783}
 --- !u!114 &2003025251597223358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +129,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 4411456554321718005}
+--- !u!114 &4861972512225955783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773543650070138907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ce650aff1b1be49ae45c07e080c8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7606497836860024854
 GameObject:
   m_ObjectHideFlags: 0
