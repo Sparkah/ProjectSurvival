@@ -8,9 +8,9 @@ namespace _ProjectSurvival.Scripts.Experience
         [SerializeField] private Behaviour _levelableObject;
         private ILevelable _levelable => _levelableObject as ILevelable;
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (other.TryGetComponent(out ExperiencePoint experiencePoint))
+            if (collision.TryGetComponent(out ExperiencePoint experiencePoint))
             {
                 if (experiencePoint.Collect(transform))
                 {
