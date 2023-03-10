@@ -16,7 +16,7 @@ TagManager:
   - PlayerCollider
   - Experience
   - ExperienceCollector
-  - 
+  - LevelBarrier
   - 
   - 
   - 
