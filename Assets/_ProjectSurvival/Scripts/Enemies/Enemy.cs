@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -9,6 +10,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         [SerializeField] private EnemyMover _enemyMover;
         [SerializeField] private ObjectAppearance _enemyAppearance;
         [SerializeField] private float _xpDropOnDeath = 10; // переделать на so
+        [SerializeField] private float _damage = 1;
         
         private IObjectPool<Enemy> _pool;
         private LevelableObject _player;
@@ -48,6 +50,15 @@ namespace _ProjectSurvival.Scripts.Enemies
         public void SetPlayer(Transform player)
         {
             _player = player.GetComponent<LevelableObject>();
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.TryGetComponent(out DamagableObject damagableObject))
+            {
+                damagableObject.TakeDamage(_damage);
+                ReturnToPool();
+            }
         }
     }
 }
