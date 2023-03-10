@@ -22,12 +22,12 @@ namespace _ProjectSurvival.Scripts.Enemies
 
         public void Destroy()
         {
-            _player.AddExperience(_xpDropOnDeath); // тут дроп опыта вместо прямого добавления
             _damagableObject.OnDefeat -= ReturnToPool;
         }
 
         public void ReturnToPool()
         {
+            _player.AddExperience(_xpDropOnDeath); // тут дроп опыта вместо прямого добавления
             Debug.Log(name + " defeated - return to pool");
             _pool.Release(this);
         }

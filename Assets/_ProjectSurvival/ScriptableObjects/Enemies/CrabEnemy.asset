@@ -18,4 +18,4 @@ MonoBehaviour:
   _baseHealth: 5
   _baseSpeed: 1
   _baseDamage: 1
-  _baseExperience: 1
+  _baseExperience: 10

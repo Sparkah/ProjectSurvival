@@ -590,17 +590,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &637317546 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 913521901856400025, guid: 070bb5ce458724b88a430a8edb61a486, type: 3}
-  m_PrefabInstance: {fileID: 2004947031}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &675080753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -608,10 +597,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5304235764285768331, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5304235764312410964, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -699,38 +684,6 @@ PrefabInstance:
     - target: {fileID: 5304235764312410987, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_Name
       value: Ultimate UI Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235764672095833, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 85.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 85.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 185.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 68.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765422368226, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 456
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 429
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
@@ -5570,14 +5523,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 24100507808405505, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
-      propertyPath: m_Radius
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 24100507808405506, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
-      propertyPath: m_Simulated
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 24100507808405507, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5626,17 +5571,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 997466040119755983, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
-      propertyPath: _damagableObject
-      value: 
-      objectReference: {fileID: 1761106404}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
---- !u!1 &1761106398 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 24100507808405507, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
-  m_PrefabInstance: {fileID: 1761106397}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1761106402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 24100507808405511, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
@@ -5647,40 +5583,23 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1291759303958039748, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
   m_PrefabInstance: {fileID: 1761106397}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761106398}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 590a1e3df8de963478ad6d62fea52652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1761106404
+--- !u!114 &1761106404 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1761106404, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
+  m_PrefabInstance: {fileID: 1761106397}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761106398}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf7fc97200a4d5b40b54efde7409568e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &1761106410
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761106398}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &1855878980
 GameObject:
   m_ObjectHideFlags: 0
@@ -5737,10 +5656,6 @@ PrefabInstance:
       propertyPath: _levelableObject
       value: 
       objectReference: {fileID: 1761106403}
-    - target: {fileID: 756410283, guid: 070bb5ce458724b88a430a8edb61a486, type: 3}
-      propertyPath: _healthSlider
-      value: 
-      objectReference: {fileID: 637317546}
     - target: {fileID: 756410283, guid: 070bb5ce458724b88a430a8edb61a486, type: 3}
       propertyPath: _damagableObject
       value: 
