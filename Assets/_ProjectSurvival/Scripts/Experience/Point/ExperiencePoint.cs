@@ -7,6 +7,8 @@ namespace _ProjectSurvival.Scripts.Experience
     public class ExperiencePoint : MonoBehaviour, IPoolableObject<ExperiencePoint>
     {
         [SerializeField] private float _gatheringSpeed;
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private ExperienceVisualTableSO _experienceVisualTableSO;
         private IObjectPool<ExperiencePoint> _pool;
         private float _experienceAmount;
         private bool _isCollected;
@@ -31,6 +33,7 @@ namespace _ProjectSurvival.Scripts.Experience
         public void Drop(Vector3 position, float experienceAmount)
         {
             _experienceAmount = experienceAmount;
+            UpdateVisual(experienceAmount);
             transform.position = position;
             _isCollected = false;
         }
@@ -57,6 +60,14 @@ namespace _ProjectSurvival.Scripts.Experience
                 await UniTask.NextFrame(cancellationToken: this.GetCancellationTokenOnDestroy());
             }
             ReturnToPool();
+        }
+
+        private void UpdateVisual(float experienceAmount)
+        {
+            ExperiencePointVisual experiencePointVisual =
+       _experienceVisualTableSO.GetVisualForExperienceAmount(experienceAmount);
+            _spriteRenderer.color = experiencePointVisual.Color;
+            _spriteRenderer.sprite = experiencePointVisual.Sprite;
         }
     }
 }

@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gatheringSpeed: 10
+  _spriteRenderer: {fileID: 5239708431295162140}
+  _experienceVisualTableSO: {fileID: 11400000, guid: b6717310b181b214fb862e949bf59061, type: 2}
 --- !u!58 &227087434130511069
 CircleCollider2D:
   m_ObjectHideFlags: 0
