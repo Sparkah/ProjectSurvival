@@ -123,6 +123,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &16438914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3638967841625596711, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
+  m_PrefabInstance: {fileID: 1761106397}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &16438915 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2470272963532995396, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
+  m_PrefabInstance: {fileID: 1761106397}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &16438917
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16438914}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &128305462
 GameObject:
   m_ObjectHideFlags: 0
@@ -5523,6 +5585,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1761106399, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
+      propertyPath: _spriteRenderer
+      value: 
+      objectReference: {fileID: 16438917}
     - target: {fileID: 24100507808405507, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5571,6 +5637,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3951661139004924395, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
+      propertyPath: _firePoint
+      value: 
+      objectReference: {fileID: 16438915}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
 --- !u!4 &1761106402 stripped
