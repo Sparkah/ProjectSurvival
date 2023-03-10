@@ -13,11 +13,13 @@ public class DamageDealer : MonoBehaviour
         if (!gameObject.activeInHierarchy || !other.attachedRigidbody)
             return;
 
+        Debug.Log($"damage Dealer on +{other.name}");
         GameObject touchedObject = other.attachedRigidbody.gameObject;
         bool isTarget = _targetLayer.Contains(touchedObject.layer);
 
         if (isTarget && touchedObject.TryGetComponent(out IDamagable damagedObject))
         {
+            Debug.Log("damagable component is present");
             if (!damagedObject.IsDefeated)
             {
                 OnDamagableTouched?.Invoke(damagedObject);

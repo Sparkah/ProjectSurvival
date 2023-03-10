@@ -8,6 +8,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         [SerializeField] private DamagableObject _damagableObject;
         [SerializeField] private EnemyMover _enemyMover;
         [SerializeField] private ObjectAppearance _enemyAppearance;
+        [SerializeField] private DamageDealer _damageDealer;
         
         private float _xpDropOnDeath;
         private float _damage;
@@ -53,13 +54,13 @@ namespace _ProjectSurvival.Scripts.Enemies
             _player = player.GetComponent<LevelableObject>();
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        /*private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.TryGetComponent(out DamagableObject damagableObject))
             {
                 damagableObject.TakeDamage(_damage);
                 ReturnToPool();
             }
-        }
+        }*/
     }
 }
