@@ -7,12 +7,13 @@ namespace _ProjectSurvival.Scripts.Player
         [SerializeField] private PlayerAttack _playerAttack;
         [SerializeField] private LevelableObject _levelableObject;
         [SerializeField] private DamagableObject _damagableObject;
+        [SerializeField] private int _playerBaseHealth = 10;
 
         private void Start()
         {
             _levelableObject.Init();
             _playerAttack.StartFire();
-            _damagableObject.SetupHealth(10);
+            _damagableObject.SetupHealth(_playerBaseHealth);
         }
     }
 }

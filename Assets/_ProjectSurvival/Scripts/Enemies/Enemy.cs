@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -9,9 +8,9 @@ namespace _ProjectSurvival.Scripts.Enemies
         [SerializeField] private DamagableObject _damagableObject;
         [SerializeField] private EnemyMover _enemyMover;
         [SerializeField] private ObjectAppearance _enemyAppearance;
-        [SerializeField] private float _xpDropOnDeath = 10; // переделать на so
-        [SerializeField] private float _damage = 1;
         
+        private float _xpDropOnDeath;
+        private float _damage;
         private IObjectPool<Enemy> _pool;
         private LevelableObject _player;
 
@@ -23,13 +22,13 @@ namespace _ProjectSurvival.Scripts.Enemies
 
         public void Destroy()
         {
+            _player.AddExperience(_xpDropOnDeath); // тут дроп опыта вместо прямого добавления
             _damagableObject.OnDefeat -= ReturnToPool;
         }
 
         public void ReturnToPool()
         {
             Debug.Log(name + " defeated - return to pool");
-            _player.AddExperience(_xpDropOnDeath);
             _pool.Release(this);
         }
 
@@ -38,6 +37,8 @@ namespace _ProjectSurvival.Scripts.Enemies
             _damagableObject.SetupHealth(enemyType.BaseHealth);
             _enemyMover.SetupSpeed(enemyType.BaseSpeed);
             _enemyAppearance.SetupSprite(enemyType.AppearanceSpriteFront);
+            _damage = enemyType.BaseDamage;
+            _xpDropOnDeath = enemyType.BaseExperience;
         }
 
         public void Restore(Vector3 appearPoint, Transform target)
