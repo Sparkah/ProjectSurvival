@@ -10,6 +10,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         [SerializeField] private EnemyMover _enemyMover;
         [SerializeField] private ObjectAppearance _enemyAppearance;
         [SerializeField] private ExperienceHolder _experienceHolder;
+        [SerializeField] private DamageDealer _damageDealer;
         
         private float _damage;
         private IObjectPool<Enemy> _pool;
@@ -18,11 +19,13 @@ namespace _ProjectSurvival.Scripts.Enemies
         {
             _pool = pool;
             _damagableObject.OnDefeat += ReturnToPool;
+            _damageDealer.OnDamagableTouched += ReturnToPoolOnPlayerTouched;
         }
 
         public void Destroy()
         {
             _damagableObject.OnDefeat -= ReturnToPool;
+            _damageDealer.OnDamagableTouched -= ReturnToPoolOnPlayerTouched;
         }
 
         public void ReturnToPool()
@@ -48,13 +51,19 @@ namespace _ProjectSurvival.Scripts.Enemies
             _enemyMover.Construct(target);
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void ReturnToPoolOnPlayerTouched(IDamagable go)
+        {
+            go.TakeDamage(_damage);
+            _pool.Release(this);
+        }
+
+        /*private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.TryGetComponent(out DamagableObject damagableObject))
             {
                 damagableObject.TakeDamage(_damage);
                 ReturnToPool();
             }
-        }
+        }*/
     }
 }
