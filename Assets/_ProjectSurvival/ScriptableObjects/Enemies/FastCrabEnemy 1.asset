@@ -17,5 +17,5 @@ MonoBehaviour:
   _appearanceSpriteBack: {fileID: 0}
   _baseHealth: 1
   _baseSpeed: 5
-  _baseDamage: 0
+  _baseDamage: 1
   _baseExperience: 5

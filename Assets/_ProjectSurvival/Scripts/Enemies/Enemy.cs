@@ -11,6 +11,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         [SerializeField] private ObjectAppearance _enemyAppearance;
         [SerializeField] private ExperienceHolder _experienceHolder;
         
+        private float _damage;
         private IObjectPool<Enemy> _pool;
 
         public void Init(IObjectPool<Enemy> pool)
@@ -36,6 +37,7 @@ namespace _ProjectSurvival.Scripts.Enemies
             _damagableObject.SetupHealth(enemyType.BaseHealth);
             _enemyMover.SetupSpeed(enemyType.BaseSpeed);
             _enemyAppearance.SetupSprite(enemyType.AppearanceSpriteFront);
+            _damage = enemyType.BaseDamage;
             _experienceHolder.SetupExperience(enemyType.BaseExperience);
         }
 
@@ -44,6 +46,15 @@ namespace _ProjectSurvival.Scripts.Enemies
             transform.position = appearPoint;
             _damagableObject.RestoreDurability();
             _enemyMover.Construct(target);
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.TryGetComponent(out DamagableObject damagableObject))
+            {
+                damagableObject.TakeDamage(_damage);
+                ReturnToPool();
+            }
         }
     }
 }
