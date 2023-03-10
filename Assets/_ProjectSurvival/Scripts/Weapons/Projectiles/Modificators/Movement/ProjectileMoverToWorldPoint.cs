@@ -10,7 +10,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
 
         private void Start()
         {
-            _landMark.gameObject.SetActive(false);
+            HideLandMark();
             _landMark.parent = null;
         }
 
@@ -21,32 +21,40 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
 
         private void OnEnable()
         {
-            Refresh();
+            RefreshLandMark();
+        }
+
+        private void OnDisable()
+        {
+            HideLandMark();
         }
 
         private void FixedUpdate()
         {
             Move();
             if (transform.position == _worldPoint)
-                Hide();
+            {
+                HideLandMark();
+                _weaponProjectile.ReturnToPool();
+            }
         }
 
-        private void Refresh() 
+        private void RefreshLandMark() 
         {
             _landMark.position = _worldPoint;
+            _landMark.rotation = Quaternion.identity;
             _landMark.gameObject.SetActive(true);
+        }
+
+        private void HideLandMark()
+        {
+            _landMark.gameObject.SetActive(false);
         }
 
         private void Move()
         {
             transform.position = Vector3.MoveTowards(
                 transform.position, _worldPoint, _weaponProjectile.Speed * Time.fixedDeltaTime);
-        }
-
-        private void Hide()
-        {
-            _weaponProjectile.ReturnToPool();
-            _landMark.gameObject.SetActive(false);
         }
     }
 }
