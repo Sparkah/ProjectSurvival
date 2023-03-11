@@ -5,7 +5,7 @@ namespace _ProjectSurvival.Scripts.Player
 {
     public class PlayerMover : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private Transform _playerSpriteTransform;
         [SerializeField] private float _speed = 150f;
         [SerializeField] private float _rotationSpeed = 2f;
     
@@ -66,7 +66,12 @@ namespace _ProjectSurvival.Scripts.Player
             //var targetVector = new Vector3(input.x, 0, input.z);
             //RotateTowardMovementVector(targetVector);
             if (input.x != 0)
-                _spriteRenderer.flipX = input.x < 0;
+            {
+                Vector3 playerTransformScale = _playerSpriteTransform.localScale;
+                playerTransformScale.x = Mathf.Abs(playerTransformScale.x);
+                playerTransformScale.x *= input.x < 0 ? -1 : 1;
+                _playerSpriteTransform.localScale = playerTransformScale;
+            }
         }
 
         private void RotateTowardMovementVector(Vector3 movementDirection)
