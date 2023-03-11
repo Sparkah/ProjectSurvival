@@ -16,7 +16,8 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
 
         private void OnDestroy()
         {
-            Destroy(_landMark.gameObject);
+            if (_landMark != null)
+                Destroy(_landMark.gameObject);
         }
 
         private void OnEnable()
