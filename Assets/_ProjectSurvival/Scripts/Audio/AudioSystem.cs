@@ -12,7 +12,6 @@ namespace _ProjectSurvival.Scripts.Audio
         [SerializeField] private AudioClip _levelSceneMusic;
 
         private AudioSource _audioSource;
-        private World _world;
 
         private void Awake()
         {

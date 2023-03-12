@@ -1,10 +1,15 @@
+using _ProjectSurvival.Infrastructure;
 using UnityEngine;
+using Zenject;
 
 namespace _ProjectSurvival.Scripts.Gold
 {
     public class GoldHolder : MonoBehaviour
     {
         private float _goldAmountToDrop;
+        
+        [Inject]
+        private World _world;
 
         public void SetUp(float amount)
         {
@@ -13,7 +18,8 @@ namespace _ProjectSurvival.Scripts.Gold
 
         public void DropGold()
         {
-            Debug.Log($"{_goldAmountToDrop} Gold dropped ");
+            _world.Gold.Value += _goldAmountToDrop;
+            Debug.Log($"Total gold: {_world.Gold.Value}");
         }
     }
 }

@@ -13,7 +13,7 @@ namespace _ProjectSurvival.Infrastructure
 
         private void Start()
         {
-            InitWorld();
+            //InitWorld();
         }
 
         private void OnDestroy()
@@ -30,7 +30,7 @@ namespace _ProjectSurvival.Infrastructure
         {
             SaveGameActions();
         }
-        
+
         public World InitWorld()
         {
             if (File.Exists(SaveStatePath.StatePath))
