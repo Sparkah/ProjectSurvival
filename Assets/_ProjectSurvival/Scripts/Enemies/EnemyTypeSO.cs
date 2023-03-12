@@ -12,12 +12,14 @@ public class EnemyTypeSO : ScriptableObject
     [SerializeField] private float _baseSpeed;
     [SerializeField] private float _baseDamage;
     [SerializeField] private float _baseExperience;
+    [SerializeField] private float _baseGold;
 
     public Enemy EnemyPrefab => _enemyPrefab;
     public float BaseHealth => _baseHealth;
     public float BaseSpeed => _baseSpeed;
     public float BaseDamage => _baseDamage;
     public float BaseExperience => _baseExperience;
+    public float BaseGold => _baseGold;
     public Sprite AppearanceSpriteFront => _appearanceSpriteFront;
     public Sprite AppearanceSpriteBack => _appearanceSpriteBack;
 }

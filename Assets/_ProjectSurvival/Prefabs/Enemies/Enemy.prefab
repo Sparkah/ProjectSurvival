@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 461090571523312540}
   - component: {fileID: 6661120161075554999}
   - component: {fileID: 4861972512225955783}
+  - component: {fileID: 7268908637068121067}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -56,6 +57,7 @@ MonoBehaviour:
   _enemyMover: {fileID: 461090571523312540}
   _enemyAppearance: {fileID: 6661120161075554999}
   _experienceHolder: {fileID: 4861972512225955783}
+  _goldHolder: {fileID: 7268908637068121067}
   _damageDealer: {fileID: 8335788665764740499}
 --- !u!114 &2003025251597223358
 MonoBehaviour:
@@ -159,6 +161,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26ce650aff1b1be49ae45c07e080c8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7268908637068121067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773543650070138907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f2d1c20d1114abab5db6c059c2b2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7606497836860024854

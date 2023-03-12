@@ -19,3 +19,4 @@ MonoBehaviour:
   _baseSpeed: 1
   _baseDamage: 1
   _baseExperience: 10
+  _baseGold: 0.1

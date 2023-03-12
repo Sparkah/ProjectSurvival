@@ -1,4 +1,5 @@
 using _ProjectSurvival.Scripts.Experience;
+using _ProjectSurvival.Scripts.Gold;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -10,6 +11,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         [SerializeField] private EnemyMover _enemyMover;
         [SerializeField] private ObjectAppearance _enemyAppearance;
         [SerializeField] private ExperienceHolder _experienceHolder;
+        [SerializeField] private GoldHolder _goldHolder;
         [SerializeField] private DamageDealer _damageDealer;
         
         private float _damage;
@@ -31,6 +33,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         public void ReturnToPool()
         {
             Debug.Log(name + " defeated - return to pool");
+            _goldHolder.DropGold();
             _experienceHolder.DropExperiencePoint();
             _pool.Release(this);
         }
@@ -42,6 +45,7 @@ namespace _ProjectSurvival.Scripts.Enemies
             _enemyAppearance.SetupSprite(enemyType.AppearanceSpriteFront);
             _damage = enemyType.BaseDamage;
             _experienceHolder.SetupExperience(enemyType.BaseExperience);
+            _goldHolder.SetUp(enemyType.BaseGold);
         }
 
         public void Restore(Vector3 appearPoint, Transform target)
@@ -56,14 +60,5 @@ namespace _ProjectSurvival.Scripts.Enemies
             go.TakeDamage(_damage);
             _pool.Release(this);
         }
-
-        /*private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.TryGetComponent(out DamagableObject damagableObject))
-            {
-                damagableObject.TakeDamage(_damage);
-                ReturnToPool();
-            }
-        }*/
     }
 }
