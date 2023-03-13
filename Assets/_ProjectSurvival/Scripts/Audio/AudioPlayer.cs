@@ -13,14 +13,15 @@ namespace _ProjectSurvival.Scripts.Audio
 
         [Header("Clips")]
         [SerializeField] private AudioClip _levelUp;
-        [SerializeField] private AudioClip _shootWeaponA;
         [SerializeField] private AudioClip _enemyDeath;
-        [SerializeField] private AudioClip _bigDrops; //=снаряд размером с персонажа
         [SerializeField] private AudioClip _enter;//выбрал перк
-        [SerializeField] private AudioClip _hit;//попадаешь по мобу пулей
-        [SerializeField] private AudioClip _hoover;//наводишь мышку на лвл ап
-        [SerializeField] private AudioClip _low;//маленькие пульки
-        [SerializeField] private AudioClip _round;//выстрел нескольких пуль по кругу
+        [SerializeField] private AudioClip _hit;
+        [SerializeField] private AudioClip _wp_10;
+        [SerializeField] private AudioClip _wp_12;
+        [SerializeField] private AudioClip _wp_1;
+        [SerializeField] private AudioClip _wp_3;
+        [SerializeField] private AudioClip _wp_7;
+        [SerializeField] private AudioClip _wp_9;
 
 
         private void Awake()
@@ -114,12 +115,16 @@ namespace _ProjectSurvival.Scripts.Audio
             {
          AudioSounds.LevelUp => _levelUp, 
          AudioSounds.EnemyDeath => _enemyDeath,
-         AudioSounds.BigDrops => _bigDrops, //=снаряд размером с персонажа
+         //AudioSounds.BigDrops => _bigDrops, //=снаряд размером с персонажа
          AudioSounds.Enter => _enter,//выбрал перк
          AudioSounds.Hit => _hit,//попадаешь по мобу пулей
-         AudioSounds.Hoover => _hoover,//наводишь мышку на лвл ап
-         AudioSounds.Low => _low,//маленькие пульки
-         AudioSounds.Round => _round,//выстрел нескольких пуль по кругу
+         //AudioSounds.Hoover => _hoover,//наводишь мышку на лвл ап
+         AudioSounds.WP_10 => _wp_10,
+         AudioSounds.WP_12 => _wp_12,
+         AudioSounds.WP_1 => _wp_1,
+         AudioSounds.WP_3 => _wp_3,
+         AudioSounds.WP_7 => _wp_7,
+         AudioSounds.WP_9 => _wp_9,
                 _ => null
             };
         }

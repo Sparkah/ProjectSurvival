@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wp-03 (SuperForwardWeapon)
   m_EditorClassIdentifier: 
   _title: "\u0412\u043E\u043F\u0440\u043E\u0441"
-  _shootSound: 4
+  _shootSound: 10
   _projectilePrefab: {fileID: 5102044091516270430, guid: bdfc937c2b37cd54ca292e1493e81adc, type: 3}
   _weaponLevels:
   - _appearFrequency: 3

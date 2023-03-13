@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wp-11 (FullAngleWeapon)
   m_EditorClassIdentifier: 
   _title: "\u041E\u0433\u043E\u043D\u044C \u043F\u043E \u043A\u0440\u0443\u0433\u0443"
-  _shootSound: 9
+  _shootSound: 0
   _projectilePrefab: {fileID: 5878013301034431319, guid: f22e1abbf471fef41a873016e9cdd33c, type: 3}
   _weaponLevels:
   - _appearFrequency: 2

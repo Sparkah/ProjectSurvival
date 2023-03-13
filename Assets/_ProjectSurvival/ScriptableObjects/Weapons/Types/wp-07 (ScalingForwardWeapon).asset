@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wp-07 (ScalingForwardWeapon)
   m_EditorClassIdentifier: 
   _title: "\u041A\u0430\u0442\u0430\u0440\u0441\u0438\u0441"
-  _shootSound: 4
+  _shootSound: 11
   _projectilePrefab: {fileID: 4126832796780620866, guid: b8a929d6dfba17b45a28d28ffcadbd47, type: 3}
   _weaponLevels:
   - _appearFrequency: 3
