@@ -1,5 +1,4 @@
 using UniRx;
-using UnityEngine;
 
 namespace _ProjectSurvival.Infrastructure
 {
