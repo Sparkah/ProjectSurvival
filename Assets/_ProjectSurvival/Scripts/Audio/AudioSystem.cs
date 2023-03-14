@@ -1,5 +1,4 @@
-using _ProjectSurvival.Infrastructure;
-using _ProjectSurvival.Scripts.Helpers;
+using _ProjectSurvival.Scripts.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
