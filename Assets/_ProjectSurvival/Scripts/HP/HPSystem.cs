@@ -1,7 +1,6 @@
 using _ProjectSurvival.Scripts.Helpers;
 using _ProjectSurvival.Scripts.SceneManagement;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace _ProjectSurvival.Scripts.HP
@@ -28,7 +27,8 @@ namespace _ProjectSurvival.Scripts.HP
             if (_healthSlider.fillAmount <= 0)
             {
                 Debug.Log("Game over");
-                SceneManager.LoadScene(SceneNames.HordeScene);
+                LevelLoader levelLoader = new LevelLoader();
+                levelLoader.ReloadCurrentLevel();
             }
         }
     }
