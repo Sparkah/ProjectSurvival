@@ -11,6 +11,8 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         public Image UpgradeImage;
         public Button Button;
         public TextMeshProUGUI Text;
+
+        [HideInInspector] public UpgradePopup UpgradePopup;
         
         private int _price;
         private UpgradeTypes _upgradeType;
