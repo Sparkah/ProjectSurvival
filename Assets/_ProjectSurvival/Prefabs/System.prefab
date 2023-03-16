@@ -192,6 +192,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _statsTypeSelector: {fileID: 1986032641}
+--- !u!1 &2222545786518516522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7551798368603645004}
+  - component: {fileID: 4175977926161898171}
+  m_Layer: 0
+  m_Name: EnemiesEvolutionTrackerInstaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7551798368603645004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222545786518516522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9210531383878399382}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4175977926161898171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222545786518516522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd97c424978bda640984b79a2dd00a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemiesEvolutionTracker: {fileID: 3961486935121032612}
 --- !u!1 &3429831636525124439
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +329,50 @@ MonoBehaviour:
   _prefab: {fileID: 7147077363567685315, guid: 6137c8db5643c4749be16c0735943fc0, type: 3}
   _collectionChecks: 1
   _maxPoolSize: 10
+--- !u!1 &7893383298502945648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7405891657942976536}
+  - component: {fileID: 3961486935121032612}
+  m_Layer: 0
+  m_Name: EnemiesEvolutionTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7405891657942976536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7893383298502945648}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9210531385913296422}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3961486935121032612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7893383298502945648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3abf694c6fe69e4d87c7b65f5b319ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9210531383878399383
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +409,7 @@ Transform:
   - {fileID: 2034113107}
   - {fileID: 810115376}
   - {fileID: 902956576184407987}
+  - {fileID: 7551798368603645004}
   m_Father: {fileID: 9210531385913296422}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -344,6 +434,7 @@ MonoBehaviour:
   - {fileID: 2034113108}
   - {fileID: 810115377}
   - {fileID: 3837511978222293379}
+  - {fileID: 4175977926161898171}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -589,6 +680,7 @@ Transform:
   - {fileID: 891810602855669443}
   - {fileID: 1986032640}
   - {fileID: 3071749122018096211}
+  - {fileID: 7405891657942976536}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -1,5 +1,4 @@
 using UnityEditor;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace _ProjectSurvival.Infrastructure
@@ -32,8 +31,8 @@ namespace _ProjectSurvival.Infrastructure
 
         private static void TryToOpenScene(string scenePath)
         {
-            if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
-                EditorSceneManager.OpenScene(scenePath);
+            if (UnityEditor.SceneManagement.EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
+                UnityEditor.SceneManagement.EditorSceneManager.OpenScene(scenePath);
         }
     }
 #endif

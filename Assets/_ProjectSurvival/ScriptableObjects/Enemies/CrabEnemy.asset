@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: CrabEnemy
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 8123472272529497478, guid: 62c3f645ff2bb437fab42b7fd131d230, type: 3}
-  _appearanceSpriteFront: {fileID: 3117046847209950790, guid: 50aadd8b16f154e78b213be89b59b94c, type: 3}
-  _appearanceSpriteBack: {fileID: 0}
-  _baseHealth: 5
-  _baseSpeed: 1
-  _baseDamage: 1
-  _baseExperience: 10
-  _baseGold: 0.1
+  _enemyLevels:
+  - _amountToEvolve: 0
+    _appearanceSpriteFront: {fileID: 3117046847209950790, guid: 50aadd8b16f154e78b213be89b59b94c, type: 3}
+    _appearanceSpriteBack: {fileID: 0}
+    _baseHealth: 5
+    _baseSpeed: 1
+    _baseDamage: 1
+    _baseExperience: 10
+    _baseGold: 0.1
