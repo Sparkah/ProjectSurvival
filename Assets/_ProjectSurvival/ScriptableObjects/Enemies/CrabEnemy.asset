@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CrabEnemy
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 8123472272529497478, guid: 62c3f645ff2bb437fab42b7fd131d230, type: 3}
+  _typeColor: {r: 0.10708821, g: 1, b: 0, a: 1}
   _enemyLevels:
   - _amountToEvolve: 0
     _appearanceSpriteFront: {fileID: 3117046847209950790, guid: 50aadd8b16f154e78b213be89b59b94c, type: 3}

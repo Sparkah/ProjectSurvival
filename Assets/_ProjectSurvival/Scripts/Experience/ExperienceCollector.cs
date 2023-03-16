@@ -1,10 +1,13 @@
+using _ProjectSurvival.Scripts.Enemies.Evolution;
 using _ProjectSurvival.Scripts.LevelingSystem;
 using UnityEngine;
+using Zenject;
 
 namespace _ProjectSurvival.Scripts.Experience
 {
     public class ExperienceCollector : MonoBehaviour
     {
+        [Inject] private EnemiesEvolutionTracker _enemiesEvolutionTracker;
         [SerializeField] private Behaviour _levelableObject;
         private ILevelable _levelable => _levelableObject as ILevelable;
 
@@ -15,6 +18,7 @@ namespace _ProjectSurvival.Scripts.Experience
                 if (experiencePoint.Collect(transform))
                 {
                     _levelable.AddExperience(experiencePoint.ExperienceAmount);
+                    _enemiesEvolutionTracker.IncreaseDefeatedCount(experiencePoint.EnemyTypeSO);
                 }
             }
         }

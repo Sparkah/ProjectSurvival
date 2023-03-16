@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Enemies;
 using UnityEngine;
 using Zenject;
 
@@ -13,10 +14,10 @@ namespace _ProjectSurvival.Scripts.Experience
             _experienceAmount = amount;
         }
 
-        public void DropExperiencePoint()
+        public void DropExperiencePoint(EnemyTypeSO enemyTypeSO)
         {
             ExperiencePoint droppingPoint = _experiencePool.Pool.Get();
-            droppingPoint.Drop(transform.position, _experienceAmount);
+            droppingPoint.Drop(transform.position, enemyTypeSO, _experienceAmount);
         }
     }
 }

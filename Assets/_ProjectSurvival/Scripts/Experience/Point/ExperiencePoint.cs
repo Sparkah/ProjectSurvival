@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Enemies;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
@@ -12,11 +13,13 @@ namespace _ProjectSurvival.Scripts.Experience
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private ExperienceVisualTableSO _experienceVisualTableSO;
         private IObjectPool<ExperiencePoint> _pool;
+        private EnemyTypeSO _enemyTypeSO;
         private float _experienceAmount;
         private bool _isCollected;
         private Quaternion _defaultRotation;
 
         public float ExperienceAmount => _experienceAmount;
+        public EnemyTypeSO EnemyTypeSO => _enemyTypeSO;
 
         public void Init(IObjectPool<ExperiencePoint> pool)
         {
@@ -35,8 +38,9 @@ namespace _ProjectSurvival.Scripts.Experience
             _pool.Release(this);
         }
 
-        public void Drop(Vector3 position, float experienceAmount)
+        public void Drop(Vector3 position, EnemyTypeSO enemyTypeSO, float experienceAmount)
         {
+            _enemyTypeSO = enemyTypeSO;
             _experienceAmount = experienceAmount;
             UpdateVisual(experienceAmount);
             transform.position = position;
@@ -52,7 +56,7 @@ namespace _ProjectSurvival.Scripts.Experience
                 _spriteRenderer.transform
                     .DOLocalRotate(new Vector3(0, 0, 360), _rotatingSpeed, RotateMode.FastBeyond360)
                     .SetEase(Ease.Linear)
-                    .SetLoops(-1,LoopType.Restart);
+                    .SetLoops(-1, LoopType.Restart);
                 return true;
             }
             return false;
@@ -74,9 +78,10 @@ namespace _ProjectSurvival.Scripts.Experience
         private void UpdateVisual(float experienceAmount)
         {
             ExperiencePointVisual experiencePointVisual =
-       _experienceVisualTableSO.GetVisualForExperienceAmount(experienceAmount);
-            _spriteRenderer.color = experiencePointVisual.Color;
+                _experienceVisualTableSO.GetVisualForExperienceAmount(experienceAmount);
             _spriteRenderer.sprite = experiencePointVisual.Sprite;
+
+            _spriteRenderer.color = _enemyTypeSO.TypeColor;
             _spriteRenderer.transform.rotation = _defaultRotation;
         }
     }

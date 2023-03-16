@@ -7,10 +7,8 @@ namespace _ProjectSurvival.Scripts.Experience
     {
         [SerializeField] private float _experienceAmount;
         [SerializeField] private Sprite _sprite;
-        [SerializeField] private Color _color;
 
         public float ExperienceAmount => _experienceAmount;
         public Sprite Sprite => _sprite;
-        public Color Color => _color;
     }
 }

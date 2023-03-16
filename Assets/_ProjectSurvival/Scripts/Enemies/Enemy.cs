@@ -55,14 +55,13 @@ namespace _ProjectSurvival.Scripts.Enemies
         {
             Debug.Log(name + " defeated - return to pool");
             _goldHolder.DropGold();
-            _experienceHolder.DropExperiencePoint();
+            _experienceHolder.DropExperiencePoint(_enemyTypeSO);
             _pool.Release(this);
         }
 
         private void ReturnToPoolOnPlayerTouched(IDamagable go)
         {
             go.TakeDamage(_damage);
-            _enemiesEvolutionTracker.IncreaseDefeatedCount(_enemyTypeSO);
             _pool.Release(this);
         }
 

@@ -6,10 +6,12 @@ namespace _ProjectSurvival.Scripts.Enemies
     public class EnemyTypeSO : ScriptableObject
     {
         [SerializeField] private Enemy _enemyPrefab;
+        [SerializeField] private Color _typeColor;
         [SerializeField] private EnemyLevelData[] _enemyLevels;
 
         public Enemy EnemyPrefab => _enemyPrefab;
         public int MaximumEvolutionLevel => _enemyLevels.Length;
+        public Color TypeColor => _typeColor;
 
         public EnemyLevelData GetEnemyLevelData(int level)
         {
