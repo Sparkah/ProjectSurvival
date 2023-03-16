@@ -31,7 +31,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
             
             upgrade.Construct(_upgradeImage, _costProgression[_currentUpgrade], _upgradeType);
 
-            if (_world.UpgradesLevels[_upgradeType] < _currentUpgrade)
+            if (_world.UpgradeLevels[_upgradeType] < _currentUpgrade)
             {
                 upgrade.Button.interactable = false;
             }

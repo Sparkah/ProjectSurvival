@@ -34,9 +34,9 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         {
             if (_world.Gold.Value >= _price)
             {
-                Debug.Log($"Upgrade {_upgradeType} purchased! It's level is {_world.UpgradesLevels[_upgradeType]}");
+                Debug.Log($"Upgrade {_upgradeType} purchased! It's level is {_world.UpgradeLevels[_upgradeType]}");
                 _world.Gold.Value -= _price;
-                _world.UpgradesLevels[_upgradeType] += 1;
+                _world.UpgradeLevels[_upgradeType] += 1;
             }
             else
             {
