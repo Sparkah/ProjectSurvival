@@ -5,7 +5,6 @@ namespace _ProjectSurvival.Scripts.Enemies
     [System.Serializable]
     public class EnemyLevelData
     {
-        [SerializeField] private int _amountToEvolve;
         [SerializeField] private Sprite _appearanceSpriteFront;
         [SerializeField] private Sprite _appearanceSpriteBack;
         [SerializeField] private float _baseHealth;
@@ -14,7 +13,6 @@ namespace _ProjectSurvival.Scripts.Enemies
         [SerializeField] private float _baseExperience;
         [SerializeField] private float _baseGold;
 
-        public int AmountToEvolve => _amountToEvolve;
         public float BaseHealth => _baseHealth;
         public float BaseSpeed => _baseSpeed;
         public float BaseDamage => _baseDamage;

@@ -18,7 +18,7 @@ namespace _ProjectSurvival.Scripts.Experience
                 if (experiencePoint.Collect(transform))
                 {
                     _levelable.AddExperience(experiencePoint.ExperienceAmount);
-                    _enemiesEvolutionTracker.IncreaseDefeatedCount(experiencePoint.EnemyTypeSO);
+                    _enemiesEvolutionTracker.IncreaseEvolutionExperience(experiencePoint.EnemyTypeSO, experiencePoint.ExperienceAmount);
                 }
             }
         }

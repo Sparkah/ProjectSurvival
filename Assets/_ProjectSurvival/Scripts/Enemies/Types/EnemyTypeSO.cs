@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.LevelingSystem;
 using UnityEngine;
 
 namespace _ProjectSurvival.Scripts.Enemies
@@ -7,20 +8,17 @@ namespace _ProjectSurvival.Scripts.Enemies
     {
         [SerializeField] private Enemy _enemyPrefab;
         [SerializeField] private Color _typeColor;
+        [SerializeField] private LevelingSchemeSO _levelingSchemeSO;
         [SerializeField] private EnemyLevelData[] _enemyLevels;
 
         public Enemy EnemyPrefab => _enemyPrefab;
         public int MaximumEvolutionLevel => _enemyLevels.Length;
         public Color TypeColor => _typeColor;
+        public LevelingSchemeSO LevelingSchemeSO => _levelingSchemeSO;
 
         public EnemyLevelData GetEnemyLevelData(int level)
         {
-            return _enemyLevels[ValidateIndex(level)];
-        }
-
-        public int GetRequirementToEvolution(int currentLevel)
-        {
-            return _enemyLevels[ValidateIndex(currentLevel)].AmountToEvolve;
+            return _enemyLevels[ValidateIndex(level-1)];
         }
 
         private int ValidateIndex(int index)
