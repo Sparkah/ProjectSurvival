@@ -138,8 +138,6 @@ MonoBehaviour:
   UpgradeImage: {fileID: 932752029795181870}
   Button: {fileID: 5144068079793284228}
   Text: {fileID: 4641165536003331240}
-  Price: 0
-  UpgradeType: 0
 --- !u!1 &475772864562729742
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +357,8 @@ MonoBehaviour:
   _upgradeType: 0
   _costProgression: 0500000005000000050000000500000005000000
   _upgradeImage: {fileID: 0}
+  _upgradeDescription: this is the upgrade description
+  _upgradeName: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u0430\u043F\u0433\u0440\u0435\u0439\u0434\u0430"
 --- !u!1 &1728947271672230594
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,8 +497,6 @@ MonoBehaviour:
   UpgradeImage: {fileID: 3046946546220207556}
   Button: {fileID: 566186495371967962}
   Text: {fileID: 5233404631370411383}
-  Price: 0
-  UpgradeType: 0
 --- !u!1 &1974903918987722605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,8 +1040,6 @@ MonoBehaviour:
   UpgradeImage: {fileID: 5961462869821538318}
   Button: {fileID: 595046290585876161}
   Text: {fileID: 5060138746871004400}
-  Price: 0
-  UpgradeType: 0
 --- !u!1 &6540036105395056357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,8 +1178,6 @@ MonoBehaviour:
   UpgradeImage: {fileID: 1356242351590639146}
   Button: {fileID: 3263052166354041449}
   Text: {fileID: 4764580121545911063}
-  Price: 0
-  UpgradeType: 0
 --- !u!1 &6559619503657774289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,8 +1316,6 @@ MonoBehaviour:
   UpgradeImage: {fileID: 8214245214614623595}
   Button: {fileID: 2710556431520993652}
   Text: {fileID: 8051036778451883181}
-  Price: 0
-  UpgradeType: 0
 --- !u!1 &6885114030614579700
 GameObject:
   m_ObjectHideFlags: 0

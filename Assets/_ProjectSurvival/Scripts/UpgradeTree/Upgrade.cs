@@ -1,3 +1,4 @@
+using System;
 using _ProjectSurvival.Infrastructure;
 using TMPro;
 using UnityEngine;
@@ -11,39 +12,36 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         public Image UpgradeImage;
         public Button Button;
         public TextMeshProUGUI Text;
-
-        [HideInInspector] public UpgradePopup UpgradePopup;
         
+        private UpgradePopup _upgradePopup;
         private int _price;
-        private UpgradeTypes _upgradeType;
+        private string _upgradeType;
+        private string _upgradeDescription;
 
-        [Inject] private World _world;
-
-        public void Construct(Sprite upgradeSprite, int price, UpgradeTypes upgradeType)
+        public void Construct(Sprite upgradeSprite, int price, string upgradeType, UpgradePopup upgradePopup, string upgradeDescription)
         {
             _upgradeType = upgradeType;
             UpgradeImage.sprite = upgradeSprite;
             _price = price;
             Text.text = _price.ToString();
+            _upgradePopup = upgradePopup;
+            _upgradeDescription = upgradeDescription;
         }
 
         private void Start()
         {
-            Button.onClick.AddListener(TryPurchaseUpgrade);
+            Button.onClick.AddListener(OpenUpgradePopup);
+        }
+ 
+        private void OpenUpgradePopup()
+        {
+            _upgradePopup.gameObject.SetActive(true);
+            _upgradePopup.SetUp(_price.ToString(), _upgradeType, _upgradeDescription, _price);
         }
 
-        private void TryPurchaseUpgrade()
+        private void OnDisable()
         {
-            if (_world.Gold.Value >= _price)
-            {
-                Debug.Log($"Upgrade {_upgradeType} purchased! It's level is {_world.UpgradeLevels[_upgradeType]}");
-                _world.Gold.Value -= _price;
-                _world.UpgradeLevels[_upgradeType] += 1;
-            }
-            else
-            {
-                Debug.Log($"Not enough money! You currently have {_world.Gold.Value} coins, the upgrade cost is {_price} coins");
-            }
+            Button.onClick.RemoveAllListeners();
         }
     }
 }

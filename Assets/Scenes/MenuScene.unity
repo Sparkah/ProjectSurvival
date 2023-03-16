@@ -1057,6 +1057,7 @@ GameObject:
   - component: {fileID: 871550695}
   - component: {fileID: 871550694}
   - component: {fileID: 871550696}
+  - component: {fileID: 871550697}
   m_Layer: 5
   m_Name: UpgradeTree
   m_TagString: Untagged
@@ -1094,7 +1095,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871550692}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -1138,6 +1139,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &871550697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871550692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87bfcbed0facc457d8a50dbe4a4ab3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpgradePopup: {fileID: 1292997227}
 --- !u!224 &887045694 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 730139218760929302, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
@@ -4060,6 +4074,10 @@ PrefabInstance:
       propertyPath: _upgradeImage
       value: 
       objectReference: {fileID: 21300000, guid: 9052f7a0bc8ae4a348c9da24ce2c1c38, type: 3}
+    - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeDescription
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _costProgression.Array.size
       value: 5
