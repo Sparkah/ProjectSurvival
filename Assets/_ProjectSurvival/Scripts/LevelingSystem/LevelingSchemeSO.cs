@@ -18,5 +18,11 @@ namespace _ProjectSurvival.Scripts.LevelingSystem
 
             return 0;
         }
+
+        public bool HasNextLevel(int level)
+        {
+            int levelIndex = level - 1;
+            return levelIndex + 1 < _requiredExperience.Length;
+        }
     }
 }

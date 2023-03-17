@@ -7,6 +7,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem
         public float CurrentExperience { get; }
         public float RequiredExperience { get; }
         public int Level { get; }
+        public bool IsMaximumLevel { get; }
 
         public event UnityAction OnExperienceChanged;
         public event UnityAction OnLevelUp;

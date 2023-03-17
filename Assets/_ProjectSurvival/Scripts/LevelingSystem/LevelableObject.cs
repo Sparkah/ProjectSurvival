@@ -13,6 +13,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem
         public float CurrentExperience => _currentExperience;
         public float RequiredExperience => _requiredExperience;
         public int Level => _level;
+        public bool IsMaximumLevel => (!HasNextLevel());// && (_currentExperience == _requiredExperience);
 
         public event UnityAction OnExperienceChanged;
         public event UnityAction OnLevelUp;
@@ -28,6 +29,11 @@ namespace _ProjectSurvival.Scripts.LevelingSystem
             if (_currentExperience >= _requiredExperience)
                 LevelUp();
             OnExperienceChanged?.Invoke();
+        }
+
+        private bool HasNextLevel()
+        {
+            return _levelingSchemeSO.HasNextLevel(_level);
         }
 
         private void LevelUp()
