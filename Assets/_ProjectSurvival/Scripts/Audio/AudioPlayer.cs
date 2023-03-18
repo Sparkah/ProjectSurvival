@@ -58,7 +58,6 @@ namespace _ProjectSurvival.Scripts.Audio
         /// <summary>
         /// Use for multiple clips play to end only last of them,
         /// Secondary audio source that should play parallel
-        /// to main with no interrupting it (skatehover, jackhammer and etc)
         /// </summary>
         public void PlaySoundAsSecondary(AudioSounds soundToPlay)
         {

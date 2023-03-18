@@ -131,9 +131,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 5649895859083812272}
     m_Modifications:
     - target: {fileID: 1730395994972641016, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _levelSceneMusic
+      propertyPath: _menuSceneMusic
       value: 
-      objectReference: {fileID: 8300000, guid: fb4fd77e3575f0242ae2b85291556ce1, type: 3}
+      objectReference: {fileID: 8300000, guid: c3f60b0dc6eb8704097ad536311fb8af, type: 3}
     - target: {fileID: 1740599322759243325, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
       propertyPath: m_Name
       value: AudioSystem
@@ -182,62 +182,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _hit
-      value: 
-      objectReference: {fileID: 8300000, guid: 432647b1cc691764ca3c5b8821e31e53, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _low
-      value: 
-      objectReference: {fileID: 8300000, guid: 91bbb92ea9a6fc342a17e47407a4bc64, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _wp_1
-      value: 
-      objectReference: {fileID: 8300000, guid: 9def7945676143049a5f4b6e78ddd94a, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _wp_3
-      value: 
-      objectReference: {fileID: 8300000, guid: 1e14c81c9f2652047a0ea85cce1c1678, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _wp_7
-      value: 
-      objectReference: {fileID: 8300000, guid: c079ce06d6e1d064ab32099567902b3e, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _wp_9
-      value: 
-      objectReference: {fileID: 8300000, guid: 462471bba8c1ddd49920d966188b20dd, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _enter
-      value: 
-      objectReference: {fileID: 8300000, guid: 06959c24dc9a8ac4990da3869249760b, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _round
-      value: 
-      objectReference: {fileID: 8300000, guid: e5c15fd1a520d8141852c83d0e1efd6f, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _wp_10
-      value: 
-      objectReference: {fileID: 8300000, guid: 91bbb92ea9a6fc342a17e47407a4bc64, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _wp_12
-      value: 
-      objectReference: {fileID: 8300000, guid: e5c15fd1a520d8141852c83d0e1efd6f, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _hoover
-      value: 
-      objectReference: {fileID: 8300000, guid: c6eed595cc8ad9442b7af5f70e576368, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _levelUp
-      value: 
-      objectReference: {fileID: 8300000, guid: 528a148291dd6854f8c0dc1a33216c67, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _bigDrops
-      value: 
-      objectReference: {fileID: 8300000, guid: 462471bba8c1ddd49920d966188b20dd, type: 3}
-    - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
-      propertyPath: _enemyDeath
-      value: 
-      objectReference: {fileID: 8300000, guid: 52f096c31e3aca34f81d39f706f597a3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
 --- !u!4 &5669885144257536242 stripped

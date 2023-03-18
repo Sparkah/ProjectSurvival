@@ -12,17 +12,19 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         
         private UpgradePopup _upgradePopup;
         private int _price;
-        private string _upgradeType;
+        private string _upgradeName;
         private string _upgradeDescription;
+        private UpgradeTypes _upgradeType;
 
-        public void Construct(Sprite upgradeSprite, int price, string upgradeType, UpgradePopup upgradePopup, string upgradeDescription)
+        public void Construct(Sprite upgradeSprite, int price, string upgradeName, UpgradePopup upgradePopup, string upgradeDescription, UpgradeTypes upgradeType)
         {
-            _upgradeType = upgradeType;
+            _upgradeName = upgradeName;
             UpgradeImage.sprite = upgradeSprite;
             _price = price;
             Text.text = _price.ToString();
             _upgradePopup = upgradePopup;
             _upgradeDescription = upgradeDescription;
+            _upgradeType = upgradeType;
         }
 
         private void Start()
@@ -33,7 +35,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         private void OpenUpgradePopup()
         {
             _upgradePopup.gameObject.SetActive(true);
-            _upgradePopup.SetUp(_price.ToString(), _upgradeType, _upgradeDescription, _price);
+            _upgradePopup.SetUp(_price.ToString(), _upgradeName, _upgradeDescription, _price, _upgradeType);
         }
 
         private void OnDisable()

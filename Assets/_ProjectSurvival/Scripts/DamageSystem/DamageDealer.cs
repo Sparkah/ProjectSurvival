@@ -36,7 +36,7 @@ namespace _ProjectSurvival.Scripts.DamageSystem
         
             if (_targetLayer.value == 256)
             {
-                AudioPlayer.Audio.PlaySound(AudioSounds.Hit);
+                AudioPlayer.Audio.PlayOneShotSound(AudioSounds.Hit);
             }
         }
     }

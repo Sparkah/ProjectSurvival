@@ -32,7 +32,7 @@ public class DamagableObject : MonoBehaviour, IDamagable
     public void TakeDamage(float damageAmount)
     {
         //Add check it is not player, otherwise remove
-        AudioPlayer.Audio.PlaySound(AudioSounds.Enter);
+        AudioPlayer.Audio.PlayOneShotSound(AudioSounds.Enter);
         _health -= damageAmount;
         OnDamaged?.Invoke();
         if (_health <= 0)
