@@ -15,6 +15,7 @@ namespace _ProjectSurvival.Scripts.Audio
         WP_3=10,
         WP_7=11,
         WP_9=12,
-        WP_1=13
+        WP_1=13,
+        Coins = 14
     }
 }

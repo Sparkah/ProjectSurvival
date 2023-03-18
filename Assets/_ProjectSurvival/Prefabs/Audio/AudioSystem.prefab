@@ -330,6 +330,7 @@ MonoBehaviour:
   _wp_3: {fileID: 8300000, guid: 1e14c81c9f2652047a0ea85cce1c1678, type: 3}
   _wp_7: {fileID: 8300000, guid: c079ce06d6e1d064ab32099567902b3e, type: 3}
   _wp_9: {fileID: 8300000, guid: 462471bba8c1ddd49920d966188b20dd, type: 3}
+  _coins: {fileID: 8300000, guid: a7a5d926f5a53f340bee00a4e5ea5aa2, type: 3}
 --- !u!1 &5313252633059848830
 GameObject:
   m_ObjectHideFlags: 0

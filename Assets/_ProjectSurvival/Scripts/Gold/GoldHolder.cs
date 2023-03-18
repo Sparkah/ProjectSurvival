@@ -1,6 +1,5 @@
-using System;
 using _ProjectSurvival.Infrastructure;
-using UniRx;
+using _ProjectSurvival.Scripts.Audio;
 using UnityEngine;
 using Zenject;
 
@@ -26,8 +25,7 @@ namespace _ProjectSurvival.Scripts.Gold
         public void DropGold()
         {
             _world.Gold.Value += _goldAmountToDrop;
-            //Debug.Log($"Total gold: {_world.Gold.Value}");
-            
+            AudioPlayer.Audio.PlaySound(AudioSounds.Coins);
         }
     }
 }

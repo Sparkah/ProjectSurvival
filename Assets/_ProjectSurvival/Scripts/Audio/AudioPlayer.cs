@@ -22,6 +22,7 @@ namespace _ProjectSurvival.Scripts.Audio
         [SerializeField] private AudioClip _wp_3;
         [SerializeField] private AudioClip _wp_7;
         [SerializeField] private AudioClip _wp_9;
+        [SerializeField] private AudioClip _coins;
 
 
         private void Awake()
@@ -124,6 +125,7 @@ namespace _ProjectSurvival.Scripts.Audio
          AudioSounds.WP_3 => _wp_3,
          AudioSounds.WP_7 => _wp_7,
          AudioSounds.WP_9 => _wp_9,
+         AudioSounds.Coins => _coins,
                 _ => null
             };
         }
