@@ -1,9 +1,6 @@
-using System;
-using _ProjectSurvival.Infrastructure;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 
 namespace _ProjectSurvival.Scripts.UpgradeTree
 {

@@ -12,6 +12,7 @@ namespace _ProjectSurvival.Scripts.Gold
 
         [Inject]
         private World _world;
+        
 
         private void Start()
         {
