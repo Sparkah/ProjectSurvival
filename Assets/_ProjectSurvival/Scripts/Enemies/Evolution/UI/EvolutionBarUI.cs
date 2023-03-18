@@ -9,8 +9,9 @@ namespace _ProjectSurvival.Scripts.Enemies.Evolution.UI
         [SerializeField] private Image _enemyImage;
         [SerializeField] private Image _experienceImage;
         [SerializeField] private Image _backgroundImage;
+        [SerializeField] private Color _lockedColor;
         [SerializeField] private Sprite _lockedEnemySprite;
-        [SerializeField] private Color _unlockedColor;
+        [SerializeField] private Sprite _unlockedProgressSprite;
         private EnemyTypeSO _enemyTypeSO;
         private ILevelable _levelable;
 
@@ -27,15 +28,23 @@ namespace _ProjectSurvival.Scripts.Enemies.Evolution.UI
         {
             _enemyImage.sprite = _lockedEnemySprite;
             _experienceImage.fillAmount = 0;
+            Recolor(_lockedColor);
         }
 
         public void Init(EnemyTypeSO enemyType, ILevelable levelable)
         {
             _enemyTypeSO = enemyType;
             _levelable = levelable;
+            Recolor(_enemyTypeSO.TypeColor);
             UpdateUI();
             _levelable.OnExperienceChanged += UpdateExperienceUI;
             _levelable.OnLevelUp += UpdateUI;
+        }
+
+        private void Recolor(Color color) 
+        {
+            _backgroundImage.color = color;
+            _experienceImage.color = color;
         }
 
         private void UpdateUI()
@@ -44,15 +53,17 @@ namespace _ProjectSurvival.Scripts.Enemies.Evolution.UI
             _enemyImage.sprite = enemyCurrentLevelData.AppearanceSpriteFront;
             if (_levelable.IsMaximumLevel)
             {
-                _backgroundImage.color = _unlockedColor;
-                _experienceImage.color = _unlockedColor;
+                _experienceImage.sprite = _unlockedProgressSprite;
+                _experienceImage.fillAmount = 1;
             }
             UpdateExperienceUI();
         }
 
         private void UpdateExperienceUI()
         {
-            _experienceImage.fillAmount = _levelable.CurrentExperience / _levelable.RequiredExperience;
+            if (_levelable.RequiredExperience != 0)
+                _experienceImage.fillAmount = _levelable.CurrentExperience / _levelable.RequiredExperience;
         }
+
     }
 }

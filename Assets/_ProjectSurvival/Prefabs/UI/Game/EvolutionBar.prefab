@@ -207,8 +207,9 @@ MonoBehaviour:
   _enemyImage: {fileID: 5005813359772242033}
   _experienceImage: {fileID: 5416370122899872388}
   _backgroundImage: {fileID: 7208844805024611263}
+  _lockedColor: {r: 0.09019608, g: 0.97647065, b: 0.97647065, a: 1}
   _lockedEnemySprite: {fileID: 21300000, guid: 07f4abf31c2b9594586c90c48bfd794b, type: 3}
-  _unlockedColor: {r: 1, g: 0.9529412, b: 0.5686275, a: 1}
+  _unlockedProgressSprite: {fileID: 21300000, guid: f996560d2e3f0354ebc7787d035bac24, type: 3}
 --- !u!1 &6798641875675830680
 GameObject:
   m_ObjectHideFlags: 0
