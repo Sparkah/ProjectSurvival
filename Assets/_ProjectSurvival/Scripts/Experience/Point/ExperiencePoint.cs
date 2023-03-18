@@ -21,6 +21,12 @@ namespace _ProjectSurvival.Scripts.Experience
         public float ExperienceAmount => _experienceAmount;
         public EnemyTypeSO EnemyTypeSO => _enemyTypeSO;
 
+        private void OnDestroy()
+        {
+            if (_spriteRenderer!=null)
+                _spriteRenderer.transform.DOKill();
+        }
+
         public void Init(IObjectPool<ExperiencePoint> pool)
         {
             _pool = pool;

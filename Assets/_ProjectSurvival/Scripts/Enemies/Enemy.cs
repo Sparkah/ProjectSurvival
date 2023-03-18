@@ -53,16 +53,22 @@ namespace _ProjectSurvival.Scripts.Enemies
 
         public void ReturnToPool()
         {
-            Debug.Log(name + " defeated - return to pool");
-            _goldHolder.DropGold();
-            _experienceHolder.DropExperiencePoint(_enemyTypeSO);
-            _pool.Release(this);
+            if (isActiveAndEnabled)
+            {
+                Debug.Log(name + " defeated - return to pool");
+                _goldHolder.DropGold();
+                _experienceHolder.DropExperiencePoint(_enemyTypeSO);
+                _pool.Release(this);
+            }
         }
 
         private void ReturnToPoolOnPlayerTouched(IDamagable go)
         {
-            go.TakeDamage(_damage);
-            _pool.Release(this);
+            if (isActiveAndEnabled)
+            {
+                go.TakeDamage(_damage);
+                _pool.Release(this);
+            }
         }
 
         private void SetupEnemy(EnemyLevelData levelData)
