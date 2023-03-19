@@ -30,6 +30,19 @@ namespace _ProjectSurvival.Scripts.Audio
             _audioSource.Play();
         }
 
+        public void StopSceneMusic(bool stop)
+        {
+            if (stop)
+            {
+                _audioSource.Pause();
+            }
+
+            if (!stop)
+            {
+                _audioSource.Play();
+            }
+        }
+
         private void OnDestroy()
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;

@@ -15,6 +15,8 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
         [Inject] private ActiveWeapons _activeWeapons;
         [Inject] private StatsTypeSelector _statsTypeSelector;
         [Inject] private ActiveStats _activeStats;
+        [Inject] private AudioSystem _audioSystem;
+        
         [SerializeField] private Window _window;
         [SerializeField] private PauseControllerSO _pauseControllerSO;
         [Header("Upgrades window")]
@@ -65,6 +67,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
             _upgradesPanel.SetActive(false);
             _fullyUpgradedPanel.SetActive(false);
             AudioPlayer.Audio.PlayOneShotSound(AudioSounds.LevelUp);
+            _audioSystem.StopSceneMusic(true);
 
             WeaponTypeSO[] selectedUpgrades = _attackTypeSelector.SelectWeapons(_levelUpButtons.Length);
 

@@ -1,12 +1,16 @@
 using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
 using System.Collections.Generic;
+using _ProjectSurvival.Scripts.Audio;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace _ProjectSurvival.Scripts.LevelingSystem.UI
 {
     public class LevelUpRewardButton : MonoBehaviour
     {
+        [Inject] private AudioSystem _audioSystem;
+        
         [SerializeField] private Button _button;
         [SerializeField] private Text _rewardTitleLabel;
         [SerializeField] private Text _rewardDescriptionLabel;
@@ -51,6 +55,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
                     rewardGiver.GiveReward(_reward);
                 }
             // _rewardGiver.GiveReward(_reward);
+            _audioSystem.StopSceneMusic(false);
             _levelUpWindow.CloseLevelUpWindow();
         }
     }
