@@ -19,21 +19,28 @@ MonoBehaviour:
   - _appearFrequency: 0.3
     _appearAmount: 1
     _projectileSetting:
-      _damage: 2
+      _damage: 0.5
       _size: 0.3
       _speed: 12
       _durability: 1
-  - _appearFrequency: 0.3
+  - _appearFrequency: 0.15
     _appearAmount: 1
     _projectileSetting:
-      _damage: 4
-      _size: 0.4
-      _speed: 13
+      _damage: 0.5
+      _size: 0.3
+      _speed: 12
       _durability: 1
-  - _appearFrequency: 0.2
+  - _appearFrequency: 0.15
     _appearAmount: 1
     _projectileSetting:
-      _damage: 7
-      _size: 0.5
-      _speed: 14
+      _damage: 1
+      _size: 0.3
+      _speed: 12
+      _durability: 1
+  - _appearFrequency: 0.1
+    _appearAmount: 1
+    _projectileSetting:
+      _damage: 1
+      _size: 0.3
+      _speed: 12
       _durability: 1

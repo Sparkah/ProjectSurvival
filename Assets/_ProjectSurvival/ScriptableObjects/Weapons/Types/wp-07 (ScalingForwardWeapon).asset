@@ -16,31 +16,31 @@ MonoBehaviour:
   _shootSound: 11
   _projectilePrefab: {fileID: 4126832796780620866, guid: b8a929d6dfba17b45a28d28ffcadbd47, type: 3}
   _weaponLevels:
-  - _appearFrequency: 3
+  - _appearFrequency: 1.5
     _appearAmount: 1
     _projectileSetting:
-      _damage: 3
+      _damage: 1
       _size: 5
       _speed: 10
-      _durability: 1
-  - _appearFrequency: 2.5
+      _durability: 999
+  - _appearFrequency: 1.5
     _appearAmount: 1
     _projectileSetting:
-      _damage: 5
+      _damage: 1
       _size: 7
-      _speed: 12
-      _durability: 2
-  - _appearFrequency: 2.25
+      _speed: 10
+      _durability: 999
+  - _appearFrequency: 1.5
     _appearAmount: 1
     _projectileSetting:
-      _damage: 7
-      _size: 8
-      _speed: 13
-      _durability: 3
-  - _appearFrequency: 2
+      _damage: 1
+      _size: 9
+      _speed: 10
+      _durability: 999
+  - _appearFrequency: 1.5
     _appearAmount: 1
     _projectileSetting:
-      _damage: 10
-      _size: 10
-      _speed: 15
-      _durability: 4
+      _damage: 1
+      _size: 11
+      _speed: 10
+      _durability: 999
