@@ -33,7 +33,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
             _skillDescriptionText.text = skillDescriptionText;
             _price = price;
             _upgradeButton.onClick.AddListener(TryPurchase);
-            _priceText.text = _world.Gold.Value+"/" + price.ToString();
+            _priceText.text = MathF.Round(_world.Gold.Value, 1)+"/" + price.ToString();
             _upgradeType = upgradeType;
         }
 
