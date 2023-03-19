@@ -1,5 +1,4 @@
-using _ProjectSurvival.Infrastructure;
-using _ProjectSurvival.Scripts.Helpers;
+using _ProjectSurvival.Scripts.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +11,6 @@ namespace _ProjectSurvival.Scripts.Audio
         [SerializeField] private AudioClip _levelSceneMusic;
 
         private AudioSource _audioSource;
-        private World _world;
 
         private void Awake()
         {
@@ -30,6 +28,19 @@ namespace _ProjectSurvival.Scripts.Audio
             }
 
             _audioSource.Play();
+        }
+
+        public void StopSceneMusic(bool stop)
+        {
+            if (stop)
+            {
+                _audioSource.Pause();
+            }
+
+            if (!stop)
+            {
+                _audioSource.Play();
+            }
         }
 
         private void OnDestroy()

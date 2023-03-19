@@ -43,7 +43,6 @@ public class EnemyFactory : MonoBehaviour
             Enemy enemy = _enemiesPools[enemyType].Pool.Get();
             enemy.DefineType(enemyType);
             enemy.Restore(spawnPosition, _chasingTarget.transform);
-            enemy.SetPlayer(_player);
         }
     }
 

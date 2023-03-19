@@ -5,9 +5,14 @@ using UnityEngine;
 public class StatsTypeSO : ScriptableObject, IReward
 {
     [SerializeField] private string _title;
+    [SerializeField] private string _description;
+    [SerializeField] private Sprite _picture;
     [SerializeField] private int _statAmount;
 
     public string Title => _title;
+    public string Description => _description;
+    public Sprite Picture => _picture;
+
     public RewardType GetRewardType()
     {
         return RewardType.Stat;

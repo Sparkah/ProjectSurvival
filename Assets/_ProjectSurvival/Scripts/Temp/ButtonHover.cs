@@ -15,11 +15,11 @@ public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerClickHan
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        AudioPlayer.Audio.PlaySound(AudioSounds.Hoover);
+        //AudioPlayer.Audio.PlaySound(AudioSounds.Hoover);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        AudioPlayer.Audio.PlaySound(AudioSounds.Enter);
+        AudioPlayer.Audio.PlayOneShotSound(AudioSounds.Enter);
     }
 }

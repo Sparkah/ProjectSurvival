@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7e0270169691b438adcd0f1f8e70db, type: 3}
+  m_Name: wp-10 (FastForwardWeapon)
+  m_EditorClassIdentifier: 
+  _title: "\u041F\u043E\u0442\u043E\u043A \u0441\u043E\u0437\u043D\u0430\u043D\u0438\u044F"
+  _shootSound: 8
+  _projectilePrefab: {fileID: 5102044091516270430, guid: bdfc937c2b37cd54ca292e1493e81adc, type: 3}
+  _weaponLevels:
+  - _appearFrequency: 0.3
+    _appearAmount: 1
+    _projectileSetting:
+      _damage: 0.5
+      _size: 0.3
+      _speed: 12
+      _durability: 1
+  - _appearFrequency: 0.15
+    _appearAmount: 1
+    _projectileSetting:
+      _damage: 0.5
+      _size: 0.3
+      _speed: 12
+      _durability: 1
+  - _appearFrequency: 0.15
+    _appearAmount: 1
+    _projectileSetting:
+      _damage: 1
+      _size: 0.3
+      _speed: 12
+      _durability: 1
+  - _appearFrequency: 0.1
+    _appearAmount: 1
+    _projectileSetting:
+      _damage: 1
+      _size: 0.3
+      _speed: 12
+      _durability: 1

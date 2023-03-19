@@ -1,41 +1,47 @@
+using _ProjectSurvival.Scripts.DamageSystem;
+using _ProjectSurvival.Scripts.Enemies.Evolution;
+using _ProjectSurvival.Scripts.Experience;
+using _ProjectSurvival.Scripts.Gold;
 using UnityEngine;
 using UnityEngine.Pool;
+using Zenject;
 
 namespace _ProjectSurvival.Scripts.Enemies
 {
     public class Enemy : MonoBehaviour, IPoolableObject<Enemy>
     {
+        [Inject] private EnemiesEvolutionTracker _enemiesEvolutionTracker;
         [SerializeField] private DamagableObject _damagableObject;
         [SerializeField] private EnemyMover _enemyMover;
         [SerializeField] private ObjectAppearance _enemyAppearance;
-        [SerializeField] private float _xpDropOnDeath = 10; // переделать на so
+        [SerializeField] private ExperienceHolder _experienceHolder;
+        [SerializeField] private GoldHolder _goldHolder;
+        [SerializeField] private DamageDealer _damageDealer;
         
+        private float _damage;
         private IObjectPool<Enemy> _pool;
-        private LevelableObject _player;
+        private EnemyTypeSO _enemyTypeSO;
 
         public void Init(IObjectPool<Enemy> pool)
         {
             _pool = pool;
             _damagableObject.OnDefeat += ReturnToPool;
+            _damageDealer.OnDamagableTouched += ReturnToPoolOnPlayerTouched;
         }
 
         public void Destroy()
         {
             _damagableObject.OnDefeat -= ReturnToPool;
-        }
-
-        public void ReturnToPool()
-        {
-            Debug.Log(name + " defeated - return to pool");
-            _player.AddExperience(_xpDropOnDeath);
-            _pool.Release(this);
+            _damageDealer.OnDamagableTouched -= ReturnToPoolOnPlayerTouched;
         }
 
         public void DefineType(EnemyTypeSO enemyType)
         {
-            _damagableObject.SetupHealth(enemyType.BaseHealth);
-            _enemyMover.SetupSpeed(enemyType.BaseSpeed);
-            _enemyAppearance.SetupSprite(enemyType.AppearanceSpriteFront);
+            _enemyTypeSO = enemyType;
+
+            int currentEvolutionLevel = _enemiesEvolutionTracker.GetEnemyEvolutionLevel(_enemyTypeSO);
+            EnemyLevelData currentLevelData = _enemyTypeSO.GetEnemyLevelData(currentEvolutionLevel);
+            SetupEnemy(currentLevelData);
         }
 
         public void Restore(Vector3 appearPoint, Transform target)
@@ -45,9 +51,34 @@ namespace _ProjectSurvival.Scripts.Enemies
             _enemyMover.Construct(target);
         }
 
-        public void SetPlayer(Transform player)
+        public void ReturnToPool()
         {
-            _player = player.GetComponent<LevelableObject>();
+            if (isActiveAndEnabled)
+            {
+                Debug.Log(name + " defeated - return to pool");
+                _goldHolder.DropGold();
+                _experienceHolder.DropExperiencePoint(_enemyTypeSO);
+                _pool.Release(this);
+            }
+        }
+
+        private void ReturnToPoolOnPlayerTouched(IDamagable go)
+        {
+            if (isActiveAndEnabled)
+            {
+                go.TakeDamage(_damage);
+                _pool.Release(this);
+            }
+        }
+
+        private void SetupEnemy(EnemyLevelData levelData)
+        {
+            _damagableObject.SetupHealth(levelData.BaseHealth);
+            _enemyMover.SetupSpeed(levelData.BaseSpeed);
+            _enemyAppearance.SetupSprite(levelData.AppearanceSpriteFront);
+            _damage = levelData.BaseDamage;
+            _experienceHolder.SetupExperience(levelData.BaseExperience);
+            _goldHolder.SetUp(levelData.BaseGold);
         }
     }
 }

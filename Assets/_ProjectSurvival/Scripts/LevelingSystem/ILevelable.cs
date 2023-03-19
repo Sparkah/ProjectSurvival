@@ -1,13 +1,17 @@
 using UnityEngine.Events;
 
-public interface ILevelable
+namespace _ProjectSurvival.Scripts.LevelingSystem
 {
-    public float CurrentExperience { get; }
-    public float RequiredExperience { get; }
-    public int Level { get; }
+    public interface ILevelable
+    {
+        public float CurrentExperience { get; }
+        public float RequiredExperience { get; }
+        public int Level { get; }
+        public bool IsMaximumLevel { get; }
 
-    public event UnityAction OnExperienceChanged;
-    public event UnityAction OnLevelUp;
+        public event UnityAction OnExperienceChanged;
+        public event UnityAction OnLevelUp;
 
-    public void AddExperience(float amount);
+        public void AddExperience(float amount);
+    }
 }

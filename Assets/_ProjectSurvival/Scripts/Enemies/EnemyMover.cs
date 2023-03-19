@@ -4,10 +4,12 @@ using UnityEngine.AI;
 
 public class EnemyMover : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer _spriteRenderer;
     private Transform _player;
     private Rigidbody2D _rigidbody;
 
     private float _speed;
+    private Vector2 _direction;
     
     public void Construct(Transform player)
     {
@@ -21,13 +23,16 @@ public class EnemyMover : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(_player);
+        _direction = _player.position - transform.position;
+        _direction.Normalize();
+        _spriteRenderer.flipX = _direction.x > 0;
+        //transform.LookAt(_player);
         //transform.rotation = Quaternion.Euler(new Vector2(transform.rotation.x, 0));
     }
 
     private void FixedUpdate()
     {
-        _rigidbody.AddForce(transform.forward*_speed);
+        _rigidbody.AddForce(_direction*_speed);
     }
 
     public void SetupSpeed(float speed)

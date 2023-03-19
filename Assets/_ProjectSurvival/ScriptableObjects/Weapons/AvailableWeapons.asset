@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: AvailableWeapons
   m_EditorClassIdentifier: 
   _weaponTypeSOs:
+  - {fileID: 11400000, guid: e1e0a93b984d8aa488e9d7da1539e146, type: 2}
+  - {fileID: 11400000, guid: 3010279825a3f1c448a005da80e0e1ca, type: 2}
+  - {fileID: 11400000, guid: 7dd04a48350c6734c8327aa7ffd01c55, type: 2}
+  - {fileID: 11400000, guid: 02fed083c6883894ab4a81696bd7064a, type: 2}
   - {fileID: 11400000, guid: 046f6f9cadd3d87468313e2070116088, type: 2}
   - {fileID: 11400000, guid: cd267e10ced792b4a9bb0bf29513dfb1, type: 2}
-  - {fileID: 11400000, guid: 3010279825a3f1c448a005da80e0e1ca, type: 2}
-  - {fileID: 11400000, guid: e1e0a93b984d8aa488e9d7da1539e146, type: 2}
-  - {fileID: 11400000, guid: a2f858f276e331d41ae9fb7cd3ed1974, type: 2}
   - {fileID: 11400000, guid: f16c37679378cc34c9f4f63eb696ffa4, type: 2}
-  - {fileID: 11400000, guid: 7dd04a48350c6734c8327aa7ffd01c55, type: 2}
-  - {fileID: 11400000, guid: e9658c4ce66bff74d8fdf9a320f571cd, type: 2}
-  - {fileID: 11400000, guid: 02fed083c6883894ab4a81696bd7064a, type: 2}

@@ -55,6 +55,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScalingForwardProjectile
       objectReference: {fileID: 0}
+    - target: {fileID: 5641912257251231343, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ca3edbdeca594a6b947d8808c52c9b2, type: 3}
+    - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
 --- !u!114 &4311097355277762408 stripped
@@ -96,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32397a4a1c7a2a04e86f373ff02a5e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _direction: 0
 --- !u!114 &3166456573968869785
 MonoBehaviour:
   m_ObjectHideFlags: 0

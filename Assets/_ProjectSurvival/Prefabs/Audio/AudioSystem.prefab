@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _menuSceneMusic: {fileID: 0}
-  _levelSceneMusic: {fileID: 8300000, guid: ea476f17d052d3b4c908bcc40c273b0c, type: 3}
+  _levelSceneMusic: {fileID: 8300000, guid: fb4fd77e3575f0242ae2b85291556ce1, type: 3}
 --- !u!1 &2965714128023367925
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,15 +320,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSourceMain: {fileID: 7698896602412660651}
   _audioSourceSecondary: {fileID: 6725695602026794179}
-  _levelUp: {fileID: 0}
-  _shootWeaponA: {fileID: 0}
-  _enemyDeath: {fileID: 0}
-  _bigDrops: {fileID: 0}
-  _enter: {fileID: 0}
-  _hit: {fileID: 0}
-  _hoover: {fileID: 0}
-  _low: {fileID: 0}
-  _round: {fileID: 0}
+  _levelUp: {fileID: 8300000, guid: 528a148291dd6854f8c0dc1a33216c67, type: 3}
+  _enemyDeath: {fileID: 8300000, guid: 52f096c31e3aca34f81d39f706f597a3, type: 3}
+  _enter: {fileID: 8300000, guid: 06959c24dc9a8ac4990da3869249760b, type: 3}
+  _hit: {fileID: 8300000, guid: 432647b1cc691764ca3c5b8821e31e53, type: 3}
+  _wp_10: {fileID: 8300000, guid: 91bbb92ea9a6fc342a17e47407a4bc64, type: 3}
+  _wp_12: {fileID: 8300000, guid: e5c15fd1a520d8141852c83d0e1efd6f, type: 3}
+  _wp_1: {fileID: 8300000, guid: 9def7945676143049a5f4b6e78ddd94a, type: 3}
+  _wp_3: {fileID: 8300000, guid: 1e14c81c9f2652047a0ea85cce1c1678, type: 3}
+  _wp_7: {fileID: 8300000, guid: c079ce06d6e1d064ab32099567902b3e, type: 3}
+  _wp_9: {fileID: 8300000, guid: 462471bba8c1ddd49920d966188b20dd, type: 3}
+  _coins: {fileID: 8300000, guid: a7a5d926f5a53f340bee00a4e5ea5aa2, type: 3}
 --- !u!1 &5313252633059848830
 GameObject:
   m_ObjectHideFlags: 0

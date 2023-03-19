@@ -1,15 +1,13 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace _ProjectSurvival.Scripts.Player
 {
     public class PlayerMover : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private Transform _playerSpriteTransform;
         [SerializeField] private float _speed = 150f;
         [SerializeField] private float _rotationSpeed = 2f;
-    
-        //private NavMeshAgent _agent; // возможно придется вернуть навмеш
+        
         private Rigidbody2D _agent;
         private Animator _animator;
         private const int _speedIncreaseConstant = 10000;
@@ -20,6 +18,10 @@ namespace _ProjectSurvival.Scripts.Player
         void Start()
         {
             _agent = gameObject.GetComponent<Rigidbody2D>();
+            //Чтобы задать навпрление стрельбы при старте игры
+            //Right - ибо тестовый персонаж при старте смотрит вправо
+            //Можно вынести в инспектор?
+            _movementDirection = transform.right;
         }
 
         void Update()
@@ -58,22 +60,13 @@ namespace _ProjectSurvival.Scripts.Player
 
         private void Rotate(Vector3 input)
         {
-            //Приделать сюда повороты
-            //var targetVector = new Vector3(input.x, 0, input.z);
-            //RotateTowardMovementVector(targetVector);
             if (input.x != 0)
-                _spriteRenderer.flipX = input.x < 0;
-        }
-
-        private void RotateTowardMovementVector(Vector3 movementDirection)
-        {
-            if (movementDirection.magnitude == 0)
             {
-                return;
+                Vector3 playerTransformScale = _playerSpriteTransform.localScale;
+                playerTransformScale.x = Mathf.Abs(playerTransformScale.x);
+                playerTransformScale.x *= input.x < 0 ? -1 : 1;
+                _playerSpriteTransform.localScale = playerTransformScale;
             }
-        
-            var rotation = Quaternion.LookRotation(movementDirection);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, _rotationSpeed);
         }
     }
 }

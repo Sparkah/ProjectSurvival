@@ -14,9 +14,9 @@ TagManager:
   - Enemy
   - Projectile
   - PlayerCollider
-  - 
-  - 
-  - 
+  - Experience
+  - ExperienceCollector
+  - LevelBarrier
   - 
   - 
   - 

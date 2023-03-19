@@ -33,7 +33,7 @@ namespace _ProjectSurvival.Scripts.Player
                 attackProjectile = activeWeapon.GetProjectile();
                 attackProjectile.PrepareForLaunch(activeWeapon.WeaponType.GetProjectileSettings(attackLevel));
                 attackProjectile.Launch(_firePoint.position, _playerMover.MovementDirection);
-                AudioPlayer.Audio.PlaySound(activeWeapon.WeaponType.ShootSound);
+                AudioPlayer.Audio.PlayOneShotSound(activeWeapon.WeaponType.ShootSound);
             }
         }
     }

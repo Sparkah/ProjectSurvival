@@ -1,31 +1,43 @@
+using _ProjectSurvival.Scripts.Audio;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DamageDealer : MonoBehaviour
+namespace _ProjectSurvival.Scripts.DamageSystem
 {
-    [SerializeField] private LayerMask _targetLayer;
-
-    public event UnityAction<IDamagable> OnDamagableTouched;
-    public event UnityAction OnNotDamagableTouched;
-
-    private void OnTriggerEnter2D(Collider2D other)
+    public class DamageDealer : MonoBehaviour
     {
-        if (!gameObject.activeInHierarchy || !other.attachedRigidbody)
-            return;
+        [SerializeField] private LayerMask _targetLayer;
+        [SerializeField] private LayerMask _destructionMask;
 
-        GameObject touchedObject = other.attachedRigidbody.gameObject;
-        bool isTarget = _targetLayer.Contains(touchedObject.layer);
+        public event UnityAction<IDamagable> OnDamagableTouched;
+        public event UnityAction OnDestructionTouched;
 
-        if (isTarget && touchedObject.TryGetComponent(out IDamagable damagedObject))
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!damagedObject.IsDefeated)
+            if (!gameObject.activeInHierarchy || !other.attachedRigidbody)
+                return;
+        
+            GameObject touchedObject = other.attachedRigidbody.gameObject;
+
+            if (_destructionMask.Contains(touchedObject.layer))
             {
-                OnDamagableTouched?.Invoke(damagedObject);
+                OnDestructionTouched?.Invoke();
+                return;
             }
-        }
-        else
-        {
-            OnNotDamagableTouched?.Invoke();
+
+            bool isTarget = _targetLayer.Contains(touchedObject.layer);
+            if (isTarget && touchedObject.TryGetComponent(out IDamagable damagedObject))
+            {
+                if (!damagedObject.IsDefeated)
+                {
+                    OnDamagableTouched?.Invoke(damagedObject);
+                }
+            }
+        
+            if (_targetLayer.value == 256)
+            {
+                AudioPlayer.Audio.PlayOneShotSound(AudioSounds.Hit);
+            }
         }
     }
 }

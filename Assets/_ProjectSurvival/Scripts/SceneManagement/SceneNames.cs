@@ -1,4 +1,4 @@
-namespace _ProjectSurvival.Scripts.Helpers
+namespace _ProjectSurvival.Scripts.SceneManagement
 {
     public static class SceneNames
     {

@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.DamageSystem;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -25,7 +26,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
         public void Init(IObjectPool<WeaponProjectile> pool)
         {
             _damageDealer.OnDamagableTouched += DoDamage;
-            _damageDealer.OnNotDamagableTouched += ReturnToPool;
+            _damageDealer.OnDestructionTouched += ReturnToPool;
             _projectileDurability.OnDefeat += ReturnToPool;
             _pool = pool;
         }
@@ -56,7 +57,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
         public void Destroy()
         {
             _damageDealer.OnDamagableTouched -= DoDamage;
-            _damageDealer.OnNotDamagableTouched -= ReturnToPool;
+            _damageDealer.OnDestructionTouched -= ReturnToPool;
             _projectileDurability.OnDefeat -= ReturnToPool;
         }
 

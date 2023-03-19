@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7e0270169691b438adcd0f1f8e70db, type: 3}
+  m_Name: wp-11 (FullAngleWeapon)
+  m_EditorClassIdentifier: 
+  _title: "\u041E\u0433\u043E\u043D\u044C \u043F\u043E \u043A\u0440\u0443\u0433\u0443"
+  _shootSound: 0
+  _projectilePrefab: {fileID: 5878013301034431319, guid: f22e1abbf471fef41a873016e9cdd33c, type: 3}
+  _weaponLevels:
+  - _appearFrequency: 2
+    _appearAmount: 4
+    _projectileSetting:
+      _damage: 2
+      _size: 1
+      _speed: 15
+      _durability: 1
+  - _appearFrequency: 1.5
+    _appearAmount: 6
+    _projectileSetting:
+      _damage: 4
+      _size: 1
+      _speed: 15
+      _durability: 1
+  - _appearFrequency: 1.25
+    _appearAmount: 8
+    _projectileSetting:
+      _damage: 6
+      _size: 1
+      _speed: 15
+      _durability: 1
+  - _appearFrequency: 1
+    _appearAmount: 10
+    _projectileSetting:
+      _damage: 8
+      _size: 1
+      _speed: 15
+      _durability: 1
