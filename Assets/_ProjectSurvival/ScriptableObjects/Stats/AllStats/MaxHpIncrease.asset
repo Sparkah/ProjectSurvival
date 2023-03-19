@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: MaxHpIncrease
   m_EditorClassIdentifier: 
   _title: Max HP Increase
+  _description: 
+  _picture: {fileID: 21300000, guid: b131d68f0a4f5a34cb4de3c2a1d0aa6a, type: 3}
   _statAmount: 3

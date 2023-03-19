@@ -9,19 +9,23 @@ namespace _ProjectSurvival.Scripts.Weapons.WeaponTypes
     public class WeaponTypeSO : ScriptableObject, IReward
     {
         [SerializeField] private string _title;
+        [SerializeField] private string _description;
+        [SerializeField] private Sprite _picture;
         [SerializeField] private AudioSounds _shootSound;
         [SerializeField] private WeaponProjectile _projectilePrefab;
         [SerializeField] private WeaponLevel[] _weaponLevels;
 
         public string Title => _title;
+        public string Description => _description;
+        public Sprite Picture => _picture;
+        public WeaponProjectile ProjectilePrefab => _projectilePrefab;
+        public int MaximumLevel => _weaponLevels.Length;
+        public AudioSounds ShootSound => _shootSound;
+
         public RewardType GetRewardType()
         {
             return RewardType.Weapon;
         }
-
-        public WeaponProjectile ProjectilePrefab => _projectilePrefab;
-        public int MaximumLevel => _weaponLevels.Length;
-        public AudioSounds ShootSound => _shootSound;
 
         public float GetAppearFrequency(int level)
         {

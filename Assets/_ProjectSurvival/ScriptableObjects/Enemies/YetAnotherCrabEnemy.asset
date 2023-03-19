@@ -30,3 +30,10 @@ MonoBehaviour:
     _baseDamage: 2
     _baseExperience: 20
     _baseGold: 0.5
+  - _appearanceSpriteFront: {fileID: -7978732649213711908, guid: 6924a945aa0c64f3aaaaaf069a4a2af3, type: 3}
+    _appearanceSpriteBack: {fileID: 0}
+    _baseHealth: 5
+    _baseSpeed: 7
+    _baseDamage: 2
+    _baseExperience: 20
+    _baseGold: 0.5

@@ -8,7 +8,9 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
     public class LevelUpRewardButton : MonoBehaviour
     {
         [SerializeField] private Button _button;
-        [SerializeField] private Text _attackLabel;
+        [SerializeField] private Text _rewardTitleLabel;
+        [SerializeField] private Text _rewardDescriptionLabel;
+        [SerializeField] private Image _rewardPicture;
         private LevelUpWindow _levelUpWindow;
         private List<IRewardGiver> _rewardGiver = new List<IRewardGiver>();
         private IReward _reward;
@@ -35,7 +37,9 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
         {
             _reward = reward;
             _rewardType = _reward.GetRewardType();
-            _attackLabel.text = _reward.Title;
+            _rewardTitleLabel.text = _reward.Title;
+            _rewardDescriptionLabel.text = _reward.Description;
+            _rewardPicture.sprite = _reward.Picture;
             gameObject.SetActive(true);
         }
 

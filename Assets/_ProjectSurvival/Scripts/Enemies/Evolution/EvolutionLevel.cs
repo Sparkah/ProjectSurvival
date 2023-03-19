@@ -13,8 +13,7 @@ namespace _ProjectSurvival.Scripts.Enemies.Evolution
         public float CurrentExperience => _currentExperience;
         public float RequiredExperience => _requiredExperience;
         public int Level => _level;
-        public bool IsMaximumLevel => (!HasNextLevel());// && (_currentExperience == _requiredExperience);
-
+        public bool IsMaximumLevel => (!HasNextLevel()) && (_currentExperience == _requiredExperience);
 
         public event UnityAction OnExperienceChanged;
         public event UnityAction OnLevelUp;
@@ -47,7 +46,17 @@ namespace _ProjectSurvival.Scripts.Enemies.Evolution
         {
             _currentExperience -= _requiredExperience;
             _level++;
-            _requiredExperience = _levelingSchemeSO.GetRequiredExperienceForLevel(_level + 1);
+
+            if (!HasNextLevel())
+            {
+                _requiredExperience = 0;
+                _currentExperience = 0;
+            }
+            else
+            {
+                _requiredExperience = _levelingSchemeSO.GetRequiredExperienceForLevel(_level + 1);
+            }
+
             OnLevelUp?.Invoke();
         }
     }

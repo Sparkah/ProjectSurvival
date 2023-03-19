@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: wp-01 (FirewallWeapon)
   m_EditorClassIdentifier: 
   _title: "\u0417\u0434\u0435\u0441\u044C \u0438 \u0441\u0435\u0439\u0447\u0430\u0441"
+  _description: "\u041D\u0435 \u0434\u0443\u043C\u0430\u0439\u0442\u0435 \u043E \u0442\u043E\u043C
+    \u0434\u043D\u0435, \u0447\u0442\u043E \u0412\u044B \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u0435\u0442\u0435
+    \u043A\u043E\u043D\u043A\u0440\u0435\u0442\u043D\u043E \u0441\u0435\u0439\u0447\u0430\u0441?"
+  _picture: {fileID: 21300000, guid: 421ece398caab1141b6423cc0a6a1ea4, type: 3}
   _shootSound: 13
   _projectilePrefab: {fileID: 3614126506049027145, guid: f7f0c999ed5bf7a41931b480dbd3c268, type: 3}
   _weaponLevels:
