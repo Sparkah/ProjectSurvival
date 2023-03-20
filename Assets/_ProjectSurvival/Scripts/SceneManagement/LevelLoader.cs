@@ -29,6 +29,8 @@ namespace _ProjectSurvival.Scripts.SceneManagement
         {
             if (_currentSceneIndex != -1)
                 LoadScene(_currentSceneIndex);
+            else
+                LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         public void LoadNextScene()

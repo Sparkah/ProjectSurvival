@@ -49,7 +49,8 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
 
         private void HideLandMark()
         {
-            _landMark.gameObject.SetActive(false);
+            if (_landMark)
+                _landMark.gameObject.SetActive(false);
         }
 
         private void Move()
