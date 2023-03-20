@@ -75,7 +75,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         {
             _damagableObject.SetupHealth(levelData.BaseHealth);
             _enemyMover.SetupSpeed(levelData.BaseSpeed);
-            _enemyAppearance.SetupSprite(levelData.AppearanceSpriteFront);
+            _enemyAppearance.SetupSprite(levelData.AppearanceSpriteFront, levelData.AppearanceSpriteBack);
             _damage = levelData.BaseDamage;
             _experienceHolder.SetupExperience(levelData.BaseExperience);
             _goldHolder.SetUp(levelData.BaseGold);
