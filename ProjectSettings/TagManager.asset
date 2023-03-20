@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Experience
+    uniqueID: 2335347139
+    locked: 0
+  - name: Enemy
+    uniqueID: 3576924307
+    locked: 0
+  - name: Attack
+    uniqueID: 3510492167
+    locked: 0
+  - name: Player
+    uniqueID: 2925746921
+    locked: 0
