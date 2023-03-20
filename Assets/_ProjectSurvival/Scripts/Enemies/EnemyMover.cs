@@ -4,7 +4,8 @@ using UnityEngine.AI;
 
 public class EnemyMover : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer _spriteRenderer;
+    private const float AxisChangeSideEdge = 0.4f;
+    [SerializeField] private ObjectAppearance _objectAppearance;
     private Transform _player;
     private Rigidbody2D _rigidbody;
 
@@ -25,7 +26,7 @@ public class EnemyMover : MonoBehaviour
     {
         _direction = _player.position - transform.position;
         _direction.Normalize();
-        _spriteRenderer.flipX = _direction.x > 0;
+        _objectAppearance.ChangeSide(_direction.y > AxisChangeSideEdge, _direction.x > 0);
         //transform.LookAt(_player);
         //transform.rotation = Quaternion.Euler(new Vector2(transform.rotation.x, 0));
     }

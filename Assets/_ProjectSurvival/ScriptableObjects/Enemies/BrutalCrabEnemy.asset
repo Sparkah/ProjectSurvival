@@ -17,21 +17,21 @@ MonoBehaviour:
   _levelingSchemeSO: {fileID: 11400000, guid: ff3e219893fd7a640bcbcded7066bd57, type: 2}
   _enemyLevels:
   - _appearanceSpriteFront: {fileID: 21300000, guid: 681aa0aa92a80474c95040794a081ae4, type: 3}
-    _appearanceSpriteBack: {fileID: 0}
+    _appearanceSpriteBack: {fileID: 21300000, guid: eb9cdc2f522eb744d95d6ca329b4dab4, type: 3}
     _baseHealth: 1
     _baseSpeed: 2
     _baseDamage: 6
     _baseExperience: 10
     _baseGold: 0.1
   - _appearanceSpriteFront: {fileID: 21300000, guid: cdbd17a732de9054abb36f468afd2c3d, type: 3}
-    _appearanceSpriteBack: {fileID: 0}
+    _appearanceSpriteBack: {fileID: -4054529651839876736, guid: 91bb53ff30a238b4c8053320243d003c, type: 3}
     _baseHealth: 2
     _baseSpeed: 2
     _baseDamage: 6
     _baseExperience: 10
     _baseGold: 10
   - _appearanceSpriteFront: {fileID: 21300000, guid: cdbd17a732de9054abb36f468afd2c3d, type: 3}
-    _appearanceSpriteBack: {fileID: 0}
+    _appearanceSpriteBack: {fileID: -4054529651839876736, guid: 91bb53ff30a238b4c8053320243d003c, type: 3}
     _baseHealth: 2
     _baseSpeed: 4
     _baseDamage: 10
