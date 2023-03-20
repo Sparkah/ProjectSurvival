@@ -27,6 +27,11 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
             _upgradePopup = _upgradeTree.UpgradePopup;
         }
 
+        public int GetUpgradesTotalAmount()
+        {
+            return _upgrades.Length;
+        }
+
         public void SetUp()
         {
             _currentUpgrade = 0;
@@ -38,7 +43,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
 
         private void SetUpButton(Upgrade upgrade)
         {
-            Debug.Log(upgrade.transform.position);
+//            Debug.Log(upgrade.transform.position);
             upgrade.Construct(_upgradeImage, _costProgression[_currentUpgrade], _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType);
 
             if (_world.UpgradeLevels[_upgradeType] < _currentUpgrade)

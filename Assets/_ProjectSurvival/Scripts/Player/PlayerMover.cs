@@ -6,7 +6,7 @@ namespace _ProjectSurvival.Scripts.Player
     {
         [SerializeField] private Transform _playerSpriteTransform;
         [SerializeField] private float _speed = 150f;
-        [SerializeField] private float _rotationSpeed = 2f;
+        //[SerializeField] private float _rotationSpeed = 2f;
         
         private Rigidbody2D _agent;
         private Animator _animator;
