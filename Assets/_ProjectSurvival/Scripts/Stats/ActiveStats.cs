@@ -52,7 +52,7 @@ namespace _ProjectSurvival.Scripts.Stats
                     break;
                 case UpgradeTypes.AllGunsCooldown:
                     OnBaseCooldownStatChanged?.Invoke(statReward.StatsIncrease[_baseDamageUpgrades]);
-                    _baseDamageUpgrades += 1;
+                    _baseCooldownUpgrades += 1;
                     break;
                 case UpgradeTypes.AllGunsDamage:
                     OnBaseDamageStatChanged?.Invoke(statReward.StatsIncrease[_baseDamageUpgrades]);

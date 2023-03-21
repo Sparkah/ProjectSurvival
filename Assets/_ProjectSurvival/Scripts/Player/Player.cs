@@ -37,7 +37,7 @@ namespace _ProjectSurvival.Scripts.Player
 
         private void IncreasePlayerHealth(float percentage)
         {
-            Debug.Log("playerHealthIncreased");
+//            Debug.Log("playerHealthIncreased");
             _playerBaseHealth = _initialHealth + (_initialHealth*percentage)/100;
             _damagableObject.IncreaseMaxHealth(_playerBaseHealth);
         }
