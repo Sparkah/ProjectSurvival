@@ -10,6 +10,7 @@ namespace _ProjectSurvival.Scripts.Stats
             if (reward.GetRewardType() == RewardType.Stat)
             {
                 Debug.Log($"{RewardType.Stat} is a reward type that is not implemented");
+                
             }
         }
     }

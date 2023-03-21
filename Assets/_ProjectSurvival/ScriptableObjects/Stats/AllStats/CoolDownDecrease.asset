@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: CoolDownDecrease
   m_EditorClassIdentifier: 
   _title: Cool down decrease
-  _statAmount: 3
+  _description: 
+  _picture: {fileID: 0}
+  _statAmountPercentIncrease: 0300000006000000090000000c0000000f00000014000000

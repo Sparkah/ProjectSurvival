@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: MovementSpeedIncrease
   m_EditorClassIdentifier: 
   _title: Movement Speed Increase
-  _statAmount: 3
+  _description: 
+  _picture: {fileID: 0}
+  _statAmountPercentIncrease: 050000000a0000000f00000014000000190000001e000000
