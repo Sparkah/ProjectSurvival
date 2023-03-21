@@ -6,6 +6,7 @@ namespace _ProjectSurvival.Infrastructure
     public class World
     {
         public ReactiveProperty<float> Gold { get; set; } = new ReactiveProperty<float>(0);
+        public ReactiveProperty<bool> IsSoundOn { get; set; } = new ReactiveProperty<bool>(true);
 
         public ReactiveDictionary<UpgradeTypes, int> UpgradeLevels = new ReactiveDictionary<UpgradeTypes, int>();
 
