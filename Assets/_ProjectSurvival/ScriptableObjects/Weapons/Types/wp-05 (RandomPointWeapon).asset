@@ -47,3 +47,4 @@ MonoBehaviour:
       _size: 1
       _speed: 15
       _durability: 8
+  _upgradeType: 8

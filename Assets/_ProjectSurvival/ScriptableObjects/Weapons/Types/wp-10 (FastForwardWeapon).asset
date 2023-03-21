@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: wp-10 (FastForwardWeapon)
   m_EditorClassIdentifier: 
   _title: "\u041F\u043E\u0442\u043E\u043A \u0441\u043E\u0437\u043D\u0430\u043D\u0438\u044F"
+  _description: 
+  _picture: {fileID: 0}
   _shootSound: 8
   _projectilePrefab: {fileID: 5102044091516270430, guid: bdfc937c2b37cd54ca292e1493e81adc, type: 3}
   _weaponLevels:
@@ -44,3 +46,4 @@ MonoBehaviour:
       _size: 0.3
       _speed: 12
       _durability: 1
+  _upgradeType: 11

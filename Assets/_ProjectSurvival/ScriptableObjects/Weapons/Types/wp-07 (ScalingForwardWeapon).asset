@@ -47,3 +47,4 @@ MonoBehaviour:
       _size: 11
       _speed: 10
       _durability: 999
+  _upgradeType: 9

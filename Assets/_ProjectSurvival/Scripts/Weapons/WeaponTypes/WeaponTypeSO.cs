@@ -1,5 +1,6 @@
 using _ProjectSurvival.Scripts.Audio;
 using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
+using _ProjectSurvival.Scripts.UpgradeTree;
 using _ProjectSurvival.Scripts.Weapons.Projectiles;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ namespace _ProjectSurvival.Scripts.Weapons.WeaponTypes
         [SerializeField] private AudioSounds _shootSound;
         [SerializeField] private WeaponProjectile _projectilePrefab;
         [SerializeField] private WeaponLevel[] _weaponLevels;
+        [SerializeField] private UpgradeTypes _upgradeType;
 
         public string Title => _title;
         public string Description => _description;
@@ -21,6 +23,7 @@ namespace _ProjectSurvival.Scripts.Weapons.WeaponTypes
         public WeaponProjectile ProjectilePrefab => _projectilePrefab;
         public int MaximumLevel => _weaponLevels.Length;
         public AudioSounds ShootSound => _shootSound;
+        public UpgradeTypes UpgradeType => _upgradeType;
 
         public RewardType GetRewardType()
         {

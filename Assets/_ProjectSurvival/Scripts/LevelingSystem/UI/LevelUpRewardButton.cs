@@ -54,7 +54,6 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
                 {
                     rewardGiver.GiveReward(_reward);
                 }
-            // _rewardGiver.GiveReward(_reward);
             _audioSystem.StopSceneMusic(false);
             _levelUpWindow.CloseLevelUpWindow();
         }

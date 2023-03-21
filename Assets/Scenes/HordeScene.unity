@@ -864,6 +864,14 @@ PrefabInstance:
       propertyPath: _waves.Array.data[18].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 9ef4f9c7df1314edd863763d2969f695, type: 2}
+    - target: {fileID: 119611638860661568, guid: 272255cc74f02c941871e0d28457d574, type: 3}
+      propertyPath: _availableStatsSo
+      value: 
+      objectReference: {fileID: 11400000, guid: f2e71c7de605043049a55cecb2572e58, type: 2}
+    - target: {fileID: 119611638860661568, guid: 272255cc74f02c941871e0d28457d574, type: 3}
+      propertyPath: _availableWeaponsSo
+      value: 
+      objectReference: {fileID: 11400000, guid: e3515f7747003aa49ba874420f5a827a, type: 2}
     - target: {fileID: 9210531385913296422, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1230,27 +1238,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 208
+      value: 171.6
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 208
+      value: 171.6
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 188.5
+      value: 155.7
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 166.40002
+      value: 137.28
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 585
+      value: 483
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1040
+      value: 858
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: wp-12 (HalfAngleWeapon)
   m_EditorClassIdentifier: 
   _title: "\u041C\u0430\u0439\u0435\u0432\u0442\u0438\u043A\u0430"
+  _description: 
+  _picture: {fileID: 0}
   _shootSound: 9
   _projectilePrefab: {fileID: 1604206291989398089, guid: 4ce3101adcf1e5f419a179d401fbe0e3, type: 3}
   _weaponLevels:
@@ -44,3 +46,4 @@ MonoBehaviour:
       _size: 1
       _speed: 15
       _durability: 1
+  _upgradeType: 12
