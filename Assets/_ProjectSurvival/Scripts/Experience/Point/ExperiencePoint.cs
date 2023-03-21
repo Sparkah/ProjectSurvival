@@ -8,9 +8,8 @@ namespace _ProjectSurvival.Scripts.Experience
 {
     public class ExperiencePoint : MonoBehaviour, IPoolableObject<ExperiencePoint>
     {
-        [SerializeField] private float _gatheringSpeed;
-        [SerializeField] private float _rotatingSpeed;
         [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private ExperiencePointSettingsSO _settingsSO;
         [SerializeField] private ExperienceVisualTableSO _experienceVisualTableSO;
         private IObjectPool<ExperiencePoint> _pool;
         private EnemyTypeSO _enemyTypeSO;
@@ -60,7 +59,7 @@ namespace _ProjectSurvival.Scripts.Experience
                 _isCollected = true;
                 MoveToCollector(collectorTransform).Forget();
                 _spriteRenderer.transform
-                    .DOLocalRotate(new Vector3(0, 0, 360), _rotatingSpeed, RotateMode.FastBeyond360)
+                    .DOLocalRotate(new Vector3(0, 0, 360), _settingsSO.RotatingSpeed, RotateMode.FastBeyond360)
                     .SetEase(Ease.Linear)
                     .SetLoops(-1, LoopType.Restart);
                 return true;
@@ -70,12 +69,12 @@ namespace _ProjectSurvival.Scripts.Experience
 
         private async UniTaskVoid MoveToCollector(Transform collectorTransform)
         {
-            while (transform.position != collectorTransform.position)
+            while (!IsTargetReached(collectorTransform.position))
             {
                 transform.position = Vector3.MoveTowards(
                     transform.position,
                     collectorTransform.position,
-                    _gatheringSpeed * Time.deltaTime);
+                    _settingsSO.GatheringSpeed * Time.deltaTime);
                 await UniTask.NextFrame(cancellationToken: this.GetCancellationTokenOnDestroy());
             }
             ReturnToPool();
@@ -89,6 +88,11 @@ namespace _ProjectSurvival.Scripts.Experience
 
             _spriteRenderer.color = _enemyTypeSO.TypeColor;
             _spriteRenderer.transform.rotation = _defaultRotation;
+        }
+
+        private bool IsTargetReached(Vector3 targetPosition)
+        {
+            return (targetPosition - transform.position).sqrMagnitude < _settingsSO.ApproximatelyDistance;
         }
     }
 }
