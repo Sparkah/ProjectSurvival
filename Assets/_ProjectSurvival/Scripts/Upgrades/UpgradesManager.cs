@@ -29,17 +29,10 @@ namespace _ProjectSurvival.Scripts.Upgrades
 
         private void UnpackPurchasedUpgrades()
         {
-            Debug.Log("Unpacking upgrades");
-
             foreach (var upgradeLevel in _world.UpgradeLevels)
             {
-
                 switch (upgradeLevel.Key)
                 {
-                    case UpgradeTypes.Vampirik:
-                        //reward.RewardType = UpgradeTypes.Vampirik;
-                        //GiveReward(UpgradeTypes.Vampirik);
-                        break;
                     case UpgradeTypes.WP_01:
                         UpgradeWeapon(UpgradeTypes.WP_01, upgradeLevel.Value);
                         break;
@@ -61,11 +54,22 @@ namespace _ProjectSurvival.Scripts.Upgrades
                     case UpgradeTypes.WP_12:
                         UpgradeWeapon(UpgradeTypes.WP_12, upgradeLevel.Value);
                         break;
-                    case UpgradeTypes.None:
+                    case UpgradeTypes.Vampirik:
+                        UpgradeStats(UpgradeTypes.Vampirik, upgradeLevel.Value);
+                        break;
                     case UpgradeTypes.MaxHealth:
+                        UpgradeStats(UpgradeTypes.MaxHealth, upgradeLevel.Value);
+                        break;
                     case UpgradeTypes.MoveSpeed:
+                        UpgradeStats(UpgradeTypes.MoveSpeed, upgradeLevel.Value);
+                        break;
                     case UpgradeTypes.AllGunsCooldown:
+                        UpgradeStats(UpgradeTypes.AllGunsCooldown, upgradeLevel.Value);
+                        break;
                     case UpgradeTypes.AllGunsDamage:
+                        UpgradeStats(UpgradeTypes.AllGunsDamage, upgradeLevel.Value);
+                        break;
+                    case UpgradeTypes.None:
                     default: 
                         Debug.Log("Upgrade not implemented");
                         break;
@@ -83,6 +87,21 @@ namespace _ProjectSurvival.Scripts.Upgrades
             _activeStats.GiveReward(reward);
         }
 
+        private void UpgradeStats(UpgradeTypes upgradeType, int value)
+        {
+            var stats = _availableStatsSo.SelectAvailableStats();
+            foreach (var stat in stats)
+            {
+                if (stat.UpgradeType == upgradeType)
+                {
+                    for (int i = 0; i < value; i++)
+                    {
+                        _activeStats.AddStat(stat);
+                    }
+                }
+            }
+        }
+
         private void UpgradeWeapon(UpgradeTypes upgradeType, int value)
         {
             var weapons = _availableWeaponsSo.SelectAvailableWeapons(_activeWeapons);
@@ -92,7 +111,6 @@ namespace _ProjectSurvival.Scripts.Upgrades
                 {
                     for (int i = 0; i < value; i++)
                     {
-                        Debug.Log($"{upgradeType} weapon upgraded");
                         _activeWeapons.AddWeapon(weapon);
                     }
                 }

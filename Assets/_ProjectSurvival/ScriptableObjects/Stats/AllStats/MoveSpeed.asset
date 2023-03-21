@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e78f82c6745c643c7a901f2bbc0d4926, type: 3}
-  m_Name: CoolDownDecrease
+  m_Name: MoveSpeed
   m_EditorClassIdentifier: 
-  _title: Cool down decrease
+  _title: Movement Speed Increase
   _description: 
   _picture: {fileID: 0}
-  _statAmountPercentIncrease: 0300000006000000090000000c0000000f00000014000000
+  _statAmountPercentIncrease: 050000000a0000000f00000014000000190000001e000000
+  _upgradeType: 2

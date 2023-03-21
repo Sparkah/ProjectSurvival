@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e78f82c6745c643c7a901f2bbc0d4926, type: 3}
-  m_Name: MaxHpIncrease
+  m_Name: AllGunsCooldown
   m_EditorClassIdentifier: 
-  _title: Max HP Increase
+  _title: Cool down decrease
   _description: 
-  _picture: {fileID: 21300000, guid: b131d68f0a4f5a34cb4de3c2a1d0aa6a, type: 3}
-  _statAmountPercentIncrease: 0a000000140000001e00000028000000320000003c000000
+  _picture: {fileID: 0}
+  _statAmountPercentIncrease: 0300000006000000090000000c0000000f00000014000000
+  _upgradeType: 3

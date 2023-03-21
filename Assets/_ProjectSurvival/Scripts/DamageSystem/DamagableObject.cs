@@ -32,6 +32,13 @@ public class DamagableObject : MonoBehaviour, IDamagable
         OnRestored?.Invoke();
     }
 
+    public void IncreaseMaxHealth(float health)
+    {
+        var currentHealth = _maxHealth;
+        _maxHealth = health;
+        _health += _maxHealth - currentHealth;
+    }
+
     public void TakeDamage(float damageAmount)
     {
         //Add check it is not player, otherwise remove

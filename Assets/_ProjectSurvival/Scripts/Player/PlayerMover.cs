@@ -1,9 +1,14 @@
+using System;
+using _ProjectSurvival.Scripts.Stats;
 using UnityEngine;
+using Zenject;
 
 namespace _ProjectSurvival.Scripts.Player
 {
     public class PlayerMover : MonoBehaviour
     {
+        public Vector2 MovementDirection => _movementDirection;
+        
         [SerializeField] private Transform _playerSpriteTransform;
         [SerializeField] private float _speed = 150f;
         //[SerializeField] private float _rotationSpeed = 2f;
@@ -12,8 +17,16 @@ namespace _ProjectSurvival.Scripts.Player
         private Animator _animator;
         private const int _speedIncreaseConstant = 10000;
         private Vector2 _movementDirection;
+        private ActiveStats _activeStats;
+        private float _initialSpeed;
 
-        public Vector2 MovementDirection => _movementDirection;
+        [Inject]
+        private void Construct(ActiveStats activeStats)
+        {
+            _initialSpeed = _speed;
+            _activeStats = activeStats;
+            _activeStats.OnWalkSpeedStatChanged += UpgradeMoveSpeed;
+        }
 
         void Start()
         {
@@ -67,6 +80,17 @@ namespace _ProjectSurvival.Scripts.Player
                 playerTransformScale.x *= input.x < 0 ? -1 : 1;
                 _playerSpriteTransform.localScale = playerTransformScale;
             }
+        }
+
+        private void UpgradeMoveSpeed(float percentage)
+        {
+            _speed = _initialSpeed + (_initialSpeed*percentage)/100;
+            //Debug.Log(_speed);
+        }
+
+        private void OnDestroy()
+        {
+            _activeStats.OnWalkSpeedStatChanged -= UpgradeMoveSpeed;
         }
     }
 }

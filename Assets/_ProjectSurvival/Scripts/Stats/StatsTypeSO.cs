@@ -1,4 +1,5 @@
 using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
+using _ProjectSurvival.Scripts.UpgradeTree;
 using UnityEngine;
 
 namespace _ProjectSurvival.Scripts.Stats
@@ -10,11 +11,13 @@ namespace _ProjectSurvival.Scripts.Stats
         [SerializeField] private string _description;
         [SerializeField] private Sprite _picture;
         [SerializeField] private int[] _statAmountPercentIncrease;
+        [SerializeField] private UpgradeTypes _upgradeType;
 
         public string Title => _title;
         public string Description => _description;
         public Sprite Picture => _picture;
         public int[] StatsIncrease => _statAmountPercentIncrease;
+        public UpgradeTypes UpgradeType => _upgradeType;
 
         public RewardType GetRewardType()
         {
