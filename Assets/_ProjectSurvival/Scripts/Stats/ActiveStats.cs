@@ -50,7 +50,7 @@ namespace _ProjectSurvival.Scripts.Stats
                     _walkSpeedUpgrades += 1;
                     break;
                 case UpgradeTypes.AllGunsCooldown:
-                    OnBaseCooldownStatChanged?.Invoke(statReward.StatsIncrease[_baseDamageUpgrades]);
+                    OnBaseCooldownStatChanged?.Invoke(statReward.StatsIncrease[_baseCooldownUpgrades]);
                     _baseCooldownUpgrades += 1;
                     break;
                 case UpgradeTypes.AllGunsDamage:
