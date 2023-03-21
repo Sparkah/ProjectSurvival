@@ -1,7 +1,10 @@
 using System;
 using _ProjectSurvival.Infrastructure;
+using _ProjectSurvival.Scripts.Weapons.WeaponTypes;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace _ProjectSurvival.Scripts.UpgradeTree
@@ -13,6 +16,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         [SerializeField] private Sprite _upgradeImage;
         [SerializeField] private string _upgradeDescription;
         [SerializeField] private string _upgradeName;
+        [SerializeField] private ScriptableObject _upgradeScriptbaleObject;
 
         [Inject] private World _world;
         private UpgradeTree _upgradeTree;
@@ -43,23 +47,32 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
 
         private void SetUpButton(Upgrade upgrade)
         {
-//            Debug.Log(upgrade.transform.position);
-            upgrade.Construct(_upgradeImage, _costProgression[_currentUpgrade], _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType);
-
             if (_world.UpgradeLevels[_upgradeType] < _currentUpgrade)
             {
                 upgrade.Button.interactable = false;
+                upgrade.Construct(_upgradeImage, _costProgression[_currentUpgrade], _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, true);
             }
             if (_world.UpgradeLevels[_upgradeType] > _currentUpgrade)
             {
-                upgrade.Button.enabled = false;
+                upgrade.Button.interactable = false;
+                upgrade.Construct(_upgradeImage, _costProgression[_currentUpgrade], _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, false);
             }
             if (_world.UpgradeLevels[_upgradeType] == _currentUpgrade)
             {
+                upgrade.Construct(_upgradeImage, _costProgression[_currentUpgrade], _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, false);
                 upgrade.Button.enabled = true;
                 upgrade.Button.interactable = true;
             }
             _currentUpgrade += 1;
+        }
+
+        private async void DisableButton(Button button)
+        {
+            ColorBlock colorBlock = button.GetComponent<Button>().colors;
+            colorBlock.disabledColor = new Color(195, 255, 104, 1f);
+            button.GetComponent<Button>().colors = colorBlock;
+            await UniTask.DelayFrame(50);
+            button.interactable = false;
         }
     }
 }

@@ -26,9 +26,9 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
             _upgradeTree = upgradeTree;
         }
         
-        public void SetUp(string skillStatText, string skillNameText, string skillDescriptionText, int price, UpgradeTypes upgradeType)
+        public void SetUp(string skillNameText, string skillDescriptionText, int price, UpgradeTypes upgradeType, string stats)
         {
-            _skillStatText.text = skillStatText;
+            _skillStatText.text = stats;
             _skillNameText.text = skillNameText;
             _skillDescriptionText.text = skillDescriptionText;
             _price = price;

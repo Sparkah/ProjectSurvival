@@ -130,10 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87554568}
     m_Modifications:
+    - target: {fileID: 165890828472196570, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Name
+      value: GunsDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeName
+      value: Guns damage
+      objectReference: {fileID: 0}
     - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeScriptbaleObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 3e5ce27a7336749caad22c48c8b08db2, type: 2}
     - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 4
@@ -1095,10 +1107,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87554568}
     m_Modifications:
+    - target: {fileID: 165890828472196570, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Name
+      value: MoveSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeName
+      value: Move Speed
+      objectReference: {fileID: 0}
     - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeScriptbaleObject
+      value: 
+      objectReference: {fileID: 11400000, guid: f442168745b57461f89098b39b0e23e1, type: 2}
     - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 2
@@ -1487,10 +1511,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87554568}
     m_Modifications:
+    - target: {fileID: 165890828472196570, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Name
+      value: WP_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeName
+      value: WP_01
+      objectReference: {fileID: 0}
     - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeScriptbaleObject
+      value: 
+      objectReference: {fileID: 11400000, guid: e1e0a93b984d8aa488e9d7da1539e146, type: 2}
     - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 6
@@ -1959,10 +1995,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87554568}
     m_Modifications:
+    - target: {fileID: 165890828472196570, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Name
+      value: WP_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeName
+      value: WP_03
+      objectReference: {fileID: 0}
     - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeScriptbaleObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 3010279825a3f1c448a005da80e0e1ca, type: 2}
     - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 7
@@ -2559,10 +2607,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87554568}
     m_Modifications:
+    - target: {fileID: 165890828472196570, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Name
+      value: WP_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeName
+      value: WP_07
+      objectReference: {fileID: 0}
     - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeScriptbaleObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 02fed083c6883894ab4a81696bd7064a, type: 2}
     - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 9
@@ -3062,10 +3122,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87554568}
     m_Modifications:
+    - target: {fileID: 165890828472196570, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Name
+      value: WP_09
+      objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeName
+      value: WP_09
+      objectReference: {fileID: 0}
     - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeScriptbaleObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 046f6f9cadd3d87468313e2070116088, type: 2}
     - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 10
@@ -3276,10 +3348,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87554568}
     m_Modifications:
+    - target: {fileID: 165890828472196570, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Name
+      value: WP_12
+      objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeName
+      value: WP_12
+      objectReference: {fileID: 0}
     - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeScriptbaleObject
+      value: 
+      objectReference: {fileID: 11400000, guid: f16c37679378cc34c9f4f63eb696ffa4, type: 2}
     - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 12
@@ -3836,10 +3920,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87554568}
     m_Modifications:
+    - target: {fileID: 165890828472196570, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Name
+      value: WP_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeName
+      value: WP_05
+      objectReference: {fileID: 0}
     - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeScriptbaleObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 7dd04a48350c6734c8327aa7ffd01c55, type: 2}
     - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 8
@@ -4180,10 +4276,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87554568}
     m_Modifications:
+    - target: {fileID: 165890828472196570, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Name
+      value: GunsCooldown
+      objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeName
+      value: Guns Cooldown
+      objectReference: {fileID: 0}
     - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeScriptbaleObject
+      value: 
+      objectReference: {fileID: 11400000, guid: f4c450a3e3f18471aa3270b6b71bfc80, type: 2}
     - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 3
@@ -4385,10 +4493,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87554568}
     m_Modifications:
+    - target: {fileID: 165890828472196570, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Name
+      value: Vampirik
+      objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeName
+      value: Vampirik
+      objectReference: {fileID: 0}
     - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeScriptbaleObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 662adccfc98dc4389bcbf59fa23e31ad, type: 2}
     - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 5
@@ -4591,10 +4711,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87554568}
     m_Modifications:
+    - target: {fileID: 165890828472196570, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Name
+      value: WP_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeName
+      value: WP_10
+      objectReference: {fileID: 0}
     - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeScriptbaleObject
+      value: 
+      objectReference: {fileID: 11400000, guid: cd267e10ced792b4a9bb0bf29513dfb1, type: 2}
     - target: {fileID: 647228727072707358, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 11
@@ -5051,6 +5183,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 87554568}
     m_Modifications:
+    - target: {fileID: 165890828472196570, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Name
+      value: MaxHealth
+      objectReference: {fileID: 0}
     - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: _upgradeType
       value: 1
@@ -5059,6 +5195,10 @@ PrefabInstance:
       propertyPath: _upgradeImage
       value: 
       objectReference: {fileID: 21300000, guid: 0bf8a7d95bc2545e49fa3b8658db1261, type: 3}
+    - target: {fileID: 194465305138545685, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: _upgradeScriptbaleObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 477da2950d8d045a8ae278ddc2dd3314, type: 2}
     - target: {fileID: 566186495371967962, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: m_Colors.m_DisabledColor.b
       value: 0.78431374
@@ -5250,6 +5390,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3263052166354041449, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
       propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263052166354041449, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}
+      propertyPath: m_Colors.m_NormalColor.a
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5055744974928891107, guid: 5db88e5e8c94a4c1784310b3f1268c17, type: 3}

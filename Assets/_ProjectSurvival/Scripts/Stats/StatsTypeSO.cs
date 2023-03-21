@@ -14,6 +14,7 @@ namespace _ProjectSurvival.Scripts.Stats
         public string Title => _title;
         public string Description => _description;
         public Sprite Picture => _picture;
+        public int[] StatsIncrease => _statAmountPercentIncrease;
 
         public RewardType GetRewardType()
         {
