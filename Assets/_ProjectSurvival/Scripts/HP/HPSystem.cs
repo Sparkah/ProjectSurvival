@@ -1,4 +1,3 @@
-using _ProjectSurvival.Scripts.Helpers;
 using _ProjectSurvival.Scripts.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,6 +23,7 @@ namespace _ProjectSurvival.Scripts.HP
         {
             _healthSlider.fillAmount = _damagableObject.CurrentDurability/_damagableObject.MaximumDurability;
 
+            Debug.Log(_healthSlider.fillAmount);
             if (_healthSlider.fillAmount <= 0)
             {
                 Debug.Log("Game over");

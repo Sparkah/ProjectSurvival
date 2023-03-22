@@ -17,6 +17,7 @@ public class DamagableObject : MonoBehaviour, IDamagable
     public event UnityAction OnDamaged;
     public event UnityAction OnRestored;
     public event UnityAction OnDefeat;
+    public event UnityAction<float> OnDamageAmount;
 
     public void SetupHealth(float health)
     {
@@ -41,15 +42,21 @@ public class DamagableObject : MonoBehaviour, IDamagable
 
     public void TakeDamage(float damageAmount)
     {
-        //Add check it is not player, otherwise remove
         PlayEffectsOnHit();
         _health -= damageAmount;
         OnDamaged?.Invoke();
+        OnDamageAmount?.Invoke(damageAmount);
         if (_health <= 0)
         {
             _isDefeated = true;
             OnDefeat?.Invoke();
         }
+    }
+
+    public void RestoreHP(float healAmount)
+    {
+        _health += healAmount;
+        OnDamaged?.Invoke();
     }
 
     private void PlayEffectsOnHit()

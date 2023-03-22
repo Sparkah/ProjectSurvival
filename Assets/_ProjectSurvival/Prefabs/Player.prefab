@@ -77,7 +77,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerSpriteTransform: {fileID: 24100507808405511}
   _speed: 10
-  _rotationSpeed: 2
 --- !u!114 &997466040119755983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +92,7 @@ MonoBehaviour:
   _playerAttack: {fileID: 3951661139004924395}
   _levelableObject: {fileID: 1291759303958039748}
   _damagableObject: {fileID: 1761106404}
-  _playerBaseHealth: 10
+  _playerBaseHealth: 30
 --- !u!114 &3951661139004924395
 MonoBehaviour:
   m_ObjectHideFlags: 0
