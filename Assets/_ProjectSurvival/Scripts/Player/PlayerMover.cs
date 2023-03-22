@@ -8,9 +8,13 @@ namespace _ProjectSurvival.Scripts.Player
     public class PlayerMover : MonoBehaviour
     {
         public Vector2 MovementDirection => _movementDirection;
-        
-        [SerializeField] private Transform _playerSpriteTransform;
+
         [SerializeField] private float _speed = 0.5f;
+        [Header("Visual rotation")]
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private Sprite _front;
+        [SerializeField] private Sprite _back;
+        [SerializeField] private Transform _playerSpriteTransform;
         //[SerializeField] private float _rotationSpeed = 2f;
         
         private Rigidbody2D _agent;
@@ -85,6 +89,10 @@ namespace _ProjectSurvival.Scripts.Player
                 playerTransformScale.x = Mathf.Abs(playerTransformScale.x);
                 playerTransformScale.x *= input.x < 0 ? -1 : 1;
                 _playerSpriteTransform.localScale = playerTransformScale;
+                if (input.y > 0)
+                    _spriteRenderer.sprite = _back;
+                else
+                    _spriteRenderer.sprite = _front;
             }
         }
 
