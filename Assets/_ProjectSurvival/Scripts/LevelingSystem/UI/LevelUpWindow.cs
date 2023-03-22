@@ -171,11 +171,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
         private void ShowWeaponUpgrade(int buttonIndex, WeaponTypeSO selectedWeapon)
         {
             int level = _activeWeapons.GetRewardLevel(selectedWeapon);
-            bool isNew = level == 0;
-            if (isNew)
-            {
-                //level = TODO: load from tree init level
-            }
+            bool isNew = !_activeWeapons.HasWeapon(selectedWeapon);
             _levelUpButtons[buttonIndex].ShowReward(selectedWeapon, level, isNew);
         }
 

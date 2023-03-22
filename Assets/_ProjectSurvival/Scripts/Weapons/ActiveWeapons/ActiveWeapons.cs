@@ -57,7 +57,6 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
                 selectedWeapon.OnFire += RequestFire;
                 selectedWeapon.StartFiring();
                 _activeWeapons.Add(selectedWeapon);
-                //TODO: SET LEVEL FROM PERKS
                 AddExtraLevelUpFromSkillUpgrades(selectedWeapon, weaponType);
             }
             else
@@ -73,7 +72,6 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
             for (var i = 0; i < quedAmount; i++)
             {
                 selectedWeapon.LevelUp();
-//                    Debug.Log("levelling up weapon from upgrades que");
             }
         }
 
@@ -93,8 +91,19 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
 
             ActiveWeapon selectedWeapon = FindWeapon((WeaponTypeSO)reward);
             if (selectedWeapon == null)
-                return 0;
+            {
+                _upgradesQue.TryGetValue((WeaponTypeSO)reward, out int quedAmount);
+                if (quedAmount <= 0)
+                    return 0;
+                else
+                    return quedAmount;
+            }
             return selectedWeapon.Level;
+        }
+
+        public bool HasWeapon(WeaponTypeSO weaponType)
+        {
+            return FindWeapon(weaponType) != null;
         }
 
         private ActiveWeapon FindWeapon(WeaponTypeSO weaponType)
