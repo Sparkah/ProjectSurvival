@@ -14,11 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _experiencePointVisuals:
   - _experienceAmount: 5
-    _sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
-    _color: {r: 1, g: 0.96274924, b: 0, a: 1}
+    _sprite: {fileID: 21300000, guid: a1e1e883458f77843b2fd5314627b6af, type: 3}
   - _experienceAmount: 10
-    _sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
-    _color: {r: 1, g: 0.4613236, b: 0, a: 1}
+    _sprite: {fileID: 21300000, guid: a1e1e883458f77843b2fd5314627b6af, type: 3}
   - _experienceAmount: 15
-    _sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
-    _color: {r: 1, g: 0.12646648, b: 0, a: 1}
+    _sprite: {fileID: 21300000, guid: a1e1e883458f77843b2fd5314627b6af, type: 3}
