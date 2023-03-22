@@ -10,7 +10,7 @@ namespace _ProjectSurvival.Scripts.Player
         public Vector2 MovementDirection => _movementDirection;
         
         [SerializeField] private Transform _playerSpriteTransform;
-        [SerializeField] private float _speed = 150f;
+        [SerializeField] private float _speed = 0.5f;
         //[SerializeField] private float _rotationSpeed = 2f;
         
         private Rigidbody2D _agent;
@@ -19,6 +19,7 @@ namespace _ProjectSurvival.Scripts.Player
         private Vector2 _movementDirection;
         private ActiveStats _activeStats;
         private float _initialSpeed;
+        private Vector2 _input;
 
         [Inject]
         private void Construct(ActiveStats activeStats)
@@ -39,13 +40,18 @@ namespace _ProjectSurvival.Scripts.Player
 
         void Update()
         {
-            var input = GetInput();
-            Move(input);
-            Rotate(input);
-            if (input.magnitude != 0)
-                _movementDirection = input;
+            _input = GetInput();
+            //Move(input);
+            Rotate(_input);
+            if (_input.magnitude != 0)
+                _movementDirection = _input;
         }
-    
+
+        private void FixedUpdate()
+        {
+            Move(_input);
+        }
+
         private Vector2 GetInput()
         {
             var horizontal = 0.0f;
@@ -68,7 +74,7 @@ namespace _ProjectSurvival.Scripts.Player
         private void MoveTowardTarget(Vector3 targetVector)
         {
             var speed = _speed * Time.deltaTime;
-            _agent.AddForce(targetVector * (speed * _speedIncreaseConstant * Time.deltaTime));
+            _agent.AddForce(targetVector * (speed * _speedIncreaseConstant));
         }
 
         private void Rotate(Vector3 input)

@@ -16,7 +16,7 @@ MonoBehaviour:
   _description: 
   _picture: {fileID: 0}
   _shootSound: 12
-  _projectilePrefab: {fileID: 5102044091516270430, guid: bdfc937c2b37cd54ca292e1493e81adc, type: 3}
+  _projectilePrefab: {fileID: 5102044091516270430, guid: 745b28af6f0df442d8d2a2a8cb6c8440, type: 3}
   _weaponLevels:
   - _appearFrequency: 0.75
     _appearAmount: 1
