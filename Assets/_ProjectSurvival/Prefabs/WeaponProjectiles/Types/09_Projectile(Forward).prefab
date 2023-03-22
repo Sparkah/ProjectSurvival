@@ -53,12 +53,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5030530398003907315, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_Name
-      value: ForwardProjectile
+      value: 03_09_10_Projectile(Forward)
       objectReference: {fileID: 0}
     - target: {fileID: 5641912257251231343, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: eab896b7218ae4f68b53859c7be7c675, type: 3}
+      objectReference: {fileID: 21300000, guid: 1b6fd6efae5774ec3b612b2f82fc3439, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
 --- !u!114 &4311097355277762408 stripped

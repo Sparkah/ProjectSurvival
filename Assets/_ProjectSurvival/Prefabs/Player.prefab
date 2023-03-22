@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerSpriteTransform: {fileID: 24100507808405511}
-  _speed: 10
+  _speed: 0.1
 --- !u!114 &997466040119755983
 MonoBehaviour:
   m_ObjectHideFlags: 0
