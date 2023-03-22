@@ -12,10 +12,9 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
     public class UpgradesRowData : MonoBehaviour
     {
         [SerializeField] private UpgradeTypes _upgradeType;
-        [SerializeField] private int[] _costProgression = new[] {5};
-        [SerializeField] private Sprite _upgradeImage;
-        [SerializeField] private string _upgradeDescription;
-        [SerializeField] private string _upgradeName;
+        [SerializeField] private int[] _costProgression = new[] {5}; //Change to read this from SO for refactoring
+        private string _upgradeDescription;
+        private string _upgradeName;
         [SerializeField] private ScriptableObject _upgradeScriptbaleObject;
 
         [Inject] private World _world;
@@ -23,6 +22,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         private int _currentUpgrade;
         private Upgrade[] _upgrades = new Upgrade[] {};
         private UpgradePopup _upgradePopup;
+        private Sprite _upgradeImage;
 
         private void Awake()
         {
