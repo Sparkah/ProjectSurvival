@@ -26,6 +26,8 @@ MonoBehaviour:
       _size: 1
       _speed: 15
       _durability: 2
+    _description: "\u0421\u043D\u0430\u0440\u044F\u0434 \u043F\u043E\u043B\u0435\u0442\u0438\u0442
+      \u0432 \u0446\u0435\u043D\u0442\u0440 \u043A\u0430\u0440\u0442\u044B"
   - _appearFrequency: 0.75
     _appearAmount: 1
     _projectileSetting:
@@ -33,6 +35,8 @@ MonoBehaviour:
       _size: 1
       _speed: 15
       _durability: 4
+    _description: "\u0443\u0440\u043E\u043D +3, \u043F\u0440\u043E\u0431\u0438\u0432\u0430\u0435\u043C\u043E\u0441\u0442\u044C
+      +2"
   - _appearFrequency: 0.75
     _appearAmount: 1
     _projectileSetting:
@@ -40,6 +44,8 @@ MonoBehaviour:
       _size: 1
       _speed: 15
       _durability: 6
+    _description: "\u0443\u0440\u043E\u043D +2, \u043F\u0440\u043E\u0431\u0438\u0432\u0430\u0435\u043C\u043E\u0441\u0442\u044C
+      +2"
   - _appearFrequency: 0.75
     _appearAmount: 1
     _projectileSetting:
@@ -47,4 +53,6 @@ MonoBehaviour:
       _size: 1
       _speed: 15
       _durability: 8
+    _description: "\u0443\u0440\u043E\u043D +2, \u043F\u0440\u043E\u0431\u0438\u0432\u0430\u0435\u043C\u043E\u0441\u0442\u044C
+      +2"
   _upgradeType: 8

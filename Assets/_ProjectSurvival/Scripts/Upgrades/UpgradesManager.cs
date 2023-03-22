@@ -89,7 +89,8 @@ namespace _ProjectSurvival.Scripts.Upgrades
 
         private void UpgradeStats(UpgradeTypes upgradeType, int value)
         {
-            var stats = _availableStatsSo.SelectAvailableStats();
+            //var stats = _availableStatsSo.SelectAvailableStats(_activeStats); //== только те, что его не прокачаны на максимум
+            var stats = _availableStatsSo.SelectAllStats(); //== все (так было изначально, если нужно получать только не прокачанные до максимума, то строка выше)
             foreach (var stat in stats)
             {
                 if (stat.UpgradeType == upgradeType)
@@ -115,6 +116,11 @@ namespace _ProjectSurvival.Scripts.Upgrades
                     }
                 }
             }
+        }
+
+        public int GetRewardLevel(IReward reward)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

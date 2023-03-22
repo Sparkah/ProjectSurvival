@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using _ProjectSurvival.Scripts.Audio;
 using UnityEngine;
 using Zenject;
+using System.Linq;
 
 namespace _ProjectSurvival.Scripts.LevelingSystem.UI
 {
@@ -69,66 +70,119 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
             AudioPlayer.Audio.PlayOneShotSound(AudioSounds.LevelUp);
             _audioSystem.StopSceneMusic(true);
 
-            WeaponTypeSO[] selectedUpgrades = _attackTypeSelector.SelectWeapons(_levelUpButtons.Length);
+            WeaponTypeSO[] selectedWeapons = _attackTypeSelector.SelectWeapons(_levelUpButtons.Length);
+            StatsTypeSO[] selectedStats = null;
 
-            if (_includeStatsUpgrades && !_firstTimeLevelUp)
+            if (_firstTimeLevelUp)
             {
-                StatsTypeSO[] statsUpgrades = _statsTypeSelector.SelectStats(_levelUpButtons.Length);
-
-                ShowAllUpgrades(selectedUpgrades, statsUpgrades);
-                _window.Open();
-                return;
+                ShowUpgrades(selectedWeapons, null);
+                _firstTimeLevelUp = false;
             }
-
-            if (selectedUpgrades.Length != 0)
-                ShowUpgrades(selectedUpgrades);
             else
-                ShowUpgradedMessage();
+            {
+                if (_includeStatsUpgrades)
+                    selectedStats = _statsTypeSelector.SelectStats(_levelUpButtons.Length);
 
-            _firstTimeLevelUp = false;
+                if (HasNoUpgrades(selectedWeapons, selectedStats))
+                    ShowUpgradedMessage();
+                else
+                    ShowUpgrades(selectedWeapons, selectedStats);
+            }
             _window.Open();
         }
 
-        private void ShowUpgrades(WeaponTypeSO[] selectedUpgrades)
+        private bool HasNoUpgrades(WeaponTypeSO[] selectedWeaponsUpgrades, StatsTypeSO[] selectedStatsUpgrades)
         {
-            for (int i = 0; i < _levelUpButtons.Length; i++)
-            {
-                if (i < selectedUpgrades.Length)
-                    _levelUpButtons[i].ShowReward(selectedUpgrades[i]);
-                else
-                    _levelUpButtons[i].Hide();
-            }
-            _upgradesPanel.SetActive(true);
+            return IsEmpty(selectedWeaponsUpgrades) && IsEmpty(selectedStatsUpgrades);
         }
 
-        private void ShowAllUpgrades(WeaponTypeSO[] selectedUpgrades, StatsTypeSO[] statsSelectedUpgrades)
+        private bool IsEmpty(Object[] array)
         {
-            for (int i = 0; i < _levelUpButtons.Length; i++)
-            {
-                var whichUpgrade = Random.Range(0, 2);
-                if (whichUpgrade == 0)
-                {
-                    if (i < selectedUpgrades.Length)
-                        _levelUpButtons[i].ShowReward(selectedUpgrades[i]);
-                    else
-                        _levelUpButtons[i].Hide();
-                }
-                else
-                {
-                    if (i < selectedUpgrades.Length)
-                    {
-                        _levelUpButtons[i].ShowReward(statsSelectedUpgrades[i]);
-                    }
-                    else
-                        _levelUpButtons[i].Hide();
-                }
-            }
-            _upgradesPanel.SetActive(true);
+            return array == null || array.Length == 0;
         }
 
         private void ShowUpgradedMessage()
         {
             _fullyUpgradedPanel.SetActive(true);
+        }
+
+        private void ShowUpgrades(WeaponTypeSO[] selectedWeaponsUpgrades, StatsTypeSO[] selectedStatsUpgrades)
+        {
+            List<int> possibleWeapons = CreateIndexesList(selectedWeaponsUpgrades);
+            List<int> possibleStats = CreateIndexesList(selectedStatsUpgrades);
+
+            RewardType whichUpgrade;
+            int upgradeIndex;
+            for (int i = 0; i < _levelUpButtons.Length; i++)
+            {
+                if (!HasNotListedUpgrades(possibleWeapons, possibleStats))
+                {
+                    _levelUpButtons[i].Hide();
+                }
+                else
+                {
+                    whichUpgrade = SelectUpgradeType(possibleWeapons, possibleStats);
+                    switch (whichUpgrade)
+                    {
+                        case RewardType.Weapon:
+                            upgradeIndex = SelectIndex(possibleWeapons);
+                            ShowWeaponUpgrade(i, selectedWeaponsUpgrades[upgradeIndex]);
+                            possibleWeapons.Remove(upgradeIndex);
+                            break;
+                        case RewardType.Stat:
+                            upgradeIndex = SelectIndex(possibleStats);
+                            ShowStatUpgrade(i, selectedStatsUpgrades[upgradeIndex]);
+                            possibleStats.Remove(upgradeIndex);
+                            break;
+                    }
+                }
+                _upgradesPanel.SetActive(true);
+            }
+        }
+
+        private List<int> CreateIndexesList(Object[] array)
+        {
+            if (IsEmpty(array))
+                return new List<int>();
+            else
+                return new List<int>(Enumerable.Range(0, array.Length));
+        }
+
+        private bool HasNotListedUpgrades(List<int> possibleWeapons, List<int> possibleStats)
+        {
+            return possibleWeapons.Count > 0 || possibleStats.Count > 0;
+        }
+
+        private RewardType SelectUpgradeType(List<int> possibleWeapons, List<int> possibleStats) //Bad scalability
+        {
+            if (possibleWeapons.Count > 0 && possibleStats.Count > 0)
+                return (RewardType)Random.Range(0, 2);
+            else if (possibleWeapons.Count > 0)
+                return RewardType.Weapon;
+            else
+                return RewardType.Stat;
+        }
+
+        private int SelectIndex(List<int> indexesList)
+        {
+            return indexesList[Random.Range(0, indexesList.Count)];
+        }
+
+        private void ShowWeaponUpgrade(int buttonIndex, WeaponTypeSO selectedWeapon)
+        {
+            int level = _activeWeapons.GetRewardLevel(selectedWeapon);
+            bool isNew = level == 0;
+            if (isNew)
+            {
+                //level = TODO: load from tree init level
+            }
+            _levelUpButtons[buttonIndex].ShowReward(selectedWeapon, level, isNew);
+        }
+
+        private void ShowStatUpgrade(int buttonIndex, StatsTypeSO selectedStat)
+        {
+            int level = _activeStats.GetRewardLevel(selectedStat);
+            _levelUpButtons[buttonIndex].ShowReward(selectedStat, level, false);
         }
     }
 }

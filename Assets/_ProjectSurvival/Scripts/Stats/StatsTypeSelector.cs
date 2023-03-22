@@ -1,14 +1,16 @@
 using UnityEngine;
+using Zenject;
 
 namespace _ProjectSurvival.Scripts.Stats
 {
     public class StatsTypeSelector : MonoBehaviour
     {
+        [Inject] private ActiveStats _activeStats;
         [SerializeField] private AvailableStatsSO _availableStatsSO;
 
         public StatsTypeSO[] SelectStats(int count)
         {
-           StatsTypeSO[] availableWeapons = _availableStatsSO.SelectAvailableStats();
+           StatsTypeSO[] availableWeapons = _availableStatsSO.SelectAvailableStats(_activeStats);
 
             RandomRangeSelector randomRangeSelector = new RandomRangeSelector();
             int[] selectedIndexes = randomRangeSelector

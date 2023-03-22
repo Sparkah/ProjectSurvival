@@ -45,16 +45,23 @@ namespace _ProjectSurvival.Scripts.Weapons.WeaponTypes
             return _weaponLevels[level - 1].ProjectileSettingSO;
         }
 
+        public string GetLevelUpDescription(int level)
+        {
+            return _weaponLevels[level - 1].Description;
+        }
+
         [System.Serializable]
         private struct WeaponLevel
         {
             [SerializeField] private float _appearFrequency;
             [SerializeField] private int _appearAmount;
             [SerializeField] private ProjectileSettings _projectileSetting;
+            [SerializeField] private string _description;
 
             public float AppearFrequency => _appearFrequency;
             public int AppearAmount => _appearAmount;
             public ProjectileSettings ProjectileSettingSO => _projectileSetting;
+            public string Description => _description;
         }
     }
 }
