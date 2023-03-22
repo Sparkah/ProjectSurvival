@@ -1,4 +1,5 @@
 using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
+using _ProjectSurvival.Scripts.Stats;
 using _ProjectSurvival.Scripts.Weapons.Projectiles;
 using _ProjectSurvival.Scripts.Weapons.WeaponTypes;
 using System.Collections.Generic;
@@ -16,8 +17,18 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
         private List<ActiveWeapon> _activeWeapons = new List<ActiveWeapon>();
         private ReactiveDictionary<WeaponTypeSO, int> _upgradesQue = new ReactiveDictionary<WeaponTypeSO, int>();
         private RewardType _rewardType = RewardType.Weapon;
+        private ActiveStats _activeStats;
+        private float _cooldownDecrease;
 
         public event UnityAction<ActiveWeapon> OnFire;
+
+        [Inject]
+        private void Construct(ActiveStats activeStats) 
+        {
+            _activeStats = activeStats;
+            _activeStats.OnBaseCooldownStatChanged += SetCooldowDecreasePercent;
+        }
+
 
         private void OnDestroy()
         {
@@ -26,6 +37,7 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
                 _activeWeapons[i].OnFire -= RequestFire;
                 _activeWeapons[i].CancelFiring();
             }
+            _activeStats.OnBaseCooldownStatChanged -= SetCooldowDecreasePercent;
         }
 
         public void GiveReward(IReward reward)
@@ -54,22 +66,13 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
                 ProjectilesPool pool = _diContainer.InstantiatePrefabForComponent<ProjectilesPool>(_projectilePoolPrefab, transform);
                 pool.InitPool(weaponType.ProjectilePrefab);
                 selectedWeapon = new ActiveWeapon(weaponType, pool);
+                selectedWeapon.ChangeCooldownDecrease(_cooldownDecrease);
                 selectedWeapon.OnFire += RequestFire;
                 selectedWeapon.StartFiring();
                 _activeWeapons.Add(selectedWeapon);
                 AddExtraLevelUpFromSkillUpgrades(selectedWeapon, weaponType);
             }
             else
-            {
-                selectedWeapon.LevelUp();
-            }
-        }
-
-        private void AddExtraLevelUpFromSkillUpgrades(ActiveWeapon selectedWeapon, WeaponTypeSO weaponType)
-        {
-            _upgradesQue.TryGetValue(weaponType, out int quedAmount);
-            if (quedAmount <= 0) return;
-            for (var i = 0; i < quedAmount; i++)
             {
                 selectedWeapon.LevelUp();
             }
@@ -106,6 +109,16 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
             return FindWeapon(weaponType) != null;
         }
 
+        private void AddExtraLevelUpFromSkillUpgrades(ActiveWeapon selectedWeapon, WeaponTypeSO weaponType)
+        {
+            _upgradesQue.TryGetValue(weaponType, out int quedAmount);
+            if (quedAmount <= 0) return;
+            for (var i = 0; i < quedAmount; i++)
+            {
+                selectedWeapon.LevelUp();
+            }
+        }
+
         private ActiveWeapon FindWeapon(WeaponTypeSO weaponType)
         {
             return _activeWeapons.Find(x => x.WeaponType == weaponType);
@@ -114,6 +127,15 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
         private void RequestFire(ActiveWeapon activeWeapon)
         {
             OnFire?.Invoke(activeWeapon);
+        }
+
+        private void SetCooldowDecreasePercent(float percent)
+        {
+            _cooldownDecrease = percent;
+            for (int i = 0; i < _activeWeapons.Count; i++)
+            {
+                _activeWeapons[i].ChangeCooldownDecrease(_cooldownDecrease);
+            }
         }
     }
 }

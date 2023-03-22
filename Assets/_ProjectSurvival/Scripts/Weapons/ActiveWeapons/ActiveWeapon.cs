@@ -11,6 +11,7 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
     {
         private WeaponTypeSO _attackType;
         private int _level;
+        private float _cooldownDecreasePercent;
         private ProjectilesPool _pool;
         private CancellationTokenSource _cancellationTokenSource;
 
@@ -52,13 +53,21 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
             _cancellationTokenSource.Cancel();
         }
 
+        public void ChangeCooldownDecrease(float percent)
+        {
+            _cooldownDecreasePercent = percent;
+        }
+
         private async UniTaskVoid Firing()
         {
+            float cooldownDuration;
             while (true)
             {
                 OnFire?.Invoke(this);
+                cooldownDuration = _attackType.GetAppearFrequency(_level);
+                cooldownDuration -= cooldownDuration * (_cooldownDecreasePercent/100f);
                 await UniTask.Delay(
-                    TimeSpan.FromSeconds(_attackType.GetAppearFrequency(_level)),
+                    TimeSpan.FromSeconds(cooldownDuration),
                     ignoreTimeScale: false,
                     cancellationToken: _cancellationTokenSource.Token);
             }
