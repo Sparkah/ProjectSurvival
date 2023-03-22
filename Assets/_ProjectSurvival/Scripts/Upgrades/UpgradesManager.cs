@@ -112,7 +112,7 @@ namespace _ProjectSurvival.Scripts.Upgrades
                 {
                     for (int i = 0; i < value; i++)
                     {
-                        _activeWeapons.AddWeapon(weapon);
+                        _activeWeapons.AddWeaponUpgradesToQue(weapon);
                     }
                 }
             }

@@ -48,14 +48,20 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         {
             if (_upgradeScriptableObject.GetType() == typeof(WeaponTypeSO))
             {
-                _upgradeScriptableObject = _upgradeScriptableObject as WeaponTypeSO;
+                var upgradeScriptableObject = _upgradeScriptableObject as WeaponTypeSO;
                 Text.text = "Increase gunproperties";
+                UpgradeImage.sprite = upgradeScriptableObject.Picture;
+                _upgradeName = upgradeScriptableObject.Title;
+                _upgradeDescription = upgradeScriptableObject.Description;
             }
 
             if (_upgradeScriptableObject.GetType() == typeof(StatsTypeSO))
             {
                 var upgradeScriptableObject = _upgradeScriptableObject as StatsTypeSO;
                 Text.text = upgradeScriptableObject.StatsIncrease[_id].ToString()+"%";
+                UpgradeImage.sprite = upgradeScriptableObject.Picture;
+                _upgradeName = upgradeScriptableObject.Title;
+                _upgradeDescription = upgradeScriptableObject.Description;
             }
         }
 

@@ -33,7 +33,7 @@ namespace _ProjectSurvival.Scripts.DamageSystem
                     OnDamagableTouched?.Invoke(damagedObject);
                 }
             }
-        
+
             if (_targetLayer.value == 256)
             {
                 AudioPlayer.Audio.PlayOneShotSound(AudioSounds.Hit);

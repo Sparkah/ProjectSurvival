@@ -69,13 +69,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
         private void DoDamage(IDamagable damagable)
         {
             damagable.TakeDamage(CalculateDamage());
-            CalculateVampirik(CalculateDamage());
             _projectileDurability.TakeDamage(1); //How many enemies can projectile hit (pass through) before destroy
-        }
-
-        private void CalculateVampirik(float damage)
-        {
-            //здесь рестор хп. Надо подписаться на ActiveStats.OnVampirikStatChanged? и ресторить игроку хп 
         }
     }
 }

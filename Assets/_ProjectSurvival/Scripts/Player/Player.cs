@@ -12,7 +12,6 @@ namespace _ProjectSurvival.Scripts.Player
         [SerializeField] private DamagableObject _damagableObject;
         [SerializeField] private float _playerBaseHealth = 30;
         private float _initialHealth;
-        private float _maxHealth;
         private ActiveStats _activeStats;
 
         [Inject]
@@ -24,21 +23,15 @@ namespace _ProjectSurvival.Scripts.Player
         }
         private void Start()
         {
-            _maxHealth = _initialHealth;
             _levelableObject.Init();
             _playerAttack.StartFire();
             _damagableObject.SetupHealth(_playerBaseHealth);
         }
 
-        public float ReturnMaxHealth()
-        {
-            return _maxHealth;
-        }
-
         private void IncreasePlayerHealth(float percentage)
         {
-//            Debug.Log("playerHealthIncreased");
             _playerBaseHealth = _initialHealth + (_initialHealth*percentage)/100;
+            Debug.Log(_playerBaseHealth);
             _damagableObject.IncreaseMaxHealth(_playerBaseHealth);
         }
 

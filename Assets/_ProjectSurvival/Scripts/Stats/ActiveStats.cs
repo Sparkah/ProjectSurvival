@@ -7,7 +7,7 @@ namespace _ProjectSurvival.Scripts.Stats
 {
     public class ActiveStats : MonoBehaviour, IRewardGiver
     {
-        public event UnityAction<float> OnVampirikStatChanged;
+        public event UnityAction<float> OnVampirikStatChanged; //Get/SetVampirikAmount methods used for this logic (runtime enemies vampirik class)
         public event UnityAction<float> OnBaseDamageStatChanged;
         public event UnityAction<float> OnBaseCooldownStatChanged;
         public event UnityAction<float> OnWalkSpeedStatChanged;
@@ -18,12 +18,12 @@ namespace _ProjectSurvival.Scripts.Stats
         private int _baseCooldownUpgrades = 0;
         private int _walkSpeedUpgrades = 0;
         private int _maxHealthUpgrades = 0;
+        private float _vampirism;
         
         public void GiveReward(IReward reward)
         {
             if (reward.GetRewardType() == RewardType.Stat)
             {
-                Debug.Log($"{RewardType.Stat} is a reward type that is not implemented");
                 var statReward = (StatsTypeSO) reward;
                 Add(statReward);
             }
@@ -39,8 +39,10 @@ namespace _ProjectSurvival.Scripts.Stats
             switch (statReward.UpgradeType)
             {
                 case UpgradeTypes.Vampirik:
+                    Debug.Log("vampiric active stat invoked");
                     OnVampirikStatChanged?.Invoke(statReward.StatsIncrease[_vampirikUpgrades]);
                     _vampirikUpgrades += 1;
+                    SetVampirikAmount(statReward.StatsIncrease[_vampirikUpgrades]);
                     break;
                 case UpgradeTypes.MaxHealth:
                     OnMaxHealthStatChanged?.Invoke(statReward.StatsIncrease[_maxHealthUpgrades]);
@@ -51,7 +53,7 @@ namespace _ProjectSurvival.Scripts.Stats
                     _walkSpeedUpgrades += 1;
                     break;
                 case UpgradeTypes.AllGunsCooldown:
-                    OnBaseCooldownStatChanged?.Invoke(statReward.StatsIncrease[_baseDamageUpgrades]);
+                    OnBaseCooldownStatChanged?.Invoke(statReward.StatsIncrease[_baseCooldownUpgrades]);
                     _baseCooldownUpgrades += 1;
                     break;
                 case UpgradeTypes.AllGunsDamage:
@@ -62,6 +64,16 @@ namespace _ProjectSurvival.Scripts.Stats
                     Debug.Log("Not implemented");
                     break;
             }
+        }
+
+        private void SetVampirikAmount(float amount)
+        {
+            _vampirism = amount;
+        }
+
+        public float GetVampirikAmount()
+        {
+            return _vampirism;
         }
 
         public int GetRewardLevel(IReward reward)
