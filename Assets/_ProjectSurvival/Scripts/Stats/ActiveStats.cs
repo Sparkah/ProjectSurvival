@@ -63,5 +63,30 @@ namespace _ProjectSurvival.Scripts.Stats
                     break;
             }
         }
+
+        public int GetRewardLevel(IReward reward)
+        {
+            if (reward.GetRewardType() != RewardType.Stat)
+                return -1;
+
+            StatsTypeSO statReward = (StatsTypeSO)reward;
+
+            switch (statReward.UpgradeType)
+            {
+                case UpgradeTypes.Vampirik:
+                    return _vampirikUpgrades;
+                case UpgradeTypes.MaxHealth:
+                    return _maxHealthUpgrades;
+                case UpgradeTypes.MoveSpeed:
+                    return _walkSpeedUpgrades;
+                case UpgradeTypes.AllGunsCooldown:
+                    return _baseCooldownUpgrades;
+                case UpgradeTypes.AllGunsDamage:
+                    return _baseDamageUpgrades;
+                default:
+                    Debug.Log("Not implemented");
+                    return -1;
+            }
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
         [Inject] DiContainer _diContainer;
         [SerializeField] private ProjectilesPool _projectilePoolPrefab;
         private List<ActiveWeapon> _activeWeapons = new List<ActiveWeapon>();
+        private RewardType _rewardType = RewardType.Weapon;
 
         public event UnityAction<ActiveWeapon> OnFire;
 
@@ -27,7 +28,7 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
 
         public void GiveReward(IReward reward)
         {
-            if (reward.GetRewardType() == RewardType.Weapon)
+            if (reward.GetRewardType() == _rewardType)
                 AddWeapon((WeaponTypeSO)reward);
         }
 
@@ -42,6 +43,7 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
                 selectedWeapon.OnFire += RequestFire;
                 selectedWeapon.StartFiring();
                 _activeWeapons.Add(selectedWeapon);
+                //TODO: SET LEVEL FROM PERKS
             }
             else
             {
@@ -56,6 +58,17 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
                 return false;
 
             return selectedWeapon.HasMaximumLevel();
+        }
+
+        public int GetRewardLevel(IReward reward)
+        {
+            if (reward.GetRewardType() != _rewardType)
+                return -1;
+
+            ActiveWeapon selectedWeapon = FindWeapon((WeaponTypeSO)reward);
+            if (selectedWeapon == null)
+                return 0;
+            return selectedWeapon.Level;
         }
 
         private ActiveWeapon FindWeapon(WeaponTypeSO weaponType)

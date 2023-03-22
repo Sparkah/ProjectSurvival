@@ -116,5 +116,10 @@ namespace _ProjectSurvival.Scripts.Upgrades
                 }
             }
         }
+
+        public int GetRewardLevel(IReward reward)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
