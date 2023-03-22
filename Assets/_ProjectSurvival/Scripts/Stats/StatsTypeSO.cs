@@ -10,6 +10,7 @@ namespace _ProjectSurvival.Scripts.Stats
         [SerializeField] private string _title;
         [SerializeField] private string _description;
         [SerializeField] private Sprite _picture;
+        [SerializeField] private string _upgradeDescriptionTemplate;
         [SerializeField] private int[] _statAmountPercentIncrease;
         [SerializeField] private UpgradeTypes _upgradeType;
 
@@ -18,6 +19,20 @@ namespace _ProjectSurvival.Scripts.Stats
         public Sprite Picture => _picture;
         public int[] StatsIncrease => _statAmountPercentIncrease;
         public UpgradeTypes UpgradeType => _upgradeType;
+
+        public string GetLevelUpDescription(int level)
+        {
+            int newValue = _statAmountPercentIncrease[level - 1];
+            if (level != 1)
+            {
+                int oldValue = _statAmountPercentIncrease[level - 2];
+                return _upgradeDescriptionTemplate.Replace("_", (newValue-oldValue).ToString());
+            }
+            else
+            {
+                return _upgradeDescriptionTemplate.Replace("_", newValue.ToString());
+            }
+        }
 
         public RewardType GetRewardType()
         {
