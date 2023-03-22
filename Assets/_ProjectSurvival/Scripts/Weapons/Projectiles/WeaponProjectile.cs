@@ -38,9 +38,9 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
             _pool.Release(this);
         }
 
-        public void PrepareForLaunch(ProjectileSettings projectileSettings)
+        public void PrepareForLaunch(ProjectileSettings projectileSettings, float damageIncreasePercent)
         {
-            _baseDamage = projectileSettings.Damage;
+            _baseDamage = projectileSettings.Damage + projectileSettings.Damage*(damageIncreasePercent/100f);
             _speed = projectileSettings.Speed;
             _size = projectileSettings.Size;
             SetDurability(projectileSettings.Durability);
