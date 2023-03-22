@@ -41,8 +41,8 @@ namespace _ProjectSurvival.Scripts.Stats
                 case UpgradeTypes.Vampirik:
                     Debug.Log("vampiric active stat invoked");
                     OnVampirikStatChanged?.Invoke(statReward.StatsIncrease[_vampirikUpgrades]);
-                    _vampirikUpgrades += 1;
                     SetVampirikAmount(statReward.StatsIncrease[_vampirikUpgrades]);
+                    _vampirikUpgrades += 1;
                     break;
                 case UpgradeTypes.MaxHealth:
                     OnMaxHealthStatChanged?.Invoke(statReward.StatsIncrease[_maxHealthUpgrades]);
