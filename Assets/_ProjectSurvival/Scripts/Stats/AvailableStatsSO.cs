@@ -8,14 +8,19 @@ public class AvailableStatsSO : ScriptableObject
 {
     [SerializeField] private StatsTypeSO[] _statsTypeSOs;
 
-    public StatsTypeSO[] SelectAvailableStats(/*ActiveStats activeWeapons*/)
+    public StatsTypeSO[] SelectAvailableStats(ActiveStats activeStats)
     {
         List<StatsTypeSO> availableStats = new List<StatsTypeSO>();
         for (int i = 0; i < _statsTypeSOs.Length; i++)
         {
-            //if (!activeWeapons.HasMaximumLevel(_weaponTypeSOs[i]))
+            if (!activeStats.HasMaximumLevel(_statsTypeSOs[i]))
                 availableStats.Add(_statsTypeSOs[i]);
         }
+        return availableStats.ToArray();
+    }
+
+    public StatsTypeSO[] SelectAllStats()
+    {
         return _statsTypeSOs.ToArray();
     }
 }

@@ -12,9 +12,14 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
         [Inject] private AudioSystem _audioSystem;
         
         [SerializeField] private Button _button;
+        [SerializeField] private Text _rewardNewLabel;
+        [SerializeField] private Text _rewardLevelLabel;
         [SerializeField] private Text _rewardTitleLabel;
-        [SerializeField] private Text _rewardDescriptionLabel;
         [SerializeField] private Image _rewardPicture;
+        [SerializeField] private Text _rewardDescriptionLabel;
+        [SerializeField] private Text _rewardUpgradeLabel;
+        [Header("UI labels")]
+        [SerializeField] private string _levelPredicate = "ур. ";
         private LevelUpWindow _levelUpWindow;
         private List<IRewardGiver> _rewardGiver = new List<IRewardGiver>();
         private IReward _reward;
@@ -37,14 +42,27 @@ namespace _ProjectSurvival.Scripts.LevelingSystem.UI
             gameObject.SetActive(false);
         }
 
-        public void ShowReward(IReward reward)
+        public void ShowReward(IReward reward, int currentLevel, bool isNew)
         {
             _reward = reward;
             _rewardType = _reward.GetRewardType();
-            _rewardTitleLabel.text = _reward.Title;
+            ShowData();
+            ShowUpgrade(currentLevel+1, isNew);
+            gameObject.SetActive(true);
+        }
+
+        private void ShowData()
+        {
+            _rewardTitleLabel.text = _reward.Title.ToUpper();
             _rewardDescriptionLabel.text = _reward.Description;
             _rewardPicture.sprite = _reward.Picture;
-            gameObject.SetActive(true);
+        }
+
+        private void ShowUpgrade(int level, bool isNew)
+        {
+            _rewardNewLabel.gameObject.SetActive(isNew);
+             _rewardLevelLabel.text = string.Concat(_levelPredicate, level);
+            _rewardUpgradeLabel.text = _reward.GetLevelUpDescription(level);
         }
 
         private void OnCick()

@@ -88,5 +88,37 @@ namespace _ProjectSurvival.Scripts.Stats
                     return -1;
             }
         }
+
+        public bool HasMaximumLevel(StatsTypeSO statType)
+        {
+            int currentLevel = 0;
+            switch (statType.UpgradeType)
+            {
+                case UpgradeTypes.Vampirik:
+                    currentLevel = _vampirikUpgrades;
+                    break;
+                case UpgradeTypes.MaxHealth:
+                    currentLevel = _maxHealthUpgrades;
+                    break;
+                case UpgradeTypes.MoveSpeed:
+                    currentLevel = _walkSpeedUpgrades;
+                    break;
+                case UpgradeTypes.AllGunsCooldown:
+                    currentLevel = _baseCooldownUpgrades;
+                    break;
+                case UpgradeTypes.AllGunsDamage:
+                    currentLevel = _baseDamageUpgrades;
+                    break;
+                default:
+                    Debug.Log("Not implemented");
+                    return false;
+            }
+            return !CanLevelUp(currentLevel, statType);
+        }
+
+        private bool CanLevelUp(int currentLevel, StatsTypeSO statType)
+        {
+            return currentLevel + 1 <= statType.StatsIncrease.Length; 
+        }
     }
 }
