@@ -46,7 +46,7 @@ namespace _ProjectSurvival.Scripts.Enemies.Evolution.UI
 
         private bool HasEmptyBar()
         {
-            return _initedCount + 1 < _evolutionBars.Length;
+            return _initedCount < _evolutionBars.Length;
         }
     }
 }
