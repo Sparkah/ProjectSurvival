@@ -20,16 +20,7 @@ public class RandomRangeSelector
             }
             else
             {
-                int initStep = 0;
-                int targetStep = indexPerPlace;
-                int selectedIndex;
-                for (int i = 0; i < amount; i++)
-                {
-                    selectedIndex = Random.Range(initStep, targetStep);
-                    selectedIndexes.Add(selectedIndex);
-                    initStep += indexPerPlace;
-                    targetStep += indexPerPlace;
-                }
+                AddRandomToList(selectedIndexes, amount, rangeSize, indexPerPlace);
             }
         }
         return selectedIndexes.ToArray();
@@ -40,6 +31,23 @@ public class RandomRangeSelector
         for (int i = from; i < count; i++)
         {
             list.Add(i);
+        }
+    }
+
+    private void AddRandomToList(List<int> list, int amount, int rangeSize, int indexPerPlace)
+    {
+        int initStep = 0;
+        int targetStep = indexPerPlace;
+        int selectedIndex;
+        for (int i = 0; i < amount; i++)
+        {
+            if (i == amount-1)
+                selectedIndex = Random.Range(initStep, rangeSize);
+            else
+                selectedIndex = Random.Range(initStep, targetStep);
+            list.Add(selectedIndex);
+            initStep += indexPerPlace;
+            targetStep += indexPerPlace;
         }
     }
 }
