@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: FatCrabEnemy
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 8123472272529497478, guid: 62c3f645ff2bb437fab42b7fd131d230, type: 3}
-  _typeColor: {r: 0.10708821, g: 1, b: 0, a: 1}
+  _typeColor: {r: 0.9339623, g: 0.49846825, b: 0.12922738, a: 1}
   _levelingSchemeSO: {fileID: 11400000, guid: ff3e219893fd7a640bcbcded7066bd57, type: 2}
   _enemyLevels:
-  - _appearanceSpriteFront: {fileID: 21300000, guid: a9981c3bd8e754fb4869fcb7b7aa27f6, type: 3}
-    _appearanceSpriteBack: {fileID: 21300000, guid: d66c1485560cb7f4c9753a3351717a31, type: 3}
+  - _appearanceSpriteFront: {fileID: 21300000, guid: 73a371cac63551d48aa13a6b2acb0e25, type: 3}
+    _appearanceSpriteBack: {fileID: 21300000, guid: 2a4ca53dc54bc3242bd74e6ca5256663, type: 3}
     _baseHealth: 3
     _baseSpeed: 2
     _baseDamage: 1
     _baseExperience: 10
     _baseGold: 0.1
-  - _appearanceSpriteFront: {fileID: 21300000, guid: 96ff8090ed400444ca45e8ef17e76f0c, type: 3}
-    _appearanceSpriteBack: {fileID: 0}
+  - _appearanceSpriteFront: {fileID: 21300000, guid: 65bb36d3225fe1543b65d310605a804f, type: 3}
+    _appearanceSpriteBack: {fileID: 21300000, guid: cd382ddcccb1123468a7a47b5f0d1ae7, type: 3}
     _baseHealth: 5
     _baseSpeed: 2
     _baseDamage: 1

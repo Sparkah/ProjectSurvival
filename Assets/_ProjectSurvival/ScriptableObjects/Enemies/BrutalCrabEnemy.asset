@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: BrutalCrabEnemy
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 8123472272529497478, guid: 62c3f645ff2bb437fab42b7fd131d230, type: 3}
-  _typeColor: {r: 0, g: 0.9796138, b: 1, a: 1}
+  _typeColor: {r: 1, g: 0, b: 0.73341465, a: 1}
   _levelingSchemeSO: {fileID: 11400000, guid: ff3e219893fd7a640bcbcded7066bd57, type: 2}
   _enemyLevels:
-  - _appearanceSpriteFront: {fileID: 21300000, guid: 681aa0aa92a80474c95040794a081ae4, type: 3}
-    _appearanceSpriteBack: {fileID: 21300000, guid: eb9cdc2f522eb744d95d6ca329b4dab4, type: 3}
+  - _appearanceSpriteFront: {fileID: 21300000, guid: f476124742c335045867728fcb287271, type: 3}
+    _appearanceSpriteBack: {fileID: 21300000, guid: f2992193500ab3f4c8b7479f842250b0, type: 3}
     _baseHealth: 1
     _baseSpeed: 2
     _baseDamage: 6
     _baseExperience: 10
     _baseGold: 0.1
-  - _appearanceSpriteFront: {fileID: 21300000, guid: cdbd17a732de9054abb36f468afd2c3d, type: 3}
-    _appearanceSpriteBack: {fileID: -4054529651839876736, guid: 91bb53ff30a238b4c8053320243d003c, type: 3}
+  - _appearanceSpriteFront: {fileID: 21300000, guid: cf89a34e123e7d74aaf7c80efe51d801, type: 3}
+    _appearanceSpriteBack: {fileID: 21300000, guid: 0665938d15a79a5428aedb53bbe60b94, type: 3}
     _baseHealth: 2
     _baseSpeed: 2
     _baseDamage: 6

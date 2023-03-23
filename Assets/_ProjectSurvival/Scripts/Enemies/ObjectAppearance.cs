@@ -18,7 +18,7 @@ public class ObjectAppearance : MonoBehaviour
             ChangeSprite(_backSprite);
         else
             ChangeSprite(_frontSprite);
-        _spriteRenderer.flipX = isMovingRight;
+        _spriteRenderer.flipX = !isMovingRight;
     }
 
     private void ChangeSprite(Sprite sprite)

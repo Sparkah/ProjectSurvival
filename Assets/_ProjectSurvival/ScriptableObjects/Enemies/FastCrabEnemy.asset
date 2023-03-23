@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: FastCrabEnemy
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 8123472272529497478, guid: 62c3f645ff2bb437fab42b7fd131d230, type: 3}
-  _typeColor: {r: 0.9339623, g: 0.49846825, b: 0.12922738, a: 1}
+  _typeColor: {r: 0, g: 0.9796138, b: 1, a: 1}
   _levelingSchemeSO: {fileID: 11400000, guid: ff3e219893fd7a640bcbcded7066bd57, type: 2}
   _enemyLevels:
-  - _appearanceSpriteFront: {fileID: 21300000, guid: a4f248fd86e5640ab8e2008045c2646d, type: 3}
-    _appearanceSpriteBack: {fileID: 21300000, guid: c712c17f76b9c024a97973025f518009, type: 3}
+  - _appearanceSpriteFront: {fileID: 21300000, guid: f42fb18dda5fde94cb160bf3f437abef, type: 3}
+    _appearanceSpriteBack: {fileID: 21300000, guid: 5d1d2d0643622f94bbc73965f833b43b, type: 3}
     _baseHealth: 1
     _baseSpeed: 6
     _baseDamage: 1
     _baseExperience: 10
     _baseGold: 0.1
-  - _appearanceSpriteFront: {fileID: 7408498800248795843, guid: d3951cb9cb1d74054b567c47e9afdc12, type: 3}
-    _appearanceSpriteBack: {fileID: -5200593367948889143, guid: 60c8ac7edb35cca4a9a00bdaed684cfc, type: 3}
+  - _appearanceSpriteFront: {fileID: 21300000, guid: 013b2020ad95fdb4c92c6d4eee690c04, type: 3}
+    _appearanceSpriteBack: {fileID: 21300000, guid: d72b93b6b514faf4fbc2974600c4f8c5, type: 3}
     _baseHealth: 2
     _baseSpeed: 6
     _baseDamage: 1
