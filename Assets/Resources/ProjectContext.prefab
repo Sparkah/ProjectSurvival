@@ -179,7 +179,7 @@ PrefabInstance:
     - target: {fileID: 1730395994972641016, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
       propertyPath: _menuSceneMusic
       value: 
-      objectReference: {fileID: 8300000, guid: c3f60b0dc6eb8704097ad536311fb8af, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1740599322759243325, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
       propertyPath: m_Name
       value: AudioSystem

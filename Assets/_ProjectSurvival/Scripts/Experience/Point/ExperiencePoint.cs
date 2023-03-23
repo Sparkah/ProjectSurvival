@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Audio;
 using _ProjectSurvival.Scripts.Enemies;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
@@ -39,6 +40,7 @@ namespace _ProjectSurvival.Scripts.Experience
 
         public void ReturnToPool()
         {
+            AudioPlayer.Audio.PlaySound(AudioSounds.Coins);
             _spriteRenderer.transform.DOKill();
             _pool.Release(this);
         }
