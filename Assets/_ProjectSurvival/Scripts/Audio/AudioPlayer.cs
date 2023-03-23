@@ -14,7 +14,6 @@ namespace _ProjectSurvival.Scripts.Audio
         [Header("Clips")]
         [SerializeField] private AudioClip _levelUp;
         [SerializeField] private AudioClip _enemyDeath;
-        [SerializeField] private AudioClip _enter;//выбрал перк
         [SerializeField] private AudioClip _hit;
         [SerializeField] private AudioClip _wp_10;
         [SerializeField] private AudioClip _wp_12;
@@ -115,10 +114,7 @@ namespace _ProjectSurvival.Scripts.Audio
             {
          AudioSounds.LevelUp => _levelUp, 
          AudioSounds.EnemyDeath => _enemyDeath,
-         //AudioSounds.BigDrops => _bigDrops, //=снаряд размером с персонажа
-         AudioSounds.Enter => _enter,//выбрал перк
          AudioSounds.Hit => _hit,//попадаешь по мобу пулей
-         //AudioSounds.Hoover => _hoover,//наводишь мышку на лвл ап
          AudioSounds.WP_10 => _wp_10,
          AudioSounds.WP_12 => _wp_12,
          AudioSounds.WP_1 => _wp_1,
