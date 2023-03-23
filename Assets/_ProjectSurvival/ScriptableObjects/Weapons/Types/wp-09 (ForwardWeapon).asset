@@ -51,3 +51,4 @@ MonoBehaviour:
       _durability: 1
     _description: "\u0443\u0440\u043E\u043D +2"
   _upgradeType: 10
+  _costProgression: 050000000a0000000f00000019000000

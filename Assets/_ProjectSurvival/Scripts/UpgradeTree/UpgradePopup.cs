@@ -39,7 +39,6 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
 
         private void TryPurchase()
         {
-            //Debug.Log(_price);
             if (_world.Gold.Value >= _price)
             {
                 _world.Gold.Value -= _price;

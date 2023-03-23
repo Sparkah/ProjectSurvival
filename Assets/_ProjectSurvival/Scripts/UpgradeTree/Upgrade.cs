@@ -12,7 +12,6 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         public Button Button;
         public TextMeshProUGUI Text;
         public Image _takenImage;
-        
         private UpgradePopup _upgradePopup;
         private int _price;
         private string _upgradeName;
@@ -21,12 +20,10 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         private ScriptableObject _upgradeScriptableObject;
         private int _id = 0;
 
-        public void Construct(Sprite upgradeSprite, int price, string upgradeName, UpgradePopup upgradePopup, string upgradeDescription, UpgradeTypes upgradeType, ScriptableObject upgradeScriptableObject, int currentUpgrade, bool taken)
+        public void Construct(Sprite upgradeSprite, string upgradeName, UpgradePopup upgradePopup, string upgradeDescription, UpgradeTypes upgradeType, ScriptableObject upgradeScriptableObject, int currentUpgrade, bool taken)
         {
             _upgradeName = upgradeName;
             UpgradeImage.sprite = upgradeSprite;
-            _price = price;
-            //Text.text = _price.ToString();
             _upgradePopup = upgradePopup;
             _upgradeDescription = upgradeDescription;
             _upgradeType = upgradeType;
@@ -49,19 +46,32 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
             if (_upgradeScriptableObject.GetType() == typeof(WeaponTypeSO))
             {
                 var upgradeScriptableObject = _upgradeScriptableObject as WeaponTypeSO;
-                Text.text = "Increase gunproperties";
+                if (_id >= upgradeScriptableObject.MaximumLevel)
+                {
+                    gameObject.SetActive(false);
+                    return;
+                }
+
+                Text.text = upgradeScriptableObject.GetLevelUpDescription(_id+1);
                 UpgradeImage.sprite = upgradeScriptableObject.Picture;
                 _upgradeName = upgradeScriptableObject.Title;
                 _upgradeDescription = upgradeScriptableObject.Description;
+                _price = upgradeScriptableObject.CostProgression[_id];
             }
 
             if (_upgradeScriptableObject.GetType() == typeof(StatsTypeSO))
             {
                 var upgradeScriptableObject = _upgradeScriptableObject as StatsTypeSO;
+                if (_id >= upgradeScriptableObject.StatsIncrease.Length)
+                {
+                    gameObject.SetActive(false);
+                    return;
+                }
                 Text.text = upgradeScriptableObject.StatsIncrease[_id].ToString()+"%";
                 UpgradeImage.sprite = upgradeScriptableObject.Picture;
                 _upgradeName = upgradeScriptableObject.Title;
                 _upgradeDescription = upgradeScriptableObject.Description;
+                _price = upgradeScriptableObject.CostProgression[_id];
             }
         }
 

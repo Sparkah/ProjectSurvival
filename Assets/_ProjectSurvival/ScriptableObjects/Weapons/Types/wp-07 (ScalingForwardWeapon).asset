@@ -55,3 +55,4 @@ MonoBehaviour:
       _durability: 999
     _description: "\u0411\u043E\u043B\u044C\u0448\u0443\u0449\u0438\u0439 \u0441\u043D\u0430\u0440\u044F\u0434"
   _upgradeType: 9
+  _costProgression: 050000000a0000000f00000019000000

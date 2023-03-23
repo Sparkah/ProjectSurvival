@@ -1,8 +1,5 @@
-using System;
 using _ProjectSurvival.Infrastructure;
-using _ProjectSurvival.Scripts.Weapons.WeaponTypes;
 using Cysharp.Threading.Tasks;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -11,13 +8,13 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
 {
     public class UpgradesRowData : MonoBehaviour
     {
+        [Inject] private World _world;
+        
         [SerializeField] private UpgradeTypes _upgradeType;
-        [SerializeField] private int[] _costProgression = new[] {5}; //Change to read this from SO for refactoring
+        [SerializeField] private ScriptableObject _upgradeScriptbaleObject;
+        
         private string _upgradeDescription;
         private string _upgradeName;
-        [SerializeField] private ScriptableObject _upgradeScriptbaleObject;
-
-        [Inject] private World _world;
         private UpgradeTree _upgradeTree;
         private int _currentUpgrade;
         private Upgrade[] _upgrades = new Upgrade[] {};
@@ -50,16 +47,16 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
             if (_world.UpgradeLevels[_upgradeType] < _currentUpgrade)
             {
                 upgrade.Button.interactable = false;
-                upgrade.Construct(_upgradeImage, _costProgression[_currentUpgrade], _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, true);
+                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, true);
             }
             if (_world.UpgradeLevels[_upgradeType] > _currentUpgrade)
             {
                 upgrade.Button.interactable = false;
-                upgrade.Construct(_upgradeImage, _costProgression[_currentUpgrade], _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, false);
+                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, false);
             }
             if (_world.UpgradeLevels[_upgradeType] == _currentUpgrade)
             {
-                upgrade.Construct(_upgradeImage, _costProgression[_currentUpgrade], _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, false);
+                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, false);
                 upgrade.Button.enabled = true;
                 upgrade.Button.interactable = true;
             }
