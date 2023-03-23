@@ -1,11 +1,13 @@
-using _ProjectSurvival.Scripts.SceneManagement;
+using _ProjectSurvival.Scripts.GameFlow.SessionOver;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace _ProjectSurvival.Scripts.HP
 {
     public class HPSystem : MonoBehaviour
     {
+        [Inject] private SessionOverController _sessionOverController;
         [SerializeField] private DamagableObject _damagableObject;
         [SerializeField] private Image _healthSlider;
 
@@ -21,14 +23,13 @@ namespace _ProjectSurvival.Scripts.HP
 
         private void UpdateUI()
         {
-            _healthSlider.fillAmount = _damagableObject.CurrentDurability/_damagableObject.MaximumDurability;
+            _healthSlider.fillAmount = _damagableObject.CurrentDurability / _damagableObject.MaximumDurability;
 
             Debug.Log(_healthSlider.fillAmount);
             if (_healthSlider.fillAmount <= 0)
             {
                 Debug.Log("Game over");
-                LevelLoader levelLoader = new LevelLoader();
-                levelLoader.ReloadCurrentLevel();
+                _sessionOverController.EndSession(SessionResult.Died);
             }
         }
     }

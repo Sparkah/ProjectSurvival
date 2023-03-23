@@ -283,6 +283,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemiesEvolutionTracker: {fileID: 3961486935121032612}
+--- !u!1 &2610721188696460137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4167533529910421761}
+  - component: {fileID: 5384521163387170437}
+  m_Layer: 0
+  m_Name: SessionOverController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4167533529910421761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2610721188696460137}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9210531385913296422}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5384521163387170437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2610721188696460137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e110a6d332a6a37429b047ac2b8a3510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3135668991418631807
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +464,51 @@ MonoBehaviour:
   _prefab: {fileID: 7147077363567685315, guid: 6137c8db5643c4749be16c0735943fc0, type: 3}
   _collectionChecks: 1
   _maxPoolSize: 10
+--- !u!1 &6385196908325436296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8589894567267692744}
+  - component: {fileID: 4186109451376186413}
+  m_Layer: 0
+  m_Name: SessionOverControllerInstaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8589894567267692744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385196908325436296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9210531383878399382}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4186109451376186413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385196908325436296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9e18403ef69b544bb2ab86f3286a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sessionOverController: {fileID: 5384521163387170437}
 --- !u!1 &7893383298502945648
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +591,7 @@ Transform:
   - {fileID: 902956576184407987}
   - {fileID: 7551798368603645004}
   - {fileID: 1934665573708400600}
+  - {fileID: 8589894567267692744}
   m_Father: {fileID: 9210531385913296422}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -528,6 +618,7 @@ MonoBehaviour:
   - {fileID: 3837511978222293379}
   - {fileID: 4175977926161898171}
   - {fileID: 7911582684306670925}
+  - {fileID: 4186109451376186413}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -775,6 +866,7 @@ Transform:
   - {fileID: 3071749122018096211}
   - {fileID: 7405891657942976536}
   - {fileID: 4214392592097599384}
+  - {fileID: 4167533529910421761}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
