@@ -44,15 +44,17 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
 
         private void SetUpButton(Upgrade upgrade)
         {
+            upgrade.Button.enabled = true;
+            upgrade.Button.interactable = true;
             if (_world.UpgradeLevels[_upgradeType] < _currentUpgrade)
             {
                 upgrade.Button.interactable = false;
-                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, true);
+                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, false);
             }
             if (_world.UpgradeLevels[_upgradeType] > _currentUpgrade)
             {
                 upgrade.Button.interactable = false;
-                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, false);
+                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, true);
             }
             if (_world.UpgradeLevels[_upgradeType] == _currentUpgrade)
             {
