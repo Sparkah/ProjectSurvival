@@ -55,7 +55,6 @@ namespace _ProjectSurvival.Scripts.Enemies
         {
             if (isActiveAndEnabled)
             {
-                Debug.Log(name + " defeated - return to pool");
                 _goldHolder.DropGold();
                 _experienceHolder.DropExperiencePoint(_enemyTypeSO);
                 _pool.Release(this);
