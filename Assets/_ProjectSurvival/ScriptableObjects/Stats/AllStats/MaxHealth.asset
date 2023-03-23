@@ -15,7 +15,7 @@ MonoBehaviour:
   _title: Max HP Increase
   _description: "\u041C\u043D\u043E\u0433\u043E \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F
     = \u0436\u0438\u0432\u0443\u0447"
-  _picture: {fileID: 21300000, guid: b131d68f0a4f5a34cb4de3c2a1d0aa6a, type: 3}
+  _picture: {fileID: 21300000, guid: e7536949ef04d47edb76586bd39c4980, type: 3}
   _upgradeDescriptionTemplate: "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435
     \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435 \u0443\u0432\u0435\u043B\u0438\u0447\u0438\u0442\u0441\u044F
     \u043D\u0430 _ %"

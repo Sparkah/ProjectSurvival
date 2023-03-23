@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: "\u041F\u043E\u0442\u043E\u043A \u0441\u043E\u0437\u043D\u0430\u043D\u0438\u044F"
   _description: 
-  _picture: {fileID: 0}
+  _picture: {fileID: 21300000, guid: 4b28ba3a4be824743b6c9c66dc6bb040, type: 3}
   _shootSound: 8
   _projectilePrefab: {fileID: 5102044091516270430, guid: bdfc937c2b37cd54ca292e1493e81adc, type: 3}
   _weaponLevels:
