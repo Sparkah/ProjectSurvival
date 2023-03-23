@@ -4,12 +4,12 @@ namespace _ProjectSurvival.Scripts.Audio
     {
         None = 0,
         LevelUp = 1,
-        //ShootWeaponA =2,
+        //2 Add new sound here
         EnemyDeath =3,
-        //BigDrops=4, //=снаряд размером с персонажа
-        Enter=5,//выбрал перк
-        Hit=6,//попадаешь по мобу пулей
-        //Hoover=7,//наводишь мышку на лвл ап
+        //4 Add new sound here
+        Enter=5,
+        Hit=6,
+        //7 Add new sound here
         WP_10=8,
         WP_12=9,
         WP_3=10,

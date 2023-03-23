@@ -26,7 +26,6 @@ namespace _ProjectSurvival.Scripts.Gold
         public void DropGold()
         {
             _world.Gold.Value += _goldAmountToDrop;
-            AudioPlayer.Audio.PlaySound(AudioSounds.Coins);
         }
     }
 }

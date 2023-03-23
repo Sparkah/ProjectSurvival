@@ -145,8 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e51a5057720a40d6b1eb6994b62f307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _menuSceneMusic: {fileID: 8300000, guid: ec61207883ade014888a3c21f7854ae3, type: 3}
-  _levelSceneMusic: {fileID: 8300000, guid: c3f60b0dc6eb8704097ad536311fb8af, type: 3}
+  _menuSceneMusic: {fileID: 0}
+  _levelSceneMusic: {fileID: 8300000, guid: a941edab08972eb46a0f3c9f862ad4df, type: 3}
 --- !u!114 &1386127406120776823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,7 +339,6 @@ MonoBehaviour:
   _audioSourceSecondary: {fileID: 6725695602026794179}
   _levelUp: {fileID: 8300000, guid: 528a148291dd6854f8c0dc1a33216c67, type: 3}
   _enemyDeath: {fileID: 8300000, guid: 52f096c31e3aca34f81d39f706f597a3, type: 3}
-  _enter: {fileID: 8300000, guid: 06959c24dc9a8ac4990da3869249760b, type: 3}
   _hit: {fileID: 8300000, guid: 432647b1cc691764ca3c5b8821e31e53, type: 3}
   _wp_10: {fileID: 8300000, guid: 91bbb92ea9a6fc342a17e47407a4bc64, type: 3}
   _wp_12: {fileID: 8300000, guid: e5c15fd1a520d8141852c83d0e1efd6f, type: 3}
