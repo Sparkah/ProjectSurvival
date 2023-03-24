@@ -1,6 +1,6 @@
 using UnityEngine.Events;
 
-namespace _ProjectSurvival.Scripts.Timer
+namespace _ProjectSurvival.Scripts.Timers
 {
     /// <summary>
     /// Object that updates current time if it is counting.

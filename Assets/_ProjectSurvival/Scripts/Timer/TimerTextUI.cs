@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _ProjectSurvival.Scripts.Timer
+namespace _ProjectSurvival.Scripts.Timers
 {
     public class TimerTextUI : TimerUI
     {

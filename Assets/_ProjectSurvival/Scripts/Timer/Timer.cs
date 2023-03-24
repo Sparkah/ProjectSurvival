@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _ProjectSurvival.Scripts.Timer
+namespace _ProjectSurvival.Scripts.Timers
 {
     /// <summary>
     /// Timer realization via deltaTime.
