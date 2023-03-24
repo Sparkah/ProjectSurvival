@@ -30,8 +30,8 @@ MonoBehaviour:
     _baseDamage: 6
     _baseExperience: 10
     _baseGold: 10
-  - _appearanceSpriteFront: {fileID: 21300000, guid: cdbd17a732de9054abb36f468afd2c3d, type: 3}
-    _appearanceSpriteBack: {fileID: -4054529651839876736, guid: 91bb53ff30a238b4c8053320243d003c, type: 3}
+  - _appearanceSpriteFront: {fileID: 21300000, guid: 8e049d586a9a095459ab56e588c725f4, type: 3}
+    _appearanceSpriteBack: {fileID: 21300000, guid: 4a2ccf4ab4077664a94e7b39ea92ac0f, type: 3}
     _baseHealth: 2
     _baseSpeed: 4
     _baseDamage: 10
