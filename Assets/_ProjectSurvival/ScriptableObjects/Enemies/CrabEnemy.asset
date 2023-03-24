@@ -24,7 +24,7 @@ MonoBehaviour:
     _baseExperience: 10
     _baseGold: 0.1
   - _appearanceSpriteFront: {fileID: 21300000, guid: 1db7fcf8e9e83cb4880ab3591a74d4df, type: 3}
-    _appearanceSpriteBack: {fileID: 21300000, guid: bbbdc3faeacd24d418d2fe2cc1ce708e, type: 3}
+    _appearanceSpriteBack: {fileID: 21300000, guid: 3a627f08742567846b2ecb52db2c5e7b, type: 3}
     _baseHealth: 2
     _baseSpeed: 2
     _baseDamage: 1
