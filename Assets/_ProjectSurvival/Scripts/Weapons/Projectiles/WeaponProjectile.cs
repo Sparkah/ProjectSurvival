@@ -50,6 +50,8 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
         public void Launch(Vector3 launchPosition, Vector3 forwardDirection)
         {
             transform.position = launchPosition;
+            if (forwardDirection.x == 0)
+                forwardDirection.x = 0.001f;
             transform.rotation = _projectileAngle.CalculateAngle(forwardDirection);
             CustomLaunch(launchPosition, forwardDirection);
         }

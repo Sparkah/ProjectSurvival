@@ -1,4 +1,3 @@
-using System;
 using _ProjectSurvival.Scripts.Stats;
 using UnityEngine;
 using Zenject;
@@ -16,7 +15,7 @@ namespace _ProjectSurvival.Scripts.Player
         [SerializeField] private Sprite _back;
         [SerializeField] private Transform _playerSpriteTransform;
         //[SerializeField] private float _rotationSpeed = 2f;
-        
+
         private Rigidbody2D _agent;
         private Animator _animator;
         private const int _speedIncreaseConstant = 10000;
@@ -60,18 +59,18 @@ namespace _ProjectSurvival.Scripts.Player
         {
             var horizontal = 0.0f;
             var vertical = 0.0f;
-        
+
             horizontal = UltimateJoystick.GetHorizontalAxis("Movement");
             vertical = UltimateJoystick.GetVerticalAxis("Movement");
 
             var input = new Vector2(horizontal, vertical);
             return input;
         }
-    
+
         private void Move(Vector2 input)
         {
             var moveDirection = new Vector2(input.x, input.y);
-            
+
             MoveTowardTarget(moveDirection);
         }
 
@@ -89,16 +88,17 @@ namespace _ProjectSurvival.Scripts.Player
                 playerTransformScale.x = Mathf.Abs(playerTransformScale.x);
                 playerTransformScale.x *= input.x < 0 ? -1 : 1;
                 _playerSpriteTransform.localScale = playerTransformScale;
-                if (input.y > 0)
-                    _spriteRenderer.sprite = _back;
-                else
-                    _spriteRenderer.sprite = _front;
+            }
+
+            if (input.y != 0)
+            {
+                _spriteRenderer.sprite = input.y > 0 ? _back : _front;
             }
         }
 
         private void UpgradeMoveSpeed(float percentage)
         {
-            _speed = _initialSpeed + (_initialSpeed*percentage)/100;
+            _speed = _initialSpeed + (_initialSpeed * percentage) / 100;
             //Debug.Log(_speed);
         }
 
