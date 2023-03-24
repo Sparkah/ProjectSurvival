@@ -1,4 +1,5 @@
 using _ProjectSurvival.Scripts.Audio;
+using _ProjectSurvival.Scripts.GameFlow.Statistics;
 using _ProjectSurvival.Scripts.Stats;
 using _ProjectSurvival.Scripts.Weapons.ActiveWeapons;
 using _ProjectSurvival.Scripts.Weapons.Projectiles;
@@ -13,11 +14,13 @@ namespace _ProjectSurvival.Scripts.Player
         [SerializeField] private PlayerMover _playerMover; //Bad dependency, find better solution
         private ActiveStats _activeStats;
         private ActiveWeapons _activeWeapons;
+        private SessionStatistics _gameStatistics;
         private float _damageIncreasePercent;
 
         [Inject]
-        private void Construct(ActiveWeapons activeWeapons, ActiveStats activeStats)
+        private void Construct(ActiveWeapons activeWeapons, ActiveStats activeStats, SessionStatistics gameStatistics)
         {
+            _gameStatistics = gameStatistics;
             _activeWeapons = activeWeapons;
             _activeStats = activeStats;
             _activeStats.OnBaseDamageStatChanged += SetDamageIncreasePercent;
@@ -46,6 +49,7 @@ namespace _ProjectSurvival.Scripts.Player
                 attackProjectile.Launch(_firePoint.position, _playerMover.MovementDirection);
                 AudioPlayer.Audio.PlayOneShotSound(activeWeapon.WeaponType.ShootSound);
             }
+            _gameStatistics.AddStatistic(StatisticType.FiredProjectiles, projectilesCount);
         }
 
         private void SetDamageIncreasePercent(float percent)

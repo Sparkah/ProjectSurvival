@@ -1,6 +1,7 @@
 using _ProjectSurvival.Scripts.DamageSystem;
 using _ProjectSurvival.Scripts.Enemies.Evolution;
 using _ProjectSurvival.Scripts.Experience;
+using _ProjectSurvival.Scripts.GameFlow.Statistics;
 using _ProjectSurvival.Scripts.Gold;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -11,6 +12,7 @@ namespace _ProjectSurvival.Scripts.Enemies
     public class Enemy : MonoBehaviour, IPoolableObject<Enemy>
     {
         [Inject] private EnemiesEvolutionTracker _enemiesEvolutionTracker;
+        [Inject] private SessionStatistics _gameStatistics;
         [SerializeField] private DamagableObject _damagableObject;
         [SerializeField] private EnemyMover _enemyMover;
         [SerializeField] private ObjectAppearance _enemyAppearance;
@@ -21,6 +23,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         private float _damage;
         private IObjectPool<Enemy> _pool;
         private EnemyTypeSO _enemyTypeSO;
+        private int _currentEvolutionLevel;
 
         public void Init(IObjectPool<Enemy> pool)
         {
@@ -39,8 +42,8 @@ namespace _ProjectSurvival.Scripts.Enemies
         {
             _enemyTypeSO = enemyType;
 
-            int currentEvolutionLevel = _enemiesEvolutionTracker.GetEnemyEvolutionLevel(_enemyTypeSO);
-            EnemyLevelData currentLevelData = _enemyTypeSO.GetEnemyLevelData(currentEvolutionLevel);
+            _currentEvolutionLevel = _enemiesEvolutionTracker.GetEnemyEvolutionLevel(_enemyTypeSO);
+            EnemyLevelData currentLevelData = _enemyTypeSO.GetEnemyLevelData(_currentEvolutionLevel);
             SetupEnemy(currentLevelData);
         }
 
@@ -57,6 +60,7 @@ namespace _ProjectSurvival.Scripts.Enemies
             {
                 _goldHolder.DropGold();
                 _experienceHolder.DropExperiencePoint(_enemyTypeSO);
+                _gameStatistics.AddStatistic(StatisticType.DefeatedEnemy, _currentEvolutionLevel);
                 _pool.Release(this);
             }
         }
