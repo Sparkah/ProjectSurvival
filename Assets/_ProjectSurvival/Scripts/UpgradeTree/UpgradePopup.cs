@@ -44,6 +44,15 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         private void SetUpMoneyText(int price)
         {
             _priceText.text = MathF.Round(_world.Gold.Value, 1)+"/" + price.ToString();
+            var worldGold = MathF.Round(_world.Gold.Value, 1);
+            if (worldGold < price)
+            {
+                _priceText.color = new Color(255,0,0);
+            }
+            else
+            {
+                _priceText.color = new Color(20,251,251);
+            }
         }
 
         private void SetUpView(string skillDescription, string skillStat)
