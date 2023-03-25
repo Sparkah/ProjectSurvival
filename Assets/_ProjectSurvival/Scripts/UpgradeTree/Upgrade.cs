@@ -62,6 +62,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
 
                 _upgradeRewardType = RewardType.Weapon;
                 Text.text = upgradeScriptableObject.GetLevelUpDescription(_id+1);
+                Text.enabled = false;
                 UpgradeImage.sprite = upgradeScriptableObject.Picture;
                 _upgradeName = upgradeScriptableObject.Title;
                 _upgradeDescription = upgradeScriptableObject.Description;
