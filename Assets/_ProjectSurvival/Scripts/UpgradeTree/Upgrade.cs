@@ -1,4 +1,5 @@
 using _ProjectSurvival.Infrastructure;
+using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
 using _ProjectSurvival.Scripts.Stats;
 using _ProjectSurvival.Scripts.Weapons.WeaponTypes;
 using TMPro;
@@ -24,6 +25,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         private ScriptableObject _upgradeScriptableObject;
         private int _id = 0;
         private CostProgressionSO _costProgression;
+        private RewardType _upgradeRewardType;
 
         public void Construct(Sprite upgradeSprite, string upgradeName, UpgradePopup upgradePopup, string upgradeDescription, UpgradeTypes upgradeType, ScriptableObject upgradeScriptableObject, int currentUpgrade, bool taken, CostProgressionSO costProgression)
         {
@@ -58,6 +60,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
                     return;
                 }
 
+                _upgradeRewardType = RewardType.Weapon;
                 Text.text = upgradeScriptableObject.GetLevelUpDescription(_id+1);
                 UpgradeImage.sprite = upgradeScriptableObject.Picture;
                 _upgradeName = upgradeScriptableObject.Title;
@@ -73,6 +76,8 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
                     gameObject.SetActive(false);
                     return;
                 }
+                
+                _upgradeRewardType = RewardType.Stat;
                 Text.text = upgradeScriptableObject.StatsIncrease[_id].ToString()+"%";
                 UpgradeImage.sprite = upgradeScriptableObject.Picture;
                 _upgradeName = upgradeScriptableObject.Title;
@@ -84,7 +89,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         private void OpenUpgradePopup()
         {
             _upgradePopup.gameObject.SetActive(true);
-            _upgradePopup.SetUp(_upgradeName, _upgradeDescription, _price, _upgradeType, Text.text);
+            _upgradePopup.SetUp(_upgradeName, _upgradeDescription, _price, _upgradeType, Text.text, _upgradeRewardType);
         }
 
         private void OnDisable()

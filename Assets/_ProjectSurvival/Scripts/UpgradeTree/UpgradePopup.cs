@@ -1,5 +1,6 @@
 using System;
 using _ProjectSurvival.Infrastructure;
+using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,21 +21,45 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         private int _price;
         private UpgradeTypes _upgradeType;
         private UpgradeTree _upgradeTree;
+        private RewardType _upgradeRewardType;
 
         public void Construct(UpgradeTree upgradeTree)
         {
             _upgradeTree = upgradeTree;
         }
         
-        public void SetUp(string skillNameText, string skillDescriptionText, int price, UpgradeTypes upgradeType, string stats)
+        public void SetUp(string skillNameText, string skillDescriptionText, int price, UpgradeTypes upgradeType, string stats, RewardType rewardType)
         {
+            _upgradeRewardType = rewardType;
             _skillStatText.text = stats;
             _skillNameText.text = skillNameText;
             _skillDescriptionText.text = skillDescriptionText;
             _price = price;
             _upgradeButton.onClick.AddListener(TryPurchase);
-            _priceText.text = MathF.Round(_world.Gold.Value, 1)+"/" + price.ToString();
             _upgradeType = upgradeType;
+            SetUpMoneyText(price);
+            SetUpView(skillDescriptionText, stats);
+        }
+
+        private void SetUpMoneyText(int price)
+        {
+            _priceText.text = MathF.Round(_world.Gold.Value, 1)+"/" + price.ToString();
+        }
+
+        private void SetUpView(string skillDescription, string skillStat)
+        {
+            if (_upgradeRewardType == RewardType.Weapon)
+            {
+                _skillDescriptionText.gameObject.SetActive(false);
+                return;
+            }
+            
+            if (_upgradeRewardType == RewardType.Stat)
+            {
+                _skillDescriptionText.gameObject.SetActive(true);
+                _skillDescriptionText.text = skillStat;
+                _skillStatText.text = skillDescription;
+            }
         }
 
         private void TryPurchase()
