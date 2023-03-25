@@ -24,11 +24,9 @@ namespace _ProjectSurvival.Scripts.HP
         private void UpdateUI()
         {
             _healthSlider.fillAmount = _damagableObject.CurrentDurability / _damagableObject.MaximumDurability;
-
-            Debug.Log(_healthSlider.fillAmount);
+            
             if (_healthSlider.fillAmount <= 0)
             {
-                Debug.Log("Game over");
                 _sessionOverController.EndSession(SessionResult.Died);
             }
         }

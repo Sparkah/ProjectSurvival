@@ -19,6 +19,7 @@ namespace _ProjectSurvival.Scripts.Tutorial
 
         private void OnDestroy()
         {
+            if (!_tutorialWindowManager) return;
             _tutorialWindowManager.OnWindowChanged -= ChangeView;
         }
 
