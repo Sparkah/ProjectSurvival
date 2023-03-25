@@ -46,6 +46,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
                 gameObject.SetActive(false);
                 _upgradeTree.SetUpUpgradeRows();
                 Debug.Log($"Upgrade {_upgradeType} purchased! It's level is {_world.UpgradeLevels[_upgradeType]}");
+                _world.CurrentUpgradeID.Value += 1;
             }
             else
             {

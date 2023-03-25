@@ -16,7 +16,6 @@ namespace _ProjectSurvival.Scripts.Weapons.WeaponTypes
         [SerializeField] private WeaponProjectile _projectilePrefab;
         [SerializeField] private WeaponLevel[] _weaponLevels;
         [SerializeField] private UpgradeTypes _upgradeType;
-        [SerializeField] private int[] _costProgression;
 
         public string Title => _title;
         public string Description => _description;
@@ -25,7 +24,6 @@ namespace _ProjectSurvival.Scripts.Weapons.WeaponTypes
         public int MaximumLevel => _weaponLevels.Length;
         public AudioSounds ShootSound => _shootSound;
         public UpgradeTypes UpgradeType => _upgradeType;
-        public int[] CostProgression => _costProgression;
 
         public RewardType GetRewardType()
         {

@@ -10,6 +10,8 @@ namespace _ProjectSurvival.Infrastructure
 
         public ReactiveDictionary<UpgradeTypes, int> UpgradeLevels = new ReactiveDictionary<UpgradeTypes, int>();
 
+        public ReactiveProperty<int> CurrentUpgradeID = new ReactiveProperty<int>();
+
         public World()
         {
             InitUpgrades();

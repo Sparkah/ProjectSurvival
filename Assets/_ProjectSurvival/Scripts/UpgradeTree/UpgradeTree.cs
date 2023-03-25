@@ -12,9 +12,10 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         [Inject] private World _world;
         
         public UpgradePopup UpgradePopup;
+        public CostProgressionSO CostProgression;
         
-        [SerializeField] private TextMeshProUGUI _upgradesAvailable;
-        [SerializeField] private TextMeshProUGUI _upgradesMastered;
+        [SerializeField] private TextMeshProUGUI _moneyAvailable;
+        [SerializeField] private TextMeshProUGUI _moneyRequiredForNextPurchase;
         
         private UpgradesRowData[] _upgradesRowDatas;
         private CompositeDisposable _disposable = new CompositeDisposable();
@@ -42,8 +43,8 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
                 }
             }
 
-            _upgradesAvailable.text = "Доступно: " + amountTotal;
-            _upgradesMastered.text = "Улучшено: " + (amountMastered).ToString();
+            _moneyAvailable.text = _world.Gold.Value.ToString();
+            _moneyRequiredForNextPurchase.text = CostProgression.CostProgression[_world.CurrentUpgradeID.Value].ToString();
         }
 
         public void SetUpUpgradeRows()

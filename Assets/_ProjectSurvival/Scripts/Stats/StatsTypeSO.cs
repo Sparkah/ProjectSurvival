@@ -13,14 +13,12 @@ namespace _ProjectSurvival.Scripts.Stats
         [SerializeField] private string _upgradeDescriptionTemplate;
         [SerializeField] private UpgradeTypes _upgradeType;
         [SerializeField] private int[] _statAmountPercentIncrease;
-        [SerializeField] private int[] _costProgression;
 
         public string Title => _title;
         public string Description => _description;
         public Sprite Picture => _picture;
         public int[] StatsIncrease => _statAmountPercentIncrease;
         public UpgradeTypes UpgradeType => _upgradeType;
-        public int[] CostProgression => _costProgression;
 
         public string GetLevelUpDescription(int level)
         {

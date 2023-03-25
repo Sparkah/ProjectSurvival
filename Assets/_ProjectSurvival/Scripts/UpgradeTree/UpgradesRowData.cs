@@ -20,12 +20,15 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         private Upgrade[] _upgrades = new Upgrade[] {};
         private UpgradePopup _upgradePopup;
         private Sprite _upgradeImage;
+        private CostProgressionSO _costProgression;
 
         private void Awake()
         {
+            //_world.Gold.Value += 10;
             _upgradeTree = GetComponentInParent<UpgradeTree>();
             _upgrades = GetComponentsInChildren<Upgrade>();
             _upgradePopup = _upgradeTree.UpgradePopup;
+            _costProgression = _upgradeTree.CostProgression;
         }
 
         public int GetUpgradesTotalAmount()
@@ -49,16 +52,16 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
             if (_world.UpgradeLevels[_upgradeType] < _currentUpgrade)
             {
                 upgrade.Button.interactable = false;
-                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, false);
+                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, false, _costProgression);
             }
             if (_world.UpgradeLevels[_upgradeType] > _currentUpgrade)
             {
                 upgrade.Button.interactable = false;
-                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, true);
+                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, true, _costProgression);
             }
             if (_world.UpgradeLevels[_upgradeType] == _currentUpgrade)
             {
-                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, false);
+                upgrade.Construct(_upgradeImage, _upgradeName, _upgradePopup, _upgradeDescription, _upgradeType, _upgradeScriptbaleObject, _currentUpgrade, false, _costProgression);
                 upgrade.Button.enabled = true;
                 upgrade.Button.interactable = true;
             }

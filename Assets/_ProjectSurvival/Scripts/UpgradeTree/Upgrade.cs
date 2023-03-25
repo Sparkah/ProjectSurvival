@@ -1,13 +1,17 @@
+using _ProjectSurvival.Infrastructure;
 using _ProjectSurvival.Scripts.Stats;
 using _ProjectSurvival.Scripts.Weapons.WeaponTypes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace _ProjectSurvival.Scripts.UpgradeTree
 {
     public class Upgrade : MonoBehaviour
     {
+        [Inject] private World _world;
+        
         public Image UpgradeImage;
         public Button Button;
         public TextMeshProUGUI Text;
@@ -19,9 +23,11 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         private UpgradeTypes _upgradeType;
         private ScriptableObject _upgradeScriptableObject;
         private int _id = 0;
+        private CostProgressionSO _costProgression;
 
-        public void Construct(Sprite upgradeSprite, string upgradeName, UpgradePopup upgradePopup, string upgradeDescription, UpgradeTypes upgradeType, ScriptableObject upgradeScriptableObject, int currentUpgrade, bool taken)
+        public void Construct(Sprite upgradeSprite, string upgradeName, UpgradePopup upgradePopup, string upgradeDescription, UpgradeTypes upgradeType, ScriptableObject upgradeScriptableObject, int currentUpgrade, bool taken, CostProgressionSO costProgression)
         {
+            _costProgression = costProgression;
             _upgradeName = upgradeName;
             UpgradeImage.sprite = upgradeSprite;
             _upgradePopup = upgradePopup;
@@ -56,7 +62,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
                 UpgradeImage.sprite = upgradeScriptableObject.Picture;
                 _upgradeName = upgradeScriptableObject.Title;
                 _upgradeDescription = upgradeScriptableObject.Description;
-                _price = upgradeScriptableObject.CostProgression[_id];
+                _price = _costProgression.CostProgression[_world.CurrentUpgradeID.Value];
             }
 
             if (_upgradeScriptableObject.GetType() == typeof(StatsTypeSO))
@@ -71,7 +77,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
                 UpgradeImage.sprite = upgradeScriptableObject.Picture;
                 _upgradeName = upgradeScriptableObject.Title;
                 _upgradeDescription = upgradeScriptableObject.Description;
-                _price = upgradeScriptableObject.CostProgression[_id];
+                _price = _costProgression.CostProgression[_world.CurrentUpgradeID.Value];
             }
         }
 
