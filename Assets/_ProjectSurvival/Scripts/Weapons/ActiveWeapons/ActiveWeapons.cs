@@ -82,8 +82,13 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
         {
             ActiveWeapon selectedWeapon = FindWeapon(weaponType);
             if (selectedWeapon == null)
-                return false;
-
+            {
+                _upgradesQue.TryGetValue(weaponType, out int quedAmount);
+                if (quedAmount <= 0)
+                    return false;
+                else
+                    return quedAmount >= weaponType.MaximumLevel;
+            }
             return selectedWeapon.HasMaximumLevel();
         }
 

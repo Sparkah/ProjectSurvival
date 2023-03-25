@@ -51,5 +51,21 @@ MonoBehaviour:
       _speed: 12
       _durability: 1
     _description: "\u0447\u0430\u0449\u0435 \u0441\u043D\u0430\u0440\u044F\u0434\u044B"
+  - _appearFrequency: 0.1
+    _appearAmount: 1
+    _projectileSetting:
+      _damage: 1
+      _size: 0.3
+      _speed: 12
+      _durability: 1
+    _description: "\u0447\u0430\u0449\u0435 \u0441\u043D\u0430\u0440\u044F\u0434\u044B"
+  - _appearFrequency: 0.1
+    _appearAmount: 1
+    _projectileSetting:
+      _damage: 1
+      _size: 0.3
+      _speed: 12
+      _durability: 1
+    _description: "\u0447\u0430\u0449\u0435 \u0441\u043D\u0430\u0440\u044F\u0434\u044B"
   _upgradeType: 11
-  _costProgression: 050000000a0000000f00000019000000
+  _costProgression: 050000000a0000000f000000190000001900000019000000
