@@ -8,8 +8,7 @@ MonoImporter:
   - _audioSourceSecondary: {instanceID: 0}
   - _levelUp: {fileID: 8300000, guid: 528a148291dd6854f8c0dc1a33216c67, type: 3}
   - _enemyDeath: {fileID: 8300000, guid: 52f096c31e3aca34f81d39f706f597a3, type: 3}
-  - _enter: {instanceID: 0}
-  - _hit: {instanceID: 0}
+  - _hit: {fileID: 8300000, guid: 432647b1cc691764ca3c5b8821e31e53, type: 3}
   - _wp_10: {fileID: 8300000, guid: 91bbb92ea9a6fc342a17e47407a4bc64, type: 3}
   - _wp_12: {fileID: 8300000, guid: e5c15fd1a520d8141852c83d0e1efd6f, type: 3}
   - _wp_1: {fileID: 8300000, guid: 9def7945676143049a5f4b6e78ddd94a, type: 3}
