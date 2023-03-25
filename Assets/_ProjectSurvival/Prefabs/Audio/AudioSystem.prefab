@@ -145,8 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e51a5057720a40d6b1eb6994b62f307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _menuSceneMusic: {fileID: 0}
-  _levelSceneMusic: {fileID: 8300000, guid: a941edab08972eb46a0f3c9f862ad4df, type: 3}
+  _menuSceneMusic: {fileID: 8300000, guid: d887adf63bebbae4d858673514c5beb6, type: 3}
+  _levelSceneMusic: {fileID: 8300000, guid: 0dbf160f7015ca34682013ccea52509c, type: 3}
 --- !u!114 &1386127406120776823
 MonoBehaviour:
   m_ObjectHideFlags: 0
