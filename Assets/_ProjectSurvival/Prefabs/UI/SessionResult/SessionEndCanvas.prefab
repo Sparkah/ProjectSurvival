@@ -1471,6 +1471,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyLevelResult (Level 2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6233006081540229990, guid: 1d0e4ba2cd4905246830452a4c6289fb, type: 3}
+      propertyPath: _lockedPicture
+      value: 
+      objectReference: {fileID: 21300000, guid: 2ebb23fe942ab6845b46dafaba4dedab, type: 3}
+    - target: {fileID: 6233006081540229990, guid: 1d0e4ba2cd4905246830452a4c6289fb, type: 3}
+      propertyPath: _unlockedPicture
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ac9aed11dc173141bf7eb76b6586cc2, type: 3}
     - target: {fileID: 7549914568354481988, guid: 1d0e4ba2cd4905246830452a4c6289fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1705,6 +1713,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyLevelResult (Level 1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6233006081540229990, guid: 1d0e4ba2cd4905246830452a4c6289fb, type: 3}
+      propertyPath: _lockedPicture
+      value: 
+      objectReference: {fileID: 21300000, guid: b50d13693a6432f49b4b45a5adfb8477, type: 3}
+    - target: {fileID: 6233006081540229990, guid: 1d0e4ba2cd4905246830452a4c6289fb, type: 3}
+      propertyPath: _unlockedPicture
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d80de00d6bb0254ca96b7157454e8fe, type: 3}
     - target: {fileID: 7549914568354481988, guid: 1d0e4ba2cd4905246830452a4c6289fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1818,6 +1834,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyLevelResult (Level 3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6233006081540229990, guid: 1d0e4ba2cd4905246830452a4c6289fb, type: 3}
+      propertyPath: _lockedPicture
+      value: 
+      objectReference: {fileID: 21300000, guid: 07826830c7d0ace4d80161a2a11067d8, type: 3}
+    - target: {fileID: 6233006081540229990, guid: 1d0e4ba2cd4905246830452a4c6289fb, type: 3}
+      propertyPath: _unlockedPicture
+      value: 
+      objectReference: {fileID: 21300000, guid: 719e77fdc6b68224f91d92c106da7161, type: 3}
     - target: {fileID: 7549914568354481988, guid: 1d0e4ba2cd4905246830452a4c6289fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
