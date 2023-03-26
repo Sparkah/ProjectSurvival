@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,21 +12,18 @@ namespace _ProjectSurvival.Scripts.Audio
         void Awake()
         {
             _button = GetComponent<Button>();
-            //_button.onClick.AddListener(PlaySound);
         }
 
         private void PlaySound()
         {
-            if (_open)
+            switch (_open)
             {
-                Debug.Log("confirm");
-                AudioPlayer.Audio.PlayOneShotSound(AudioSounds.ConfirmUI);
-            }
-
-            if (!_open)
-            {
-                Debug.Log("cancel");
-                AudioPlayer.Audio.PlayOneShotSound(AudioSounds.CancelUI);
+                case true:
+                    AudioPlayer.Audio.PlayOneShotSound(AudioSounds.ConfirmUI);
+                    break;
+                case false:
+                    AudioPlayer.Audio.PlayOneShotSound(AudioSounds.CancelUI);
+                    break;
             }
         }
 
