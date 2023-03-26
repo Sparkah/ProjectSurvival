@@ -7,6 +7,7 @@ using _ProjectSurvival.Scripts.Audio;
 using UnityEngine;
 using Zenject;
 using System.Linq;
+using _ProjectSurvival.Scripts.Windows;
 
 namespace _ProjectSurvival.Scripts.LevelingSystem.UI
 {

@@ -82,8 +82,6 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
                 Text.text = upgradeScriptableObject.StatsIncrease[_id].ToString()+"%";
                 UpgradeImage.sprite = upgradeScriptableObject.Picture;
                 _upgradeName = upgradeScriptableObject.Title;
-                //_upgradeDescription = upgradeScriptableObject.Description;
-                Debug.Log(_id);
                 _upgradeDescription = upgradeScriptableObject.GetLevelUpDescription(_id+1);
                 _price = _costProgression.CostProgression[_world.CurrentUpgradeID.Value];
             }

@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Audio;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -39,6 +40,7 @@ namespace _ProjectSurvival.Scripts.Tutorial
 
         public void NextWindow()
         {
+            AudioPlayer.Audio.PlayOneShotSound(AudioSounds.ConfirmUI);
             _tutorialWindows[_currentWindow].gameObject.SetActive(false);
             _currentWindow += 1;
             _tutorialWindows[_currentWindow].gameObject.SetActive(true);
@@ -47,6 +49,7 @@ namespace _ProjectSurvival.Scripts.Tutorial
 
         public void PreviousWindow()
         {
+            AudioPlayer.Audio.PlayOneShotSound(AudioSounds.ConfirmUI);
             _tutorialWindows[_currentWindow].gameObject.SetActive(false);
             _currentWindow -= 1;
             _tutorialWindows[_currentWindow].gameObject.SetActive(true);

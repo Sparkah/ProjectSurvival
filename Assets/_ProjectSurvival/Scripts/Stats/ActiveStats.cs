@@ -39,7 +39,6 @@ namespace _ProjectSurvival.Scripts.Stats
             switch (statReward.UpgradeType)
             {
                 case UpgradeTypes.Vampirik:
-                    Debug.Log("vampiric active stat invoked");
                     OnVampirikStatChanged?.Invoke(statReward.StatsIncrease[_vampirikUpgrades]);
                     SetVampirikAmount(statReward.StatsIncrease[_vampirikUpgrades]);
                     _vampirikUpgrades += 1;
