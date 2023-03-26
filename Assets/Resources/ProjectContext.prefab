@@ -182,12 +182,12 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d887adf63bebbae4d858673514c5beb6, type: 3}
     - target: {fileID: 1730395994972641016, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
       propertyPath: _levelSceneMusic.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1730395994972641016, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
       propertyPath: _levelSceneMusic.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 0dbf160f7015ca34682013ccea52509c, type: 3}
+      objectReference: {fileID: 8300000, guid: f4aa69090f116b14899ad3b1f82d1280, type: 3}
     - target: {fileID: 1730395994972641016, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
       propertyPath: _levelSceneMusic.Array.data[1]
       value: 
