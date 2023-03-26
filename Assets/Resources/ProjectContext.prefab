@@ -182,7 +182,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d887adf63bebbae4d858673514c5beb6, type: 3}
     - target: {fileID: 1730395994972641016, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
       propertyPath: _levelSceneMusic.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1730395994972641016, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
       propertyPath: _levelSceneMusic.Array.data[0]
@@ -192,6 +192,10 @@ PrefabInstance:
       propertyPath: _levelSceneMusic.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: b556dafd36b04c7429676b785d98700b, type: 3}
+    - target: {fileID: 1730395994972641016, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
+      propertyPath: _levelSceneMusic.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f4aa69090f116b14899ad3b1f82d1280, type: 3}
     - target: {fileID: 1740599322759243325, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
       propertyPath: m_Name
       value: AudioSystem
@@ -243,7 +247,7 @@ PrefabInstance:
     - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
       propertyPath: _enter
       value: 
-      objectReference: {fileID: 8300000, guid: 258176459c631574f92fb9362a59c4a8, type: 3}
+      objectReference: {fileID: 8300000, guid: 55e8ce3243e236042817744766e3cc49, type: 3}
     - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
       propertyPath: _wp_05
       value: 
@@ -251,7 +255,7 @@ PrefabInstance:
     - target: {fileID: 4705725556280192460, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
       propertyPath: _cancel
       value: 
-      objectReference: {fileID: 8300000, guid: a734dda3b3e87654e95ee84ac65e2956, type: 3}
+      objectReference: {fileID: 8300000, guid: 0084832a7ff08be49ac8adfc0070b7a4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afade08eba4b5437cbe9d5e1103688de, type: 3}
 --- !u!4 &5669885144257536242 stripped
