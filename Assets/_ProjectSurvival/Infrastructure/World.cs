@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Tutorial;
 using _ProjectSurvival.Scripts.UpgradeTree;
 using UniRx;
 
@@ -11,6 +12,8 @@ namespace _ProjectSurvival.Infrastructure
         public ReactiveDictionary<UpgradeTypes, int> UpgradeLevels = new ReactiveDictionary<UpgradeTypes, int>();
 
         public ReactiveProperty<int> CurrentUpgradeID = new ReactiveProperty<int>();
+
+        public ReactiveDictionary<TutorialEnum, bool> Tutorial = new ReactiveDictionary<TutorialEnum, bool>();
 
         public World()
         {

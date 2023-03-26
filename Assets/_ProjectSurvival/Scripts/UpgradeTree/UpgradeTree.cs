@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using _ProjectSurvival.Infrastructure;
 using TMPro;
@@ -43,7 +44,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
                 }
             }
 
-            _moneyAvailable.text = _world.Gold.Value.ToString();
+            _moneyAvailable.text = MathF.Round(_world.Gold.Value,1).ToString();
             _moneyRequiredForNextPurchase.text = CostProgression.CostProgression[_world.CurrentUpgradeID.Value].ToString();
         }
 

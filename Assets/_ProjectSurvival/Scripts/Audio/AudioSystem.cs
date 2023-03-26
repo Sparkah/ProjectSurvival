@@ -8,7 +8,7 @@ namespace _ProjectSurvival.Scripts.Audio
     {
         [Header("Main sound themes")]
         [SerializeField] private AudioClip _menuSceneMusic;
-        [SerializeField] private AudioClip _levelSceneMusic;
+        [SerializeField] private AudioClip[] _levelSceneMusic;
 
         private AudioSource _audioSource;
 
@@ -24,7 +24,7 @@ namespace _ProjectSurvival.Scripts.Audio
                 _audioSource.clip = _menuSceneMusic;
             else
             {
-                _audioSource.clip = _levelSceneMusic;
+                _audioSource.clip = _levelSceneMusic[Random.Range(0,_levelSceneMusic.Length)];
             }
 
             _audioSource.Play();
