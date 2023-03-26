@@ -32,7 +32,7 @@ MonoBehaviour:
     _baseGold: 5
   - _appearanceSpriteFront: {fileID: 21300000, guid: cefc80d512c41234280a4768320cd720, type: 3}
     _appearanceSpriteBack: {fileID: 21300000, guid: 3c56c168a2b0b8548844397923945ec1, type: 3}
-    _baseHealth: 3
+    _baseHealth: 4
     _baseSpeed: 10
     _baseDamage: 5
     _baseExperience: 10

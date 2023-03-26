@@ -590,7 +590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: _waves.Array.data[8].TimerSecondsThisWave
-      value: 90
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: _waves.Array.data[9].TimerSecondsThisWave
@@ -602,7 +602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: _waves.Array.data[11].TimerSecondsThisWave
-      value: 90
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: _waves.Array.data[12].TimerSecondsThisWave
@@ -614,7 +614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: _waves.Array.data[14].TimerSecondsThisWave
-      value: 90
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: _waves.Array.data[15].TimerSecondsThisWave
@@ -626,7 +626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: _waves.Array.data[17].TimerSecondsThisWave
-      value: 90
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: _waves.Array.data[18].TimerSecondsThisWave
