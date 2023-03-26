@@ -1,11 +1,9 @@
 using _ProjectSurvival.Infrastructure;
 using _ProjectSurvival.Scripts.DamageSystem;
-using _ProjectSurvival.Scripts.Stats;
-using _ProjectSurvival.Scripts.UpgradeTree;
 using UnityEngine;
 using Zenject;
 
-namespace _ProjectSurvival.Scripts.Upgrades
+namespace _ProjectSurvival.Scripts.Stats.Upgrades
 {
     [RequireComponent(typeof(DamagableObject))]
     public class Vampirik : MonoBehaviour
@@ -15,13 +13,11 @@ namespace _ProjectSurvival.Scripts.Upgrades
         private ActiveStats _activeStats;
         private World _world;
         private float _healPercentage = 0;
-        private Player.Player _player;
         private DamageDealer _playerDamageDealer;
 
         [Inject]
         public void Construct(ActiveStats activeStats, World world, Player.Player player)
         {
-            _player = player;
             _damagableObjectSelf = GetComponent<DamagableObject>();
             _damagableObjectPlayer = player.GetComponent<DamagableObject>();
             _activeStats = activeStats;
