@@ -23,7 +23,7 @@ namespace _ProjectSurvival.Scripts.Tutorial.HighLightedTutorials
             CheckIfPlayerHasEnoughMoney();
         }
 
-        private void CheckIfPlayerHasEnoughMoney()
+        public void CheckIfPlayerHasEnoughMoney()
         {
             if (_world.Gold.Value >= _costProgressionSO.CostProgression[_world.CurrentUpgradeID.Value])
             {
