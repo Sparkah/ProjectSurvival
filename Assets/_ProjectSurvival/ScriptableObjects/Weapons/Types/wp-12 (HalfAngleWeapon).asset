@@ -16,7 +16,7 @@ MonoBehaviour:
   _description: "\u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0432\u0437\u0433\u043B\u044F\u043D\u0443\u0442\u044C
     \u043D\u0430 \u0441\u0432\u043E\u0451 \u0443\u0431\u0435\u0436\u0434\u0435\u043D\u0438\u0435
     \u0441\u043E \u0441\u0442\u043E\u0440\u043E\u043D\u044B."
-  _picture: {fileID: 21300000, guid: 8cc84175f95c8426e91fa65406a4054f, type: 3}
+  _picture: {fileID: 21300000, guid: f39cc100591814fe6bd18b84f557bd97, type: 3}
   _shootSound: 9
   _projectilePrefab: {fileID: 1604206291989398089, guid: 4ce3101adcf1e5f419a179d401fbe0e3, type: 3}
   _weaponLevels:
