@@ -29,11 +29,11 @@ namespace _ProjectSurvival.Scripts.Tutorial.HighLightedTutorials
             _world.Tutorial.TryGetValue(TutorialEnum.PlayGame, out bool val);
             if (val == false)
             {
+                _buttonToCompleteTutorial.onClick.AddListener(CompleteTutorial);
                 _world.Tutorial.TryGetValue(TutorialEnum.WatchTutorial, out bool tutorWatched);
                 {
                     if (tutorWatched)
                     {
-                        _buttonToCompleteTutorial.onClick.AddListener(CompleteTutorial);
                         _tweenableButton.Tween();
                     }
                     else
