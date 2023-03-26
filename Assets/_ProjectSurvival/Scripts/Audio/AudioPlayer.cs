@@ -21,7 +21,10 @@ namespace _ProjectSurvival.Scripts.Audio
         [SerializeField] private AudioClip _wp_3;
         [SerializeField] private AudioClip _wp_7;
         [SerializeField] private AudioClip _wp_9;
+        [SerializeField] private AudioClip _wp_05;
         [SerializeField] private AudioClip _coins;
+        [SerializeField] private AudioClip _enter;
+        [SerializeField] private AudioClip _cancel;
 
 
         private void Awake()
@@ -31,8 +34,7 @@ namespace _ProjectSurvival.Scripts.Audio
             else
                 Audio = this;
         }
-
-
+        
         public void SetAudioSourceActive(bool isActive)
         {
             _audioSourceMain.enabled = isActive;
@@ -114,7 +116,7 @@ namespace _ProjectSurvival.Scripts.Audio
             {
          AudioSounds.LevelUp => _levelUp, 
          AudioSounds.EnemyDeath => _enemyDeath,
-         AudioSounds.Hit => _hit,//попадаешь по мобу пулей
+         AudioSounds.Hit => _hit, //попадаешь по мобу пулей
          AudioSounds.WP_10 => _wp_10,
          AudioSounds.WP_12 => _wp_12,
          AudioSounds.WP_1 => _wp_1,
@@ -122,6 +124,9 @@ namespace _ProjectSurvival.Scripts.Audio
          AudioSounds.WP_7 => _wp_7,
          AudioSounds.WP_9 => _wp_9,
          AudioSounds.Coins => _coins,
+         AudioSounds.ConfirmUI => _enter, //успешный клик по UI
+         AudioSounds.CancelUI => _cancel, //Клик отмены по UI
+         AudioSounds.WP_05 => _wp_05,
                 _ => null
             };
         }

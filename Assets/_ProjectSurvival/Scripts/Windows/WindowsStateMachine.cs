@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Audio;
 using UnityEngine;
 
 /// <summary>
@@ -40,6 +41,8 @@ public class WindowsStateMachine : MonoBehaviour
     /// <param name="openedWindow">Opened window.</param>
     private void OnWindowOpened(Window openedWindow)
     {
+        Debug.Log("opened");
+        AudioPlayer.Audio.PlayOneShotSound(AudioSounds.ConfirmUI);
         if (openedWindow != _defaultWindow)
         {
             StopListeningActiveCloseEvent();
@@ -54,6 +57,8 @@ public class WindowsStateMachine : MonoBehaviour
     /// <param name="closedWindow">Closed window.</param>
     private void OnActiveClosed(Window closedWindow)
     {
+        Debug.Log("closed");
+        AudioPlayer.Audio.PlayOneShotSound(AudioSounds.CancelUI);
         StopListeningActiveCloseEvent();
         OpenDefault();
     }
