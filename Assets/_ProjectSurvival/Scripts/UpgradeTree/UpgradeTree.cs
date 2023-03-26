@@ -45,7 +45,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
             }
 
             _moneyAvailable.text = MathF.Round(_world.Gold.Value,1).ToString();
-            _moneyRequiredForNextPurchase.text = CostProgression.CostProgression[_world.CurrentUpgradeID.Value].ToString();
+            _moneyRequiredForNextPurchase.text =  "Стоимость: " + CostProgression.CostProgression[_world.CurrentUpgradeID.Value].ToString();
         }
 
         public void SetUpUpgradeRows()
