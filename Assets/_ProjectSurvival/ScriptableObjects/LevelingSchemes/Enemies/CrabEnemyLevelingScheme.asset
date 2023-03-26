@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _requiredExperience:
   - 0
-  - 400
-  - 3400
+  - 150
+  - 600

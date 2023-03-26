@@ -75,11 +75,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c8140065ff6409d86d1e86faaebcfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 0.1
   _spriteRenderer: {fileID: 446429126}
   _front: {fileID: -8549331183647182351, guid: 4c40b9d4abb8d444c84417c7b5a54316, type: 3}
   _back: {fileID: -3296818347688557028, guid: 9de6e1f3b2e8aa746b25d644cdb796a8, type: 3}
   _playerSpriteTransform: {fileID: 24100507808405511}
-  _speed: 0.1
 --- !u!114 &997466040119755983
 MonoBehaviour:
   m_ObjectHideFlags: 0
