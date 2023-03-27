@@ -35,7 +35,7 @@ MonoBehaviour:
       _size: 1
       _speed: 15
       _durability: 3
-    _description: "\u0411\u043E\u043B\u044C\u0448\u0435  \u0446\u0435\u043B\u0435\u0439"
+    _description: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0446\u0435\u043B\u0435\u0439"
   - _appearFrequency: 0.75
     _appearAmount: 1
     _projectileSetting:
