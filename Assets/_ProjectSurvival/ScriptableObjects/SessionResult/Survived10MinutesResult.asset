@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c59faccc06f4d5447ae45775e3bcfd6f, type: 3}
-  m_Name: Survived15MinutesResult
+  m_Name: Survived10MinutesResult
   m_EditorClassIdentifier: 
   _sessionResult: 0
   _titleLabelText: "\u0423\u0441\u043F\u0435\u0445!"

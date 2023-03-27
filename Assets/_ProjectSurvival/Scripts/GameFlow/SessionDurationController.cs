@@ -27,7 +27,7 @@ namespace _ProjectSurvival.Scripts.GameFlow
             if (_timer.CurrentTime >= _targetTime)
             {
                 _timer.OnTimeUpdate -= CheckGameComplete;
-                _sessionOverController.EndSession(SessionResult.Survived15Minutes);
+                _sessionOverController.EndSession(SessionResult.Survived10Minutes);
             }
         }
     }

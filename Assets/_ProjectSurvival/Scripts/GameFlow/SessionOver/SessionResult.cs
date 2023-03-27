@@ -2,7 +2,7 @@ namespace _ProjectSurvival.Scripts.GameFlow.SessionOver
 {
     public enum SessionResult
     {
-        Survived15Minutes,
+        Survived10Minutes,
         Died
     }
 }
