@@ -18,6 +18,8 @@ namespace _ProjectSurvival.Scripts.Tutorial
         private void OnDestroy()
         {
             StopTween();
+            if (_button)
+                _button.transform.DOKill();
         }
 
         public void Tween()
