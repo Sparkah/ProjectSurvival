@@ -4127,6 +4127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpgradeTree
       objectReference: {fileID: 0}
+    - target: {fileID: 2157607193353265334, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2157607193353265335, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4470,6 +4474,14 @@ PrefabInstance:
     - target: {fileID: 4251690747188402238, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659652233492204347, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 802
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659652233492204347, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 4807150475126682035, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5180,6 +5192,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5560179299140217449, guid: d4c109fbe8ce647b7b3e740e95bdc212, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5560179299140217449, guid: d4c109fbe8ce647b7b3e740e95bdc212, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5911298212490956501, guid: d4c109fbe8ce647b7b3e740e95bdc212, type: 3}
       propertyPath: m_SizeDelta.x
       value: 327
@@ -5241,6 +5261,10 @@ PrefabInstance:
     - target: {fileID: 7345292754852691092, guid: bf9d901536781ab4fb4510b92e8f6136, type: 3}
       propertyPath: m_Name
       value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7345292754852691092, guid: bf9d901536781ab4fb4510b92e8f6136, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7345292754852691093, guid: bf9d901536781ab4fb4510b92e8f6136, type: 3}
       propertyPath: m_Pivot.x
