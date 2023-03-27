@@ -1,5 +1,4 @@
 using _ProjectSurvival.Infrastructure;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -57,7 +56,15 @@ namespace _ProjectSurvival.Scripts.Tutorial.HighLightedTutorials
 
         private void CompleteTutorial()
         {
-            _world.Tutorial.Add(TutorialEnum.PlayGame, true);
+            if (!_world.Tutorial.ContainsKey(TutorialEnum.PlayGame))
+            {
+                _world.Tutorial.Add(TutorialEnum.PlayGame, true);
+            }
+            else
+            {
+                _world.Tutorial[TutorialEnum.PlayGame] = true;
+            }
+
             _playerHelper.UpdateStates();
         }
     }
