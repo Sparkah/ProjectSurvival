@@ -15,6 +15,11 @@ namespace _ProjectSurvival.Scripts.Tutorial
             _button = GetComponent<Button>();
         }
 
+        private void OnDestroy()
+        {
+            StopTween();
+        }
+
         public void Tween()
         {
             _buttonTween = _button.transform.DOScale(new Vector3(1.05f, 1.05f, 1.05f), 0.5f).SetLoops(-1);
