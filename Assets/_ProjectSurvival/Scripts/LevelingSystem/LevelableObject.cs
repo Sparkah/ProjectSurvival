@@ -25,6 +25,7 @@ namespace _ProjectSurvival.Scripts.LevelingSystem
 
         public void AddExperience(float amount)
         {
+            _currentExperience += amount;
             if (_currentExperience >= _requiredExperience)
                 LevelUp();
             OnExperienceChanged?.Invoke();
