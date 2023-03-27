@@ -56,6 +56,10 @@ public class DamagableObject : MonoBehaviour, IDamagable
     public void RestoreHP(float healAmount)
     {
         _health += healAmount;
+        if (_health > _maxHealth)
+        {
+            _health = _maxHealth;
+        }
         OnDamaged?.Invoke();
     }
 

@@ -32,18 +32,8 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
             UpdateUpgradesCount();
         }
 
-        private void UpdateUpgradesCount()
+        public void UpdateUpgradesCount()
         {
-            var amountTotal = _upgradesRowDatas.Sum(upgradeRaw => upgradeRaw.GetUpgradesTotalAmount());
-            var amountMastered = 0;
-            foreach (var worldUpgradeLevel in _world.UpgradeLevels)
-            {
-                if (worldUpgradeLevel.Value > 0)
-                {
-                    amountMastered += worldUpgradeLevel.Value;
-                }
-            }
-
             _moneyAvailable.text = MathF.Round(_world.Gold.Value,1).ToString();
             _moneyRequiredForNextPurchase.text =  "Стоимость: " + CostProgression.CostProgression[_world.CurrentUpgradeID.Value].ToString();
         }

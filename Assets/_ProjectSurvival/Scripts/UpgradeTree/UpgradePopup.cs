@@ -78,9 +78,10 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
                 _world.Gold.Value -= _price;
                 _world.UpgradeLevels[_upgradeType] += 1;
                 gameObject.SetActive(false);
+                _world.CurrentUpgradeID.Value += 1;
+                _upgradeTree.UpdateUpgradesCount();
                 _upgradeTree.SetUpUpgradeRows();
                 Debug.Log($"Upgrade {_upgradeType} purchased! It's level is {_world.UpgradeLevels[_upgradeType]}");
-                _world.CurrentUpgradeID.Value += 1;
             }
             else
             {
