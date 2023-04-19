@@ -29,7 +29,8 @@ namespace _ProjectSurvival.Scripts.Tutorial
 
         public void StopTween()
         {
-            _buttonTween.Kill();
+            _button.transform.DOKill();
+            //_buttonTween.Kill();
         }
     }
 }

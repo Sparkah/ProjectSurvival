@@ -42,6 +42,10 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
             {
                 _takenImage.enabled = true;
             }
+            else
+            {
+                _takenImage.enabled = false;
+            }
         }
 
         private void Start()

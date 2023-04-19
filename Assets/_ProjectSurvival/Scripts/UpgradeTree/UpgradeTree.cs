@@ -24,6 +24,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         
         private void Start()
         {
+            //_world.Gold.Value = 1100; // => get cheat gold
             UpgradePopup.Construct(this);
             _upgradesRowDatas = GetComponentsInChildren<UpgradesRowData>();
             _world.UpgradeLevels.ObserveReplace().Subscribe(x => _purchasedUpgrades.Value+=1).AddTo(_disposable);
@@ -56,14 +57,14 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
                 _world.UpgradeLevels[key] = 0;
             }
 
-            for (int i = 0; i <= _world.CurrentUpgradeID.Value; i++)
+            for (int i = 0; i < _world.CurrentUpgradeID.Value; i++)
             {
                 Debug.Log("adding gold for upgrade");
-                _world.Gold.Value += 10;
+                _world.Gold.Value += CostProgression.CostProgression[i];
             }
             _world.CurrentUpgradeID.Value = 0;
             Debug.Log("resetting upgrades");
-            UpdateUpgradesCount();
+            Start();
         }
 
         private void OnDestroy()

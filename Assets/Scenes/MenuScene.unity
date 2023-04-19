@@ -4597,6 +4597,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 4100
       objectReference: {fileID: 0}
+    - target: {fileID: 2157607193572957407, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00062162784
+      objectReference: {fileID: 0}
     - target: {fileID: 2157607193583752280, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
       propertyPath: m_Spacing
       value: 50
@@ -4638,9 +4642,38 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2157607194746749604, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157607194746749604, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157607194746749604, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 952980532}
+    - target: {fileID: 2157607194746749604, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 952980532}
+    - target: {fileID: 2157607194746749604, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157607194746749604, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CheckIfPlayerHasEnoughMoney
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157607194746749604, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: _ProjectSurvival.Scripts.Tutorial.HighLightedTutorials.TutorialUpgradeTree,
+        Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157607194746749604, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2157607194789772347, guid: f200f1f34f64b4cec91ce0b0c8d901bf, type: 3}
       propertyPath: m_IsActive
       value: 0
