@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using _ProjectSurvival.Infrastructure;
 using TMPro;
 using UniRx;
@@ -43,6 +44,26 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
             {
                 upgradesRowData.SetUp();
             }
+        }
+
+        public void ResetUpgradeTree()
+        {
+            _purchasedUpgrades.Value = 0;
+
+            List<UpgradeTypes> keys = new List<UpgradeTypes>(_world.UpgradeLevels.Keys);
+            foreach (UpgradeTypes key in keys)
+            {
+                _world.UpgradeLevels[key] = 0;
+            }
+
+            for (int i = 0; i <= _world.CurrentUpgradeID.Value; i++)
+            {
+                Debug.Log("adding gold for upgrade");
+                _world.Gold.Value += 10;
+            }
+            _world.CurrentUpgradeID.Value = 0;
+            Debug.Log("resetting upgrades");
+            UpdateUpgradesCount();
         }
 
         private void OnDestroy()

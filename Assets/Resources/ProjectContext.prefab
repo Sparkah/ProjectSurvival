@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _encryptData: 1
+  _monsterTypesSo: {fileID: 11400000, guid: 304493608399d4858b609d1186197512, type: 2}
 --- !u!1001 &8939242072110479066
 PrefabInstance:
   m_ObjectHideFlags: 0

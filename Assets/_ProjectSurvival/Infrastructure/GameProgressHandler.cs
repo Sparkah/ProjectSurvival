@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Text;
+using _ProjectSurvival.Scripts.AI;
 using UnityEngine;
 
 namespace _ProjectSurvival.Infrastructure
@@ -8,6 +9,7 @@ namespace _ProjectSurvival.Infrastructure
     public class GameProgressHandler : MonoBehaviour
     {
         [SerializeField] private bool _encryptData = true;
+        [SerializeField] private MonsterTypesSO _monsterTypesSo;
         private World _world;
         private float _currentTime;
 
@@ -64,6 +66,7 @@ namespace _ProjectSurvival.Infrastructure
 
         private void SaveGameActions()
         {
+            _monsterTypesSo.ClearSprites();
             CreateFolderIfNotExists();
             Save();
         }

@@ -18,7 +18,16 @@ namespace _ProjectSurvival.Scripts.Enemies
         public float BaseDamage => _baseDamage;
         public float BaseExperience => _baseExperience;
         public float BaseGold => _baseGold;
-        public Sprite AppearanceSpriteFront => _appearanceSpriteFront;
-        public Sprite AppearanceSpriteBack => _appearanceSpriteBack;
+        public Sprite AppearanceSpriteFront 
+        {
+            get => _appearanceSpriteFront;
+            set => _appearanceSpriteFront = value;
+        }
+
+        public Sprite AppearanceSpriteBack
+        {
+            get => _appearanceSpriteBack;
+            set => _appearanceSpriteBack = value;
+        }
     }
 }

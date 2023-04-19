@@ -13,6 +13,7 @@ namespace _ProjectSurvival.Scripts.Enemies
 
         public Enemy EnemyPrefab => _enemyPrefab;
         public int MaximumEvolutionLevel => _enemyLevels.Length;
+        public EnemyLevelData[] EnemyLevels => _enemyLevels;
         public Color TypeColor => _typeColor;
         public LevelingSchemeSO LevelingSchemeSO => _levelingSchemeSO;
 
