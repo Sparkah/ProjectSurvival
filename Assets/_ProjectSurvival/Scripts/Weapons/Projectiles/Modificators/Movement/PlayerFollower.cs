@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace _ProjectSurvival.Scripts.Weapons.Projectiles
+namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators.Movement
 {
     public class PlayerFollower : MonoBehaviour
     {

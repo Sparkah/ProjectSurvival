@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43862bde4f13ef41bd87eeb95875b93, type: 3}
+  m_Name: TestAvailableWeapons 1
+  m_EditorClassIdentifier: 
+  _weaponTypeSOs:
+  - {fileID: 11400000, guid: 7dd04a48350c6734c8327aa7ffd01c55, type: 2}
+  - {fileID: 11400000, guid: 02fed083c6883894ab4a81696bd7064a, type: 2}
+  - {fileID: 11400000, guid: 046f6f9cadd3d87468313e2070116088, type: 2}

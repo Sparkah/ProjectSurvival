@@ -9,7 +9,7 @@ namespace _ProjectSurvival.Scripts.GameFlow
     {
         [Header("Time in seconds")]
         [SerializeField] private int _targetTime;
-        [Inject(Id = "SessionTimer")] Timer _timer;
+        [Inject(Id = "SessionTimer")] Timer.Timer _timer;
         [Inject] private SessionOverController _sessionOverController;
 
         private void Start()

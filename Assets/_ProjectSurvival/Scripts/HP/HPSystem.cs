@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.DamageSystem;
 using _ProjectSurvival.Scripts.GameFlow.SessionOver;
 using UnityEngine;
 using UnityEngine.UI;
