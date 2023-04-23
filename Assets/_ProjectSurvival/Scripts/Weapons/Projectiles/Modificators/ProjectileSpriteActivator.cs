@@ -15,6 +15,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators
         private IEnumerator EnableSprite()
         {
             yield return new WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
             _sprite.enabled = true;
         }
 

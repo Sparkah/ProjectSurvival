@@ -22,10 +22,10 @@ MonoBehaviour:
   - _appearFrequency: 0.3
     _appearAmount: 1
     _projectileSetting:
-      _damage: 0.5
-      _size: 0.3
-      _speed: 12
-      _durability: 1
+      _damage: 2
+      _size: 2
+      _speed: 2
+      _durability: 50
     _description: "\u0411\u044B\u0441\u0442\u0440\u0430\u044F \u0441\u0442\u0440\u0435\u043B\u044C\u0431\u0430
       \u0432\u043F\u0435\u0440\u0435\u0434"
   - _appearFrequency: 0.2

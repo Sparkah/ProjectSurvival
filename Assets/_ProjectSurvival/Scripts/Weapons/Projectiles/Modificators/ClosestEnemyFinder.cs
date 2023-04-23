@@ -45,14 +45,14 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators
         {
             if (!other.TryGetComponent(out Collider2D enemy)) return;
             _enemiesInRange.Add(enemy);
-            Debug.Log("enemy added");
+//            Debug.Log("enemy added");
             //enemyNavMesh.GetComponentInChildren<Enemy>().OnEnemyDeath += RemoveEnemyFromList;
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
             if (!other.TryGetComponent(out Collider2D enemy)) return;
-            Debug.Log("enemy removed");
+           // Debug.Log("enemy removed");
             // Debug.Log("removing enemy from list" + _enemiesInRange.Count + "name " + gameObject.name);
             _enemiesInRange.Remove(enemy);
         }

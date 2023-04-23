@@ -46,6 +46,11 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators.Movement
 
                 transform.position = movement;
                 transform.LookAt(_closestEnemy.gameObject.transform);
+
+                if (transform.position == _closestEnemy.transform.position)
+                {
+                    _flyStraight = true;
+                }
                 
                 return;
             }
@@ -56,7 +61,8 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators.Movement
 
         private void OnDisable()
         {
-            if (!_closestEnemy) return;
+            //if (!_closestEnemy) return;
+            if (!_autoAim) return;
             _markClosestEnemy = false;
             _closestEnemy = null;
             _flyStraight = false;

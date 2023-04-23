@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _ProjectSurvival.Scripts.Weapons.Projectiles
+namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators.Direction
 {
     public class ProjectileAngleDirection : ProjectileAngle
     {
