@@ -864,14 +864,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5304235764285768331, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 01ccaea9b49214edda39f03f648b5b8b, type: 3}
-    - target: {fileID: 5304235764285768331, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5304235764312410964, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -959,46 +951,6 @@ PrefabInstance:
     - target: {fileID: 5304235764312410987, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_Name
       value: Ultimate UI Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235764672095833, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235764672095833, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: deef7d28045284f449ec0c47e1cbbcdc, type: 3}
-    - target: {fileID: 5304235764672095833, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 192.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 192.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 174.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 154.23999
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765422368226, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 542
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 964
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
