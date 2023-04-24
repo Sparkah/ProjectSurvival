@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Enemies.Types;
 using _ProjectSurvival.Scripts.LevelingSystem;
 using UnityEngine;
 using UnityEngine.UI;

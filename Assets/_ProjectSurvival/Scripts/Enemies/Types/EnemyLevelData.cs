@@ -1,6 +1,7 @@
+using _ProjectSurvival.Scripts.Enemies.Abilities;
 using UnityEngine;
 
-namespace _ProjectSurvival.Scripts.Enemies
+namespace _ProjectSurvival.Scripts.Enemies.Types
 {
     [System.Serializable]
     public class EnemyLevelData
@@ -12,6 +13,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         [SerializeField] private float _baseDamage;
         [SerializeField] private float _baseExperience;
         [SerializeField] private float _baseGold;
+        [SerializeField] private EnemyAbilities _enemyAbilities;
 
         public float BaseHealth => _baseHealth;
         public float BaseSpeed => _baseSpeed;
@@ -29,5 +31,7 @@ namespace _ProjectSurvival.Scripts.Enemies
             get => _appearanceSpriteBack;
             set => _appearanceSpriteBack = value;
         }
+
+        public EnemyAbilities EnemyAbilities => _enemyAbilities;
     }
 }

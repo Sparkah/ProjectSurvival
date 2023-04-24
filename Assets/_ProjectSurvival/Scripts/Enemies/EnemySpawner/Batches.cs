@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Enemies.Types;
 using UnityEngine;
 
 namespace _ProjectSurvival.Scripts.Enemies.EnemySpawner

@@ -1,5 +1,7 @@
 using _ProjectSurvival.Scripts.DamageSystem;
+using _ProjectSurvival.Scripts.Enemies.Abilities;
 using _ProjectSurvival.Scripts.Enemies.Evolution;
+using _ProjectSurvival.Scripts.Enemies.Types;
 using _ProjectSurvival.Scripts.Experience;
 using _ProjectSurvival.Scripts.GameFlow.Statistics;
 using _ProjectSurvival.Scripts.Gold;
@@ -20,11 +22,14 @@ namespace _ProjectSurvival.Scripts.Enemies
         [SerializeField] private ExperienceHolder _experienceHolder;
         [SerializeField] private GoldHolder _goldHolder;
         [SerializeField] private DamageDealer _damageDealer;
+        [SerializeField] private EnemyAbilityAction _abilityAction;
         
         private float _damage;
         private IObjectPool<Enemy> _pool;
         private EnemyTypeSO _enemyTypeSO;
         private int _currentEvolutionLevel;
+
+        public DamagableObject EnemyDamagable => _damagableObject;
 
         public void Init(IObjectPool<Enemy> pool)
         {
@@ -77,6 +82,7 @@ namespace _ProjectSurvival.Scripts.Enemies
 
         private void SetupEnemy(EnemyLevelData levelData)
         {
+            _abilityAction.SetUpAbility(levelData.EnemyAbilities);
             _damagableObject.SetupHealth(levelData.BaseHealth);
             _enemyMover.SetupSpeed(levelData.BaseSpeed);
             _enemyAppearance.SetupSprite(levelData.AppearanceSpriteFront, levelData.AppearanceSpriteBack);

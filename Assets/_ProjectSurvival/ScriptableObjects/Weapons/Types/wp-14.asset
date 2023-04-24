@@ -22,6 +22,14 @@ MonoBehaviour:
   _projectilePrefab: {fileID: 3089239821365037360, guid: c9af27b95106247f2a8597d871cdb001, type: 3}
   _weaponLevels:
   - _appearFrequency: 4
+    _appearAmount: 1
+    _projectileSetting:
+      _damage: 2
+      _size: 2
+      _speed: 2
+      _durability: 50
+    _description: 2
+  - _appearFrequency: 4
     _appearAmount: 2
     _projectileSetting:
       _damage: 2
@@ -37,4 +45,28 @@ MonoBehaviour:
       _speed: 2
       _durability: 50
     _description: 2
-  _upgradeType: 0
+  - _appearFrequency: 4
+    _appearAmount: 4
+    _projectileSetting:
+      _damage: 2
+      _size: 2
+      _speed: 2
+      _durability: 50
+    _description: 2
+  - _appearFrequency: 4
+    _appearAmount: 5
+    _projectileSetting:
+      _damage: 2
+      _size: 2
+      _speed: 2
+      _durability: 50
+    _description: 2
+  - _appearFrequency: 4
+    _appearAmount: 6
+    _projectileSetting:
+      _damage: 2
+      _size: 2
+      _speed: 2
+      _durability: 50
+    _description: 2
+  _upgradeType: 13

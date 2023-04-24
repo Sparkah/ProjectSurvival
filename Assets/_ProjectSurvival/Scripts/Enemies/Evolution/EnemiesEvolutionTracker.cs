@@ -1,5 +1,6 @@
 using _ProjectSurvival.Scripts.LevelingSystem;
 using System.Collections.Generic;
+using _ProjectSurvival.Scripts.Enemies.Types;
 using UnityEngine;
 
 namespace _ProjectSurvival.Scripts.Enemies.Evolution

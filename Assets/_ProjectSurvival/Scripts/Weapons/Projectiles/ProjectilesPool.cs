@@ -1,7 +1,6 @@
 using _ProjectSurvival.Scripts.Pool;
 using _ProjectSurvival.Scripts.Weapons.ActiveWeapons;
 using _ProjectSurvival.Scripts.Weapons.Projectiles.Types;
-using UnityEngine;
 using Zenject;
 
 namespace _ProjectSurvival.Scripts.Weapons.Projectiles
@@ -19,9 +18,8 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
         private void CheckForUpgradeType(ActiveWeapon activeWeapon)
         {
             var projectiles = GetComponentsInChildren<CircularProjectile>(true);
+            if (projectiles.Length == 0) return;
             
-            if (projectiles == null) return;
-            Debug.Log(projectiles.Length);
             SetUpCircualarProjectiles(projectiles);
         }
 
@@ -31,7 +29,6 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
             if (projectiles == null) return;
             foreach (var projectile in projectiles)
             {
-                Debug.Log("index");
                 projectile.SetUpProjectiles(index, projectiles.Length);
                 index += 1;
             }

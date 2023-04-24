@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _ProjectSurvival.Scripts.DamageSystem;
 using UnityEngine;
 using Zenject;
 
@@ -6,9 +7,9 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators
 {
     public class ClosestEnemyFinder : MonoBehaviour
     {
-        private List<Collider2D> _enemiesInRange = new List<Collider2D>();
+        private List<DamagableObject> _enemiesInRange = new List<DamagableObject>();
         private Transform _closestEnemy;
-        
+
         [Inject(Id = "Player")] private Transform _playerTransform;
 
         public bool ReturnClosestEnemy(out Transform enemy)
@@ -43,24 +44,21 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!other.TryGetComponent(out Collider2D enemy)) return;
-            _enemiesInRange.Add(enemy);
-//            Debug.Log("enemy added");
-            //enemyNavMesh.GetComponentInChildren<Enemy>().OnEnemyDeath += RemoveEnemyFromList;
+            if (!other.TryGetComponent(out DamagableObject damagableObject)) return;
+            _enemiesInRange.Add(damagableObject);
+            damagableObject.OnDefeatDamagable += RemoveEnemyFromList;
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            if (!other.TryGetComponent(out Collider2D enemy)) return;
-           // Debug.Log("enemy removed");
-            // Debug.Log("removing enemy from list" + _enemiesInRange.Count + "name " + gameObject.name);
-            _enemiesInRange.Remove(enemy);
+            if (!other.TryGetComponent(out DamagableObject damagableObject)) return;
+            _enemiesInRange.Remove(damagableObject);
+            damagableObject.OnDefeatDamagable -= RemoveEnemyFromList;
         }
 
-        private void RemoveEnemyFromList(Collider2D enemy)
+        private void RemoveEnemyFromList(DamagableObject enemy)
         {
             _enemiesInRange.Remove(enemy);
-            //Debug.Log("removing enemy from list _enemiesCoun = " + _enemiesInRange.Count + " name " + gameObject.name);
         }
     }
 }

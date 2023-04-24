@@ -1,5 +1,6 @@
 using _ProjectSurvival.Scripts.Audio;
 using _ProjectSurvival.Scripts.Enemies;
+using _ProjectSurvival.Scripts.Enemies.Types;
 using _ProjectSurvival.Scripts.Pool;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;

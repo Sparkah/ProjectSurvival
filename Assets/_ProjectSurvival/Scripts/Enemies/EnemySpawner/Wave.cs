@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _ProjectSurvival.Scripts.Enemies.Types;
 
 namespace _ProjectSurvival.Scripts.Enemies.EnemySpawner
 {

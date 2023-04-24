@@ -431,6 +431,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1986032641, guid: 272255cc74f02c941871e0d28457d574, type: 3}
+      propertyPath: _availableStatsSO
+      value: 
+      objectReference: {fileID: 11400000, guid: d442b8199943c415c86d78ed73cc4cdf, type: 2}
+    - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
+      propertyPath: _waves.Array.data[0].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
+      propertyPath: _waves.Array.data[0].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5ac33f76e2a76d64ba8d910779908884, type: 2}
+    - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
+      propertyPath: _waves.Array.data[0].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ef4f9c7df1314edd863763d2969f695, type: 2}
+    - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
+      propertyPath: _waves.Array.data[0].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: c66a5a612002e4584b189e812fe137e0, type: 2}
     - target: {fileID: 9210531383967087399, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: _availableWeaponsSO
       value: 

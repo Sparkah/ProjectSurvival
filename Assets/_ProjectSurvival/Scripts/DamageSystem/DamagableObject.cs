@@ -19,6 +19,8 @@ namespace _ProjectSurvival.Scripts.DamageSystem
         public event UnityAction OnDamaged;
         public event UnityAction OnRestored;
         public event UnityAction OnDefeat;
+
+        public event UnityAction<DamagableObject> OnDefeatDamagable; 
         public event UnityAction<float> OnDamageAmount;
 
         public void SetupHealth(float health)
@@ -52,6 +54,7 @@ namespace _ProjectSurvival.Scripts.DamageSystem
             {
                 _isDefeated = true;
                 OnDefeat?.Invoke();
+                OnDefeatDamagable?.Invoke(this);
             }
         }
 

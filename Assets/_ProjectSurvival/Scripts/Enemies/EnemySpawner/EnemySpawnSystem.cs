@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using _ProjectSurvival.Scripts.Enemies.Factory;
+using _ProjectSurvival.Scripts.Enemies.Types;
 using UnityEngine;
 using Zenject;
 using Random = System.Random;

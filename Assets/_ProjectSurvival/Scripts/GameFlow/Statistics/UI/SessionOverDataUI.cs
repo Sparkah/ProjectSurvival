@@ -1,4 +1,5 @@
 using _ProjectSurvival.Scripts.Enemies;
+using _ProjectSurvival.Scripts.Enemies.Types;
 using UnityEngine;
 using Zenject;
 

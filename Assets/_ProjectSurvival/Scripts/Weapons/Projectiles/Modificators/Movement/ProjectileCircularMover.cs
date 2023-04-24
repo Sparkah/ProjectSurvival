@@ -14,6 +14,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators.Movement
         private float _elapsedTime;
         private bool _moveProjectileInCircles;
         private float _correctionID;
+        private int _arrayLength;
 
         void Update()
         {
@@ -21,7 +22,6 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators.Movement
             
             if (!_moveProjectileInCircles) return;
             
-
             float x = _playerTransform.position.x + _radius * Mathf.Cos(_elapsedTime + _correctionID);
             float y = _playerTransform.position.y + _radius * Mathf.Sin(_elapsedTime + _correctionID);
             
@@ -30,6 +30,8 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators.Movement
         
         public void SetUpProjectiles(int id, int arrayLength)
         {
+            if(_arrayLength==arrayLength) return;
+            _arrayLength = arrayLength;
             _moveProjectileInCircles = false;
             var circleID = 360 / arrayLength;
             var positionID = circleID * id;
@@ -39,8 +41,13 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators.Movement
 
         private void UpdatePosition(float positionID)
         {
-            Debug.Log(positionID);
             _correctionID = positionID * Mathf.Deg2Rad;
+
+            float x = _playerTransform.position.x + _radius * Mathf.Cos(_correctionID);
+            float y = _playerTransform.position.y + _radius * Mathf.Sin(_correctionID);
+            
+            transform.position = new Vector3(x, y, transform.position.z);
+            _elapsedTime = 0;
             _moveProjectileInCircles = true;
         }
     }
