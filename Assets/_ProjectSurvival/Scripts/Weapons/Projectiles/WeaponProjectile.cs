@@ -10,6 +10,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
         [SerializeField] private DamagableObject _projectileDurability;
         [SerializeField] private DamageDealer _damageDealer;
         [SerializeField] private ProjectileAngle _projectileAngle;
+        [SerializeField] private bool _calculateAngle = true;
         private IObjectPool<WeaponProjectile> _pool;
         private float _speed;
         private float _baseDamage;
@@ -53,7 +54,9 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
             transform.position = launchPosition;
             if (forwardDirection.x == 0)
                 forwardDirection.x = 0.001f;
-            transform.rotation = _projectileAngle.CalculateAngle(forwardDirection);
+            if (_calculateAngle)
+                transform.rotation = _projectileAngle.CalculateAngle(forwardDirection);
+            
             CustomLaunch(launchPosition, forwardDirection);
         }
 

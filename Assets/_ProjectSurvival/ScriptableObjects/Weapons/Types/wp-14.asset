@@ -17,7 +17,7 @@ MonoBehaviour:
     \u0438\u0433\u0440\u043E\u043A\u0430 \u0438 \u043D\u0430\u043D\u043E\u0441\u0438\u0442
     \u0443\u0440\u043E\u043D \u0432\u0441\u0435\u043C \u0432\u0440\u0430\u0433\u0430\u043C
     \u0432 \u0440\u0430\u0434\u0438\u0443\u0441\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F"
-  _picture: {fileID: 7860404732172082419, guid: b96c3fee840144995af2bbc43e8371c4, type: 3}
+  _picture: {fileID: 21300000, guid: 800a3f2f0ad434d98aa88347ba614614, type: 3}
   _shootSound: 5
   _projectilePrefab: {fileID: 3089239821365037360, guid: c9af27b95106247f2a8597d871cdb001, type: 3}
   _weaponLevels:
@@ -25,48 +25,48 @@ MonoBehaviour:
     _appearAmount: 1
     _projectileSetting:
       _damage: 2
-      _size: 2
+      _size: 0.5
       _speed: 2
-      _durability: 50
+      _durability: 999
     _description: 2
   - _appearFrequency: 4
     _appearAmount: 2
     _projectileSetting:
       _damage: 2
-      _size: 2
+      _size: 0.5
       _speed: 2
-      _durability: 50
+      _durability: 999
     _description: 2
   - _appearFrequency: 4
     _appearAmount: 3
     _projectileSetting:
       _damage: 2
-      _size: 2
+      _size: 0.5
       _speed: 2
-      _durability: 50
+      _durability: 999
     _description: 2
   - _appearFrequency: 4
     _appearAmount: 4
     _projectileSetting:
       _damage: 2
-      _size: 2
+      _size: 0.5
       _speed: 2
-      _durability: 50
+      _durability: 999
     _description: 2
   - _appearFrequency: 4
     _appearAmount: 5
     _projectileSetting:
       _damage: 2
-      _size: 2
+      _size: 0.5
       _speed: 2
-      _durability: 50
+      _durability: 999
     _description: 2
   - _appearFrequency: 4
     _appearAmount: 6
     _projectileSetting:
       _damage: 2
-      _size: 2
+      _size: 0.5
       _speed: 2
-      _durability: 50
+      _durability: 999
     _description: 2
   _upgradeType: 13

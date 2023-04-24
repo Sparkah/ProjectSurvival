@@ -49,6 +49,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators.Movement
             transform.position = new Vector3(x, y, transform.position.z);
             _elapsedTime = 0;
             _moveProjectileInCircles = true;
+            transform.rotation = Quaternion.Euler(new Vector3(-10,90,0)); //bad cheat 
         }
     }
 }

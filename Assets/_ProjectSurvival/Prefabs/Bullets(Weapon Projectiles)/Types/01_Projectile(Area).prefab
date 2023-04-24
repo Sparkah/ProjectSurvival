@@ -16,6 +16,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 695566582781420574, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 695566582781420574, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 695566582781420574, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 695566582781420574, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -55,10 +67,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4269500399533194716, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_Radius
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5030530398003907315, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_Name
       value: 01_Projectile(Area)
       objectReference: {fileID: 0}
+    - target: {fileID: 5641912257251231343, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 276f08fea8c2346b4b202637005e7413, type: 3}
     - target: {fileID: 5641912257251231343, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_Color.a
       value: 0.47058824
@@ -77,11 +97,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5641912257251231343, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5641912257251231343, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_LocalRotation.w
@@ -153,6 +185,7 @@ MonoBehaviour:
   _projectileDurability: {fileID: 407363456766995403}
   _damageDealer: {fileID: 5956052269194703428}
   _projectileAngle: {fileID: 5088327208976522667}
+  _calculateAngle: 1
   _hasDefaultInitSize: 1
   _isScalingBack: 0
 --- !u!114 &5088327208976522667
@@ -245,6 +278,10 @@ PrefabInstance:
     - target: {fileID: 3098814739045341577, guid: d4faca41b7b174c1cb5d42212a69e0c8, type: 3}
       propertyPath: m_Name
       value: effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098814739045341577, guid: d4faca41b7b174c1cb5d42212a69e0c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4faca41b7b174c1cb5d42212a69e0c8, type: 3}

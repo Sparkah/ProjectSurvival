@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4269500399533194716, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_Radius
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5030530398003907315, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_Name
       value: 14_Projectile
@@ -62,10 +66,22 @@ PrefabInstance:
     - target: {fileID: 5641912257251231343, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1012138459562129124, guid: 043f5f79fadf44e1283da64640bb746e, type: 3}
+      objectReference: {fileID: 21300000, guid: 800a3f2f0ad434d98aa88347ba614614, type: 3}
     - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: _destructionMask.m_Bits
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_LocalRotation.w
@@ -149,6 +165,7 @@ MonoBehaviour:
   _projectileDurability: {fileID: 4122420145229404279}
   _damageDealer: {fileID: 7942903178322772472}
   _projectileAngle: {fileID: 4367222066675393210}
+  _calculateAngle: 0
   _circularMover: {fileID: 7418399184693057286}
 --- !u!114 &4367222066675393210
 MonoBehaviour:
@@ -176,5 +193,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c319af3075a40466eaf2ed9ff0cc5e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 2
   _radius: 3
-  speed: 3
