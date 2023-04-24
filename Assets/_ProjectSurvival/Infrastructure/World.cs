@@ -32,6 +32,7 @@ namespace _ProjectSurvival.Infrastructure
             UpgradeLevels.Add(UpgradeTypes.WP_09,0);
             UpgradeLevels.Add(UpgradeTypes.WP_10,0);
             UpgradeLevels.Add(UpgradeTypes.WP_12,0);
+            UpgradeLevels.Add(UpgradeTypes.WP_14,0);
             UpgradeLevels.Add(UpgradeTypes.AllGunsCooldown,0);
             UpgradeLevels.Add(UpgradeTypes.AllGunsDamage,0);
         }
