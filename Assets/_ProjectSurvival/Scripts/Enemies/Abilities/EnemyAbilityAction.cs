@@ -8,20 +8,15 @@ namespace _ProjectSurvival.Scripts.Enemies.Abilities
 
         public void SetUpAbility(EnemyAbilities abilities)
         {
-            switch (abilities)
+            ImplementAbilities(abilities);
+        }
+
+        private void ImplementAbilities(EnemyAbilities abilities)
+        {
+            foreach (var ability in _abilities)
             {
-                case EnemyAbilities.WalkThrough:
-                    Debug.Log("Walk through");
-                    break;
-                case EnemyAbilities.WaveDamager:
-                    Debug.Log("Wave Damager");
-                    break;
-                case EnemyAbilities.XpDestroyer:
-                    Debug.Log("xp destroyer");
-                    break;
-                default:
-                    Debug.Log("no ability");
-                    break;
+                ability.Construct(this);
+                ability.ImplementAbility(abilities);
             }
         }
     }

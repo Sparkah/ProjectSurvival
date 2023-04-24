@@ -67,6 +67,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: _targetLayer.m_Bits
+      value: 163904
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: _targetLayer.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: _targetLayer.Array.data[0].m_Bits
+      value: 163904
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: _targetLayer.Array.data[1].m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: _targetLayer.Array.data[2].m_Bits
+      value: 163840
+      objectReference: {fileID: 0}
     - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.5
@@ -121,6 +141,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5030530398003907315, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
   m_PrefabInstance: {fileID: 4280909781684578360}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1407941368501354922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9131277482335281867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eda40f312e0249b3b6b4e1916f22bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 8441084415880998487}
 --- !u!114 &2038309747956820201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,16 +196,4 @@ MonoBehaviour:
   _projectileDurability: {fileID: 4311097355277762408}
   _damageDealer: {fileID: 7843866649473378023}
   _projectileAngle: {fileID: 2038309747956820201}
---- !u!114 &1407941368501354922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9131277482335281867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eda40f312e0249b3b6b4e1916f22bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sprite: {fileID: 8441084415880998487}
+  _calculateAngle: 1

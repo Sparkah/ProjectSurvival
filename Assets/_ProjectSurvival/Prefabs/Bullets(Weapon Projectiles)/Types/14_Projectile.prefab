@@ -68,8 +68,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 800a3f2f0ad434d98aa88347ba614614, type: 3}
     - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: _targetLayer.m_Bits
+      value: 163904
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: _destructionMask.m_Bits
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: _targetLayer.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: _targetLayer.Array.data[0].m_Bits
+      value: 163904
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: _targetLayer.Array.data[1].m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: _targetLayer.Array.data[2].m_Bits
+      value: 163840
       objectReference: {fileID: 0}
     - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_LocalScale.x

@@ -19,10 +19,10 @@ TagManager:
   - LevelBarrier
   - EnemyFinder
   - 
+  - Colliders
+  - EnemyWalkThroughColliders
   - 
-  - 
-  - 
-  - 
+  - EnemyXPDestroyers
   - 
   - 
   - 
