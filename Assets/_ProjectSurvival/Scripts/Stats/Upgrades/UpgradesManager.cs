@@ -1,13 +1,13 @@
+using System;
 using _ProjectSurvival.Infrastructure;
 using _ProjectSurvival.Scripts.LevelingSystem.Rewards;
-using _ProjectSurvival.Scripts.Stats;
 using _ProjectSurvival.Scripts.UpgradeTree;
 using _ProjectSurvival.Scripts.Weapons.ActiveWeapons;
 using _ProjectSurvival.Scripts.Weapons.WeaponTypes;
 using UnityEngine;
 using Zenject;
 
-namespace _ProjectSurvival.Scripts.Upgrades
+namespace _ProjectSurvival.Scripts.Stats.Upgrades
 {
     public class UpgradesManager : MonoBehaviour, IRewardGiver
     {
@@ -17,7 +17,7 @@ namespace _ProjectSurvival.Scripts.Upgrades
         private World _world;
         private ActiveWeapons _activeWeapons;
         private ActiveStats _activeStats;
-        
+
         [Inject]
         public void Construct(World world, ActiveWeapons activeWeapons, ActiveStats activeStats)
         {
@@ -54,6 +54,9 @@ namespace _ProjectSurvival.Scripts.Upgrades
                     case UpgradeTypes.WP_12:
                         UpgradeWeapon(UpgradeTypes.WP_12, upgradeLevel.Value);
                         break;
+                    case UpgradeTypes.WP_14:
+                        UpgradeWeapon(UpgradeTypes.WP_14, upgradeLevel.Value);
+                        break;
                     case UpgradeTypes.Vampirik:
                         UpgradeStats(UpgradeTypes.Vampirik, upgradeLevel.Value);
                         break;
@@ -89,8 +92,8 @@ namespace _ProjectSurvival.Scripts.Upgrades
 
         private void UpgradeStats(UpgradeTypes upgradeType, int value)
         {
-            //var stats = _availableStatsSo.SelectAvailableStats(_activeStats); //== только те, что его не прокачаны на максимум
-            var stats = _availableStatsSo.SelectAllStats(); //== все (так было изначально, если нужно получать только не прокачанные до максимума, то строка выше)
+            //var stats = _availableStatsSo.SelectAvailableStats(_activeStats); //== пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            var stats = _availableStatsSo.SelectAllStats(); //== пїЅпїЅпїЅ (пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ)
             foreach (var stat in stats)
             {
                 if (stat.UpgradeType == upgradeType)

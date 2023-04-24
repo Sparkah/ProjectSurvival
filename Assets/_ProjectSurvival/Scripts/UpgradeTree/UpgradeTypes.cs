@@ -14,7 +14,7 @@ namespace _ProjectSurvival.Scripts.UpgradeTree
         WP_07 = 9,
         WP_09 = 10,
         WP_10 = 11,
-        WP_12 = 12
-        
+        WP_12 = 12,
+        WP_14 = 13,
     }
 }

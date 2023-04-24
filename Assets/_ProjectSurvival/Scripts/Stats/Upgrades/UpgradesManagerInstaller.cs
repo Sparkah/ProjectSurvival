@@ -1,3 +1,4 @@
+using _ProjectSurvival.Scripts.Stats.Upgrades;
 using UnityEngine;
 using Zenject;
 

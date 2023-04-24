@@ -29,4 +29,12 @@ MonoBehaviour:
       _speed: 2
       _durability: 50
     _description: 2
+  - _appearFrequency: 4
+    _appearAmount: 3
+    _projectileSetting:
+      _damage: 2
+      _size: 2
+      _speed: 2
+      _durability: 50
+    _description: 2
   _upgradeType: 0

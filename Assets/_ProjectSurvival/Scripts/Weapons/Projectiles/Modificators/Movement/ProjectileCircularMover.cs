@@ -40,7 +40,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators.Movement
         private void UpdatePosition(float positionID)
         {
             Debug.Log(positionID);
-            _correctionID = positionID* Mathf.Deg2Rad;
+            _correctionID = positionID * Mathf.Deg2Rad;
             _moveProjectileInCircles = true;
         }
     }

@@ -61,6 +61,7 @@ namespace _ProjectSurvival.Scripts.Weapons.ActiveWeapons
         public void AddWeapon(WeaponTypeSO weaponType)
         {
             ActiveWeapon selectedWeapon = FindWeapon(weaponType);
+            
             if (selectedWeapon == null)
             {
                 ProjectilesPool pool = _diContainer.InstantiatePrefabForComponent<ProjectilesPool>(_projectilePoolPrefab, transform);
