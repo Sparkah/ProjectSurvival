@@ -46,6 +46,7 @@ namespace _ProjectSurvival.Scripts.DamageSystem
 
         public void TakeDamage(float damageAmount)
         {
+            Debug.Log(damageAmount);
             PlayEffectsOnHit();
             _health -= damageAmount;
             OnDamaged?.Invoke();

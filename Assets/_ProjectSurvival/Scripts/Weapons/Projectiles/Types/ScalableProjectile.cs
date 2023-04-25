@@ -1,7 +1,9 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
-namespace _ProjectSurvival.Scripts.Weapons.Projectiles
+namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Types
 {
     public class ScalableProjectile : WeaponProjectile
     {
@@ -9,6 +11,8 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
         [SerializeField] private bool _hasDefaultInitSize = true;
         [Tooltip("Check if after scaling to custom size, projectile should scale back to appear size")]
         [SerializeField] private bool _isScalingBack;
+
+        public event UnityAction OnFiringComplete;
 
         private void OnDestroy()
         {
@@ -25,7 +29,9 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
             var scalingTweening = transform.DOScale(Size, Speed * 0.05f).SetEase(Ease.InSine);
             if (_isScalingBack)
                 scalingTweening.SetLoops(2, LoopType.Yoyo);
+            
             scalingTweening.OnComplete(ReturnToPool);
+            if (OnFiringComplete != null) scalingTweening.OnComplete(OnFiringComplete.Invoke);
         }
 
         protected override float CalculateDamage()

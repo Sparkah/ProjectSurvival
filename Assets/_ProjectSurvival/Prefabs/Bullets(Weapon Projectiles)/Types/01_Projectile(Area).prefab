@@ -137,23 +137,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6707752669001311730, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
@@ -205,7 +209,7 @@ MonoBehaviour:
   _projectileDurability: {fileID: 407363456766995403}
   _damageDealer: {fileID: 5956052269194703428}
   _projectileAngle: {fileID: 5088327208976522667}
-  _calculateAngle: 1
+  _calculateAngle: 0
   _hasDefaultInitSize: 1
   _isScalingBack: 0
 --- !u!114 &5088327208976522667
