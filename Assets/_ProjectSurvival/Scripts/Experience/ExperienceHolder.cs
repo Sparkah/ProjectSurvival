@@ -1,5 +1,6 @@
 using _ProjectSurvival.Scripts.Enemies;
 using _ProjectSurvival.Scripts.Enemies.Types;
+using _ProjectSurvival.Scripts.Experience.Point;
 using UnityEngine;
 using Zenject;
 

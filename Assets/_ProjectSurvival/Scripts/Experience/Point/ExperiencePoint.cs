@@ -1,5 +1,4 @@
 using _ProjectSurvival.Scripts.Audio;
-using _ProjectSurvival.Scripts.Enemies;
 using _ProjectSurvival.Scripts.Enemies.Types;
 using _ProjectSurvival.Scripts.Pool;
 using Cysharp.Threading.Tasks;
@@ -7,7 +6,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace _ProjectSurvival.Scripts.Experience
+namespace _ProjectSurvival.Scripts.Experience.Point
 {
     public class ExperiencePoint : MonoBehaviour, IPoolableObject<ExperiencePoint>
     {

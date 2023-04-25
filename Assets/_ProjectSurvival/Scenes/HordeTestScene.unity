@@ -464,7 +464,7 @@ PrefabInstance:
     - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: _waves.Array.data[0].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 9ef4f9c7df1314edd863763d2969f695, type: 2}
+      objectReference: {fileID: 11400000, guid: c66a5a612002e4584b189e812fe137e0, type: 2}
     - target: {fileID: 58295334293904983, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: _waves.Array.data[0].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[1]
       value: 
