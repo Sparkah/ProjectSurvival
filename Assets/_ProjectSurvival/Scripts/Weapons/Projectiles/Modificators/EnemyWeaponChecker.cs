@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyWeaponChecker : MonoBehaviour
+namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators
 {
-    // Start is called before the first frame update
-    void Start()
+    public class EnemyWeaponChecker : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            //Debug.Log(col.name);
+        }
     }
 }

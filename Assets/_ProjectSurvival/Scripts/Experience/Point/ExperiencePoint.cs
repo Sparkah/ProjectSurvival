@@ -49,7 +49,7 @@ namespace _ProjectSurvival.Scripts.Experience.Point
         public void Drop(Vector3 position, EnemyTypeSO enemyTypeSO, float experienceAmount)
         {
             _enemyTypeSO = enemyTypeSO;
-            _experienceAmount = experienceAmount*20;
+            _experienceAmount = experienceAmount;
             UpdateVisual(experienceAmount);
             transform.position = position;
             _isCollected = false;

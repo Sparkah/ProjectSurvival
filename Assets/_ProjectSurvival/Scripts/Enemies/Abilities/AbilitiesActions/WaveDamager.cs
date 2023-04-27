@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Threading;
 using _ProjectSurvival.Scripts.Weapons.Projectiles.Types;
 using _ProjectSurvival.Scripts.Weapons.WeaponTypes;
@@ -21,6 +20,7 @@ namespace _ProjectSurvival.Scripts.Enemies.Abilities.AbilitiesActions
         {
             _cancellationTokenSource = new CancellationTokenSource();
             _projectile.OnFiringComplete += ReturnToPool;
+            _projectile.Init(null);
         }
 
         private void ReturnToPool()
@@ -65,6 +65,7 @@ namespace _ProjectSurvival.Scripts.Enemies.Abilities.AbilitiesActions
 
         private void OnDisable()
         {
+            _projectile.Destroy();
             ReturnToPool();
         }
     }

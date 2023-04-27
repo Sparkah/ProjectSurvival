@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4d4e2477f376546bdb47e26cfce760, type: 3}
   m_Name: FastCrabEnemy
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 8123472272529497478, guid: 62c3f645ff2bb437fab42b7fd131d230, type: 3}
+  _enemyPrefab: {fileID: 4248374447366386733, guid: 62c3f645ff2bb437fab42b7fd131d230, type: 3}
   _typeColor: {r: 0, g: 0.9796138, b: 1, a: 1}
   _levelingSchemeSO: {fileID: 11400000, guid: ff3e219893fd7a640bcbcded7066bd57, type: 2}
   _enemyLevels:

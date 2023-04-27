@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: EnemyAvailableWeapons
   m_EditorClassIdentifier: 
   _weaponTypeSOs:
-  - {fileID: 11400000, guid: b0e36e8f7df0b462cb8904767ebac085, type: 2}
+  - {fileID: 11400000, guid: c822335f9e4f148ac9fbae4de3bb4c4c, type: 2}
