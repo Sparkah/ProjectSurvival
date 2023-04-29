@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectile: {fileID: 3089239821365037360}
-  _timeUntilDestroy: 3
+  _timeUntilDestroy: 2
 --- !u!114 &3089239821365037360
 MonoBehaviour:
   m_ObjectHideFlags: 0
