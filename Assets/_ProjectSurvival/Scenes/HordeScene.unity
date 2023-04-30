@@ -1028,27 +1028,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 256.8
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 256.8
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 232.6
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 205.44
+      value: 86.399994
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 722
+      value: 224
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1284
+      value: 540
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
@@ -9092,6 +9092,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1761106399, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
+      propertyPath: _speed
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 24100507808405507, guid: 04e5b0380f6d1cb46b1286d93cd38507, type: 3}
       propertyPath: m_Name
       value: Player

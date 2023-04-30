@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 53129466766497616, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
+      propertyPath: _effectsObjects.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 695566582781420574, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: m_RootOrder
       value: 0
