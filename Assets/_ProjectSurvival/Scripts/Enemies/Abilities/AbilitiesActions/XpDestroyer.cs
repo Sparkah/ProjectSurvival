@@ -5,10 +5,13 @@ namespace _ProjectSurvival.Scripts.Enemies.Abilities.AbilitiesActions
 {
     public class XpDestroyer : Ability
     {
+        [SerializeField] private CircleCollider2D _collider;
+        [SerializeField] private float _radiusIncrease = 1.2f;
         public override void ImplementAbility(EnemyAbilities ability)
         {
             if (ability != EnemyAbilities.XpDestroyer) return;
             var layer = LayerMask.NameToLayer("EnemyXPDestroyers");
+            _collider.radius = _radiusIncrease;
             _enemy.gameObject.layer = layer;
             gameObject.layer = layer;
         }

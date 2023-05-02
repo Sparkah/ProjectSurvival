@@ -106,7 +106,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 4
 --- !u!50 &634626452
 Rigidbody2D:
   serializedVersion: 4
@@ -1627,7 +1627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[5].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[6].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.size
@@ -1712,7 +1712,7 @@ PrefabInstance:
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[4].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: d06f88f7e3451ce4c9891675d588e0c1, type: 2}
+      objectReference: {fileID: 11400000, guid: 5ac33f76e2a76d64ba8d910779908884, type: 2}
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[4].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[1]
       value: 
@@ -1756,7 +1756,7 @@ PrefabInstance:
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[6].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: d06f88f7e3451ce4c9891675d588e0c1, type: 2}
+      objectReference: {fileID: 11400000, guid: c66a5a612002e4584b189e812fe137e0, type: 2}
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[7].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[0]
       value: 
@@ -1772,7 +1772,7 @@ PrefabInstance:
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[7].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: d06f88f7e3451ce4c9891675d588e0c1, type: 2}
+      objectReference: {fileID: 11400000, guid: c66a5a612002e4584b189e812fe137e0, type: 2}
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[8].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[0]
       value: 
@@ -1804,7 +1804,7 @@ PrefabInstance:
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[9].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: d06f88f7e3451ce4c9891675d588e0c1, type: 2}
+      objectReference: {fileID: 11400000, guid: c66a5a612002e4584b189e812fe137e0, type: 2}
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[10].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[0]
       value: 
@@ -1840,11 +1840,11 @@ PrefabInstance:
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[12].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: d06f88f7e3451ce4c9891675d588e0c1, type: 2}
+      objectReference: {fileID: 11400000, guid: c66a5a612002e4584b189e812fe137e0, type: 2}
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[13].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: d06f88f7e3451ce4c9891675d588e0c1, type: 2}
+      objectReference: {fileID: 11400000, guid: c66a5a612002e4584b189e812fe137e0, type: 2}
     - target: {fileID: 9159611575924156757, guid: 109ed449666693b42ad601bdbd73715a, type: 3}
       propertyPath: _waves.Array.data[14].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[0]
       value: 
