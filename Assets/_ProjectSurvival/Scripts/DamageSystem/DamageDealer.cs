@@ -26,12 +26,6 @@ namespace _ProjectSurvival.Scripts.DamageSystem
             
             GameObject touchedObject = other.attachedRigidbody.gameObject;
 
-            if (_destructionMask.Contains(touchedObject.layer))
-            {
-                OnDestructionTouched?.Invoke();
-                return;
-            }
-
             bool isTarget = _targetLayer.Contains(touchedObject.layer);
             if (isTarget && touchedObject.TryGetComponent(out IDamagable damagedObject))
             {
@@ -39,6 +33,12 @@ namespace _ProjectSurvival.Scripts.DamageSystem
                 {
                     OnDamagableTouched?.Invoke(damagedObject);
                 }
+            }
+            
+            if (_destructionMask.Contains(touchedObject.layer))
+            {
+                OnDestructionTouched?.Invoke();
+                return;
             }
 
             int otherLayerMask = 1 << other.gameObject.layer;

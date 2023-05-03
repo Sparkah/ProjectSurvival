@@ -15,10 +15,12 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
         private float _speed;
         private float _baseDamage;
         private float _size;
+        private float _pushBack;
 
         public float Speed => _speed;
         public float Size => _size;
         public float BaseDamage => _baseDamage;
+        public float PushBack => _pushBack;
 
         public abstract void CustomPrepareForLaunch(ProjectileSettings projectileSettings);
         public abstract void CustomLaunch(Vector3 launchPosition, Vector3 forwardDirection);
@@ -28,10 +30,12 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
         public void Init(IObjectPool<WeaponProjectile> pool)
         {
             _damageDealer.OnDamagableTouched += DoDamage;
+            _damageDealer.OnDamagableTouched += DoPush;
             _damageDealer.OnDestructionTouched += ReturnToPool;
             _projectileDurability.OnDefeat += ReturnToPool;
             _pool = pool;
         }
+        
 
         public void ReturnToPool()
         {
@@ -45,6 +49,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
             _baseDamage = projectileSettings.Damage + projectileSettings.Damage*(damageIncreasePercent/100f);
             _speed = projectileSettings.Speed;
             _size = projectileSettings.Size;
+            _pushBack = projectileSettings.PushBack;
             SetDurability(projectileSettings.Durability);
             CustomPrepareForLaunch(projectileSettings);
         }
@@ -52,6 +57,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
         public void Launch(Vector3 launchPosition, Vector3 forwardDirection)
         {
             transform.position = launchPosition;
+            _startingPosition = launchPosition;
             if (forwardDirection.x == 0)
                 forwardDirection.x = 0.001f;
             if (_calculateAngle)
@@ -65,6 +71,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
             _damageDealer.OnDamagableTouched -= DoDamage;
             _damageDealer.OnDestructionTouched -= ReturnToPool;
             _projectileDurability.OnDefeat -= ReturnToPool;
+            _damageDealer.OnDamagableTouched -= DoPush;
         }
 
         protected void SetDurability(int durability)
@@ -76,6 +83,14 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
         {
             damagable.TakeDamage(CalculateDamage());
             _projectileDurability.TakeDamage(1); //How many enemies can projectile hit (pass through) before destroy
+        }
+
+        private Vector3 _startingPosition;
+        private void DoPush(IDamagable damagable)
+        {
+            Vector3 currentPosition = transform.position;
+            var direction = currentPosition - _startingPosition;
+            damagable.GetPushed(_pushBack, direction);
         }
     }
 }

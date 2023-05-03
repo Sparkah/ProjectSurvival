@@ -26,6 +26,7 @@ MonoBehaviour:
       _size: 4
       _speed: 10
       _durability: 999
+      _pushBack: 400
     _description: "\u0420\u0430\u0441\u0442\u0443\u0449\u0438\u0439 \u0448\u0430\u0440,
       \u043B\u0435\u0442\u044F\u0449\u0438\u0439 \u0432\u043F\u0435\u0440\u0435\u0434"
   - _appearFrequency: 1.5
@@ -35,6 +36,7 @@ MonoBehaviour:
       _size: 5
       _speed: 10
       _durability: 999
+      _pushBack: 0
     _description: "\u0421\u043D\u0430\u0440\u044F\u0434 \u0441\u0442\u0430\u043D\u0435\u0442
       \u0431\u043E\u043B\u044C\u0448\u0435"
   - _appearFrequency: 1.5
@@ -44,6 +46,7 @@ MonoBehaviour:
       _size: 7
       _speed: 10
       _durability: 999
+      _pushBack: 0
     _description: "\u0421\u043D\u0430\u0440\u044F\u0434 \u0441\u0442\u0430\u043D\u0435\u0442
       \u0435\u0449\u0435 \u0431\u043E\u043B\u044C\u0448\u0435"
   - _appearFrequency: 1.5
@@ -53,6 +56,7 @@ MonoBehaviour:
       _size: 10
       _speed: 10
       _durability: 999
+      _pushBack: 0
     _description: "\u0421\u043D\u0430\u0440\u044F\u0434 \u0441\u0442\u0430\u043D\u0435\u0442
       \u0415\u0429\u0415 \u0431\u043E\u043B\u044C\u0448\u0435"
   - _appearFrequency: 1.5
@@ -62,6 +66,7 @@ MonoBehaviour:
       _size: 10
       _speed: 14
       _durability: 999
+      _pushBack: 0
     _description: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430"
   - _appearFrequency: 1.25
     _appearAmount: 1
@@ -70,6 +75,7 @@ MonoBehaviour:
       _size: 10
       _speed: 14
       _durability: 999
+      _pushBack: 0
     _description: "\u0415\u0449\u0435 \u0431\u043E\u043B\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430
       \u0438 \u0447\u0430\u0449\u0435 \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u044B"
   _upgradeType: 9

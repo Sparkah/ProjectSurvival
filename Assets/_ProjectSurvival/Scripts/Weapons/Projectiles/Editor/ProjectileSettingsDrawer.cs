@@ -14,6 +14,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles
         new OutputtingField("Size","_size",40),
         new OutputtingField("Speed","_speed",50),
         new OutputtingField("Durability","_durability",60),
+        new OutputtingField("Push Back","_pushBack",60),
         };
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)

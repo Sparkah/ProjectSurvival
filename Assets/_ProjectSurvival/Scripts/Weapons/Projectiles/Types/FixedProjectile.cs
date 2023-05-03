@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Types
@@ -21,6 +22,12 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Types
 
         protected override void PrepareForReturningToPool()
         {
+            StartCoroutine(ReturnToPool());
+        }
+
+        private IEnumerator ReturnToPool()
+        {
+            yield return new WaitForFixedUpdate();
             transform.position = Vector3.zero;
         }
     }

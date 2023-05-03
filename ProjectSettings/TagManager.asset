@@ -21,7 +21,7 @@ TagManager:
   - 
   - Colliders
   - EnemyWalkThroughColliders
-  - 
+  - WalkThroughDetectionLayer
   - EnemyXPDestroyers
   - 
   - EnemyProjectile

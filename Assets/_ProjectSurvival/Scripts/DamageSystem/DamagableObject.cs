@@ -1,3 +1,4 @@
+using System;
 using _ProjectSurvival.Scripts.Audio;
 using _ProjectSurvival.Scripts.Effects;
 using UnityEngine;
@@ -11,6 +12,7 @@ namespace _ProjectSurvival.Scripts.DamageSystem
         private float _maxHealth;
         private float _health;
         private bool _isDefeated;
+        private Rigidbody2D _rigidbody;
 
         public float MaximumDurability => _maxHealth;
         public float CurrentDurability => _health;
@@ -22,6 +24,12 @@ namespace _ProjectSurvival.Scripts.DamageSystem
 
         public event UnityAction<DamagableObject> OnDefeatDamagable; 
         public event UnityAction<float> OnDamageAmount;
+
+        private void Awake()
+        {
+            TryGetComponent(out Rigidbody2D rigidbody2D);
+            _rigidbody = rigidbody2D;
+        }
 
         public void SetupHealth(float health)
         {
@@ -35,6 +43,14 @@ namespace _ProjectSurvival.Scripts.DamageSystem
             _isDefeated = false;
             ResetEffects();
             OnRestored?.Invoke();
+        }
+
+        public void GetPushed(float pushPower, Vector3 rotation)
+        {
+            if (_rigidbody)
+            {
+                _rigidbody.AddForce(rotation * pushPower);
+            }
         }
 
         public void IncreaseMaxHealth(float health)

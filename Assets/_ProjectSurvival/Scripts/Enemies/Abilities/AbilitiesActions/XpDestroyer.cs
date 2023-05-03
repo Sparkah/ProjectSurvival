@@ -12,7 +12,7 @@ namespace _ProjectSurvival.Scripts.Enemies.Abilities.AbilitiesActions
             if (ability != EnemyAbilities.XpDestroyer) return;
             var layer = LayerMask.NameToLayer("EnemyXPDestroyers");
             _collider.radius = _radiusIncrease;
-            _enemy.gameObject.layer = layer;
+            //_enemy.gameObject.layer = layer;
             gameObject.layer = layer;
         }
 

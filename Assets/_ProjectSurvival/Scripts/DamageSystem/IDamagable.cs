@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace _ProjectSurvival.Scripts.DamageSystem
@@ -14,5 +15,7 @@ namespace _ProjectSurvival.Scripts.DamageSystem
         public bool IsDefeated { get; }
         public void TakeDamage(float damageAmount);
         public void RestoreDurability();
+
+        public void GetPushed(float pushPower, Vector3 rotation);
     }
 }

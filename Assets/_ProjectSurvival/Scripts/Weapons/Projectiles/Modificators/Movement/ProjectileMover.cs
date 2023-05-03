@@ -61,7 +61,6 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators.Movement
 
         private void OnDisable()
         {
-            //if (!_closestEnemy) return;
             if (!_autoAim) return;
             _markClosestEnemy = false;
             _closestEnemy = null;
