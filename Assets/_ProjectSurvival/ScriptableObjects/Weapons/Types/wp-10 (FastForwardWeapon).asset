@@ -22,10 +22,11 @@ MonoBehaviour:
   - _appearFrequency: 0.3
     _appearAmount: 1
     _projectileSetting:
-      _damage: 0.5
+      _damage: 0.25
       _size: 0.3
       _speed: 12
       _durability: 1
+      _pushBack: 30
     _description: "\u0411\u044B\u0441\u0442\u0440\u0430\u044F \u0441\u0442\u0440\u0435\u043B\u044C\u0431\u0430
       \u0432\u043F\u0435\u0440\u0435\u0434"
   - _appearFrequency: 0.2
@@ -35,6 +36,7 @@ MonoBehaviour:
       _size: 0.3
       _speed: 12
       _durability: 1
+      _pushBack: 20
     _description: "\u041E\u0433\u043E\u043D\u044C \u0447\u0430\u0449\u0435"
   - _appearFrequency: 0.15
     _appearAmount: 1
@@ -43,6 +45,7 @@ MonoBehaviour:
       _size: 0.3
       _speed: 12
       _durability: 1
+      _pushBack: 40
     _description: "\u041E\u0433\u043E\u043D\u044C \u0435\u0449\u0435 \u0447\u0430\u0449\u0435"
   - _appearFrequency: 0.15
     _appearAmount: 1
@@ -51,6 +54,7 @@ MonoBehaviour:
       _size: 0.3
       _speed: 12
       _durability: 1
+      _pushBack: 40
     _description: "\u0423\u0440\u043E\u043D\u0430 \u0431\u043E\u043B\u044C\u0448\u0435"
   - _appearFrequency: 0.1
     _appearAmount: 1
@@ -59,6 +63,7 @@ MonoBehaviour:
       _size: 0.3
       _speed: 12
       _durability: 1
+      _pushBack: 60
     _description: "\u0423\u0440\u043E\u043D\u0430 \u0435\u0449\u0435 \u0431\u043E\u043B\u044C\u0448\u0435,
       \u043E\u0433\u043E\u043D\u044C \u0435\u0449\u0435 \u0447\u0430\u0449\u0435"
   - _appearFrequency: 0.1
@@ -68,5 +73,6 @@ MonoBehaviour:
       _size: 0.3
       _speed: 12
       _durability: 1
+      _pushBack: 60
     _description: "\u0423\u0440\u043E\u043D\u0430 \u0415\u0429\u0401 \u0431\u043E\u043B\u044C\u0448\u0435"
   _upgradeType: 11

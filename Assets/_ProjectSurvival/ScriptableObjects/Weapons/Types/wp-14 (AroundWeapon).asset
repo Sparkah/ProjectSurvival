@@ -26,15 +26,17 @@ MonoBehaviour:
       _size: 0.5
       _speed: 2
       _durability: 999
+      _pushBack: 0
     _description: "\u0421\u043D\u0430\u0440\u044F\u0434 \u0432\u0440\u0430\u0449\u0430\u044E\u0449\u0438\u0439\u0441\u044F
       \u0432\u043E\u043A\u0440\u0443\u0433 \u0414\u0440\u0438\u043C"
   - _appearFrequency: 4
-    _appearAmount: 1
+    _appearAmount: 2
     _projectileSetting:
       _damage: 1
       _size: 0.5
-      _speed: 4
+      _speed: 2
       _durability: 999
+      _pushBack: 0
     _description: "\u0421\u043D\u0430\u0440\u044F\u0434 \u0432\u0440\u0430\u0449\u0430\u0435\u0442\u0441\u044F
       \u0431\u044B\u0441\u0442\u0440\u0435\u0435"
   - _appearFrequency: 4
@@ -44,17 +46,9 @@ MonoBehaviour:
       _size: 0.5
       _speed: 4
       _durability: 999
+      _pushBack: 0
     _description: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0432\u0442\u043E\u0440\u043E\u0439
       \u0441\u043D\u0430\u0440\u044F\u0434"
-  - _appearFrequency: 4
-    _appearAmount: 2
-    _projectileSetting:
-      _damage: 2
-      _size: 0.5
-      _speed: 4
-      _durability: 999
-    _description: "\u0421\u043D\u0430\u0440\u044F\u0434\u044B \u043D\u0430\u043D\u043E\u0441\u044F\u0442
-      \u0431\u043E\u043B\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430"
   - _appearFrequency: 4
     _appearAmount: 3
     _projectileSetting:
@@ -62,6 +56,17 @@ MonoBehaviour:
       _size: 0.5
       _speed: 4
       _durability: 999
+      _pushBack: 0
+    _description: "\u0421\u043D\u0430\u0440\u044F\u0434\u044B \u043D\u0430\u043D\u043E\u0441\u044F\u0442
+      \u0431\u043E\u043B\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430"
+  - _appearFrequency: 4
+    _appearAmount: 3
+    _projectileSetting:
+      _damage: 2
+      _size: 0.5
+      _speed: 6
+      _durability: 999
+      _pushBack: 0
     _description: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0442\u0440\u0435\u0442\u0438\u0439
       \u0441\u043D\u0430\u0440\u044F\u0434"
   - _appearFrequency: 4
@@ -69,8 +74,9 @@ MonoBehaviour:
     _projectileSetting:
       _damage: 2
       _size: 0.5
-      _speed: 4
+      _speed: 6
       _durability: 999
+      _pushBack: 0
     _description: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0447\u0435\u0442\u0432\u0435\u0440\u0442\u044B\u0439
       \u0441\u043D\u0430\u0440\u044F\u0434"
   _upgradeType: 13

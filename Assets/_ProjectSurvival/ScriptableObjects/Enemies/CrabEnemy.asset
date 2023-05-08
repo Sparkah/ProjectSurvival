@@ -19,7 +19,7 @@ MonoBehaviour:
   - _appearanceSpriteFront: {fileID: 21300000, guid: cede8e4c428829f4e970f9f8ab79caa6, type: 3}
     _appearanceSpriteBack: {fileID: 21300000, guid: bbbdc3faeacd24d418d2fe2cc1ce708e, type: 3}
     _baseHealth: 1
-    _baseSpeed: 2
+    _baseSpeed: 3
     _baseDamage: 1
     _baseExperience: 10
     _baseGold: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
   - _appearanceSpriteFront: {fileID: 21300000, guid: 1db7fcf8e9e83cb4880ab3591a74d4df, type: 3}
     _appearanceSpriteBack: {fileID: 21300000, guid: 3a627f08742567846b2ecb52db2c5e7b, type: 3}
     _baseHealth: 2
-    _baseSpeed: 4
+    _baseSpeed: 6
     _baseDamage: 2
     _baseExperience: 10
     _baseGold: 5
@@ -35,7 +35,7 @@ MonoBehaviour:
   - _appearanceSpriteFront: {fileID: 21300000, guid: a0941819d532f5149b03c986458b13dc, type: 3}
     _appearanceSpriteBack: {fileID: 21300000, guid: 5cbe46908442b194096cb28aa9b0b22a, type: 3}
     _baseHealth: 3
-    _baseSpeed: 5
+    _baseSpeed: 9
     _baseDamage: 5
     _baseExperience: 10
     _baseGold: 20

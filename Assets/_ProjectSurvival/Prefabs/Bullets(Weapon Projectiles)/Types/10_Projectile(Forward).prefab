@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponProjectile: {fileID: 5102044091516270430}
-  _autoAim: 0
+  _autoAim: 1
 --- !u!114 &5102044091516270430
 MonoBehaviour:
   m_ObjectHideFlags: 0

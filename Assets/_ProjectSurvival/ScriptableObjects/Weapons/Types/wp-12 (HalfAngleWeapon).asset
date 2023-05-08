@@ -20,54 +20,60 @@ MonoBehaviour:
   _shootSound: 9
   _projectilePrefab: {fileID: 1604206291989398089, guid: 4ce3101adcf1e5f419a179d401fbe0e3, type: 3}
   _weaponLevels:
-  - _appearFrequency: 2.5
+  - _appearFrequency: 1.5
     _appearAmount: 3
     _projectileSetting:
       _damage: 1
       _size: 1
       _speed: 15
       _durability: 1
+      _pushBack: 0
     _description: "\u0412\u044B\u043F\u0443\u0441\u043A\u0430\u0435\u0442 \u0441\u043D\u0430\u0440\u044F\u0434\u044B
       \u0432 \u043A\u043E\u043D\u0443\u0441\u0435 \u043F\u0435\u0440\u0435\u0434
       \u0441\u043E\u0431\u043E\u0439"
-  - _appearFrequency: 2.5
+  - _appearFrequency: 1.5
     _appearAmount: 5
     _projectileSetting:
       _damage: 1
       _size: 1
       _speed: 15
       _durability: 1
+      _pushBack: 0
     _description: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0441\u043D\u0430\u0440\u044F\u0434\u043E\u0432"
-  - _appearFrequency: 2.5
+  - _appearFrequency: 1.5
     _appearAmount: 7
     _projectileSetting:
       _damage: 1
       _size: 1
       _speed: 15
       _durability: 1
+      _pushBack: 0
     _description: "\u0415\u0449\u0435 \u0431\u043E\u043B\u044C\u0448\u0435 \u0441\u043D\u0430\u0440\u044F\u0434\u043E\u0432"
-  - _appearFrequency: 2.5
+  - _appearFrequency: 1.5
     _appearAmount: 9
     _projectileSetting:
       _damage: 1
       _size: 1
       _speed: 15
       _durability: 1
+      _pushBack: 0
     _description: "\u0415\u0429\u0415 \u0431\u043E\u043B\u044C\u0448\u0435 \u0441\u043D\u0430\u0440\u044F\u0434\u043E\u0432"
-  - _appearFrequency: 2.5
-    _appearAmount: 9
+  - _appearFrequency: 1.5
+    _appearAmount: 11
     _projectileSetting:
       _damage: 2
       _size: 1
       _speed: 15
       _durability: 1
+      _pushBack: 0
     _description: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430"
-  - _appearFrequency: 2.5
-    _appearAmount: 9
+  - _appearFrequency: 1.5
+    _appearAmount: 13
     _projectileSetting:
       _damage: 3
       _size: 1
       _speed: 15
       _durability: 1
+      _pushBack: 0
     _description: "\u0415\u0449\u0435 \u0431\u043E\u043B\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430"
   _upgradeType: 12
