@@ -25,7 +25,7 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Types
             StartCoroutine(ReturnToPool());
         }
 
-        private IEnumerator ReturnToPool()
+        private new IEnumerator ReturnToPool()
         {
             yield return new WaitForFixedUpdate();
             transform.position = Vector3.zero;

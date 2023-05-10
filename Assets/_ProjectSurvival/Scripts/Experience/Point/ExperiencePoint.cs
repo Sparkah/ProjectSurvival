@@ -41,6 +41,7 @@ namespace _ProjectSurvival.Scripts.Experience.Point
 
         public void ReturnToPool()
         {
+            if (this == null) return;
             AudioPlayer.Audio.PlaySound(AudioSounds.Coins);
             _spriteRenderer.transform.DOKill();
             _pool.Release(this);
@@ -57,7 +58,7 @@ namespace _ProjectSurvival.Scripts.Experience.Point
 
         public bool Collect(Transform collectorTransform)
         {
-            if (!_isCollected)
+            if (!_isCollected && collectorTransform!=null)
             {
                 _isCollected = true;
                 MoveToCollector(collectorTransform).Forget();
