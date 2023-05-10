@@ -25,7 +25,7 @@ MonoBehaviour:
       _damage: 1
       _size: 1
       _speed: 15
-      _durability: 2
+      _durability: 3
       _pushBack: 0
     _description: "\u0421\u043D\u0430\u0440\u044F\u0434, \u043B\u0435\u0442\u044F\u0449\u0438\u0439
       \u043A \u0446\u0435\u043D\u0442\u0440\u0443 \u043F\u043E\u043B\u044F"
@@ -35,23 +35,23 @@ MonoBehaviour:
       _damage: 1
       _size: 1
       _speed: 15
-      _durability: 3
+      _durability: 4
       _pushBack: 0
     _description: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0446\u0435\u043B\u0435\u0439"
   - _appearFrequency: 0.5
     _appearAmount: 1
     _projectileSetting:
       _damage: 1
-      _size: 1
+      _size: 1.2
       _speed: 15
       _durability: 4
       _pushBack: 0
-    _description: "\u0415\u0449\u0435 \u0431\u043E\u043B\u044C\u0448\u0435 \u0446\u0435\u043B\u0435\u0439"
+    _description: "\u0421\u043D\u0430\u0440\u044F\u0434 \u043A\u0440\u0443\u043F\u043D\u0435\u0435"
   - _appearFrequency: 0.5
     _appearAmount: 1
     _projectileSetting:
       _damage: 1
-      _size: 1
+      _size: 1.2
       _speed: 15
       _durability: 6
       _pushBack: 0
@@ -60,11 +60,12 @@ MonoBehaviour:
     _appearAmount: 1
     _projectileSetting:
       _damage: 2
-      _size: 1
+      _size: 1.5
       _speed: 15
       _durability: 6
       _pushBack: 0
-    _description: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430"
+    _description: "\u041A\u0440\u0443\u043F\u043D\u0435\u0435 \u0441\u043D\u0430\u0440\u044F\u0434,
+      \u0431\u043E\u043B\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430"
   - _appearFrequency: 0.25
     _appearAmount: 1
     _projectileSetting:
