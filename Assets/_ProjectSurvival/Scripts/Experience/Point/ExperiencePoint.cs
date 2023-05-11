@@ -1,3 +1,4 @@
+using System.Collections;
 using _ProjectSurvival.Scripts.Audio;
 using _ProjectSurvival.Scripts.Enemies.Types;
 using _ProjectSurvival.Scripts.Pool;
@@ -19,6 +20,7 @@ namespace _ProjectSurvival.Scripts.Experience.Point
         private bool _isCollected;
         private Quaternion _defaultRotation;
         private Tween _rotationTween;
+
 
         public float ExperienceAmount => _experienceAmount;
         public EnemyTypeSO EnemyTypeSO => _enemyTypeSO;
@@ -59,36 +61,48 @@ namespace _ProjectSurvival.Scripts.Experience.Point
 
         public bool Collect(Transform collectorTransform)
         {
-            if (!_isCollected && collectorTransform!=null)
+            if (!_isCollected && collectorTransform != null)
             {
                 _isCollected = true;
                 MoveToCollector(collectorTransform).Forget();
+                StartCoroutine(ForceKill());
                 _rotationTween = _spriteRenderer.transform
                     .DOLocalRotate(new Vector3(0, 0, 360), _settingsSO.RotatingSpeed, RotateMode.FastBeyond360)
                     .SetEase(Ease.Linear)
                     .SetLoops(-1, LoopType.Restart);
                 return true;
             }
-
-            if (collectorTransform == null)
-            {
-                if (_rotationTween != null)
-                {
-                    _rotationTween.Kill();
-                    _rotationTween = null;
-                }
-            }
             return false;
         }
 
+        private IEnumerator ForceKill()
+        {
+            yield return new WaitForSeconds(1f);
+            if (!gameObject.activeInHierarchy) yield break;
+            _spriteRenderer.transform.DOKill();
+            _rotationTween.Kill();
+            gameObject.SetActive(false);
+        }
+        
+       /* private void FixedUpdate()
+        {
+            if (!_isCollected || _collector.activeInHierarchy || _rotationTween == null) return;
+            _spriteRenderer.transform.DOKill();
+            _rotationTween.Kill();
+            _rotationTween = null;
+        }*/
+
         private async UniTaskVoid MoveToCollector(Transform collectorTransform)
         {
+            if (collectorTransform == null) return;
             while (!IsTargetReached(collectorTransform.position))
             {
+                if (collectorTransform == null) return;
                 transform.position = Vector3.MoveTowards(
                     transform.position,
                     collectorTransform.position,
                     _settingsSO.GatheringSpeed * Time.deltaTime);
+                if (collectorTransform == null) return;
                 await UniTask.NextFrame(cancellationToken: this.GetCancellationTokenOnDestroy());
             }
             ReturnToPool();

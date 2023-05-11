@@ -18,7 +18,7 @@ MonoBehaviour:
   _enemyLevels:
   - _appearanceSpriteFront: {fileID: 21300000, guid: 73a371cac63551d48aa13a6b2acb0e25, type: 3}
     _appearanceSpriteBack: {fileID: 21300000, guid: 2a4ca53dc54bc3242bd74e6ca5256663, type: 3}
-    _baseHealth: 6
+    _baseHealth: 2
     _baseSpeed: 2
     _baseDamage: 1
     _baseExperience: 10
@@ -26,7 +26,7 @@ MonoBehaviour:
     _enemyAbilities: 1
   - _appearanceSpriteFront: {fileID: 21300000, guid: 65bb36d3225fe1543b65d310605a804f, type: 3}
     _appearanceSpriteBack: {fileID: 21300000, guid: cd382ddcccb1123468a7a47b5f0d1ae7, type: 3}
-    _baseHealth: 8
+    _baseHealth: 3
     _baseSpeed: 3
     _baseDamage: 2
     _baseExperience: 10
@@ -34,7 +34,7 @@ MonoBehaviour:
     _enemyAbilities: 1
   - _appearanceSpriteFront: {fileID: 21300000, guid: 4a795963a1e29c740a40db6e30830d64, type: 3}
     _appearanceSpriteBack: {fileID: 21300000, guid: d260c9d16a356e94db03b2828d867e1d, type: 3}
-    _baseHealth: 8
+    _baseHealth: 4
     _baseSpeed: 5
     _baseDamage: 5
     _baseExperience: 10

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DefaultExperiencePointSettings
   m_EditorClassIdentifier: 
   _gatheringSpeed: 10
-  _rotatingSpeed: 0.1
+  _rotatingSpeed: 0.05
   _approximatelyDistance: 0.05
