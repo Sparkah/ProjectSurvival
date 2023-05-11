@@ -80,8 +80,8 @@ namespace OpenAI
 
                     _monsterTypesSO.Sprites.Add(sprite);
                     
-                    AssetDatabase.CreateAsset(sprite, "Assets/AI/GeneratedSprites/SavedSprite.asset");
-                    AssetDatabase.SaveAssets();
+                   // AssetDatabase.CreateAsset(sprite, "Assets/AI/GeneratedSprites/SavedSprite.asset");
+                    //AssetDatabase.SaveAssets();
                     _monsterTypesSO.ChangeSprites();
                 }
             }

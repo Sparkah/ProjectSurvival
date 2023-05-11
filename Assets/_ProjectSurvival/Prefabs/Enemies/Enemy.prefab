@@ -647,6 +647,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 917845983197059205, guid: c202b3988f920441db4387c211ca2613, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 917845983197059205, guid: c202b3988f920441db4387c211ca2613, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 917845983197059205, guid: c202b3988f920441db4387c211ca2613, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 917845983197059205, guid: c202b3988f920441db4387c211ca2613, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -685,6 +697,10 @@ PrefabInstance:
     - target: {fileID: 917845983197059205, guid: c202b3988f920441db4387c211ca2613, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 917845983197059205, guid: c202b3988f920441db4387c211ca2613, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2092725720679324597, guid: c202b3988f920441db4387c211ca2613, type: 3}
       propertyPath: _gameobjectToFollow
