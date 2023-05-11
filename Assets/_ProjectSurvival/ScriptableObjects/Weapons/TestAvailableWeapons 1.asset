@@ -15,4 +15,4 @@ MonoBehaviour:
   _weaponTypeSOs:
   - {fileID: 11400000, guid: e1e0a93b984d8aa488e9d7da1539e146, type: 2}
   - {fileID: 11400000, guid: 046f6f9cadd3d87468313e2070116088, type: 2}
-  - {fileID: 11400000, guid: 02fed083c6883894ab4a81696bd7064a, type: 2}
+  - {fileID: 11400000, guid: b0e36e8f7df0b462cb8904767ebac085, type: 2}

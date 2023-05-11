@@ -63,6 +63,7 @@ namespace _ProjectSurvival.Scripts.DamageSystem
         public void TakeDamage(float damageAmount)
         {
             PlayEffectsOnHit();
+            damageAmount /=  2; // костыль потому что на враге 2 коллайдера триггер и не триггер. Триггер вынести в пустой геймобж, дописать логику
             _health -= damageAmount;
             OnDamaged?.Invoke();
             OnDamageAmount?.Invoke(damageAmount);

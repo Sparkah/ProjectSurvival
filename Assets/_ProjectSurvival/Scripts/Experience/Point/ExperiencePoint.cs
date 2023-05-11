@@ -18,6 +18,7 @@ namespace _ProjectSurvival.Scripts.Experience.Point
         private float _experienceAmount;
         private bool _isCollected;
         private Quaternion _defaultRotation;
+        private Tween _rotationTween;
 
         public float ExperienceAmount => _experienceAmount;
         public EnemyTypeSO EnemyTypeSO => _enemyTypeSO;
@@ -62,11 +63,20 @@ namespace _ProjectSurvival.Scripts.Experience.Point
             {
                 _isCollected = true;
                 MoveToCollector(collectorTransform).Forget();
-                _spriteRenderer.transform
+                _rotationTween = _spriteRenderer.transform
                     .DOLocalRotate(new Vector3(0, 0, 360), _settingsSO.RotatingSpeed, RotateMode.FastBeyond360)
                     .SetEase(Ease.Linear)
                     .SetLoops(-1, LoopType.Restart);
                 return true;
+            }
+
+            if (collectorTransform == null)
+            {
+                if (_rotationTween != null)
+                {
+                    _rotationTween.Kill();
+                    _rotationTween = null;
+                }
             }
             return false;
         }

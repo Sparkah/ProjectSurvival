@@ -170,7 +170,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 1b6fd6efae5774ec3b612b2f82fc3439, type: 3}
     - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: _targetLayer.m_Bits
-      value: 163904
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6319636506099650271, guid: a9c2d5faabe25a341af5b55b583ec178, type: 3}
       propertyPath: _targetLayer.Array.size

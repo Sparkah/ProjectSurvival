@@ -1308,6 +1308,10 @@ PrefabInstance:
       propertyPath: _waves.Array.data[17].Batches.Array.data[0].EnemiesToSpawnThisWave.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: 5ac33f76e2a76d64ba8d910779908884, type: 2}
+    - target: {fileID: 4771030133279822628, guid: 272255cc74f02c941871e0d28457d574, type: 3}
+      propertyPath: _targetTime
+      value: 420
+      objectReference: {fileID: 0}
     - target: {fileID: 9210531385913296422, guid: 272255cc74f02c941871e0d28457d574, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1847,27 +1851,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 108
+      value: 238.4
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 108
+      value: 238.4
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 61.5
+      value: 215.8
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765185150489, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 43.199997
+      value: 95.359985
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 231
+      value: 670
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 540
+      value: 1192
       objectReference: {fileID: 0}
     - target: {fileID: 5304235765422368230, guid: 3a1d85b24a8dc49ba804b0bed266854c, type: 3}
       propertyPath: m_AnchoredPosition.x
