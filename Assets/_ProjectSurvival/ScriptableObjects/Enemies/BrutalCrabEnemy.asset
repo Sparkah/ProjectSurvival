@@ -23,7 +23,7 @@ MonoBehaviour:
     _baseDamage: 5
     _baseExperience: 10
     _baseGold: 1
-    _enemyAbilities: 0
+    _enemyAbilities: 2
   - _appearanceSpriteFront: {fileID: 21300000, guid: cf89a34e123e7d74aaf7c80efe51d801, type: 3}
     _appearanceSpriteBack: {fileID: 21300000, guid: 0665938d15a79a5428aedb53bbe60b94, type: 3}
     _baseHealth: 1.5

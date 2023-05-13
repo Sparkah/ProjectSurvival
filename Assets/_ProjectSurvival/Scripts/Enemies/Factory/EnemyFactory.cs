@@ -43,8 +43,8 @@ namespace _ProjectSurvival.Scripts.Enemies.Factory
             if (_enemiesPools.ContainsKey(enemyType))
             {
                 Enemy enemy = _enemiesPools[enemyType].Pool.Get();
-                enemy.DefineType(enemyType);
                 enemy.Restore(spawnPosition, _chasingTarget.transform);
+                enemy.DefineType(enemyType);
             }
         }
 
