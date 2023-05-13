@@ -18,7 +18,7 @@ TagManager:
   - ExperienceCollector
   - LevelBarrier
   - EnemyFinder
-  - 
+  - PlayerMoveBarrier
   - Colliders
   - EnemyWalkThroughColliders
   - WalkThroughDetectionLayer

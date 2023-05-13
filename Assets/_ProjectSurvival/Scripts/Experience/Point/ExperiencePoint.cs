@@ -1,5 +1,6 @@
 using System.Collections;
 using _ProjectSurvival.Scripts.Audio;
+using _ProjectSurvival.Scripts.DamageSystem;
 using _ProjectSurvival.Scripts.Enemies.Types;
 using _ProjectSurvival.Scripts.Pool;
 using Cysharp.Threading.Tasks;
@@ -27,6 +28,8 @@ namespace _ProjectSurvival.Scripts.Experience.Point
 
         private void OnDestroy()
         {
+            if(_damagableObject!=null)
+                _damagableObject.OnDefeat -= UpdateDamagableDeathState;
             if (_spriteRenderer!=null)
                 _spriteRenderer.transform.DOKill();
         }
@@ -59,38 +62,37 @@ namespace _ProjectSurvival.Scripts.Experience.Point
             _isCollected = false;
         }
 
+        private DamagableObject _damagableObject;
+
         public bool Collect(Transform collectorTransform)
         {
             if (!_isCollected && collectorTransform != null)
             {
                 _isCollected = true;
                 MoveToCollector(collectorTransform).Forget();
-                StartCoroutine(ForceKill());
                 _rotationTween = _spriteRenderer.transform
                     .DOLocalRotate(new Vector3(0, 0, 360), _settingsSO.RotatingSpeed, RotateMode.FastBeyond360)
                     .SetEase(Ease.Linear)
                     .SetLoops(-1, LoopType.Restart);
+
+                collectorTransform.gameObject.TryGetComponent(out DamagableObject damagableObject);
+                if (damagableObject != null)
+                {
+                    _damagableObject = damagableObject;
+                    damagableObject.OnDefeat += UpdateDamagableDeathState;
+                }
+
                 return true;
             }
             return false;
         }
 
-        private IEnumerator ForceKill()
+        private void UpdateDamagableDeathState()
         {
-            yield return new WaitForSeconds(1f);
-            if (!gameObject.activeInHierarchy) yield break;
-            _spriteRenderer.transform.DOKill();
+            Debug.Log(" died");
             _rotationTween.Kill();
-            gameObject.SetActive(false);
+            ReturnToPool();
         }
-        
-       /* private void FixedUpdate()
-        {
-            if (!_isCollected || _collector.activeInHierarchy || _rotationTween == null) return;
-            _spriteRenderer.transform.DOKill();
-            _rotationTween.Kill();
-            _rotationTween = null;
-        }*/
 
         private async UniTaskVoid MoveToCollector(Transform collectorTransform)
         {
