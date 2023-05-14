@@ -11,6 +11,7 @@ namespace _ProjectSurvival.Scripts.Weapons.WeaponTypes
     {
         [SerializeField] private string _title;
         [SerializeField] private string _description;
+        [SerializeField] private string _descriptionForUPGR;
         [SerializeField] private Sprite _picture;
         [SerializeField] private AudioSounds _shootSound;
         [SerializeField] private WeaponProjectile _projectilePrefab;
@@ -19,6 +20,7 @@ namespace _ProjectSurvival.Scripts.Weapons.WeaponTypes
 
         public string Title => _title;
         public string Description => _description;
+        public string Description1 => _descriptionForUPGR;
         public Sprite Picture => _picture;
         public WeaponProjectile ProjectilePrefab => _projectilePrefab;
         public int MaximumLevel => _weaponLevels.Length;
@@ -57,11 +59,13 @@ namespace _ProjectSurvival.Scripts.Weapons.WeaponTypes
             [SerializeField] private int _appearAmount;
             [SerializeField] private ProjectileSettings _projectileSetting;
             [SerializeField] private string _description;
+            [SerializeField] private string _descriptionForUPGR;
 
             public float AppearFrequency => _appearFrequency;
             public int AppearAmount => _appearAmount;
             public ProjectileSettings ProjectileSettingSO => _projectileSetting;
             public string Description => _description;
+            public string DescriptionForUPGR => _descriptionForUPGR;
         }
     }
 }
