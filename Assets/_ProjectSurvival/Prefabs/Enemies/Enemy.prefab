@@ -176,6 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collider: {fileID: 1475013659743016555}
   _radiusIncrease: 1.2
+  DamagableObject: {fileID: 14643534292785579}
 --- !u!114 &4615628733962347209
 MonoBehaviour:
   m_ObjectHideFlags: 0

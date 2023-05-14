@@ -1,6 +1,5 @@
-using System.Collections;
 using _ProjectSurvival.Scripts.Audio;
-using _ProjectSurvival.Scripts.DamageSystem;
+using _ProjectSurvival.Scripts.Enemies.Abilities.AbilitiesActions;
 using _ProjectSurvival.Scripts.Enemies.Types;
 using _ProjectSurvival.Scripts.Pool;
 using Cysharp.Threading.Tasks;
@@ -21,17 +20,28 @@ namespace _ProjectSurvival.Scripts.Experience.Point
         private bool _isCollected;
         private Quaternion _defaultRotation;
         private Tween _rotationTween;
-
+        private bool _returnedToPool;
 
         public float ExperienceAmount => _experienceAmount;
         public EnemyTypeSO EnemyTypeSO => _enemyTypeSO;
 
         private void OnDestroy()
         {
-            if(_damagableObject!=null)
-                _damagableObject.OnDefeat -= UpdateDamagableDeathState;
+            if(_xpDestroyer!=null)
+                _xpDestroyer.DamagableObject.OnDefeat -= UpdateDamagableDeathState;
             if (_spriteRenderer!=null)
                 _spriteRenderer.transform.DOKill();
+        }
+
+        private void OnDisable()
+        {
+            if(_xpDestroyer!=null)
+                _xpDestroyer.DamagableObject.OnDefeat -= UpdateDamagableDeathState;
+        }
+
+        private void OnEnable()
+        {
+            _returnedToPool = false;
         }
 
         public void Init(IObjectPool<ExperiencePoint> pool)
@@ -47,9 +57,12 @@ namespace _ProjectSurvival.Scripts.Experience.Point
 
         public void ReturnToPool()
         {
-            if (this == null) return;
+            if (this == null||_returnedToPool) return;
+            _returnedToPool = true;
             AudioPlayer.Audio.PlaySound(AudioSounds.Coins);
             _spriteRenderer.transform.DOKill();
+            if(_xpDestroyer!=null)
+                _xpDestroyer.DamagableObject.OnDefeat -= UpdateDamagableDeathState;
             _pool.Release(this);
         }
 
@@ -62,7 +75,7 @@ namespace _ProjectSurvival.Scripts.Experience.Point
             _isCollected = false;
         }
 
-        private DamagableObject _damagableObject;
+        private XpDestroyer _xpDestroyer;
 
         public bool Collect(Transform collectorTransform)
         {
@@ -75,11 +88,11 @@ namespace _ProjectSurvival.Scripts.Experience.Point
                     .SetEase(Ease.Linear)
                     .SetLoops(-1, LoopType.Restart);
 
-                collectorTransform.gameObject.TryGetComponent(out DamagableObject damagableObject);
-                if (damagableObject != null)
+                collectorTransform.gameObject.TryGetComponent(out XpDestroyer xpDestroyer);
+                if (xpDestroyer != null)
                 {
-                    _damagableObject = damagableObject;
-                    damagableObject.OnDefeat += UpdateDamagableDeathState;
+                    _xpDestroyer = xpDestroyer;
+                    _xpDestroyer.DamagableObject.OnDefeat += UpdateDamagableDeathState;
                 }
 
                 return true;

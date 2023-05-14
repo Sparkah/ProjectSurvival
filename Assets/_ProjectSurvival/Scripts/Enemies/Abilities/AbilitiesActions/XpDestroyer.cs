@@ -1,3 +1,5 @@
+using System;
+using _ProjectSurvival.Scripts.DamageSystem;
 using _ProjectSurvival.Scripts.Experience.Point;
 using UnityEngine;
 
@@ -7,6 +9,8 @@ namespace _ProjectSurvival.Scripts.Enemies.Abilities.AbilitiesActions
     {
         [SerializeField] private CircleCollider2D _collider;
         [SerializeField] private float _radiusIncrease = 1.2f;
+        public DamagableObject DamagableObject;
+
         public override void ImplementAbility(EnemyAbilities ability)
         {
             if (ability != EnemyAbilities.XpDestroyer) return;
