@@ -24,10 +24,15 @@ namespace _ProjectSurvival.Scripts.Weapons.Projectiles.Modificators
                     {
                         _enemiesInRange.Remove(closestEnemy);
                     }
-                    var distanceToCurrentEnemy = Vector3.Distance(transform.position, closestEnemy.gameObject.transform.position);
-                    if (!(distanceToCurrentEnemy < distanceToClosestEnemy)) continue;
-                    distanceToClosestEnemy = distanceToCurrentEnemy;
-                    _closestEnemy = closestEnemy.gameObject.transform;
+
+                    if (closestEnemy != null)
+                    {
+                        var distanceToCurrentEnemy = Vector3.Distance(transform.position,
+                            closestEnemy.gameObject.transform.position);
+                        if (!(distanceToCurrentEnemy < distanceToClosestEnemy)) continue;
+                        distanceToClosestEnemy = distanceToCurrentEnemy;
+                        _closestEnemy = closestEnemy.gameObject.transform;
+                    }
                 }
                 enemy = _closestEnemy;
                 return true;

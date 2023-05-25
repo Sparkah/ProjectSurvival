@@ -23,7 +23,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         [SerializeField] private GoldHolder _goldHolder;
         [SerializeField] private DamageDealer _damageDealer;
         [SerializeField] private EnemyAbilityAction _abilityAction;
-        
+
         private float _damage;
         private IObjectPool<Enemy> _pool;
         private EnemyTypeSO _enemyTypeSO;
@@ -55,6 +55,7 @@ namespace _ProjectSurvival.Scripts.Enemies
 
         public void Restore(Vector3 appearPoint, Transform target)
         {
+            _abilityAction.transform.position = transform.position;
             transform.position = appearPoint;
             _damagableObject.RestoreDurability();
             _enemyMover.Construct(target);
@@ -84,7 +85,7 @@ namespace _ProjectSurvival.Scripts.Enemies
         {
             _abilityAction.SetUpAbility(levelData.EnemyAbilities);
             _damagableObject.SetupHealth(levelData.BaseHealth);
-            _enemyMover.SetupSpeed(levelData.BaseSpeed);
+            _enemyMover.SetupSpeed(levelData.BaseSpeed, transform);
             _enemyAppearance.SetupSprite(levelData.AppearanceSpriteFront, levelData.AppearanceSpriteBack);
             _damage = levelData.BaseDamage;
             _experienceHolder.SetupExperience(levelData.BaseExperience);

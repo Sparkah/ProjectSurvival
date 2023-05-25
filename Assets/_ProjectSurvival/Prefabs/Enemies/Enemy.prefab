@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectAppearance: {fileID: 4977959630427274204}
+  startMovementDelay: 1
 --- !u!114 &4977959630427274204
 MonoBehaviour:
   m_ObjectHideFlags: 0

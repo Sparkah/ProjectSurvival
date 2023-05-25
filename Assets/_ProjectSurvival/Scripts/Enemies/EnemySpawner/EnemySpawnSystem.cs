@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using _ProjectSurvival.Scripts.Enemies.Factory;
 using _ProjectSurvival.Scripts.Enemies.Types;
 using UnityEngine;
@@ -105,11 +104,10 @@ namespace _ProjectSurvival.Scripts.Enemies.EnemySpawner
 
         private void SpawnEnemies(int enemyBatch, int currentWave)
         {
-            var random = new Vector2(Mathf.Sin(_rand.Next(0, 360)),  Mathf.Cos(_rand.Next(0, 360)));
-            var spawnPosition =
-                new Vector2(_spawnPoint.position.x, _spawnPoint.position.y);
-            var dir = random.normalized;
-            spawnPosition += (dir * _spawnDistance);
+            float angleInDegrees = _rand.Next(0, 360);
+            float angleInRadians = angleInDegrees * Mathf.Deg2Rad;
+            var random = new Vector2(Mathf.Sin(angleInRadians), Mathf.Cos(angleInRadians)) * _spawnDistance;
+            var spawnPosition = _spawnPoint.position + new Vector3(random.x, random.y,0);
 
             EnemyTypeSO selectedEnemy = _waves[currentWave].Batches[enemyBatch].EnemiesToSpawnThisWave[
                     _rand.Next(0, _waves[currentWave].Batches[enemyBatch].EnemiesToSpawnThisWave.Length)];
